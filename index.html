@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        (function () {
+            const userLang = navigator.language || navigator.userLanguage;
+            const storedLang = localStorage.getItem('site_lang');
+            let lang = storedLang || userLang.split('-')[0];
+            if (!['en', 'de', 'ru'].includes(lang)) lang = 'en';
+
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            // Replace with the default landing page for the detected language
+            const targetPage = 'impressum.html';
+            window.location.replace(lang + '/' + targetPage + window.location.search + window.location.hash);
+        })();
+    </script>
+</head>
+<body></body>
+</html>
