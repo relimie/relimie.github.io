@@ -50,11 +50,21 @@ function loadTranslations(lang) {
 // Helper: load and parse markdown into content area if present
 function loadContent(lang) {
     const contentEl = document.getElementById('content');
-    if (!contentEl) return; 
-
+    const aboutEl = document.getElementById('about-content');
+    
     const path = window.location.pathname;
     let page = path.split('/').pop().replace('.html', '');
     
+    if (aboutEl) {
+        const text = siteContent[lang].about;
+        if (text && typeof marked !== 'undefined') {
+            marked.setOptions({ breaks: true, gfm: true });
+            aboutEl.innerHTML = marked.parse(text);
+        }
+    }
+
+    if (!contentEl) return; 
+
     if (page === 'index' || page === '') {
         return; 
     }

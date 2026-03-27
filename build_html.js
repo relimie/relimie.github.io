@@ -32,19 +32,21 @@ function getTemplate(lang, pageName, isIndex) {
         <div class="hero">
             <div class="hero-content glass-card">
                 <div class="hero-left">
-                    <img src="../icon.png" alt="Relimie App Icon" class="hero-icon">
                     <div class="store-section">
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" />
                         </a>
                         <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
                     </div>
+                    <img src="../icon.png" alt="Relimie App Icon" class="hero-icon">
                 </div>
                 <div class="hero-right">
                     <h1 data-i18n="heroTitle">Relimie</h1>
-                    <div class="subtitle" data-i18n="heroSubtitle">Mindful tracking. Better habits.</div>
-                    <div class="markdown-body">
-                        <p data-i18n="heroDesc">Relimie is your mindful companion for tracking alcohol consumption, analyzing your habits, and celebrating your sobriety milestones. Designed with a deeply atmospheric, premium "Obsidian" aesthetic, the app creates a calm and reflective environment to cultivate better habits.</p>
+                    <div class="subtitle" data-i18n="heroSubtitle">Understand Your Habits. Keep Your Edge.</div>
+                    <div id="about-content" class="markdown-body">
+                        <!-- Content injected via script.js -->
+                    </div>
+                    <div style="margin-top: 32px;">
                         <a href="guide.html" class="glass-btn primary" data-i18n="readGuide">Read the User Guide</a>
                     </div>
                 </div>
