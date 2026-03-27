@@ -11,7 +11,7 @@
 
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             // Replace with the default landing page for the detected language
-            const targetPage = 'impressum.html';
+            const targetPage = currentPage === '' || currentPage === 'index.html' ? 'index.html' : currentPage;
             window.location.replace(lang + '/' + targetPage + window.location.search + window.location.hash);
         })();
     </script>

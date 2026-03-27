@@ -7,94 +7,148 @@ document.addEventListener('DOMContentLoaded', () => {
         if (path.includes('/de/')) return 'de';
         if (path.includes('/ru/')) return 'ru';
         if (path.includes('/en/')) return 'en';
-        return null;
+        return null; // For root index.html
     }
 
-    // 2. Fallback logic
     let currentLang = getLanguageFromUrl() || localStorage.getItem('site_lang') || navigator.language.split('-')[0] || defaultLang;
 
     if (!['en', 'de', 'ru'].includes(currentLang)) {
         currentLang = defaultLang;
     }
+    
+    // Attempt saving user preference if we're not at root
+    if (getLanguageFromUrl()) {
+        localStorage.setItem('site_lang', currentLang);
+    }
 
-    // 3. Initialize content
+    // Initialize UI
+    loadTranslations(currentLang);
     loadContent(currentLang);
-    updateNav(currentLang);
+    initHamburger();
+    initPrivacyBanner(currentLang);
 });
 
-async function loadContent(lang) {
+// Load static localized strings via data-i18n tags
+function loadTranslations(lang) {
+    try {
+        const langData = translations[lang] || translations['en'];
+        
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (langData[key]) {
+                const text = langData[key];
+                element.innerText = text;
+            }
+        });
+
+        document.documentElement.lang = lang;
+    } catch (error) {
+        console.error('Error loading translations:', error);
+    }
+}
+
+// Helper: load and parse markdown into content area if present
+function loadContent(lang) {
     const contentEl = document.getElementById('content');
-    if (!contentEl) return;
+    if (!contentEl) return; 
 
     const path = window.location.pathname;
-    let page = path.split('/').pop().replace('.html', '') || 'index';
-
-    // Default page if inside a lang folder without filename
-    if (page === 'index' || page === '') page = 'impressum';
+    let page = path.split('/').pop().replace('.html', '');
+    
+    if (page === 'index' || page === '') {
+        return; 
+    }
 
     contentEl.innerHTML = `<p class="loading-text">${translations[lang].loading || 'Loading...'}</p>`;
 
     if (page === 'support') {
-        const text = translations[lang].supportContent;
-        contentEl.innerHTML = marked.parse(text);
+        const text = translations[lang].supportContent || '# Support\n\nPlease contact us via email.';
+        if (typeof marked !== 'undefined') {
+            contentEl.innerHTML = marked.parse(text);
+        }
+        return;
+    }
+
+    // Handle new placeholder pages missing from content.js
+    if (page === 'faq' || page === 'whats_new' || page === 'votes' || page === 'privacy_web') {
+        contentEl.innerHTML = `<h2 style="text-align: center; margin-top: 48px;">${translations[lang][page] || 'Coming Soon'}</h2><p style="text-align: center; color: var(--text-secondary);">This page is currently being updated.</p>`;
         return;
     }
 
     try {
         if (typeof siteContent === 'undefined') {
-            throw new Error('siteContent variable is not defined. Make sure assets/js/content.js is loaded correctly.');
+            throw new Error('siteContent variable is not defined.');
         }
         if (!siteContent[lang]) {
-            throw new Error(`Language "${lang}" not found in siteContent. Available: ${Object.keys(siteContent).join(', ')}`);
+            throw new Error(`Language "${lang}" not found.`);
         }
         const text = siteContent[lang][page];
         if (text) {
-            contentEl.innerHTML = marked.parse(text);
-
-            // SEO and Title
-            const pageTitle = translations[lang][page] || 'Relimie';
-            document.title = `Relimie - ${pageTitle}`;
+            if (typeof marked !== 'undefined') {
+                marked.setOptions({ breaks: true, gfm: true });
+                contentEl.innerHTML = marked.parse(text);
+            }
         } else {
-            throw new Error(`Content for page "${page}" in language "${lang}" is empty or missing. Available pages: ${Object.keys(siteContent[lang]).join(', ')}`);
+            throw new Error(`Content for page "${page}" is empty.`);
         }
     } catch (error) {
         console.error('Content Loading Error:', error);
-        contentEl.innerHTML = `<p class="loading-text" style="color: #ff4d4d; border: 1px solid rgba(255, 77, 77, 0.3); padding: 24px; border-radius: 12px; background: rgba(255, 77, 77, 0.05);">
-            <strong>Error:</strong> ${error.message}<br><br>
-            <small>If viewing locally, check if assets/js/content.js exists. Try refreshing the page.</small>
+        contentEl.innerHTML = `<p class="loading-text" style="color: #ff4d4d;">
+            <strong>Error:</strong> ${error.message}
         </p>`;
     }
 }
 
-function updateNav(lang) {
-    // Highlight active link (sidebar)
-    const path = window.location.pathname;
-    const page = path.split('/').pop() || 'index.html';
+function initHamburger() {
+    const hamburger = document.querySelector('.hamburger');
+    const mainNav = document.querySelector('.main-nav');
 
-    document.querySelectorAll('.nav-item').forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && href.includes(page)) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
+    if (hamburger && mainNav) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
 
-    // Highlight active language button
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        const btnLang = btn.innerText.toLowerCase().trim();
-        if (btnLang === lang) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
+        // Close menu automatically on larger screens
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                hamburger.classList.remove('active');
+                mainNav.classList.remove('active');
+            }
+        });
+    }
+}
 
-    // Update link texts from translations
-    document.querySelectorAll('[data-id]').forEach(el => {
-        const id = el.getAttribute('data-id');
-        if (translations[lang][id]) {
-            el.innerText = translations[lang][id];
-        }
+// Minimal Privacy/Cookie Banner Logic
+function initPrivacyBanner(lang) {
+    if (window.location.search.includes('reset=1')) {
+        localStorage.removeItem('privacy_accepted');
+    }
+    if (localStorage.getItem('privacy_accepted')) return;
+
+    const langData = translations[lang] || translations['en'];
+
+    const banner = document.createElement('div');
+    banner.className = 'privacy-banner';
+    banner.innerHTML = `
+        <p>${langData.privacyNotice}</p>
+        <button class="privacy-btn">${langData.privacyAccept}</button>
+    `;
+
+    document.body.appendChild(banner);
+
+    // Show with slight delay
+    setTimeout(() => {
+        banner.classList.add('show');
+    }, 1000);
+
+    banner.querySelector('.privacy-btn').addEventListener('click', () => {
+        banner.classList.remove('show');
+        localStorage.setItem('privacy_accepted', 'true');
+        setTimeout(() => {
+            if (document.body.contains(banner)) {
+                document.body.removeChild(banner);
+            }
+        }, 600);
     });
 }

@@ -1,91 +1,81 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relimie - Impressum</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Relimie - User Guide</title>
     <link rel="icon" type="image/png" href="../icon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
 <body>
-    <div class="layout-container">
-        <aside class="sidebar glass-panel" style="border-radius: 0;">
-            <a href="impressum.html" class="brand">
-                <img src="../icon.png" alt="Relimie Logo" class="app-icon">
-                Relimie
-            </a>
-            <nav class="nav-links">
-                <a href="impressum.html" class="nav-item" data-id="impressum">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <line x1="10" y1="9" x2="8" y2="9"></line>
-                    </svg>
-                    Impressum
+    <div class="glow-blob blob-1"></div>
+    <div class="glow-blob blob-2"></div>
+    
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <img src="../icon.png" alt="Relimie Icon" class="logo-img">
+                    <span class="brand-name">Relimie</span>
                 </a>
-                <a href="terms.html" class="nav-item" data-id="terms">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    </svg>
-                    Terms of Use
-                </a>
-                <a href="privacy.html" class="nav-item" data-id="privacy">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    </svg>
-                    Privacy Policy
-                </a>
-                <a href="guide.html" class="nav-item" data-id="guide">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                    </svg>
-                    User Guide
-                </a>
-                <a href="support.html" class="nav-item" data-id="support">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                    </svg>
-                    Support Info
-                </a>
+            </div>
+
+            <nav class="main-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="whats_new.html" data-i18n="community">Community</a>
+                    <div class="dropdown-menu">
+                        <a href="whats_new.html" data-i18n="releaseNews">Release News</a>
+                        <a href="votes.html" data-i18n="featureVotes">Feature Votes</a>
+                    </div>
+                </div>
+                <div class="nav-item has-dropdown">
+                    <a href="guide.html" data-i18n="guide">Guide</a>
+                    <div class="dropdown-menu">
+                        <a href="guide.html" data-i18n="userGuide">User Guide</a>
+                        <a href="faq.html" data-i18n="faq">FAQ</a>
+                    </div>
+                </div>
             </nav>
-            <div class="language-selector">
-                <a href="../en/guide.html" class="lang-btn">EN</a>
-                <a href="../de/guide.html" class="lang-btn">DE</a>
-                <a href="../ru/guide.html" class="lang-btn">RU</a>
-            </div>
-        </aside>
 
-        <main class="main-content">
-            <div class="glass-panel" style="padding: 48px;">
-                <article id="content" class="markdown-body">
-                    <!-- CONTENT RENDERS HERE -->
-                </article>
+            <div class="header-right">
+                <div class="lang-switch">
+                    <a href="../en/guide.html" class="lang-btn " data-lang="en">EN</a>
+                    <a href="../de/guide.html" class="lang-btn " data-lang="de">DE</a>
+                    <a href="../ru/guide.html" class="lang-btn active" data-lang="ru">RU</a>
+                </div>
+                <button class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-        </main>
-    </div>
+        </div>
+    </header>
 
-    <!-- SCRIPTS -->
+    <main>
+        
+        <div class="glass-card page-card">
+            <article id="content" class="markdown-body">
+                <!-- Content injected via script.js -->
+            </article>
+        </div>
+    
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-links">
+            <a href="terms.html" data-i18n="terms">Terms of Service</a>
+            <a href="privacy.html" data-i18n="privacy">Privacy Policy</a>
+            <a href="privacy_web.html" data-i18n="websitePrivacy">Website Privacy</a>
+            <a href="impressum.html" data-i18n="impressum">Impressum</a>
+            <a href="support.html" data-i18n="support">Support</a>
+        </div>
+        <p class="copyright">&copy; 2026 Relimie</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="../assets/js/content.js?v=2"></script>
+    <script src="../assets/js/content.js"></script>
     <script src="../assets/js/translations.js"></script>
-    <script src="../assets/js/script.js?v=4"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
