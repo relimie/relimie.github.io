@@ -1,5 +1,3 @@
-Understand Your Habits. Keep Your Edge.
-
 Relimie is the mindful drinking companion for self-confident individuals who value clarity and control. This is not an app designed to force you to quit; it is a tool for finding your own balance. We believe you don’t need advice, judgment, or preaching—you need the facts to draw your own conclusions.
 
 ## A New Way to Look at Limits

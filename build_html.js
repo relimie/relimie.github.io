@@ -42,7 +42,7 @@ function getTemplate(lang, pageName, isIndex) {
                 </div>
                 <div class="hero-right">
                     <h1 data-i18n="heroTitle">Relimie</h1>
-                    <div class="subtitle" data-i18n="heroSubtitle">Understand Your Habits. Keep Your Edge.</div>
+                    <div class="subtitle" data-i18n="heroSubtitle">Enjoy the moment without losing your edge.</div>
                     <div id="about-content" class="markdown-body">
                         <!-- Content injected via script.js -->
                     </div>

@@ -1,5 +1,3 @@
-Verstehe deine Gewohnheiten. Behalte die Kontrolle.
-
 Relimie ist der achtsame Begleiter für Menschen, die Wert auf Klarheit und Kontrolle legen. Dies ist keine App, die dich zum Aufhören zwingt; es ist ein Werkzeug, um dein eigenes Gleichgewicht zu finden. Wir glauben, dass du keine Belehrungen brauchst – du brauchst Fakten, um deine eigenen Schlüsse zu ziehen.
 
 ## Ein neuer Blick auf Limits
