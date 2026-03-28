@@ -83,6 +83,10 @@ relimie.github.io/
 - **Local Storage**: Used only for functional purposes (storing language preference and privacy banner acceptance state).
 - **No External Analytics**: No Google Analytics or third-party tracking scripts.
 
+### 3.6 Targeted Scope
+- **ALWAYS WORK ONLY ON THE PAGES RELEVANT TO THE CHANGE!**
+- **NEVER TOUCH ANY PAGES WHICH ARE NOT RELATED TO THE REQUEST!**
+
 ---
 
 ## 4. Common Tasks
