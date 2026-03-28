@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = 'c:/GitHub/relimie.github.io';
 const langs = ['en', 'de', 'ru'];
-const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'votes', 'faq', 'android'];
+const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'votes', 'faq', 'android', 'videos'];
 
 const getPageTitle = (page) => {
     switch(page) {
@@ -17,6 +17,7 @@ const getPageTitle = (page) => {
         case 'votes': return 'Feature Votes';
         case 'faq': return 'FAQ';
         case 'android': return 'Android Open Test';
+        case 'videos': return 'Video Guides';
         default: return 'Relimie';
     }
 }
@@ -41,12 +42,14 @@ function getTemplate(lang, pageName, isIndex) {
                             <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
                         </a>
                     </div>
-                    <div class="carousel-container">
-                        <img src="../assets/images/screen1.webp" alt="Relimie App Screenshot 1" class="carousel-slide active">
-                        <img src="../assets/images/screen2.webp" alt="Relimie App Screenshot 2" class="carousel-slide">
-                        <img src="../assets/images/screen3.webp" alt="Relimie App Screenshot 3" class="carousel-slide">
-                        <img src="../assets/images/screen4.webp" alt="Relimie App Screenshot 4" class="carousel-slide">
-                    </div>
+                    <a href="videos.html" class="carousel-link" style="display: block; text-decoration: none;">
+                        <div class="carousel-container">
+                            <img src="../assets/images/screen1.webp" alt="Relimie App Screenshot 1" class="carousel-slide active">
+                            <img src="../assets/images/screen2.webp" alt="Relimie App Screenshot 2" class="carousel-slide">
+                            <img src="../assets/images/screen3.webp" alt="Relimie App Screenshot 3" class="carousel-slide">
+                            <img src="../assets/images/screen4.webp" alt="Relimie App Screenshot 4" class="carousel-slide">
+                        </div>
+                    </a>
                 </div>
                 <div class="hero-right">
                     <h1 data-i18n="heroTitle">Relimie</h1>
@@ -103,6 +106,7 @@ function getTemplate(lang, pageName, isIndex) {
                     <a href="guide.html" data-i18n="guide">Guide</a>
                     <div class="dropdown-menu">
                         <a href="guide.html" data-i18n="userGuide">User Guide</a>
+                        <a href="videos.html" data-i18n="videoGuides">Video Guides</a>
                         <a href="faq.html" data-i18n="faq">FAQ</a>
                     </div>
                 </div>
