@@ -38,7 +38,12 @@ function getTemplate(lang, pageName, isIndex) {
                         </a>
                         <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
                     </div>
-                    <img src="../icon.png" alt="Relimie App Icon" class="hero-icon">
+                    <div class="carousel-container">
+                        <img src="../assets/images/screen1.webp" alt="Relimie App Screenshot 1" class="carousel-slide active">
+                        <img src="../assets/images/screen2.webp" alt="Relimie App Screenshot 2" class="carousel-slide">
+                        <img src="../assets/images/screen3.webp" alt="Relimie App Screenshot 3" class="carousel-slide">
+                        <img src="../assets/images/screen4.webp" alt="Relimie App Screenshot 4" class="carousel-slide">
+                    </div>
                 </div>
                 <div class="hero-right">
                     <h1 data-i18n="heroTitle">Relimie</h1>

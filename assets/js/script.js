@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadContent(currentLang);
     initHamburger();
     initPrivacyBanner(currentLang);
+    startCarousel();
 });
 
 // Load static localized strings via data-i18n tags
@@ -161,4 +162,20 @@ function initPrivacyBanner(lang) {
             }
         }, 600);
     });
+}
+// Simple Carousel Logic
+function startCarousel() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    if (slides.length === 0) return;
+
+    let currentSlide = 0;
+    const intervalTime = 4000; // 4 seconds
+
+    setInterval(() => {
+        if (!slides[currentSlide]) return;
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        if (!slides[currentSlide]) return;
+        slides[currentSlide].classList.add('active');
+    }, intervalTime);
 }

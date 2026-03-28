@@ -27,7 +27,8 @@ relimie.github.io/
 │   │   ├── script.js        # UI logic, content injection, privacy banner
 │   │   ├── translations.js  # Dictionary for UI strings (EN/DE/RU)
 │   │   └── content.js       # Main page content (Markdown strings)
-│   └── images/              # App icon and screenshots
+│   └── images/              # App icon and screenshots (WebP)
+│   └── pictures/            # Source screenshots (PNG)
 ├── en/                      # English pages (generated)
 │   ├── index.html           # Homepage
 │   ├── guide.html           # User Guide
@@ -102,6 +103,11 @@ relimie.github.io/
 ### Modifying the Privacy Banner
 1. Edit the `privacyNotice` and `privacyAccept` strings in `assets/js/translations.js`.
 2. The logic is located in `assets/js/script.js` inside `initPrivacyBanner`.
+
+### Updating the Hero Carousel
+1. Convert new screenshots to `.webp` format and place them in `assets/images/`.
+2. Update the `img` tags in the `carousel-container` section of `build_html.js`.
+3. Run `node build_html.js`.
 
 ---
 

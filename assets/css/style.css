@@ -297,11 +297,33 @@ main {
     gap: 32px;
 }
 
-.hero-icon {
-    width: 220px;
-    height: 220px;
+/* Hero Carousel */
+.carousel-container {
+    position: relative;
+    width: 280px;
+    height: 600px;
     border-radius: 48px;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide.active {
+    opacity: 1;
 }
 
 .store-section {
@@ -486,6 +508,12 @@ main {
         padding: 40px 24px;
         gap: 40px;
         text-align: center;
+    }
+    
+    .carousel-container {
+        width: 200px;
+        height: 430px;
+        border-radius: 36px;
     }
     
     .hero-right h1 {
