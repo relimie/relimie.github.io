@@ -11,7 +11,7 @@ Relimie is a **mindful drinking companion app** designed for tracking alcohol co
 
 The website is a **static site** that uses a small Node.js script (`build_html.js`) for template-based generation of localized pages.
 
-**Current App Version**: v1.0.0
+**Current App Version**: v1.2.2
 **Target Platform**: iOS (Apple App Store)
 
 ---
@@ -102,8 +102,9 @@ relimie.github.io/
 1. Add the page name to the `pagesText` array in `build_html.js`.
 2. Add the title mapping to `getPageTitle` in `build_html.js`.
 3. Add the content string to all languages in `assets/js/content.js`.
-4. Add the link to the navigation in the `getTemplate` function in `build_html.js`.
-5. Run `node build_html.js`.
+4. **Crucial:** Ensure the page name is removed from the \"Coming Soon\" interceptor in `assets/js/script.js` (around line 84) so the markdown actually renders.
+5. Add the link to the navigation in the `getTemplate` function in `build_html.js`.
+6. Run `node build_html.js`.
 
 ### Modifying the Privacy Banner
 1. Edit the `privacyNotice` and `privacyAccept` strings in `assets/js/translations.js`.
