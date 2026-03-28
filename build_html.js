@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = 'c:/GitHub/relimie.github.io';
 const langs = ['en', 'de', 'ru'];
-const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'votes', 'faq'];
+const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'votes', 'faq', 'android'];
 
 const getPageTitle = (page) => {
     switch(page) {
@@ -16,6 +16,7 @@ const getPageTitle = (page) => {
         case 'whats_new': return 'Release News';
         case 'votes': return 'Feature Votes';
         case 'faq': return 'FAQ';
+        case 'android': return 'Android Open Test';
         default: return 'Relimie';
     }
 }
@@ -36,7 +37,9 @@ function getTemplate(lang, pageName, isIndex) {
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" />
                         </a>
-                        <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="coming-soon-link">
+                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        </a>
                     </div>
                     <div class="carousel-container">
                         <img src="../assets/images/screen1.webp" alt="Relimie App Screenshot 1" class="carousel-slide active">
@@ -91,6 +94,7 @@ function getTemplate(lang, pageName, isIndex) {
                 <div class="nav-item has-dropdown">
                     <a href="whats_new.html" data-i18n="community">Community</a>
                     <div class="dropdown-menu">
+                        <a href="android.html" data-i18n="androidTest">Android Open Test</a>
                         <a href="whats_new.html" data-i18n="releaseNews">Release News</a>
                         <a href="votes.html" data-i18n="featureVotes">Feature Votes</a>
                     </div>

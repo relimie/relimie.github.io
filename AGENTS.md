@@ -39,7 +39,8 @@ relimie.github.io/
 │   ├── support.html         # Support Info
 │   ├── whats_new.html       # Release News
 │   ├── faq.html             # FAQ
-│   └── votes.html           # Feature Votes
+│   ├── votes.html           # Feature Votes
+│   └── android.html         # Android Open Test
 ├── de/                      # German pages (same structure)
 ├── ru/                      # Russian pages (same structure)
 ├── index.html               # Root redirect (detects browser language)

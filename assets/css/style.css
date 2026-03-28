@@ -348,6 +348,15 @@ main {
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.coming-soon-link {
+    text-decoration: none;
+}
+
+.coming-soon-link:hover .coming-soon {
+    color: var(--accent-teal);
 }
 
 .hero-right {
