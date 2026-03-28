@@ -81,7 +81,7 @@ function loadContent(lang) {
     }
 
     // Handle new placeholder pages missing from content.js
-    if (page === 'whats_new' || page === 'votes' || page === 'privacy_web') {
+    if (page === 'votes' || page === 'privacy_web') {
         contentEl.innerHTML = `<h2 style="text-align: center; margin-top: 48px;">${translations[lang][page] || 'Coming Soon'}</h2><p style="text-align: center; color: var(--text-secondary);">This page is currently being updated.</p>`;
         return;
     }
