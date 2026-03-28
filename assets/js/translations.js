@@ -17,8 +17,8 @@ const translations = {
                 "heroSubtitle": "Enjoy the moment without losing your edge.",
                 "readGuide": "Read the User Guide",
                 "androidComingSoon": "Android app coming soon",
-                "privacyNotice": "We use cookies to improve your experience. By continuing to use this site, you agree to our Privacy Policy.",
-                "privacyAccept": "Accept"
+                "privacyNotice": "We use local storage to provide functional features like language preferences. We do not use tracking or collect personal data.",
+                "privacyAccept": "Got it"
         },
         "de": {
                 "impressum": "Impressum",
@@ -38,8 +38,8 @@ const translations = {
                 "heroSubtitle": "Genieße den Moment, ohne die Kontrolle zu verlieren.",
                 "readGuide": "Benutzerhandbuch lesen",
                 "androidComingSoon": "Android-App in Kürze verfügbar",
-                "privacyNotice": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die weitere Nutzung dieser Website stimmen Sie unserer Datenschutzrichtlinie zu.",
-                "privacyAccept": "Akzeptieren"
+                "privacyNotice": "Wir verwenden lokalen Speicher für funktionale Zwecke, wie Spracheinstellungen. Wir verwenden kein Tracking und sammeln keine persönlichen Daten.",
+                "privacyAccept": "Verstanden"
         },
         "ru": {
                 "impressum": "Импрессум",
@@ -59,7 +59,7 @@ const translations = {
                 "heroSubtitle": "Наслаждайся моментом, не теряя контроля.",
                 "readGuide": "Читать Руководство",
                 "androidComingSoon": "Приложение для Android скоро появится",
-                "privacyNotice": "Мы используем файлы cookie для улучшения вашей работы с сайтом. Продолжая использовать этот сайт, вы соглашаетесь с нашей Политикой конфиденциальности.",
-                "privacyAccept": "Принять"
+                "privacyNotice": "Мы используем локальное хранилище для обеспечения работы таких функций, как языковые настройки. Мы не используем отслеживание и не собираем личные данные.",
+                "privacyAccept": "Понятно"
         }
 };
