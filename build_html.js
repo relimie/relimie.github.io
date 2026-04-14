@@ -1,9 +1,26 @@
 const fs = require('fs');
 const path = require('path');
+const { marked } = require('marked');
+
+marked.setOptions({ breaks: true, gfm: true });
 
 const root = 'c:/GitHub/relimie.github.io';
 const langs = ['en', 'de', 'ru'];
 const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'votes', 'faq', 'android', 'videos'];
+
+const fileMap = {
+    'privacy': 'privacy_policy',
+    'impressum': 'impressum',
+    'terms': 'terms_of_service',
+    'guide': 'USER_GUIDE',
+    'privacy_web': 'privacy_web',
+    'support': 'support',
+    'whats_new': 'whats_new',
+    'votes': 'votes',
+    'faq': 'faq',
+    'android': 'android',
+    'videos': 'videos'
+};
 
 const getPageTitle = (page) => {
     switch(page) {
@@ -28,7 +45,7 @@ langs.forEach(lang => {
     if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
 });
 
-function getTemplate(lang, pageName, isIndex) {
+function getTemplate(lang, pageName, isIndex, bodyContent) {
     // Generate the HTML that mirrors LeelaClue
     const content = isIndex ? `
         <div class="new-version-banner">
@@ -59,7 +76,7 @@ function getTemplate(lang, pageName, isIndex) {
                     <h1><span data-i18n="heroTitle">Relimie</span> <span class="version-badge">v2.0.0</span></h1>
                     <div class="subtitle" data-i18n="heroSubtitle">Enjoy the moment without losing your edge.</div>
                     <div id="about-content" class="markdown-body">
-                        <!-- Content injected via script.js -->
+                        ${bodyContent}
                     </div>
                     <div style="margin-top: 32px;">
                         <a href="guide.html" class="glass-btn primary" data-i18n="readGuide">Read the User Guide</a>
@@ -70,7 +87,7 @@ function getTemplate(lang, pageName, isIndex) {
     ` : `
         <div class="glass-card page-card">
             <article id="content" class="markdown-body">
-                <!-- Content injected via script.js -->
+                ${bodyContent}
             </article>
         </div>
     `;
@@ -146,8 +163,6 @@ function getTemplate(lang, pageName, isIndex) {
         <p class="copyright">&copy; 2026 Relimie</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="../assets/js/content.js"></script>
     <script src="../assets/js/translations.js"></script>
     <script src="../assets/js/script.js"></script>
 </body>
@@ -155,12 +170,29 @@ function getTemplate(lang, pageName, isIndex) {
 }
 
 langs.forEach(lang => {
+    // Render about for index
+    const aboutPath = path.join(root, 'assets', 'docs', `about_relimie_${lang}.md`);
+    const aboutMd = fs.readFileSync(aboutPath, 'utf8');
+    const aboutHtml = marked.parse(aboutMd);
+
     // Write index
-    fs.writeFileSync(path.join(root, lang, 'index.html'), getTemplate(lang, 'index', true));
+    fs.writeFileSync(path.join(root, lang, 'index.html'), getTemplate(lang, 'index', true, aboutHtml));
     
     // Write text pages
     pagesText.forEach(page => {
-        fs.writeFileSync(path.join(root, lang, `${page}.html`), getTemplate(lang, page, false));
+        const fileName = fileMap[page] || page;
+        const filePath = path.join(root, 'assets', 'docs', `${fileName}_${lang}.md`);
+        
+        let bodyHtml = '';
+        if (fs.existsSync(filePath)) {
+            const md = fs.readFileSync(filePath, 'utf8');
+            bodyHtml = marked.parse(md);
+        } else {
+            console.warn(`Warning: Content file not found: ${filePath}`);
+            bodyHtml = `<p>Coming Soon</p>`;
+        }
+
+        fs.writeFileSync(path.join(root, lang, `${page}.html`), getTemplate(lang, page, false, bodyHtml));
     });
 });
 console.log("HTML pages generated with new Community, Support, Website Privacy, and FAQ menus.");
