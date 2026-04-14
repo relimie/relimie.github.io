@@ -59,7 +59,8 @@ relimie.github.io/
 ### 3.2 Navigation and Content
 - **Static Content**: Main page content is stored as Markdown files in `assets/docs/`. It is rendered to HTML and injected into the final pages during the build step.
 - **UI Strings**: Translatable UI labels (buttons, nav, banners) are managed in `assets/js/translations.js` and injected at runtime.
-- **No Runtime MD Rendering**: Content is "hard-baked" into HTML files for performance and reliability (avoiding `siteContent is undefined` errors).
+- **No Runtime MD Rendering**: Content is "hard-baked" into HTML files for performance and reliability.
+- **Heading IDs**: The `marked-gfm-heading-id` extension is used during the build to generate stable anchor IDs for all headers (critical for ToC functionality).
 
 ### 3.3 The Build Process
 - The HTML files in the language folders are **generated**.

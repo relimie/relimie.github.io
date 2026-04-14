@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const { marked } = require('marked');
+const { gfmHeadingId } = require('marked-gfm-heading-id');
 
+marked.use(gfmHeadingId());
 marked.setOptions({ breaks: true, gfm: true });
 
 const root = 'c:/GitHub/relimie.github.io';
