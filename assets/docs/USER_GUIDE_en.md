@@ -1,148 +1,141 @@
 # Relimie - User Guide
 
-Welcome to Relimie, your mindful companion for tracking alcohol consumption, analyzing your habits, and celebrating your sobriety milestones. Designed with a deeply atmospheric, premium "Obsidian" aesthetic, the app creates a calm and reflective environment to cultivate better habits.
+Welcome to Relimie, your mindful companion for tracking alcohol consumption, analyzing your habits, and celebrating your sobriety milestones. This guide walks you through the core concepts of the app to help you make the most of your journey. For more detailed information, usage videos, and a deeper dive into our philosophy, please visit the **[Relimie website](https://relimie.github.io)**.
 
 ## Table of Contents
-- [1. The Home Screen & Core Navigation](#1-the-home-screen--core-navigation)
-- [2. Quick Logging & Drink Catalog](#2-quick-logging--drink-catalog)
-- [3. Daily Journaling & Context](#3-daily-journaling--context)
-- [4. The Analytics Hub (Free & Premium View)](#4-the-analytics-hub-free--premium-view)
-- [5. The Diary](#5-the-diary)
-- [6. Settings & Personalization](#6-settings--personalization)
-- [7. Data Privacy & Exports](#7-data-privacy--exports)
-- [8. Premium & Monetization (Relimie Premium)](#8-premium--monetization-relimie-premium)
+- [1. Personal Baseline](#1-personal-baseline)
+- [2. Drinks Logging](#2-drinks-logging)
+- [3. Diary and Tags](#3-diary-and-tags)
+- [4. Cravings and Breathing](#4-cravings-and-breathing)
+- [5. Analytics Hub](#5-analytics-hub)
+- [6. Data Export](#6-data-export)
+- [7. Additional Features](#7-additional-features)
+- [8. Relimie Premium](#8-relimie-premium)
+
+## 1. Personal Baseline
+
+### The Core Concept
+Setting a **Personal Baseline** is the foundational step in understanding and managing your alcohol consumption. Instead of merely counting drinks, a baseline gives your tracking meaning by acting as your personalized long-term orientation point.
+
+It is important to understand what a baseline *is* — and what it *isn't*. It is expressed as a daily alcohol amount, but it is **not a strict daily limit you must never cross**. Think of it more like a long-term average you are aiming to stay around. Some days you may drink a little more, some days less or not at all — that is perfectly normal. What matters is that over time, your consumption gravitates back toward, and ideally below, that middle value. The baseline is your compass, not a hard wall.
+
+By setting this personal target, tracking becomes genuinely actionable: the app clearly shows you when you are running ahead of your pace, exactly how many recovery days you need to bring your average back in line, and how many drinks you've successfully avoided to protect your health.
+
+### Establishing the Baseline
+Your Personal Baseline is initially configured during the **Onboarding** process when you first launch the app. As your lifestyle and habits evolve, you can effortlessly adjust this limit at any time by navigating to **Settings -> Personalization** to redefine your pure alcohol ceiling.
+
+### Determining Your Target
+If you are unsure what a healthy baseline looks like, Relimie provides dynamic, science-based suggestions. These recommendations are aligned with the **World Health Organization (WHO)** guidelines. The app also contextualizes your target by comparing it against the median consumption levels tailored to your country's health data and adjusted for your gender. As your habits improve, pay attention to your actual consumption patterns: if you consistently find yourself drinking well below your current limit, that is a strong positive signal — consider revisiting **Settings → Personalization** to tighten your baseline to a lower value. Your ceiling should grow stricter as you grow stronger.
+
+### Tracking Your Progress
+Once your baseline is established, monitoring your adherence takes only moments. By tapping the glowing **Orb** on your Home Screen, you toggle into the **Baseline Trend View** — a second tap cycles you back to the standard display. This instantly visualizes whether you are under your limit or exactly how many recovery days you need to get back on track. The Orb's color signals your position at a glance: **green** when you are safely within your limit, **gold** when you are approaching it, and **red** when recovery days are needed. Note that on **past dates**, tapping the Orb does not cycle views — instead, it logs a "Clear Day" for that day if it has no entry recorded. For comprehensive, long-term macro-shifts, you can dive deeper into the **Trends** tab located inside the Analytics Hub.
 
 ---
 
-## 1. The Home Screen & Core Navigation
+## 2. Drinks Logging
 
-The Home screen acts as your operational base. Clean, gesture-driven, and highly visual, it immediately lets you know where you stand.
+### The Core Concept
+Tracking your drinks accurately should be completely frictionless while still providing a wealth of data for your future self. Relimie goes beyond standard alcohol counting by capturing a holistic picture of your consumption's real-world impact. When you are ready to track, simply tap the **Add Drink** button on the Home Screen.
 
-### **The Orb**
-The focal point of the home screen is an animated, glowing, glass-like UI element known as **The Orb**. It shifts appearance directly reacting to your consumption status:
-- **Gray/Clear**: Your day has not yet been logged. A blank canvas.
-- **Teal (Sober)**: You are sober today.
-- **Sky Blue (Moderate)**: You drank, but stayed within safe personal or standard drinking limits.
-- **Deep Blue (Heavy)**: You experienced a heavy drinking day.
+### Comprehensive Tracking
+When you log a drink, you inherently log much more than just the alcohol. Relimie automatically calculates the **money spent** by estimating costs based on your country and your selected location context — you can choose between **"Home"** and **"Outside"** directly within the logging screen, since a drink at a bar typically costs significantly more than the same drink at home. If the auto-calculated summary price still doesn't match your actual bill, you can easily correct it by **long-pressing the Total Price** in the bottom summary bar to manually overwrite the final amount spent. Furthermore, the app actively counts the **calories** generated by your alcohol intake, providing another layer of health awareness.
 
-The Orb is fully interactive:
-- **Tap**: Brings up the quick-action menu—giving you one-touch access to log a drink or quickly mark the day as 100% sober.
-- **Long Press (The Breathing Exercise)**: If you feel a sudden craving or urge to drink, long-press the Orb. This initiates a **4-7-8 Mindful Breathing Exercise**. The screen transforms into a calm, expanding and contracting orb that guides you through inhaling (4 seconds), holding (7 seconds), and exhaling (8 seconds). Coupled with randomized mindful citations and quotes, this feature acts as an immediate psychological circuit breaker to help you ride out intense cravings.
+### Navigating the Catalog and AI Assistance
+Relimie stores a built-in catalog of pre-delivered standard drinks, but also allows you to securely save any number of your own custom drinks. To make navigating this growing catalog effortless, a dedicated **Search Bar** helps you find your drinks faster. Once you have typed a search term and no match is found, the **AI Sparkle button** automatically appears. Tapping this button prompts the system to research and autofill the correct Volume and ABV for your new drink. AI-assisted detection is available across all tiers, though the number of monthly lookups is tiered — **Trial** users receive a generous quota to explore the feature, while **Subscription** and **Lifetime Premium** holders enjoy higher limits. You also have total control over what is displayed: you can use the **(+) button** to define custom drinks manually, and you can use the **Organizing Dialog** to hide any catalog drinks you don't use, keeping your interface beautifully relevant to your lifestyle.
 
-### **Navigating Time**
-- Located underneath the Orb is a horizontal swipeable date strip. Swiping left and right lets you seamlessly backdate entries or examine previous days without ever leaving the homepage.
-- Your **Current Sober Streak** floats proudly at the top of the interface.
-
----
-
-## 2. Quick Logging & Drink Catalog
-
-Relimie is built to reduce the friction of tracking, but highly flexible for unique, nuanced drinks. 
-
-### **The Logger Screen**
-When you tap to add a drink on any given day, you are taken to a beautiful grid layout mapping all standard drinks natively embedded into the app (e.g., Beer, Wine, Cocktails, Spirits). The app comes pre-configured with globally standard ABVs and volumes.
-
-However, you have total control over what is logged:
-- **Tuning Drinks**: You can use the +/- steppers during selection to fine-tune the Volume (ml) or Strength (ABV %) if the pint you are holding deviates from the standard catalog.
-- **Price Overrides**: By default, the app estimates what a drink costs depending on your ISO country code. However, you can toggle between "Home" (cheaper) and "Outside" (more expensive).
-- **Manual Submission Pricing**: If your total for the day doesn't match the automatic sum (e.g., due to happy hours or shared bottles), you can **Long-Press the Total Price** in the bottom summary bar to manually adjust the final amount.
-
-### **Customizing Your Catalog (Relimie Premium ⭐️)**
-
-Relimie allows you to mold the interface to your specific lifestyle:
-
-- **Add Custom Drinks**: Tap the **(+) button** in the top right of the Logger screen. You can choose a personalized icon, set a name, and define its volume and strength (ABV). The app even lets you set default "Home" and "Outside" prices for your custom creations.
-- **Edit & Tune Existing Drinks**: **Long-Press** any drink card in the grid to open the editing menu. Here you can tweak the ABV or Volume if your local standard differs from the app's default. Once adjusted, the drink will display a small star badge ⭐️.
-- **Organizing & Hiding Drinks**: If you never drink wine or certain spirits, you can "Hide" standard drinks via the grid edit menu (Long-Press) or settings. They will instantly vanish from your logger screen so it strictly reflects what you consume.
+### Reviewing Your Statistics
+All of this comprehensively collected data is gathered and visualized for you inside the **Analytics Hub**. You can open the Hub at any time by **swiping up** on the Home Screen, or by tapping the **grid icon** in the top corner of the screen. Inside, you'll find the **Consumption Overview**. This section breaks your logging down in explicit detail:
+- **Money Spent:** You can track the precise financial impact of your habits by viewing your *Total Spent* over your entire tracking lifespan, alongside your *Avg Spent* (average daily cost). Furthermore, this financial data actively powers the insights in the **Trends** and **Habits** tabs, allowing you to evaluate if your monthly spending is safely decreasing or dangerously increasing compared to past months.
+- **Calories Counted:** See exactly how drinking affects your diet by viewing your *Total Calories* and your daily *Avg Calories*.
+- **Alcohol Volume:** The tab clearly tracks your total pure alcohol intake and the overall volume of standard drinks you've consumed.
+This detailed breakdown ensures you maintain a holistic, immediate view of the financial and physical impacts of your consumption over time.
 
 ---
 
-## 3. Daily Journaling & Context
+## 3. Diary and Tags
 
-Relimie emphasizes the concept that understanding *why* you drink is vastly more important than simply counting *what* you drink.
+### The Core Concept
+Understanding *why* you drink is vastly more important than simply counting *what* you drink. The Diary and Tagging system is intentionally designed to build the emotional and situational context directly around your numerical data.
 
-### **The Daily Journal**
-Access the journal via a simple layout swipe on any day. This screen builds the emotional context around your numerical data.
+### Documenting the Emotional Context
+Emotional context is crucial for identifying behavioral triggers. By logging your emotional state before drinking, how you feel the day after a heavy session, or the positive energy you experience during a sober streak, you build a roadmap of your psychology. You can seamlessly reach your daily journal directly by tapping the **Log** button right on the Home Screen. Furthermore, you can also access it automatically after logging a new drink, by tapping any specific chronological day inside your Diary, or simply by swiping the date layout on the Home Screen. For **Premium** users, tapping directly on any entry in the Diary History acts as a quick-edit shortcut, jumping straight to that day's journal without navigating away from the Diary view.
 
-- **Fast Tagging System**: Tap to assign emotional flags to your day. The tags are categorized neatly into:
-  - **Triggers**: Stressed, Bored, Social Pressure, Sad (used when logging drinking).
-  - **After-Effects**: Hangover, Anxiety, Poor Sleep, Guilt (used the day after heavy drinking).
-  - **Sober Feelings**: Productive, Feeling Great, Energetic (used to reinforce positive sober streaks).
-- **Physical Context**: Explicitly track your environmental factors (e.g., drank *Alone* vs. *With Friends*, drank at *Home* vs. *Outside*).
-- **Freeform Reflections**: Use the built-in text area to write private, stream-of-consciousness reflections. You can even use your OS-native voice dictation to ramble your thoughts hands-free.
+### Contextual Tagging System
+Relimie offers fast, contextual emotional tags to categorize your days. The app automatically detects your situation and surfaces only the most relevant category — no manual selection required. **Triggers** (like stressed, bored, or facing social pressure) appear when you log alcohol, **After-Effects** (such as hangover, anxiety, or guilt) are available the day after drinking, and **Sober Feelings** (like feeling productive or great) are highlighted on clean days. You can perfectly match your personal psychological footprint by creating and managing custom, user-defined tags through the **Settings** menu.
 
-*(Note: Custom user-defined tags can easily be created and added directly from this view).*
+### Recognizing Patterns
+Over time, this emotional data becomes your strongest tool. Inside the Analytics Hub under the **Habits** section, Relimie actively re-ranks your most frequently used tags up against your consumption days. This automatically generates a "Top Reasons You Drink" list, allowing you to anticipate and actively avoid specific situational triggers.
 
 ---
 
-## 4. The Analytics Hub (Free & Premium View)
+## 4. Cravings and Breathing
 
-To view long-term macro shifts in your behavior, navigate to the **Analytics Hub**. This tablet-optimized dashboard displays high-contrast glassmorphism cards tracking overarching Key Performance Indicators.
+### The Core Concept
+When a sudden urge or craving to drink hits, sheer willpower often isn't enough. Disrupting the immediate impulse gives your rational brain a crucial moment to catch up and regain control, significantly reducing the probability of an unwanted relapse.
 
-### **Analytics (Relimie Premium ⭐️)**
-*Free for your first 30 logging days. After the trial period, these baseline stats require a subscription.*
-- Details your complete lifespan of tracking: Total days logged, total missed days, and overall ratio of sober relative to drinking days.
-- **Consumption Overview**: Displays total monetary spending, daily average spending, total standard units consumed, and total caloric intake generated by alcohol.
-- **Streaks System**: Highlights your longest ever sober streak up against your longest heavy drinking streak.
-
-### **Trends (Relimie Premium ⭐️)**
-- **Target Progress**: Visualizes how well you are staying underneath your designated "Alcohol limits."
-- **Volume & Spending Macro Shifts**: Dynamically calculates whether your consumption and spending are currently trending up (dangerous) or down (safely) relative to previous tracking periods.
-- **Preference Shifts**: Analyzes data to reveal if your "Main" drink is changing over time. 
-- **Harm Reduction Rating**: Analyzes if your frequency of negative tags (like Hangovers) is increasing or decreasing.
-
-### **Habits (Relimie Premium ⭐️)**
-- **When & Why**: Produces sweeping visual charts measuring the exact days of the week, or months of the year, that you suffer the most relapses.
-- Re-ranks your heavily used Tags strictly on consumption days, creating a "Top 3 Reasons You Drink" list so you know what environmental triggers to avoid.
+### Riding Out the Impulse
+By long-pressing the Orb on Today's date, you trigger an immediate psychological circuit breaker directly on the Home Screen. The screen transforms into a calm, expanding and contracting visual that guides you through the proven **4-7-8 Breathing Technique** — inhaling for 4 seconds, holding for 7, and exhaling for 8. This mindful support flow is accompanied by grounding citations and quotes to help anchor your focus. Once the breathing cycle completes, the app surfaces a prompt to log a **"Clear Day"** — a positive reinforcement step that turns the act of resisting a craving into a trackable achievement on your sober streak.
 
 ---
 
-## 5. The Diary (Relimie Premium ⭐️)
+## 5. Analytics Hub
 
-The Diary is your chronologically descending repository of memory. *(Free for your first 30 logging days).*
-Instead of a standard calendar, the Diary works like a literal notebook of your journey.
-- **Heatmap Color Coding**: Every logged day strip is color-coded, making it incredibly easy to visually parse a long scroll. Heavy weekends stick out as dark blue gashes, while long sober streaks form beautifully unbroken teal lines.
-- **Fluid Edits**: History isn't locked. You can tap on a diary log from three weeks ago, instantly jump into its context menu, add a missing drink, tweak an emotional tag, and gracefully slide back to the timeline.
+### The Core Concept
+The Analytics Hub is where your daily inputs are transformed into actionable, long-term insights, allowing you to view your overarching progress and behavior shifts clearly. You can open it at any time by **swiping up** on the Home Screen, or by tapping the **grid icon** in the top corner of the screen.
 
----
+### Visualizing Your Lifespan
+The hub provides a complete snapshot of your tracking lifespan. Inside, you can review your **Consumption Overview** to see your daily average spending, total caloric impact, and your overall ratio of sober days versus drinking days. The **Streaks System** cleanly highlights your defining milestones, placing your longest ever sober streak in perspective against your longest heavy drinking period. Through sweeping visual charts, the **Trends and Habits** sections allow you to verify if your consumption and spending are currently trending safely downward, and pinpoint exactly which days of the week or months of the year leave you most vulnerable to relapse.
 
-## 6. Settings & Personalization
-
-Relimie molds to your geography and your psychological comfort zone.
-
-- **Flexible Alcohol Units**: Depending on your location, you can universally shift the app’s measurement standard to grams, milliliters (ml), Standard US Drinks (14g), UK Units (8g), or AU Drinks (10g).
-- **Personal Daily Limits**: This is the "North Star" of your habit tracking. Navigate to **Settings -> Personalization** to configure your hard target ceilings. 
-  - **Why set a limit?**: The app uses this value to determine the color of the Home Screen Orb. If you stay below your limit, the Orb stays Teal/Blue; if you exceed it, it shifts to Deep Blue/Purple.
-  - **How to choose?**: The app provides dynamic suggestions based on WHO guidelines and your specific country's health data, adjusted for your gender.
-  - **The Limit Trend**: In the Analytics Hub, the "Target Progress" card calculates exactly how much "sober buffer" you have left or—if you've exceeded it—exactly how many sober days you need to reset your monthly average back to health.
-- **Favorite Drink Tooltip System**: Establish an ultimate "Favorite Drink" (such as a standard 330ml Beer or a specific Wine Glass). Whenever you view total alcohol numbers (like in the Analytics hub), a subtle haptic tap will open a tooltip translating that overwhelming pure gram number into "e.g. ~14 Large Beers", making abstract consumption highly tangible.
+### Reviewing Consumption History
+Below your overview metrics, the Hub hosts your complete **Consumption History**. This chronologically ordered ledger allows you to easily review all past entries. More importantly, tapping directly on the history summary opens a date picker, allowing you to seamlessly navigate back to any specific previous date on the Home Screen. From there, you can effortlessly adjust logged drinks, amend your diary notes, or refine your emotional tags entirely retroactively.
 
 ---
 
-## 7. Data Privacy & Exports
+## 6. Data Export
 
-Your sobriety journey is intimately private, and Relimie treats it successfully as such.
+### The Core Concept
+Your sobriety journey is intimately private. While there may be times you need to share your progress with a medical professional or securely back up your history, Relimie ensures you retain complete ownership over your data by defaulting to a private, offline-first architecture.
 
-- **Offline-First Security**: The application has no central cloud database requirement. Every tag, log, reflection, custom drink, and monetary value exists physically on your local device storage.
-- **PDF Export ("Share My Story")**: Need to share your progress with a therapist, a doctor, or a sponsor? The "Share My Story" button in the Hub organically compiles your critical metrics (streaks, habit charts, spending shifts) into a beautifully rendered, margin-clean PDF report. *(Note: Deeply personal journal text descriptions are omitted algorithmically from the PDF to protect your privacy).*
-- **Raw JSON Backup**: To safely port your local data to a new device in the future, navigate to the `Dev Tools / Info` menu and select "Export Data". This compresses your entire lifestyle configurations (Settings, Drink Catalog, Tag Catalogs, Logs) into a portable JSON package.
+### Sharing and Protecting Your History
+To share your milestones with a therapist, doctor, or sponsor, you can generate a **"Share My Story" PDF Export** native to the Hub. This creates a beautifully rendered report of your critical metrics. To protect your privacy, it omits your deeply personal journal prose, while still including your emotional **tags** — so your behavioral patterns remain visible without exposing your private thoughts. Additionally, the **Raw JSON Backup** tool exports your entire application profile — including all logs, catalog, and tag configurations — into a portable file. This is ideal for deep-diving into your own data using an external tool or a **Gen AI assistant** to surface patterns that go beyond the built-in analytics.
 
 ---
 
-## 8. Premium & Monetization (Relimie Premium)
+## 7. Additional Features
 
-To respect users, the foundational tracking functions of Relimie are perpetually free. However, many of the advanced features are provided as a **30-Day Free Trial** based on your logging history. After 30 days of use, the app restricts access to macro-analytics, deep reflection, and custom structuring unless you upgrade to **Relimie Premium**.
+While tracking and analyzing form the core of Relimie, the app also includes several utility features to further support your journey:
+- **Alcohol Unit Customization**: Relimie can display your consumption in the unit system that feels most natural to you. Navigate to **Settings → Personalization** to choose between Grams of pure alcohol, Milliliters, or Standard Drinks calibrated to the **US**, **UK**, or **Australian** definitions.
+- **Multilingual Support**: Relimie is fully localized to ensure you can interact with your health data in your native tongue. Currently, the app natively supports three languages: English, German, and Russian.
+- **Daily Reminders**: To help you build a consistent tracking habit, you can enable a daily reminder notification through the **Settings** menu. This gentle nudge ensures you never forget to check in and log your daily emotional state.
 
-**Core Free Tier Features (Always Free):**
-- Perpetual daily logging of predefined standard drinks.
-- The interactive Home Screen Orb states and Quick Actions.
-- The 4-7-8 Deep Breathing Exercise system.
-- Streaks visible on the Home Screen.
+---
 
-**Premium Integration Highlights (Locked after 30 Logging Days):**
-- **Drink Customization**: Creating custom drinks from scratch or overriding specific attributes requires a subscription after the early access period.
-- **The Diary History**: Navigating backwards through the chronological ledger of your entire drinking/sober history.
-- **Unlocks Advanced Data Views**: The heavily computational `Analytics`, `Trends`, and `Habits` tabs inside the Hub are exclusively reserved for premium users.
-- **Full JSON & PDF Exporting**: Generating custom layout PDF reports ("Share My Story") and deeply-nested JSON configuration backups are powerful tools limited to the pro-tier.
+## 8. Relimie Premium
 
-Upgrades are easily managed dynamically via RevenueCat processing to provide safe, instant unlocking after subscribing. You can engage the paywall directly from the `Info` screen, where the teal "Upgrade to Premium" button resides, or anytime you tap on a locked component.
+To respect our users, the foundational tracking capabilities of Relimie are perpetually free. However, access to deep macro-analytics, unlimited historical reflections, and advanced AI utilities are part of the **Relimie Premium** experience.
+
+### The 30-Logging-Day Free Trial
+When you first start using Relimie, you are automatically granted a **30-Logging-Day Free Trial** that unlocks every premium feature. This timeframe strictly counts down *only* on the days you actually log an entry, giving you ample, fair time to properly explore the app at your own pace without feeling rushed.
+
+### Core Free Tier (Always Free)
+After your 30 logging days expire, you retain perpetual access to the most vital tools, completely for free:
+- Unlimited daily logging of pre-delivered standard drinks.
+- Full access to the interactive Home Screen Orb and Quick Actions (Log/Sober).
+- The 4-7-8 Deep Breathing mindful exercise.
+- Your sober streaks remaining visible on the Home Screen.
+- Read-only access to your full historical Diary.
+
+### Relimie Premium Features
+Upgrading to **Relimie Premium** permanently unlocks (or continues) the following capabilities:
+- **Advanced Orb Navigation**: Full access to the Baseline Trend View, allowing you to instantly visualize your distance to your target limit.
+- **Diary & Reflection Writing**: The ability to write new journal entries and attach emotional tags to new days. After your trial expires, the Diary becomes read-only on the free tier.
+- **Complete Customization**: AI-assisted drink creation, manual drink overrides, and expanding your personal drink catalog natively.
+- **Deep Reflection**: Navigating backward through your full chronological ledger and using direct-editing shortcuts directly from the Diary.
+- **Analytics & Exporting**: Permanent access to the powerful `Analytics`, `Trends`, and `Habits` tabs inside the Hub, along with the ability to generate PDF "Share My Story" reports and Raw JSON backups.
+
+### Pricing Models
+Upgrades are securely managed through your device's native app store. You can select the plan that best fits your lifestyle:
+- **Monthly Subscription**: Auto-renewing, billed monthly.
+- **Annual Subscription**: Auto-renewing, billed once per year.
+- **Lifetime Purchase**: A one-time purchase granting access to all current premium features for the lifetime of the application.
+- **Promo Codes**: If you have a promotional Apple Offer Code, you can seamlessly apply it directly through the "Redeem Code" link located in the app's Info menu.
