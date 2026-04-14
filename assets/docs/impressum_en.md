@@ -2,7 +2,7 @@
 
 ## Service Provider
 Irene Engelko
-leelaclue@gmail.com
+ikaengel@icloud.com
 
 ## Disclaimer
 
@@ -17,4 +17,4 @@ The content and works created by the operator of this application are subject to
 
 ## Contact
 For any legal inquiries, please contact:
-Irene Engelko | leelaclue@gmail.com
+Irene Engelko | ikaengel@icloud.com

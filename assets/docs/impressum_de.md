@@ -2,7 +2,7 @@
 
 ## Angaben gemäß § 5 DDG
 Irene Engelko
-leelaclue@gmail.com
+ikaengel@icloud.com
 
 ## Haftungsausschluss
 
@@ -17,4 +17,4 @@ Die durch den Betreiber dieser Anwendung erstellten Inhalte und Werke unterliege
 
 ## Kontakt
 Bei rechtlichen Anfragen wenden Sie sich bitte an:
-Irene Engelko | leelaclue@gmail.com
+Irene Engelko | ikaengel@icloud.com

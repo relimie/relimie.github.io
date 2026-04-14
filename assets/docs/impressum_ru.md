@@ -2,7 +2,7 @@
 
 ## Поставщик услуг
 Irene Engelko
-leelaclue@gmail.com
+ikaengel@icloud.com
 
 ## Отказ от ответственности
 
@@ -17,4 +17,4 @@ leelaclue@gmail.com
 
 ## Контакт
 По юридическим вопросам обращайтесь:
-Irene Engelko | leelaclue@gmail.com
+Irene Engelko | ikaengel@icloud.com

@@ -46,4 +46,4 @@ Ein ununterbrochener und störungsfreier Betrieb der Anwendung oder die Verfügb
 ## 7. Geltungsbereich
 Dieser Haftungsausschluss gilt für alle Nutzungsformen der Relimie-Anwendung, einschließlich kostenfreier und Premium-Funktionen.
 
-**Kontakt**: Irene Engelko | leelaclue@gmail.com
+**Kontakt**: Irene Engelko | ikaengel@icloud.com

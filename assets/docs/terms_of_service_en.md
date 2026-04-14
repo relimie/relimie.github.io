@@ -46,4 +46,4 @@ Continuous and uninterrupted operation of the application or availability of loc
 ## 7. Scope
 This disclaimer applies to all forms of use of the Relimie application, including free and premium functions.
 
-**Contact**: Irene Engelko | leelaclue@gmail.com
+**Contact**: Irene Engelko | ikaengel@icloud.com
