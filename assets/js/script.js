@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadTranslations(currentLang);
     initHamburger();
     initPrivacyBanner(currentLang);
+    initSmoothScroll();
     startCarousel();
 });
 
@@ -115,4 +116,27 @@ function startCarousel() {
         if (!slides[currentSlide]) return;
         slides[currentSlide].classList.add('active');
     }, intervalTime);
+}
+
+// 4. Smooth Scroll for Anchor Links (Chrome/Safari compatibility)
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                // We use scrollIntoView if available, but calculate manually to respect scroll-padding in JS
+                // or just rely on the CSS scroll-padding-top if the browser supports it.
+                // Modern browsers supporting scroll-behavior will work with just this.
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Update URL without jump
+                history.pushState(null, null, `#${targetId}`);
+            }
+        });
+    });
 }
