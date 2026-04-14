@@ -11,7 +11,7 @@ Relimie is a **mindful drinking companion app** designed for tracking alcohol co
 
 The website is a **static site** that uses a small Node.js script (`build_html.js`) for template-based generation of localized pages.
 
-**Current App Version**: v2.0.1
+**Current App Version**: v2.0.0
 **Target Platform**: iOS (Apple App Store)
 
 ---
