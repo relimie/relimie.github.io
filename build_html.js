@@ -31,6 +31,10 @@ langs.forEach(lang => {
 function getTemplate(lang, pageName, isIndex) {
     // Generate the HTML that mirrors LeelaClue
     const content = isIndex ? `
+        <div class="new-version-banner">
+            <p data-i18n="newVersionBanner">Version 2.0.0 is now live! Discover the new interactive Orb and AI logging.</p>
+            <a href="whats_new.html" class="banner-cta" data-i18n="seeWhatsNew">See what's new</a>
+        </div>
         <div class="hero">
             <div class="hero-content glass-card">
                 <div class="hero-left">
@@ -52,7 +56,7 @@ function getTemplate(lang, pageName, isIndex) {
                     </a>
                 </div>
                 <div class="hero-right">
-                    <h1 data-i18n="heroTitle">Relimie</h1>
+                    <h1><span data-i18n="heroTitle">Relimie</span> <span class="version-badge">v2.0.0</span></h1>
                     <div class="subtitle" data-i18n="heroSubtitle">Enjoy the moment without losing your edge.</div>
                     <div id="about-content" class="markdown-body">
                         <!-- Content injected via script.js -->
@@ -95,7 +99,7 @@ function getTemplate(lang, pageName, isIndex) {
 
             <nav class="main-nav">
                 <div class="nav-item has-dropdown">
-                    <a href="whats_new.html" data-i18n="community">Community</a>
+                    <a href="whats_new.html"><span data-i18n="community">Community</span> <span class="dot-new"></span></a>
                     <div class="dropdown-menu">
                         <a href="android.html" data-i18n="androidTest">Android Open Test</a>
                         <a href="whats_new.html" data-i18n="releaseNews">Release News</a>

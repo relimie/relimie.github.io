@@ -20,7 +20,9 @@ const translations = {
                 "readGuide": "Read the User Guide",
                 "androidComingSoon": "Android app coming soon",
                 "privacyNotice": "We use local storage to provide functional features like language preferences. We do not use tracking or collect personal data.",
-                "privacyAccept": "Got it"
+                "privacyAccept": "Got it",
+                "newVersionBanner": "Version 2.0.0 is now live! Discover the new interactive Orb and AI logging.",
+                "seeWhatsNew": "See what's new"
         },
         "de": {
                 "impressum": "Impressum",
@@ -43,7 +45,9 @@ const translations = {
                 "readGuide": "Benutzerhandbuch lesen",
                 "androidComingSoon": "Android-App in Kürze verfügbar",
                 "privacyNotice": "Wir verwenden lokalen Speicher für funktionale Zwecke, wie Spracheinstellungen. Wir verwenden kein Tracking und sammeln keine persönlichen Daten.",
-                "privacyAccept": "Verstanden"
+                "privacyAccept": "Verstanden",
+                "newVersionBanner": "Version 2.0.0 ist jetzt live! Entdecke den neuen interaktiven Orb und KI-Logging.",
+                "seeWhatsNew": "Was gibt's Neues?"
         },
         "ru": {
                 "impressum": "Импрессум",
@@ -66,6 +70,8 @@ const translations = {
                 "readGuide": "Читать Руководство",
                 "androidComingSoon": "Приложение для Android скоро появится",
                 "privacyNotice": "Мы используем локальное хранилище для обеспечения работы таких функций, как языковые настройки. Мы не используем отслеживание и не собираем личные данные.",
-                "privacyAccept": "Понятно"
+                "privacyAccept": "Понятно",
+                "newVersionBanner": "Версия 2.0.0 уже доступна! Открой для себя новый интерактивный Орб и ИИ-логгинг.",
+                "seeWhatsNew": "Что нового?"
         }
 };
