@@ -593,6 +593,22 @@ main {
     font-weight: 700;
 }
 
+.markdown-body blockquote {
+    margin: 32px 0;
+    padding: 24px 32px;
+    background: rgba(45, 212, 191, 0.08);
+    border-left: 4px solid var(--accent-teal);
+    border-radius: 0 20px 20px 0;
+    color: var(--text-primary);
+    font-size: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.markdown-body blockquote p {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
 .loading-text {
     text-align: center;
     color: var(--text-secondary);
