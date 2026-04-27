@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initPrivacyBanner(currentLang);
     initSmoothScroll();
     startCarousel();
+    initScrollReveal();
+    initStickyCta();
+    initScrollSpy();
 });
 
 // Load static localized strings via data-i18n tags
@@ -101,21 +104,81 @@ function initPrivacyBanner(lang) {
         }, 600);
     });
 }
-// Simple Carousel Logic
+// Carousel Logic — handles multiple independent carousels
 function startCarousel() {
-    const slides = document.querySelectorAll('.carousel-slide');
-    if (slides.length === 0) return;
+    document.querySelectorAll('.ls-carousel').forEach(container => {
+        const slides = container.querySelectorAll('.carousel-slide');
+        if (slides.length < 2) return;
+        let current = 0;
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 4000);
+    });
+}
 
-    let currentSlide = 0;
-    const intervalTime = 4000; // 4 seconds
+// Scroll reveal for landing sections
+function initScrollReveal() {
+    const targets = document.querySelectorAll('.reveal-section');
+    if (targets.length === 0) return;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+    targets.forEach(el => observer.observe(el));
+}
 
-    setInterval(() => {
-        if (!slides[currentSlide]) return;
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        if (!slides[currentSlide]) return;
-        slides[currentSlide].classList.add('active');
-    }, intervalTime);
+// Sticky App Store CTA — present on all pages.
+// Index page: appears once Section 1 store badges scroll out of view.
+// All other pages: shown immediately on load.
+function initStickyCta() {
+    const cta = document.getElementById('sticky-cta');
+    if (!cta) return;
+    const heroStore = document.querySelector('#ls-hero .store-section');
+    if (!heroStore) {
+        // Not the index page — show right away
+        cta.classList.add('visible');
+        return;
+    }
+    const observer = new IntersectionObserver(entries => {
+        cta.classList.toggle('visible', !entries[0].isIntersecting);
+    }, { threshold: 0 });
+    observer.observe(heroStore);
+}
+
+// Scroll-spy for section sidebar nav
+function initScrollSpy() {
+    const nav = document.getElementById('section-nav');
+    if (!nav) return;
+
+    const sectionIds = ['ls-hero', 'ls-diary', 'ls-logging', 'ls-analytics', 'ls-cravings'];
+    const items = nav.querySelectorAll('.section-nav-item');
+
+    function updateActive() {
+        const center = window.innerHeight / 2;
+        let closest = null;
+        let minDist = Infinity;
+
+        sectionIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const rect = el.getBoundingClientRect();
+            const dist = Math.abs(rect.top + rect.height / 2 - center);
+            if (dist < minDist) { minDist = dist; closest = id; }
+        });
+
+        items.forEach(item => {
+            item.classList.toggle('active', item.dataset.section === closest);
+        });
+    }
+
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
 }
 
 // 4. Smooth Scroll for Anchor Links (Chrome/Safari compatibility)

@@ -88,7 +88,7 @@ body::before {
 }
 
 .header-container {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 16px 24px;
     display: flex;
@@ -258,7 +258,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 48px 24px;
+    padding: 16px 24px;
 }
 
 .glass-card {
@@ -271,52 +271,67 @@ main {
 }
 
 .page-card {
-    max-width: 900px;
+    max-width: 1100px;
     width: 100%;
     padding: 48px;
 }
 
-/* Hero Section */
-.hero {
+/* Landing Sections */
+.landing-section {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1100px;
+    padding: 32px 24px;
 }
 
-.hero-content {
+.ls-card {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    padding: 64px;
-    gap: 64px;
+    align-items: center;
+    gap: 56px;
+    padding: 48px;
     width: 100%;
+    max-width: 1440px;
 }
 
-.hero-left {
-    flex: 1;
+.ls-reversed {
+    flex-direction: row-reverse;
+}
+
+.ls-text {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.ls-media {
+    flex: 0.8;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
 }
 
-/* Hero Carousel */
-.carousel-container {
+/* Per-section carousel */
+.ls-carousel {
     position: relative;
-    width: 280px;
-    height: 600px;
-    border-radius: 48px;
+    width: 260px;
+    height: 560px;
+    border-radius: 44px;
     overflow: hidden;
-    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
     background: rgba(15, 23, 42, 0.4);
-    border: 1px solid var(--glass-border);
+    border: 2px solid rgba(45, 212, 191, 0.55);
+    box-shadow:
+        0 24px 80px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(45, 212, 191, 0.12),
+        0 0 40px rgba(45, 212, 191, 0.18);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
-.carousel-slide {
+.ls-carousel .carousel-slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -327,10 +342,120 @@ main {
     transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.carousel-slide.active {
+.ls-carousel .carousel-slide.active {
     opacity: 1;
 }
 
+/* Scroll reveal
+   Strategy: scale-based entrance on the card (perpendicular to scroll → always visible),
+   combined with large horizontal slide on each half (also perpendicular to scroll direction).
+   Spring overshoot easing (0.34, 1.56, 0.64, 1) gives a physical "pop" feel. */
+
+/* Card: scales up from 85% with fade — the scale is clearly visible against any scroll speed */
+.reveal-section .ls-card {
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 0.65s ease-out,
+                transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.reveal-section.is-visible .ls-card {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Normal layout (Section 3): phone on left, text on right */
+.reveal-section .ls-card:not(.ls-reversed) .ls-media {
+    opacity: 0;
+    transform: translateX(-90px);
+    transition: opacity 0.6s ease 0.18s,
+                transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.18s;
+}
+.reveal-section .ls-card:not(.ls-reversed) .ls-text {
+    opacity: 0;
+    transform: translateX(90px);
+    transition: opacity 0.6s ease 0.3s,
+                transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s;
+}
+
+/* Reversed layout (Sections 2 & 4): text on left, phone on right */
+.reveal-section .ls-card.ls-reversed .ls-text {
+    opacity: 0;
+    transform: translateX(-90px);
+    transition: opacity 0.6s ease 0.18s,
+                transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.18s;
+}
+.reveal-section .ls-card.ls-reversed .ls-media {
+    opacity: 0;
+    transform: translateX(90px);
+    transition: opacity 0.6s ease 0.3s,
+                transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s;
+}
+
+/* Final resting state */
+.reveal-section.is-visible .ls-card .ls-media,
+.reveal-section.is-visible .ls-card .ls-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Gentle float on the phone after it arrives */
+@keyframes floatPhone {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-12px); }
+}
+.reveal-section.is-visible .ls-carousel {
+    animation: floatPhone 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+/* Sticky App Store CTA bar */
+.sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 12px 24px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--glass-border);
+    z-index: 950;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sticky-cta.visible {
+    transform: translateY(0);
+}
+
+.store-badge-sm {
+    height: 36px;
+    transition: opacity 0.2s;
+}
+
+.store-badge-sm:hover {
+    opacity: 0.8;
+}
+
+.coming-soon-link-sm {
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: color 0.2s;
+}
+
+.coming-soon-link-sm:hover {
+    color: var(--accent-teal);
+}
+
+/* Shared store/badge styles */
 .store-section {
     display: flex;
     flex-direction: column;
@@ -364,25 +489,20 @@ main {
     color: var(--accent-teal);
 }
 
-.hero-right {
-    flex: 1.5;
-    display: flex;
-    flex-direction: column;
-}
-
-.hero-right h1 {
+/* Hero typography (used inside Section 1 ls-text) */
+.ls-text h1 {
     font-size: 56px;
     font-weight: 900;
     line-height: 1.1;
     letter-spacing: -1.5px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .subtitle {
-    font-size: 24px;
+    font-size: 22px;
     color: var(--text-secondary);
     font-weight: 500;
-    margin-bottom: 32px;
+    margin-bottom: 8px;
 }
 
 .glass-btn {
@@ -483,6 +603,8 @@ main {
 /* Footer */
 .glass-footer {
     padding: 32px;
+    padding-bottom: max(32px, calc(env(safe-area-inset-bottom) + 32px));
+    padding-bottom: 88px; /* always clear the sticky CTA bar */
     text-align: center;
     border-top: 1px solid var(--glass-border);
     margin-top: auto;
@@ -563,7 +685,7 @@ main {
     justify-content: space-between;
     gap: 16px;
     width: 100%;
-    max-width: 1100px;
+    max-width: 1440px;
     animation: fadeInDown 0.8s ease-out;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -616,27 +738,123 @@ main {
     }
 }
 
+/* Section scroll-spy sidebar */
+.section-nav {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    z-index: 500;
+}
+
+.section-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.section-nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    flex-shrink: 0;
+    transition: background 0.3s ease, width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.section-nav-label {
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    transition: color 0.22s ease;
+}
+
+.section-nav-item.active .section-nav-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--accent-teal);
+    box-shadow: 0 0 10px rgba(45, 212, 191, 0.65);
+}
+
+.section-nav-item.active .section-nav-label {
+    color: var(--accent-teal);
+}
+
+.section-nav-item:hover .section-nav-dot {
+    transform: scale(1.35);
+    background: var(--accent-teal);
+}
+
+.section-nav-item:hover .section-nav-label {
+    color: var(--accent-teal);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
-    .hero-content {
+    .section-nav { display: none; }
+
+    /* Landing sections: stack vertically */
+    .ls-card,
+    .ls-card.ls-reversed {
         flex-direction: column;
-        padding: 40px 24px;
-        gap: 40px;
+        padding: 28px 20px;
+        gap: 28px;
         text-align: center;
     }
-    
-    .carousel-container {
+
+    .ls-text {
+        align-items: center;
+    }
+
+    .ls-carousel {
         width: 200px;
         height: 430px;
         border-radius: 36px;
     }
-    
-    .hero-right h1 {
-        font-size: 40px;
+
+    .landing-section {
+        padding: 24px 16px;
     }
-    
+
+    .ls-text h1 {
+        font-size: 36px;
+    }
+
     .subtitle {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .markdown-body {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    /* Reveal animation on mobile: no horizontal slide, just scale pop + staggered fade */
+    .reveal-section .ls-card:not(.ls-reversed) .ls-media,
+    .reveal-section .ls-card:not(.ls-reversed) .ls-text,
+    .reveal-section .ls-card.ls-reversed .ls-text,
+    .reveal-section .ls-card.ls-reversed .ls-media {
+        transform: none;
+    }
+    /* Card scale still works on mobile — that's the main visible effect */
+
+    /* Sticky CTA: stack vertically on very small screens */
+    .sticky-cta {
+        gap: 12px;
+        padding: 10px 16px;
+        padding-bottom: max(10px, env(safe-area-inset-bottom));
+    }
+
+    /* Footer needs room above sticky CTA */
+    .glass-footer {
+        padding-bottom: 72px;
     }
 
     .hamburger {
@@ -655,6 +873,7 @@ main {
         gap: 16px;
         border-bottom: 1px solid var(--glass-border);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
     }
 
     .main-nav.active {
@@ -662,7 +881,7 @@ main {
     }
 
     .has-dropdown:hover .dropdown-menu {
-        display: none; /* Disable hover dropdown on mobile */
+        display: none;
     }
 
     .dropdown-menu {
@@ -677,6 +896,17 @@ main {
 
     .page-card {
         padding: 32px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sticky-cta {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .ls-text h1 {
+        font-size: 28px;
     }
 }
 

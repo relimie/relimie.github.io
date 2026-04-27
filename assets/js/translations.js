@@ -21,8 +21,14 @@ const translations = {
                 "androidComingSoon": "Android app coming soon",
                 "privacyNotice": "We use local storage to provide functional features like language preferences. We do not use tracking or collect personal data.",
                 "privacyAccept": "Got it",
-                "newVersionBanner": "Version 2.0.0 is now live! Discover the new interactive Orb and AI logging.",
-                "seeWhatsNew": "See what's new"
+                "newVersionBanner": "Version 2.0.1 is now live! Discover the new interactive Orb and AI logging.",
+                "seeWhatsNew": "See what's new",
+                "cravingsBreaker": "Cravings Breaker",
+                "navStart": "Baseline",
+                "navDiary": "Diary",
+                "navLogging": "Logging",
+                "navAnalytics": "Analytics",
+                "navCravings": "Cravings"
         },
         "de": {
                 "impressum": "Impressum",
@@ -46,8 +52,14 @@ const translations = {
                 "androidComingSoon": "Android-App in Kürze verfügbar",
                 "privacyNotice": "Wir verwenden lokalen Speicher für funktionale Zwecke, wie Spracheinstellungen. Wir verwenden kein Tracking und sammeln keine persönlichen Daten.",
                 "privacyAccept": "Verstanden",
-                "newVersionBanner": "Version 2.0.0 ist jetzt live! Entdecke den neuen interaktiven Orb und KI-Logging.",
-                "seeWhatsNew": "Was gibt's Neues?"
+                "newVersionBanner": "Version 2.0.1 ist jetzt live! Entdecke den neuen interaktiven Orb und KI-Logging.",
+                "seeWhatsNew": "Was gibt's Neues?",
+                "cravingsBreaker": "Cravings Breaker",
+                "navStart": "Baseline",
+                "navDiary": "Tagebuch",
+                "navLogging": "Logging",
+                "navAnalytics": "Analyse",
+                "navCravings": "Verlangen"
         },
         "ru": {
                 "impressum": "Импрессум",
@@ -71,7 +83,13 @@ const translations = {
                 "androidComingSoon": "Приложение для Android скоро появится",
                 "privacyNotice": "Мы используем локальное хранилище для обеспечения работы таких функций, как языковые настройки. Мы не используем отслеживание и не собираем личные данные.",
                 "privacyAccept": "Понятно",
-                "newVersionBanner": "Версия 2.0.0 уже доступна! Открой для себя новый интерактивный Орб и ИИ-логгинг.",
-                "seeWhatsNew": "Что нового?"
+                "newVersionBanner": "Версия 2.0.1 уже доступна! Открой для себя новый интерактивный Орб и ИИ-логгинг.",
+                "seeWhatsNew": "Что нового?",
+                "cravingsBreaker": "Укротитель тяги",
+                "navStart": "Начало",
+                "navDiary": "Дневник",
+                "navLogging": "Журнал",
+                "navAnalytics": "Аналитика",
+                "navCravings": "Тяга"
         }
 };

@@ -10,7 +10,7 @@
 <body>
     <div class="glow-blob blob-1"></div>
     <div class="glow-blob blob-2"></div>
-    
+
     <header class="glass-header">
         <div class="header-container">
             <div class="logo-container">
@@ -35,6 +35,7 @@
                         <a href="guide.html" data-i18n="userGuide">User Guide</a>
                         <a href="videos.html" data-i18n="videoGuides">Video Guides</a>
                         <a href="faq.html" data-i18n="faq">FAQ</a>
+                        <a href="cravings.html" data-i18n="cravingsBreaker">Cravings Breaker</a>
                     </div>
                 </div>
             </nav>
@@ -56,13 +57,39 @@
 
     <main>
         
+        <nav class="section-nav" id="section-nav">
+            <a href="#ls-hero" class="section-nav-item active" data-section="ls-hero">
+                <span class="section-nav-dot"></span>
+                <span class="section-nav-label" data-i18n="navStart">Start</span>
+            </a>
+            <a href="#ls-diary" class="section-nav-item" data-section="ls-diary">
+                <span class="section-nav-dot"></span>
+                <span class="section-nav-label" data-i18n="navDiary">Diary</span>
+            </a>
+            <a href="#ls-logging" class="section-nav-item" data-section="ls-logging">
+                <span class="section-nav-dot"></span>
+                <span class="section-nav-label" data-i18n="navLogging">Logging</span>
+            </a>
+            <a href="#ls-analytics" class="section-nav-item" data-section="ls-analytics">
+                <span class="section-nav-dot"></span>
+                <span class="section-nav-label" data-i18n="navAnalytics">Analytics</span>
+            </a>
+            <a href="#ls-cravings" class="section-nav-item" data-section="ls-cravings">
+                <span class="section-nav-dot"></span>
+                <span class="section-nav-label" data-i18n="navCravings">Cravings</span>
+            </a>
+        </nav>
+
         <div class="new-version-banner">
-            <p data-i18n="newVersionBanner">Version 2.0.0 is now live! Discover the new interactive Orb and AI logging.</p>
+            <p data-i18n="newVersionBanner">Version 2.0.1 is now live! Discover the new interactive Orb and AI logging.</p>
             <a href="whats_new.html" class="banner-cta" data-i18n="seeWhatsNew">See what's new</a>
         </div>
-        <div class="hero">
-            <div class="hero-content glass-card">
-                <div class="hero-left">
+
+        <!-- Section 1: Hero — Who it's for + Baseline -->
+        <section class="landing-section" id="ls-hero">
+            <div class="ls-card glass-card">
+                <div class="ls-media">
+                    
                     <div class="store-section">
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" />
@@ -71,38 +98,181 @@
                             <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
                         </a>
                     </div>
-                    <a href="videos.html" class="carousel-link" style="display: block; text-decoration: none;">
-                        <div class="carousel-container">
-                            <img src="../assets/images/screen1.webp" alt="Relimie App Screenshot 1" class="carousel-slide active">
-                            <img src="../assets/images/screen2.webp" alt="Relimie App Screenshot 2" class="carousel-slide">
-                            <img src="../assets/images/screen3.webp" alt="Relimie App Screenshot 3" class="carousel-slide">
-                            <img src="../assets/images/screen4.webp" alt="Relimie App Screenshot 4" class="carousel-slide">
-                        </div>
-                    </a>
+                    <div class="ls-carousel">
+                        <img src="../assets/images/section1/screen1.webp" alt="Relimie App Screenshot" class="carousel-slide active">
+                <img src="../assets/images/section1/screen2.webp" alt="Relimie App Screenshot" class="carousel-slide">
+                <img src="../assets/images/section1/screen3.webp" alt="Relimie App Screenshot" class="carousel-slide">
+                    </div>
                 </div>
-                <div class="hero-right">
-                    <h1><span data-i18n="heroTitle">Relimie</span> <span class="version-badge">v2.0.0</span></h1>
-                    <div class="subtitle" data-i18n="heroSubtitle">Enjoy the moment without losing your edge.</div>
-                    <div id="about-content" class="markdown-body">
-                        <p>Relimie is the mindful drinking companion for self-confident individuals who value clarity and control. This is not an app designed to force you to quit; it is a tool for finding your own balance. We believe you don’t need advice, judgment, or preaching—you need the facts to draw your own conclusions.</p>
-<h2 id="a-new-way-to-look-at-limits">A New Way to Look at Limits</h2>
-<p>Most trackers treat your goals as a &quot;pass or fail&quot; daily test, but life is rarely that linear. At the heart of Relimie is the Long-Term Baseline, a unique approach to moderation that focuses on your overall trend rather than a single evening. Your limit isn&#39;t a rigid wall; it’s a guide. If you have a heavy night, the app doesn’t reset a clock or shame you. Instead, it shows you exactly how your long-term balance is affected and helps you visualize the path back to your personal baseline. Whether you are looking to lower your intake or simply want to stay aware, Relimie gives you the perspective to stay in the driver’s seat.</p>
-<h2 id="the-orb-your-mindful-interruption">The Orb: Your Mindful Interruption</h2>
-<p>The centerpiece of the experience is The Orb, an interactive status indicator that shifts appearance based on your data. It provides immediate, non-verbal feedback on your day, but it also serves as a vital circuit breaker for sudden urges. By long-pressing the Orb, you trigger a guided 4-7-8 breathing exercise. Accompanied by mindful citations, it offers a quiet, private moment to pause, breathe through a craving, and regain your focus before making a choice.</p>
-<h2 id="a-complete-flexible-trackerfree-forever">A Complete, Flexible Tracker—Free Forever</h2>
-<p>We believe the tools to monitor your health should be accessible and powerful. Unlike other apps that hide basic logging behind a paywall, Relimie’s core tracker is entirely free. This isn&#39;t just about counting units of alcohol; it is a full-spectrum tool that tracks the money spent and the calories consumed from every drink. It is also incredibly flexible—you can use standard measurements or fine-tune volumes, strengths (ABV), and prices on the fly to reflect exactly what is in your hand. Whether you are tracking a pint at home or a cocktail at a lounge, you get a pixel-perfect view of the impact on your wallet and your wellness.</p>
-<h2 id="radical-privacy--context">Radical Privacy &amp; Context</h2>
-<p>Relimie emphasizes that why you drink is just as important as what you drink. Use our integrated Diary and Tagging to identify stressors or physical consequences like poor sleep. Your habits are your business: Relimie is built on a foundation of Offline-First security. No accounts, no emails, and no cloud databases. Everything stays physically on your device. You retain total ownership, with the ability to export your story as a professional PDF report or a full data backup whenever you choose.</p>
-<h2 id="transparent--fair">Transparent &amp; Fair</h2>
-<p>The foundational logging, the Orb, and the breathing exercises are perpetually free. To help you build a habit, we provide a usage-based 30-day trial of our advanced analytics and historical diary so you can experience the full power of Relimie’s deep insights at your own pace.</p>
+                <div class="ls-text">
+                    <h1><span data-i18n="heroTitle">Relimie</span> <span class="version-badge">v2.0.1</span></h1>
+                    <p class="subtitle" data-i18n="heroSubtitle">Enjoy the moment without losing your edge.</p>
+                    <div class="markdown-body">
+                        <h2 id="for-anyone-who-drinks-and-wants-to-stay-in-control">For Anyone Who Drinks and Wants to Stay in Control</h2>
+<p>Relimie is not a sobriety app. It&#39;s a mindful drinking companion — built for people who enjoy alcohol socially but want to stay aware of their habits without guilt or judgment.</p>
+<p>At the heart of Relimie is your <strong>Personal Baseline</strong> — a long-term orientation target, not a strict daily limit. Think of it as a monthly average you aim to stay around. Some evenings you&#39;ll drink a little more, others less or not at all — that&#39;s life. What matters is that over time, your consumption gravitates back toward your baseline.</p>
+<p>Your glowing <strong>Orb</strong> tells you where you stand at a glance:</p>
+<ul>
+<li><strong>Green</strong> — you&#39;re safely within your baseline</li>
+<li><strong>Gold</strong> — you&#39;re approaching your limit</li>
+<li><strong>Red</strong> — a recovery day helps bring your average back in line</li>
+</ul>
+<p>Your baseline is calibrated to <strong>WHO health guidelines</strong>, adjusted for your country and gender. As your habits improve, you can tighten it — your ceiling should grow stricter as you grow stronger.</p>
 
                     </div>
-                    <div style="margin-top: 32px;">
-                        <a href="guide.html" class="glass-btn primary" data-i18n="readGuide">Read the User Guide</a>
+                    <a href="guide.html" class="glass-btn primary" data-i18n="readGuide">Read the User Guide</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Diary -->
+        <section class="landing-section reveal-section" id="ls-diary">
+            <div class="ls-card glass-card ls-reversed">
+                <div class="ls-text">
+                    <div class="markdown-body">
+                        <h2 id="your-emotional-journal--understand-why-you-drink">Your Emotional Journal — Understand <em>Why</em> You Drink</h2>
+<p>Counting drinks tells you <em>what</em> you consumed. The Diary reveals <em>why</em> — which is far more powerful for lasting change.</p>
+<p>Every day, log your emotional state: how you felt before drinking, how you feel the morning after, or the energy of a clean sober day. Over time this builds a psychological map of your habits.</p>
+<p><strong>Contextual tags surface automatically</strong> — no manual selection needed:</p>
+<ul>
+<li><strong>Triggers</strong> appear when you log alcohol (stressed, bored, social pressure)</li>
+<li><strong>After-Effects</strong> are ready the next morning (hangover, anxiety, guilt)</li>
+<li><strong>Sober Feelings</strong> highlight clean days (productive, clear-headed, proud)</li>
+</ul>
+<p>Inside the Analytics Hub, your most frequent tags are ranked against your drinking days — automatically surfacing your <strong>Top Reasons You Drink</strong>, so you can anticipate and avoid the situations that lead to relapse.</p>
+
+                    </div>
+                </div>
+                <div class="ls-media">
+                    
+                    <div class="store-section">
+                        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener">
+                            <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" />
+                        </a>
+                        <a href="android.html" class="coming-soon-link">
+                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        </a>
+                    </div>
+                    <div class="ls-carousel">
+                        <img src="../assets/images/section2/screen1.webp" alt="Relimie App Screenshot" class="carousel-slide active">
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Section 3: Drinks Logging -->
+        <section class="landing-section reveal-section" id="ls-logging">
+            <div class="ls-card glass-card">
+                <div class="ls-media">
+                    
+                    <div class="store-section">
+                        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener">
+                            <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" />
+                        </a>
+                        <a href="android.html" class="coming-soon-link">
+                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        </a>
+                    </div>
+                    <div class="ls-carousel">
+                        <img src="../assets/images/section3/screen1.webp" alt="Relimie App Screenshot" class="carousel-slide active">
+                <img src="../assets/images/section3/screen2.webp" alt="Relimie App Screenshot" class="carousel-slide">
+                <img src="../assets/images/section3/screen3.webp" alt="Relimie App Screenshot" class="carousel-slide">
+                <img src="../assets/images/section3/screen4.webp" alt="Relimie App Screenshot" class="carousel-slide">
+                    </div>
+                </div>
+                <div class="ls-text">
+                    <div class="markdown-body">
+                        <h2 id="log-a-drink-track-money-calories-and-more">Log a Drink. Track Money, Calories, and More.</h2>
+<p>Logging should take seconds — and every entry should tell you something valuable. Relimie captures the full picture of your consumption automatically.</p>
+<p><strong>When you log a drink, you also log:</strong></p>
+<ul>
+<li><strong>Money spent</strong> — estimated from your country, with Home vs. Outside pricing. Long-press the total to override if needed.</li>
+<li><strong>Calories</strong> — so you see the diet impact, not just the alcohol</li>
+<li><strong>Alcohol volume</strong> — total pure alcohol tracked over your lifetime</li>
+</ul>
+<p>Relimie&#39;s built-in drink catalog covers hundreds of standard drinks. Can&#39;t find yours? The <strong>AI Sparkle button</strong> researches and autofills volume and ABV for any drink in seconds.</p>
+<p>All of this data flows into your <strong>Analytics Hub</strong> — so your daily logs become weekly insights, and weekly insights become the trends that drive lasting change.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Analytics -->
+        <section class="landing-section reveal-section" id="ls-analytics">
+            <div class="ls-card glass-card ls-reversed">
+                <div class="ls-text">
+                    <div class="markdown-body">
+                        <h2 id="your-habits-visualized-your-data-yours-to-keep">Your Habits, Visualized. Your Data, Yours to Keep.</h2>
+<p>The Analytics Hub is where your daily inputs transform into long-term clarity. Open it anytime by swiping up on the Home Screen.</p>
+<p><strong>What you see inside:</strong></p>
+<ul>
+<li><strong>Consumption Overview</strong> — daily average spending, caloric impact, sober vs. drinking day ratio</li>
+<li><strong>Streaks System</strong> — your longest sober streak alongside your longest heavy-drinking period</li>
+<li><strong>Trends &amp; Habits</strong> — weekly and monthly patterns that reveal when you&#39;re most vulnerable to relapse</li>
+<li><strong>Consumption History</strong> — tap any past date to retroactively adjust entries, amend diary notes, or refine emotional tags</li>
+</ul>
+<p><strong>Your data stays yours:</strong></p>
+<p>When you&#39;re ready to share progress with a therapist or doctor, generate a <strong>&quot;Share My Story&quot; PDF</strong> — key metrics without your private journal text. Or export a <strong>Raw JSON Backup</strong> for deep analysis with any tool or AI assistant.</p>
+<p>Everything stays offline-first. No cloud sync. No third-party access.</p>
+
+                    </div>
+                </div>
+                <div class="ls-media">
+                    
+                    <div class="store-section">
+                        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener">
+                            <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" />
+                        </a>
+                        <a href="android.html" class="coming-soon-link">
+                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        </a>
+                    </div>
+                    <div class="ls-carousel">
+                        <img src="../assets/images/section4/screen1.webp" alt="Relimie App Screenshot" class="carousel-slide active">
+                <img src="../assets/images/section4/screen2.webp" alt="Relimie App Screenshot" class="carousel-slide">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Cravings Breaker -->
+        <section class="landing-section reveal-section" id="ls-cravings">
+            <div class="ls-card glass-card">
+                <div class="ls-media">
+                    
+                    <div class="store-section">
+                        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener">
+                            <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" />
+                        </a>
+                        <a href="android.html" class="coming-soon-link">
+                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        </a>
+                    </div>
+                    <div class="ls-carousel">
+                        <img src="../assets/images/section5/screen1.webp" alt="Relimie App Screenshot" class="carousel-slide active">
+                    </div>
+                </div>
+                <div class="ls-text">
+                    <div class="markdown-body">
+                        <h1 id="cravings-breaker">Cravings Breaker</h1>
+<h2 id="when-willpower-isnt-enough">When Willpower Isn&#39;t Enough</h2>
+<p>A craving doesn&#39;t ask for permission. It hits suddenly — and sheer willpower often isn&#39;t enough to ride it out. Disrupting the impulse in the first 30 seconds gives your rational brain the window it needs to regain control and significantly reduce the chance of an unwanted relapse.</p>
+<h2 id="the-instant-circuit-breaker">The Instant Circuit Breaker</h2>
+<p><strong>Long-press the Orb</strong> on today&#39;s date to trigger the Cravings Breaker directly from the Home Screen. Your screen transforms into a calm, pulsing visual that guides you through the proven <strong>4-7-8 Breathing Technique</strong>:</p>
+<ul>
+<li><strong>Inhale</strong> for 4 seconds</li>
+<li><strong>Hold</strong> for 7 seconds</li>
+<li><strong>Exhale</strong> for 8 seconds</li>
+</ul>
+<p>Grounding quotes and citations accompany every cycle to anchor your focus and steady your mind.</p>
+<h2 id="turn-resistance-into-a-win">Turn Resistance into a Win</h2>
+<p>Once the breathing cycle completes, Relimie prompts you to log a <strong>Clear Day</strong> — turning the act of resisting a craving into a trackable achievement on your sober streak. Every resisted urge is a data point. Every data point is progress.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
     
     </main>
 
@@ -116,6 +286,14 @@
         </div>
         <p class="copyright">&copy; 2026 Relimie</p>
     </footer>
+
+    <!-- Sticky App Store CTA — always visible on scroll (all pages) -->
+    <div class="sticky-cta" id="sticky-cta">
+        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge-sm" alt="Download on the App Store">
+        </a>
+        <a href="android.html" class="coming-soon-link-sm" data-i18n="androidComingSoon">Android app coming soon</a>
+    </div>
 
     <script src="../assets/js/translations.js"></script>
     <script src="../assets/js/script.js"></script>
