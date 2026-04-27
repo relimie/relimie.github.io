@@ -41,7 +41,7 @@ const translations = {
                 "faq": "FAQ",
                 "community": "Community",
                 "releaseNews": "Releases",
-                "featureVotes": "Features Voten",
+                "featureVotes": "Feature-Abstimmung",
                 "androidTest": "Android Offener Test",
                 "support": "Support",
                 "loading": "Laden...",

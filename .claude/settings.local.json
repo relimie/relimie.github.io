@@ -10,7 +10,10 @@
       "Bash(python -c \"from PIL import Image; print\\('pillow ok'\\)\")",
       "Bash(ffmpeg -y -i \"Bildschirmfoto 2026-03-14 um 14.56.21.png\" -vf \"scale=600:-1\" -c:v libwebp -quality 85 screen1.webp)",
       "Bash(ffmpeg -y -i \"Bildschirmfoto 2026-03-14 um 14.58.09.png\" -vf \"scale=600:-1\" -c:v libwebp -quality 85 screen2.webp)",
-      "Bash(ffmpeg -y -i \"IMG_4330.PNG\" -vf \"scale=600:-1\" -c:v libwebp -quality 85 screen3.webp)"
+      "Bash(ffmpeg -y -i \"IMG_4330.PNG\" -vf \"scale=600:-1\" -c:v libwebp -quality 85 screen3.webp)",
+      "WebFetch(domain:relimie.com)",
+      "Bash(python C:\\\\Users\\\\andre\\\\.claude\\\\plugins\\\\cache\\\\agricidaniel-seo\\\\claude-seo\\\\1.9.0\\\\scripts\\\\google_auth.py --check)",
+      "Bash(python C:\\\\Users\\\\andre\\\\.claude\\\\plugins\\\\cache\\\\agricidaniel-seo\\\\claude-seo\\\\1.9.0\\\\scripts\\\\backlinks_auth.py --check)"
     ]
   }
 }

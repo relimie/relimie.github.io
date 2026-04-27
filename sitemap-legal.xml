@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Privacy Policy -->
+  <url><loc>https://relimie.com/en/privacy.html</loc><lastmod>2026-04-14</lastmod></url>
+  <url><loc>https://relimie.com/de/privacy.html</loc><lastmod>2026-04-14</lastmod></url>
+  <url><loc>https://relimie.com/ru/privacy.html</loc><lastmod>2026-04-14</lastmod></url>
+
+  <!-- Terms of Service -->
+  <url><loc>https://relimie.com/en/terms.html</loc><lastmod>2026-04-14</lastmod></url>
+  <url><loc>https://relimie.com/de/terms.html</loc><lastmod>2026-04-14</lastmod></url>
+  <url><loc>https://relimie.com/ru/terms.html</loc><lastmod>2026-04-14</lastmod></url>
+
+  <!-- Impressum -->
+  <url><loc>https://relimie.com/en/impressum.html</loc><lastmod>2026-04-14</lastmod></url>
+  <url><loc>https://relimie.com/de/impressum.html</loc><lastmod>2026-04-14</lastmod></url>
+  <url><loc>https://relimie.com/ru/impressum.html</loc><lastmod>2026-04-14</lastmod></url>
+
+  <!-- Website Privacy -->
+  <url><loc>https://relimie.com/en/privacy_web.html</loc><lastmod>2026-04-27</lastmod></url>
+  <url><loc>https://relimie.com/de/privacy_web.html</loc><lastmod>2026-04-27</lastmod></url>
+  <url><loc>https://relimie.com/ru/privacy_web.html</loc><lastmod>2026-04-27</lastmod></url>
+
+</urlset>

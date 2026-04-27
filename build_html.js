@@ -8,7 +8,7 @@ marked.setOptions({ breaks: true, gfm: true });
 
 const root = 'c:/GitHub/relimie.github.io';
 const langs = ['en', 'de', 'ru'];
-const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'votes', 'faq', 'android', 'videos', 'cravings'];
+const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'android', 'videos', 'cravings'];
 
 const fileMap = {
     'privacy': 'privacy_policy',
@@ -41,6 +41,158 @@ const getPageTitle = (page) => {
         case 'cravings': return 'Cravings Breaker';
         default: return 'Relimie';
     }
+};
+
+const getPageTitleFull = (page, lang) => {
+    if (page === 'index') {
+        if (lang === 'de') return 'Relimie – Achtsamer Trink-Tracker für iPhone';
+        if (lang === 'ru') return 'Relimie – Осознанный трекер употребления алкоголя';
+        return 'Relimie – Mindful Drinking Tracker for iPhone';
+    }
+    if (page === 'guide') {
+        if (lang === 'de') return 'Relimie – Alkohol tracken & Getränke loggen | Anleitung';
+        if (lang === 'ru') return 'Relimie – Как вести учёт алкоголя | Руководство';
+        return 'Relimie – How to Track Alcohol Intake | User Guide';
+    }
+    if (page === 'faq') {
+        if (lang === 'de') return 'Relimie – FAQ: Baseline, Getränke loggen & Heißhunger';
+        if (lang === 'ru') return 'Relimie – FAQ: ориентир, журнал и тяга к алкоголю';
+        return 'Relimie – Alcohol Tracking FAQ: Baseline, Logging & Cravings';
+    }
+    if (page === 'cravings') {
+        if (lang === 'de') return 'Relimie – Alkoholverlangen stoppen | 4-7-8 Atemübung';
+        if (lang === 'ru') return 'Relimie – Справиться с тягой к алкоголю | Дыхание 4-7-8';
+        return 'Relimie – Stop Alcohol Cravings | 4-7-8 Breathing Exercise';
+    }
+    return `Relimie – ${getPageTitle(page)}`;
+};
+
+const getPageDescription = (page, lang) => {
+    const desc = {
+        en: {
+            index: 'Reduce alcohol intake mindfully. Free drink logging, calorie & spending tracking, emotional trigger diary. iPhone app — private by design, no account needed.',
+            guide: 'How to track alcohol intake and build better drinking habits — complete guide to Relimie: baseline setup, drink logging, triggers, and analytics.',
+            faq: 'Answers to common questions about tracking alcohol, setting a baseline, managing cravings, and staying private — Relimie FAQ.',
+            cravings: 'Stop alcohol cravings in real time with guided 4-7-8 breathing. A free mindfulness tool built into Relimie — no premium needed.',
+            privacy: 'Relimie privacy policy. All your data stays on your device. No cloud storage, no third-party access, no tracking. Ever.',
+            terms: 'Terms of service for Relimie — the mindful drinking companion app for iPhone.',
+            impressum: 'Legal disclosure and contact information for Relimie.',
+            whats_new: "What's new in Relimie v2.0.1 — interactive Orb, AI-powered drink logging, and more.",
+            videos: 'Video guides for Relimie — tutorials on setting your baseline, logging drinks, and using the Cravings Breaker.',
+            support: 'Get support for Relimie. Contact us for help with the mindful drinking tracker app.',
+            android: 'Relimie for Android is coming soon. Join the open test and be the first to try the mindful drinking app on Android.',
+            votes: 'Vote on upcoming features for Relimie — help shape the future of the mindful drinking companion app.',
+            privacy_web: 'Website privacy notice for relimie.com — no cookies, no tracking scripts, no personal data collected.',
+        },
+        de: {
+            index: 'Alkohol reduzieren ohne harte Regeln. Kostenlose Getränkeprotokollierung, Kalorien- und Ausgaben-Tracking. Kein Account, keine Cloud.',
+            guide: 'Alkoholkonsum kontrollieren Schritt für Schritt: Baseline einstellen, Getränke loggen, Auslöser tracken und Heißhunger stoppen.',
+            faq: 'Antworten auf häufige Fragen zu Alkohol-Tracking, Baseline, Heißhunger-Stopper und Datenschutz.',
+            cravings: 'Alkoholverlangen sofort stoppen: die 4-7-8-Atemtechnik als mentaler Reset. Kostenlos in Relimie für iPhone.',
+            privacy: 'Datenschutzerklärung für Relimie. Alle Daten bleiben auf deinem Gerät. Kein Cloud-Speicher, kein Tracking.',
+            terms: 'Nutzungsbedingungen für Relimie — den achtsamen Trink-Begleiter für iPhone.',
+            impressum: 'Impressum für Relimie — gesetzliche Pflichtangaben und Kontaktinformationen.',
+            whats_new: 'Neu in Relimie v2.0.1 — interaktive Sphäre, KI-Protokollierung und mehr.',
+            videos: 'Video-Anleitungen für Relimie — Tutorials zu Baseline, Getränken und Heißhunger-Stopper.',
+            support: 'Support für Relimie — Kontakt bei Fragen zur App.',
+            android: 'Relimie für Android kommt bald. Melde dich zum offenen Test an.',
+            votes: 'Stimme über neue Funktionen für Relimie ab — gestalte die Zukunft der App mit.',
+            privacy_web: 'Website-Datenschutz für relimie.com — keine Cookies, kein Tracking.',
+        },
+        ru: {
+            index: 'Снижай потребление алкоголя без жёстких правил. Бесплатный журнал напитков, трекинг триггеров и калорий. Только на устройстве, без облака.',
+            guide: 'Как снизить употребление алкоголя: настрой ориентир, веди журнал напитков, отслеживай триггеры и справляйся с тягой.',
+            faq: 'Ответы на частые вопросы об отслеживании алкоголя, базовой линии, борьбе с тягой и конфиденциальности.',
+            cravings: 'Справиться с тягой к алкоголю прямо сейчас: дыхательная техника 4-7-8 как ментальный сброс. Бесплатно в Relimie.',
+            privacy: 'Политика конфиденциальности Relimie. Все данные хранятся только на устройстве. Никаких облаков, никакого отслеживания.',
+            terms: 'Условия использования Relimie — осознанного помощника для контроля употребления алкоголя.',
+            impressum: 'Юридическая информация и контактные данные Relimie.',
+            whats_new: 'Что нового в Relimie v2.0.1 — интерактивная Сфера, ИИ-запись напитков и многое другое.',
+            videos: 'Видеогиды по Relimie — уроки по настройке базовой линии, ведению журнала и борьбе с тягой.',
+            support: 'Поддержка Relimie — свяжись с нами по вопросам работы приложения.',
+            android: 'Relimie для Android скоро выйдет. Присоединись к открытому тестированию.',
+            votes: 'Голосуй за новые функции Relimie — помоги сформировать будущее приложения.',
+            privacy_web: 'Политика конфиденциальности сайта relimie.com — без cookie, без трекинга, без аналитики.',
+        }
+    };
+    return (desc[lang] && desc[lang][page]) || (desc['en'] && desc['en'][page]) || 'Relimie – Mindful drinking companion app for iPhone.';
+};
+
+function getHreflangTags(pageName) {
+    const base = 'https://relimie.com';
+    return langs.map(l =>
+        `    <link rel="alternate" hreflang="${l}" href="${base}/${l}/${pageName}.html">`
+    ).join('\n') + `\n    <link rel="alternate" hreflang="x-default" href="${base}/en/${pageName}.html">`;
+}
+
+function getSchemaOrg(lang, pageName, isIndex) {
+    const orgSchema = `    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://relimie.com/#organization",
+      "name": "Relimie",
+      "url": "https://relimie.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://relimie.com/icon.png"
+      },
+      "sameAs": ["https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714"]
+    }
+    </script>`;
+
+    if (isIndex) {
+        return orgSchema + `
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://relimie.com/#website",
+      "url": "https://relimie.com",
+      "name": "Relimie",
+      "description": "Mindful drinking companion app for tracking alcohol consumption and habit reflection.",
+      "publisher": { "@id": "https://relimie.com/#organization" },
+      "inLanguage": ["en", "de", "ru"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "@id": "https://relimie.com/#app",
+      "name": "Relimie – Track Alcohol Limits",
+      "description": "Relimie is a mindful drinking companion that helps you track alcohol consumption, set a personal baseline, identify emotional triggers, and build healthier drinking habits — without guilt or rigid rules.",
+      "url": "https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "iOS",
+      "softwareVersion": "2.0.1",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@id": "https://relimie.com/#organization" },
+      "publisher": { "@id": "https://relimie.com/#organization" },
+      "inLanguage": ["en", "de", "ru"],
+      "featureList": [
+        "Personal baseline drinking tracker",
+        "Emotional trigger diary",
+        "Drinks logging with AI-powered catalog",
+        "Analytics Hub with data export",
+        "Cravings Breaker breathing exercise",
+        "WHO-based recommendations"
+      ]
+    }
+    </script>`;
+    }
+
+    return orgSchema + `
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Relimie", "item": "https://relimie.com/${lang}/" },
+        { "@type": "ListItem", "position": 2, "name": "${getPageTitle(pageName)}", "item": "https://relimie.com/${lang}/${pageName}.html" }
+      ]
+    }
+    </script>`;
 }
 
 // Read all image files from a section subfolder
@@ -54,13 +206,25 @@ function getSectionImages(sectionNum) {
     });
 }
 
+const sectionAltTexts = {
+    1: ['Relimie Orb – Personal Baseline indicator', 'Relimie Home Screen – baseline tracking view', 'Relimie drink logging interface', 'Relimie baseline settings'],
+    2: ['Relimie Diary – emotional trigger tags', 'Relimie morning after-effects check-in'],
+    3: ['Relimie drink logging screen', 'Relimie AI drink search feature', 'Relimie daily spending and calorie summary', 'Relimie drink catalog'],
+    4: ['Relimie Analytics Hub – habits overview', 'Relimie drinking trends and patterns'],
+    5: ['Relimie Cravings Breaker – 4-7-8 breathing exercise']
+};
+
 // Build carousel HTML for a given section folder and path prefix
 function buildCarousel(sectionNum) {
+    const alts = sectionAltTexts[sectionNum] || [];
     const imgs = getSectionImages(sectionNum);
     if (imgs.length === 0) return '<p style="color:var(--text-secondary);text-align:center">Screenshots coming soon</p>';
-    return imgs.map((img, i) =>
-        `<img src="../assets/images/section${sectionNum}/${img}" alt="Relimie App Screenshot" class="carousel-slide${i === 0 ? ' active' : ''}">`
-    ).join('\n                ');
+    return imgs.map((img, i) => {
+        const alt = alts[i] || `Relimie app screenshot – section ${sectionNum}`;
+        const isLCP = (sectionNum === 1 && i === 0);
+        const loadAttr = isLCP ? ' fetchpriority="high"' : ' loading="lazy"';
+        return `<img src="../assets/images/section${sectionNum}/${img}" alt="${alt}" class="carousel-slide${i === 0 ? ' active' : ''}"${loadAttr}>`;
+    }).join('\n                ');
 }
 
 // Ensure folders exist
@@ -72,8 +236,8 @@ langs.forEach(lang => {
 // Reusable store badge block used in every landing section
 const storeBadgeHtml = `
                     <div class="store-section">
-                        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener">
-                            <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" />
+                        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
+                            <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
                         <a href="android.html" class="coming-soon-link">
                             <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
@@ -81,6 +245,10 @@ const storeBadgeHtml = `
                     </div>`;
 
 function getTemplate(lang, pageName, isIndex, bodyContent) {
+    const title = getPageTitleFull(pageName, lang);
+    const description = getPageDescription(pageName, lang);
+    const canonicalUrl = `https://relimie.com/${lang}/${pageName}.html`;
+
     const content = isIndex ? `
         <nav class="section-nav" id="section-nav">
             <a href="#ls-hero" class="section-nav-item active" data-section="ls-hero">
@@ -120,7 +288,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
                     </div>
                 </div>
                 <div class="ls-text">
-                    <h1><span data-i18n="heroTitle">Relimie</span> <span class="version-badge">v2.0.1</span></h1>
+                    <h1><span data-i18n="heroTitle">Relimie</span> <span class="version-badge" aria-hidden="true">v2.0.1</span></h1>
                     <p class="subtitle" data-i18n="heroSubtitle">Enjoy the moment without losing your edge.</p>
                     <div class="markdown-body">
                         ${bodyContent.s1}
@@ -210,9 +378,29 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relimie - ${getPageTitle(pageName)}</title>
+    <meta name="theme-color" content="#0F172A">
+    <title>${title}</title>
+    <meta name="description" content="${description}">
+    <link rel="canonical" href="${canonicalUrl}">
+${getHreflangTags(pageName)}
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Relimie">
+    <meta property="og:title" content="${title}">
+    <meta property="og:description" content="${description}">
+    <meta property="og:url" content="${canonicalUrl}">
+    <meta property="og:image" content="https://relimie.com/icon.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${title}">
+    <meta name="twitter:description" content="${description}">
+    <meta name="twitter:image" content="https://relimie.com/icon.png">
     <link rel="icon" type="image/png" href="../icon.png">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="apple-touch-icon" href="../icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
+    <link rel="stylesheet" href="../assets/css/style.css">${isIndex ? `
+    <link rel="preload" as="image" href="../assets/images/section1/screen1.webp">` : ''}
+${getSchemaOrg(lang, pageName, isIndex)}
 </head>
 <body>
     <div class="glow-blob blob-1"></div>
@@ -233,7 +421,6 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
                     <div class="dropdown-menu">
                         <a href="android.html" data-i18n="androidTest">Android Open Test</a>
                         <a href="whats_new.html" data-i18n="releaseNews">Release News</a>
-                        <a href="votes.html" data-i18n="featureVotes">Feature Votes</a>
                     </div>
                 </div>
                 <div class="nav-item has-dropdown">
@@ -242,7 +429,6 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
                         <a href="guide.html" data-i18n="userGuide">User Guide</a>
                         <a href="videos.html" data-i18n="videoGuides">Video Guides</a>
                         <a href="faq.html" data-i18n="faq">FAQ</a>
-                        <a href="cravings.html" data-i18n="cravingsBreaker">Cravings Breaker</a>
                     </div>
                 </div>
             </nav>
@@ -279,7 +465,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
 
     <!-- Sticky App Store CTA — always visible on scroll (all pages) -->
     <div class="sticky-cta" id="sticky-cta">
-        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener">
+        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge-sm" alt="Download on the App Store">
         </a>
         <a href="android.html" class="coming-soon-link-sm" data-i18n="androidComingSoon">Android app coming soon</a>

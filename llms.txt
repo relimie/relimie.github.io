@@ -1,0 +1,39 @@
+# Relimie
+
+> Relimie is a mindful drinking companion app for iOS. It helps moderate drinkers track alcohol consumption against a personal baseline, understand emotional triggers through a diary, analyze habits, and break cravings with a guided 4-7-8 breathing exercise — without guilt or judgment.
+
+The core method is "baseline-drinking": a personal long-term average rather than a rigid daily limit. The Orb on the Home Screen shows at a glance whether the user is within their baseline (Green), slightly over (Gold), or needs to pause (Red).
+
+## Key Pages
+
+- [Homepage](https://relimie.com/en/): What the app is, who it's for, and how the Personal Baseline method works.
+- [User Guide](https://relimie.com/en/guide.html): Complete feature documentation covering the Orb, drink logging, diary, analytics, and data export.
+- [FAQ](https://relimie.com/en/faq.html): Common questions about baseline tracking, logging, the Cravings Breaker, and data privacy.
+- [Cravings Breaker](https://relimie.com/en/cravings.html): How the 4-7-8 breathing circuit breaker works for craving disruption.
+- [What's New](https://relimie.com/en/whats_new.html): Release notes for Relimie v2.0.1 — interactive Orb, AI-powered drink logging.
+- [Privacy Policy](https://relimie.com/en/privacy.html): Full data privacy documentation. All data is stored locally on device only.
+- [Support](https://relimie.com/en/support.html): Contact information for support.
+
+## App Details
+
+- Platform: iOS (Apple App Store, App ID: 6759795714)
+- Download: https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714
+- Android: Coming soon
+- Languages: English, German, Russian
+- Current version: 2.0.1
+- Privacy model: Zero cloud storage, no third-party analytics, no cookies, no account required
+- Pricing: Free core features (logging, analytics); optional premium subscription for advanced analytics
+
+## Core Features
+
+- **Personal Baseline**: A long-term drinking average (not a rigid daily limit) that acts as an anchor for habit change. Data from WHO recommendations and country/gender averages help users choose their starting baseline.
+- **Emotional Trigger Diary**: Log how you feel before drinking, the morning after, and on sober days. Contextual tags surface automatically — Triggers (stress, boredom, social pressure), After-Effects (hangover, anxiety, clarity), Sober Feelings (productivity, pride, energy).
+- **Drink Logging**: Track pure alcohol, calories, and spending per drink. AI Sparkle button auto-fills ABV and calories for unknown drinks. Prices preset by country average.
+- **Analytics Hub**: History, overview, habits graph, trends by day/time, and a chronological heatmap. Export as PDF ("Share My Story") or JSON backup. All data stays on device.
+- **Cravings Breaker**: Long-press the Orb to trigger a guided 4-7-8 breathing exercise (inhale 4s, hold 7s, exhale 8s) with inspirational quotes. Acts as a mental circuit breaker.
+
+## Optional: Full Content
+
+- [Full User Guide](https://relimie.com/en/guide.html)
+- [German version](https://relimie.com/de/)
+- [Russian version](https://relimie.com/ru/)

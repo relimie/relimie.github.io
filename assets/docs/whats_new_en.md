@@ -1,6 +1,6 @@
-# What's New in Relimie 2.0.0
+# What's New in Relimie 2.0.1
 
-Welcome to the **Relimie 2.0.0** release! This update brings several new features designed to help you track your consumption with more precision and clarity.
+Welcome to the **Relimie 2.0.1** release! This update brings several new features designed to help you track your consumption with more precision and clarity.
 
 ### 🌟 Major Highlights
 - **Interactive Orb Explorer**: Tap the central Orb on the Home Screen to switch between your current consumption and the new **Baseline Trend** view. Real-time comparison against your goals.

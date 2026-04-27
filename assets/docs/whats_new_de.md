@@ -1,6 +1,6 @@
-# Neuigkeiten in Relimie 2.0.0
+# Neuigkeiten in Relimie 2.0.1
 
-Willkommen zum Release von **Relimie 2.0.0**! Dieses Update bringt neue Funktionen, die dir helfen, deinen Konsum noch präziser und klarer zu verfolgen.
+Willkommen zum Release von **Relimie 2.0.1**! Dieses Update bringt neue Funktionen, die dir helfen, deinen Konsum noch präziser und klarer zu verfolgen.
 
 ### 🌟 Die Highlights
 - **Interaktive Orb-Exploration**: Tippe auf den zentralen Orb im Home-Screen, um zwischen deinem aktuellen Konsum und der neuen **Referenzwert-Trend-Ansicht** zu wechseln.
