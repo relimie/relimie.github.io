@@ -1,13 +1,11 @@
 ## Bewusst genießen, statt verzichten
 
-Relimie ist keine App zum Aufhören, sondern für die Kontrolle. Ein Begleiter für alle, die gerne mal etwas trinken, aber ihre Gewohnheiten nicht dem Autopiloten überlassen wollen — ohne schlechtes Gewissen oder den Zeigefinger, der oft beim Tracking mitschwingt.
+Bei Relimie geht es nicht nur darum, mit dem Trinken aufzuhören; es ist ein Begleiter für alle, die gerne mal etwas trinken, aber verhindern möchten, dass ihre Gewohnheiten zur Sucht werden – ohne das schlechte Gewissen oder die Verurteilung, die oft beim Tracking mitschwingen.
 
-Alles dreht sich um deinen **persönlichen Referenzwert**. Statt eines starren Tageslimits, das sich bei jeder kleinen Überschreitung wie Versagen anfühlt, ist dein Referenzwert ein langfristiger Anker. Das Leben passiert: An manchen Abenden trinkst du ein Glas mehr, an anderen gar nichts. Was zählt, ist der Trend. Mit der Zeit finden deine Gewohnheiten ganz natürlich wieder zurück zu deinem Ziel.
+Bei Relimie dreht sich alles um deinen **persönlichen Referenzwert** (deshalb nennen wir unsere Methode auch „Referenzwert-Trinken“ oder "Baseline-Drinking" im Englischen). Statt eines starren Tageslimits, das sich bei jeder Überschreitung wie Versagen anfühlt, ist dein Referenzwert ein langfristiger Anker. Das Leben passiert: An manchen Abenden trinkst du ein Glas mehr, an anderen gar nichts. Was zählt, ist der Trend. Mit der Zeit finden deine Gewohnheiten ganz natürlich wieder zurück zu deinem Ziel.
 
-Dein leuchtender **Orb** zeigt dir auf einen Blick, wo du stehst:
+Ein Tippen auf deinen leuchtenden **Orb** zeigt dir auf einen Blick, wo du stehst: **Grün** – du bewegst dich entspannt unterhalb deines Referenzwerts; **Gold** – du bist leicht über deinem Limit; **Rot** – du solltest eine Pause von ein paar Tagen in Betracht ziehen, um deinen Durchschnitt wieder auszugleichen. Die grünen Anzeigen zeigen dir außerdem, wie viele Getränke du bisher vermieden hast. Du kannst diese Information nutzen, um deinen Referenzwert nach unten anzupassen und deinen Konsum Schritt für Schritt zu reduzieren, wenn du möchtest.
 
-- **Grün** — du bewegst dich entspannt in deinem Referenzwert
-- **Gold** — du näherst dich deiner Grenze
-- **Rot** — ein Erholungstag hilft dir, deinen Durchschnitt wieder auszugleichen
+Um dir bei der Wahl deines Referenzwerts zu helfen, stellen wir Daten aus WHO-Empfehlungen sowie Durchschnittswerte für dein Land und dein Geschlecht bereit. Diese dienen als Orientierung, bis du deine persönlichen Werte gefunden hast. Relimie unterstützt zudem verschiedene Maßeinheiten, damit du die nutzen kannst, die du am besten verstehst (wie Gramm reiner Alkohol oder Standard-US-Einheiten).
 
-Dein Referenzwert basiert auf den **WHO-Gesundheitsrichtlinien**, angepasst an dein Land und dein Geschlecht. Sobald du dein Gleichgewicht gefunden hast, kannst du ihn verschärfen — deine Obergrenze sollte strenger werden, während du stärker wirst.
+Denk daran: Auch wenn das Referenzwert-Trinken ein starker Helfer ist, um dein Verhalten zu kontrollieren, nimmt es dir die Arbeit nicht ab. Du musst selbst den Aufwand betreiben, dich an deinen Referenzwert zu halten und die richtigen Informationen einzutragen. Da der Referenzwert auf Aggregation basiert, braucht er etwas Zeit, um „anzuspringen“, während er Daten sammelt. Lass dich also nicht entmutigen, wenn du nicht sofort eine Veränderung siehst, obwohl er direkt nach dem Onboarding verfügbar ist.
