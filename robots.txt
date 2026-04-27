@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /.claude/
+Disallow: /*/privacy.html
+Disallow: /*/terms.html
+Disallow: /*/impressum.html
+Disallow: /*/privacy_web.html
 
 Sitemap: https://relimie.com/sitemap.xml

@@ -248,6 +248,8 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
     const title = getPageTitleFull(pageName, lang);
     const description = getPageDescription(pageName, lang);
     const canonicalUrl = `https://relimie.com/${lang}/${pageName}.html`;
+    const noIndexPages = ['privacy', 'impressum', 'terms', 'privacy_web'];
+    const isNoIndex = noIndexPages.includes(pageName);
 
     const content = isIndex ? `
         <nav class="section-nav" id="section-nav">
@@ -382,6 +384,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
     <title>${title}</title>
     <meta name="description" content="${description}">
     <link rel="canonical" href="${canonicalUrl}">
+${isNoIndex ? '    <meta name="robots" content="noindex, nofollow">' : ''}
 ${getHreflangTags(pageName)}
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Relimie">
