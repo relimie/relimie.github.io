@@ -62,10 +62,16 @@ relimie.github.io/
 
 ## 3. Critical Rules
 
-### 3.1 Trilingual Consistency
+### 3.1 Trilingual Consistency & Tone
 - **Every content change must be applied to all three languages**: EN, DE, RU.
-- German: informal **"du"** (lowercase) consistently.
-- Russian: informal **"ты"** consistently, correct **"ё"** always.
+- **Tone**: Mindful, personal, and supportive. Avoid "AI fluff" or overly academic/clinical phrasing.
+- **German**: Informal **"du"** (lowercase) consistently.
+- **Russian**: Informal **"ты"** consistently, correct **"ё"** always. Avoid vulgar/slang terms (e.g., use **"бокалом"** instead of **"выпивкой"**).
+- **Terminology**:
+    - The app is a **"helper"** (DE: *starker Helfer*, RU: *мощный помощник*), not a "tool."
+    - The centerpiece UI is the **"Orb"** (EN), **"Sphäre"** (DE), or **"Сфера"** (RU).
+- **Highlighting**: Use the **🎁 Gift icon** inside a **blockquote** to highlight high-value free features.
+    - Format: `> 🎁 **[Heading]:** [Description]`
 - UI strings (buttons, labels, nav) live in `assets/js/translations.js`.
 
 ### 3.2 Build Process
