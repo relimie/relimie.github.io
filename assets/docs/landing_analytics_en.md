@@ -4,13 +4,14 @@ The Analytics Hub turns your daily entries into a clear picture of your balance.
 
 **What's inside:**
 
-- **Personal Overview** — your spending, caloric impact, and the ratio of clear days to drinking ones.
-- **Streaks & Patterns** — see your longest clear runs alongside the periods where things got heavy.
-- **Weekly Trends** — spot the specific days and times when you're most likely to drift off course.
-- **Full History** — look back at any date to adjust entries, update notes, or refine how you felt.
+- **History** — Go back and forth in time.
+- **Overview** — Your spending, caloric impact, and the ratio of clear days to drinking ones (available in the free version as well).
+- **Habits** — A graphical overview of your drinking habits.
+- **Trends** — Spot the specific days and times when you're most likely to drift off course.
+- **Log** — Look back at any date to adjust entries, update notes, or refine how you felt.
 
 **Private by Design:**
 
-Your data never leaves your device. When you're ready, generate a **"Share My Story" PDF** to show progress to a doctor or therapist — without sharing your private journal notes. Or export a **JSON Backup** for your own analysis.
+Your data never leaves your device. When you want to, you can generate a **"Share My Story" PDF** to show progress to someone — without sharing your private journal notes. Or export a **JSON Backup** for your own analysis.
 
 No cloud, no tracking, no third-party access. Ever.
