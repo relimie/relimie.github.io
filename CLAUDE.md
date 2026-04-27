@@ -40,8 +40,7 @@ relimie.github.io/
 │   │   ├── whats_new_[lang].md
 │   │   ├── android_[lang].md
 │   │   ├── privacy_web_[lang].md
-│   │   ├── support_[lang].md
-│   │   └── votes_[lang].md
+│   │   └── support_[lang].md
 │   └── images/
 │       ├── section1/   # Hero screenshots/videos (carousel) — WebP preferred
 │       ├── section2/   # Diary carousel
@@ -58,7 +57,8 @@ relimie.github.io/
 ├── sitemap-legal.xml   # Legal pages sitemap (privacy, terms, impressum, privacy_web)
 ├── robots.txt          # Crawler directives + sitemap reference
 ├── llms.txt            # AI system self-description (GEO / AI search)
-├── icon.png            # App icon
+├── TODO.md             # Pending tasks (OG image, GSC submission, App Store rating)
+├── icon.png            # App icon (also used as og:image fallback until OG image is created)
 ├── video.md            # Video hosting decision reference (self-host vs YouTube)
 └── README.md           # Technical setup notes
 ```
@@ -88,7 +88,7 @@ relimie.github.io/
 - Content is hard-baked into HTML at build time (no runtime Markdown rendering).
 - `marked-gfm-heading-id` generates stable anchor IDs for all headings (critical for ToC links).
 - **SEO functions in `build_html.js`**: `getPageTitleFull(page, lang)` generates `<title>`, `getPageDescription(page, lang)` generates `<meta name="description">`, `getHreflangTags(pageName)` generates hreflang links, `getSchemaOrg(lang, pageName, isIndex)` generates JSON-LD schema. Update these functions when adding new pages.
-- **After adding a new page**, update `getPageDescription()` with trilingual descriptions for all three languages.
+- **After adding a new page**, update `getPageDescription()` with trilingual descriptions for all three languages. For high-value content pages (guide, faq, cravings pattern), also add a language-aware case to `getPageTitleFull()` with keyword-rich titles per language.
 - **`sitemap-main.xml` and `sitemap-legal.xml`** must be updated manually when pages are added or content significantly changes (lastmod dates). The build script does not auto-generate sitemaps.
 
 ### 3.3 Design System (Obsidian Aesthetic)
@@ -165,7 +165,7 @@ Pages are registered in `build_html.js`:
 
 **Navigation dropdown placement:**
 - Guide dropdown: User Guide, Video Guides, FAQ
-- Community dropdown: Android Open Test, Release News, Feature Votes
+- Community dropdown: Android Open Test, Release News
 
 **`cravings_[lang].md` serves double duty**: it is both Section 5 on the index page AND the standalone `cravings.html` text page.
 
