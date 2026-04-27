@@ -1,13 +1,13 @@
-## Verstehe das Muster: Das Warum zählt
+## Finde das Warum: Deine Muster verstehen
 
-Die reine Anzahl der Getränke ist nur der Anfang. Im Tagebuch findest du heraus, *warum* du eigentlich trinkst.
+Zahlen zu tracken ist nur der Anfang. Im Tagebuch findest du das *Warum*.
 
-Indem du festhältst, wie du dich fühlst — vor dem ersten Glas, am Morgen danach oder an einem energiegeladenen Tag ohne Alkohol — erkennst du Muster, die sonst im Verborgenen bleiben. Es geht darum, deine Auslöser zu verstehen, bevor sie dich im Griff haben.
+Indem du festhältst, wie du dich fühlst – vor einem Drink, am Morgen danach oder an einem klaren Tag – beginnst du, Muster zu erkennen, die sonst verborgen bleiben. Es geht darum, Auslöser zu identifizieren und einen Weg zu finden, ihnen einen Schritt voraus zu sein. Das Tagebuch hilft dir, die Konsequenzen zu verstehen und den Moment zu erkennen, in dem du die Kontrolle übernehmen musst.
 
-**Kontextuelle Tags helfen dir dabei:**
+**Kontextbezogene Tags erscheinen genau dann, wenn du sie brauchst:**
 
-- **Auslöser** erscheinen, wenn du Alkohol einträgst (Stress, Langeweile, Gruppenzwang)
-- **Nachwirkungen** warten am nächsten Morgen auf dich (Kater, Unruhe, Klarheit)
-- **Gute Gefühle** zeigen dir die Gewinne (Produktivität, Stolz, Energie)
+- **Auslöser (Triggers)** erscheinen, wenn du Alkohol einträgst (Stress, Langeweile, sozialer Druck)
+- **Nachwirkungen (After-Effects)** warten am nächsten Morgen auf dich (Kater, Angstgefühle, Klarheit)
+- **Gute Gefühle (Sober Feelings)** betonen deine Erfolge (Produktivität, Stolz, Energie)
 
-Im Analyse-Hub werden deine häufigsten Tags gegen deine Trinktage abgewogen — so lernst du Situationen vorauszusehen, in denen du besonders gefährdet bist, und bleibst ihnen einen Schritt voraus.
+Im Analyse-Hub werden deine häufigsten Tags mit deinen Trinktagen abgeglichen. Das hilft dir, Situationen vorherzusehen, in denen du am ehesten rückfällig wirst, damit du vorbereitet bist. Und natürlich kannst du im Einstellungsmenü deine eigenen Tags hinzufügen.
