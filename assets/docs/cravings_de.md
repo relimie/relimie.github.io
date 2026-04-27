@@ -1,19 +1,15 @@
-# Cravings Breaker
+# Heißhunger-Stopper
 
-## Atme durch den Impuls
+## Atme dich durch den Impuls
 
-Ein Verlangen fragt nicht nach Erlaubnis. Es kommt plötzlich, und in den ersten 30 Sekunden fühlt sich Willenskraft allein oft nicht nach genug an. Doch wenn du diesen ersten Impuls unterbrichst, gibst du deinem Gehirn den nötigen Raum, um innezuhalten und auf Kurs zu bleiben.
+Heißhunger fragt nicht um Erlaubnis. Er trifft dich schnell, und in den ersten 30 Sekunden fühlt sich reine Willenskraft oft nicht nach genug an. Aber wenn du diesen ersten Impuls unterbrichst, gibst du deinem Gehirn das nötige Zeitfenster, um einen Schritt zurückzutreten und auf Kurs zu bleiben.
 
-## Dein sofortiger Unterbrecher
+## Dein sofortiger Notstopp
 
-**Halte den Orb** auf dem Startbildschirm gedrückt, um den Breaker sofort auszulösen. Dein Bildschirm verwandelt sich in eine ruhige, pulsierende Führung durch die **4-7-8-Atemtechnik**:
+**Halte die Sphäre** auf dem Startbildschirm gedrückt, um den Stopper sofort zu aktivieren. Dein Bildschirm verwandelt sich in eine ruhige, pulsierende Anleitung für die **4-7-8-Atemtechnik**. Während du atmest, helfen dir erdende Zitate dabei, deinen Fokus zu finden und deinen Geist zu beruhigen, bis der Drang vorüber ist.
 
-- **Einatmen** für 4 Sekunden
-- **Halten** für 7 Sekunden
-- **Ausatmen** für 8 Sekunden
+## Mache aus einer Herausforderung einen Sieg
 
-Während du atmest, helfen dir erdende Zitate, deinen Fokus zu halten und deinen Geist zu beruhigen, bis der Drang nachlässt.
+Wenn der Zyklus endet, erinnert Relimie dich daran, einen **klaren Tag** einzutragen. Indem du einen Moment des Widerstands in einen trackbaren Erfolg verwandelst, machst du aus einem schwierigen Impuls einen weiteren Baustein deines Erfolgs. Jeder überstandene Drang ist ein Beweis für deinen Fortschritt.
 
-## Mach eine Herausforderung zum Erfolg
-
-Wenn der Zyklus endet, erinnert dich Relimie daran, einen **Klaren Tag** einzutragen. Indem du einen Moment des Widerstands in einen sichtbaren Erfolg verwandelst, wird aus einem schwierigen Impuls ein weiterer Baustein für deine Serie. Jeder überstandene Drang ist der Beweis für deinen Fortschritt.
+Wenn du weitere Ideen hast, was gegen Heißhunger helfen könnte, lass es uns unter [support@relimie.com] wissen!
