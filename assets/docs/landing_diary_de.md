@@ -1,13 +1,13 @@
-## Dein emotionales Tagebuch — versteh, *warum* du trinkst
+## Verstehe das Muster: Das Warum zählt
 
-Das Zählen von Getränken sagt dir *was* du konsumiert hast. Das Tagebuch zeigt das *warum* — und das ist für dauerhaften Wandel weitaus wertvoller.
+Die reine Anzahl der Getränke ist nur der Anfang. Im Tagebuch findest du heraus, *warum* du eigentlich trinkst.
 
-Jeden Tag kannst du deinen emotionalen Zustand festhalten: wie du dich vor dem Trinken gefühlt hast, wie du dich am nächsten Morgen fühlst, oder die Energie eines klaren, nüchternen Tages. Mit der Zeit entsteht so eine psychologische Landkarte deiner Gewohnheiten.
+Indem du festhältst, wie du dich fühlst — vor dem ersten Glas, am Morgen danach oder an einem energiegeladenen Tag ohne Alkohol — erkennst du Muster, die sonst im Verborgenen bleiben. Es geht darum, deine Auslöser zu verstehen, bevor sie dich im Griff haben.
 
-**Kontextuelle Tags erscheinen automatisch** — keine manuelle Auswahl nötig:
+**Kontextuelle Tags helfen dir dabei:**
 
-- **Auslöser** erscheinen beim Eintragen von Alkohol (Stress, Langeweile, sozialer Druck)
-- **Nachwirkungen** sind am nächsten Morgen verfügbar (Kater, Angst, Schuldgefühle)
-- **Nüchternheitsgefühle** heben alkoholfreie Tage hervor (produktiv, klar, stolz)
+- **Auslöser** erscheinen, wenn du Alkohol einträgst (Stress, Langeweile, Gruppenzwang)
+- **Nachwirkungen** warten am nächsten Morgen auf dich (Kater, Unruhe, Klarheit)
+- **Gute Gefühle** zeigen dir die Gewinne (Produktivität, Stolz, Energie)
 
-Im Analyse-Hub werden deine häufigsten Tags gegen deine Trinktage abgewogen — so entstehen automatisch deine **Top-Gründe, warum du trinkst**, damit du die Situationen, die zu Rückfällen führen, vorhersehen und vermeiden kannst.
+Im Analyse-Hub werden deine häufigsten Tags gegen deine Trinktage abgewogen — so lernst du Situationen vorauszusehen, in denen du besonders gefährdet bist, und bleibst ihnen einen Schritt voraus.

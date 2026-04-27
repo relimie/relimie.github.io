@@ -1,16 +1,16 @@
-## Your Habits, Visualized. Your Data, Yours to Keep.
+## See Your Story. Own Your Data.
 
-The Analytics Hub is where your daily inputs transform into long-term clarity. Open it anytime by swiping up on the Home Screen.
+The Analytics Hub turns your daily entries into a clear picture of your balance. Just swipe up from the Home Screen to see where you stand.
 
-**What you see inside:**
+**What's inside:**
 
-- **Consumption Overview** — daily average spending, caloric impact, sober vs. drinking day ratio
-- **Streaks System** — your longest sober streak alongside your longest heavy-drinking period
-- **Trends & Habits** — weekly and monthly patterns that reveal when you're most vulnerable to relapse
-- **Consumption History** — tap any past date to retroactively adjust entries, amend diary notes, or refine emotional tags
+- **Personal Overview** — your spending, caloric impact, and the ratio of clear days to drinking ones.
+- **Streaks & Patterns** — see your longest clear runs alongside the periods where things got heavy.
+- **Weekly Trends** — spot the specific days and times when you're most likely to drift off course.
+- **Full History** — look back at any date to adjust entries, update notes, or refine how you felt.
 
-**Your data stays yours:**
+**Private by Design:**
 
-When you're ready to share progress with a therapist or doctor, generate a **"Share My Story" PDF** — key metrics without your private journal text. Or export a **Raw JSON Backup** for deep analysis with any tool or AI assistant.
+Your data never leaves your device. When you're ready, generate a **"Share My Story" PDF** to show progress to a doctor or therapist — without sharing your private journal notes. Or export a **JSON Backup** for your own analysis.
 
-Everything stays offline-first. No cloud sync. No third-party access.
+No cloud, no tracking, no third-party access. Ever.

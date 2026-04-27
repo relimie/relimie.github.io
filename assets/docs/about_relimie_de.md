@@ -1,13 +1,13 @@
-## Für alle, die bewusst trinken möchten
+## Bewusst genießen, statt verzichten
 
-Relimie ist keine Nüchternheits-App. Es ist ein achtsamer Trinkbegleiter — entwickelt für Menschen, die Alkohol gesellig genießen, aber ihre Gewohnheiten im Blick behalten möchten, ohne Schuldgefühle oder Verurteilung.
+Relimie ist keine App zum Aufhören, sondern für die Kontrolle. Ein Begleiter für alle, die gerne mal etwas trinken, aber ihre Gewohnheiten nicht dem Autopiloten überlassen wollen — ohne schlechtes Gewissen oder den Zeigefinger, der oft beim Tracking mitschwingt.
 
-Im Mittelpunkt von Relimie steht dein **persönlicher Referenzwert** — ein langfristiger Orientierungspunkt, kein striktes Tageslimit. Stell ihn dir wie einen monatlichen Durchschnitt vor, um den du dich bewegen möchtest. Manche Abende trinkst du etwas mehr, andere weniger oder gar nicht — das ist Leben. Entscheidend ist, dass dein Konsum im Laufe der Zeit wieder auf deinen Referenzwert zurückfindet.
+Alles dreht sich um deinen **persönlichen Referenzwert**. Statt eines starren Tageslimits, das sich bei jeder kleinen Überschreitung wie Versagen anfühlt, ist dein Referenzwert ein langfristiger Anker. Das Leben passiert: An manchen Abenden trinkst du ein Glas mehr, an anderen gar nichts. Was zählt, ist der Trend. Mit der Zeit finden deine Gewohnheiten ganz natürlich wieder zurück zu deinem Ziel.
 
-Dein leuchtender **Orb** zeigt dir deinen Stand auf einen Blick:
+Dein leuchtender **Orb** zeigt dir auf einen Blick, wo du stehst:
 
-- **Grün** — du bist sicher im Rahmen deines Referenzwerts
+- **Grün** — du bewegst dich entspannt in deinem Referenzwert
 - **Gold** — du näherst dich deiner Grenze
-- **Rot** — ein Erholungstag hilft, deinen Durchschnitt wieder auszugleichen
+- **Rot** — ein Erholungstag hilft dir, deinen Durchschnitt wieder auszugleichen
 
-Dein Referenzwert wird anhand der **WHO-Gesundheitsrichtlinien** kalibriert, angepasst an dein Land und Geschlecht. Wenn sich deine Gewohnheiten verbessern, kannst du ihn verschärfen — deine Obergrenze sollte strenger werden, je stärker du wirst.
+Dein Referenzwert basiert auf den **WHO-Gesundheitsrichtlinien**, angepasst an dein Land und dein Geschlecht. Sobald du dein Gleichgewicht gefunden hast, kannst du ihn verschärfen — deine Obergrenze sollte strenger werden, während du stärker wirst.
