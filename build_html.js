@@ -182,6 +182,29 @@ function getSchemaOrg(lang, pageName, isIndex) {
     </script>`;
     }
 
+    if (pageName === 'faq') {
+        const faqPath = path.join(root, 'assets', 'docs', `faq_${lang}.md`);
+        if (fs.existsSync(faqPath)) {
+            const faqMd = fs.readFileSync(faqPath, 'utf8');
+            const matches = [...faqMd.matchAll(/### (.*?)\n(.*?)(?=\n###|$)/gs)];
+            if (matches.length > 0) {
+                const faqSchema = {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": matches.map(m => ({
+                        "@type": "Question",
+                        "name": m[1].trim(),
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": m[2].trim().replace(/\[(.*?)\]\(.*?\)/g, '$1')
+                        }
+                    }))
+                };
+                return orgSchema + `\n    <script type="application/ld+json">\n${JSON.stringify(faqSchema, null, 4)}\n    </script>`;
+            }
+        }
+    }
+
     return orgSchema + `
     <script type="application/ld+json">
     {
@@ -398,6 +421,7 @@ ${getHreflangTags(pageName)}
     <meta name="twitter:image" content="https://relimie.com/icon.png">
     <link rel="icon" type="image/png" href="../icon.png">
     <link rel="apple-touch-icon" href="../icon.png">
+    <link rel="alternate" type="text/plain" title="LLM Context" href="../llms.txt">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
@@ -515,4 +539,16 @@ langs.forEach(lang => {
         fs.writeFileSync(path.join(root, lang, `${page}.html`), getTemplate(lang, page, false, bodyHtml));
     });
 });
-console.log("HTML pages generated successfully.");
+
+// Generate llms-full.txt (Aggregate all core documentation for AI agents)
+let llmsFull = `# Relimie - Full Documentation\n\n`;
+['about_relimie_en.md', 'landing_diary_en.md', 'landing_logging_en.md', 'landing_analytics_en.md', 'cravings_en.md', 'USER_GUIDE_en.md', 'faq_en.md'].forEach(file => {
+    const filePath = path.join(root, 'assets', 'docs', file);
+    if (fs.existsSync(filePath)) {
+        const title = file.replace('_en.md', '').replace(/landing_|about_/g, '').replace(/_/g, ' ').toUpperCase();
+        llmsFull += `## SECTION: ${title}\n\n` + fs.readFileSync(filePath, 'utf8') + `\n\n---\n\n`;
+    }
+});
+fs.writeFileSync(path.join(root, 'llms-full.txt'), llmsFull);
+
+console.log("HTML pages and llms-full.txt generated successfully.");

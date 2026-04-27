@@ -33,7 +33,7 @@ The core method is "baseline-drinking": a personal long-term average rather than
 - **Cravings Breaker**: Long-press the Orb to trigger a guided 4-7-8 breathing exercise (inhale 4s, hold 7s, exhale 8s) with inspirational quotes. Acts as a mental circuit breaker.
 
 ## Optional: Full Content
-
+- [Aggregated Full Documentation](https://relimie.com/llms-full.txt)
 - [Full User Guide](https://relimie.com/en/guide.html)
 - [German version](https://relimie.com/de/)
 - [Russian version](https://relimie.com/ru/)
