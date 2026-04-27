@@ -1,13 +1,13 @@
-## Getränk eintragen. Geld, Kalorien und mehr tracken.
+## Tracking ohne Hürden
 
-Das Eintragen soll Sekunden dauern — und jede Eingabe soll dir etwas Wertvolles sagen. Relimie erfasst das vollständige Bild deines Konsums automatisch.
+Das Eintragen deiner Getränke sollte keine lästige Pflicht sein. Relimie ist darauf ausgelegt, dass du in Sekunden fertig bist, während im Hintergrund automatisch die Details erfasst werden, die wirklich zählen.
 
-**Wenn du ein Getränk einträgst, erfasst du auch:**
+**Jeder Eintrag vervollständigt das Gesamtbild:**
 
-- **Ausgegebenes Geld** — geschätzt nach deinem Land, mit Preisen für Zuhause und Draußen. Lang drücken auf die Summe, um sie bei Bedarf zu überschreiben.
-- **Kalorien** — damit du die Auswirkungen auf deine Ernährung siehst, nicht nur den Alkohol
-- **Alkoholvolumen** — gesamter reiner Alkohol, der über deine gesamte Laufzeit verfolgt wird
+- **Ausgaben** — geschätzt nach deinem Land, mit Preisen für zu Hause und unterwegs. Du willst es genau wissen? Einfach lang auf die Summe drücken, um sie anzupassen.
+- **Kalorien** — sieh die echten Auswirkungen auf deine Fitnessziele, nicht nur die Anzahl der Gläser.
+- **Volumen** — verfolge die Gesamtmenge an reinem Alkohol über Wochen, Monate oder Jahre.
 
-Der integrierte Getränkekatalog von Relimie umfasst hunderte von Standardgetränken. Deins nicht dabei? Der **KI-Funkel-Button** recherchiert und füllt Volumen und ABV für jedes Getränk in Sekunden automatisch aus.
+Mit einem Katalog aus hunderten Getränken und dem **KI-Funkel-Button**, der fehlende Infos in Sekunden recherchiert und einträgt, musst du nie wieder über Prozente oder Mengen rätseln.
 
-All diese Daten fließen in deinen **Analyse-Hub** — täglich eingetragene Daten werden zu wöchentlichen Erkenntnissen, und wöchentliche Erkenntnisse zu den Trends, die dauerhafte Veränderungen bringen.
+Alle Daten fließen direkt in deinen **Analyse-Hub**, wo aus täglichen Einträgen die Erkenntnisse werden, die dir helfen, die Kontrolle zu behalten.

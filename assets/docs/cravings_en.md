@@ -1,19 +1,19 @@
 # Cravings Breaker
 
-## When Willpower Isn't Enough
+## Breathe Through the Impulse
 
-A craving doesn't ask for permission. It hits suddenly — and sheer willpower often isn't enough to ride it out. Disrupting the impulse in the first 30 seconds gives your rational brain the window it needs to regain control and significantly reduce the chance of an unwanted relapse.
+A craving doesn't ask for permission. It hits fast, and in those first 30 seconds, willpower alone often feels like it's not enough. But if you can disrupt that initial impulse, you give your brain the window it needs to step back and stay on track.
 
-## The Instant Circuit Breaker
+## Your Instant Circuit Breaker
 
-**Long-press the Orb** on today's date to trigger the Cravings Breaker directly from the Home Screen. Your screen transforms into a calm, pulsing visual that guides you through the proven **4-7-8 Breathing Technique**:
+**Long-press the Orb** on the Home Screen to trigger the Breaker immediately. Your screen transforms into a calm, pulsing guide for the **4-7-8 Breathing Technique**:
 
 - **Inhale** for 4 seconds
 - **Hold** for 7 seconds
 - **Exhale** for 8 seconds
 
-Grounding quotes and citations accompany every cycle to anchor your focus and steady your mind.
+As you breathe, grounding quotes help anchor your focus and steady your mind until the urge passes.
 
-## Turn Resistance into a Win
+## Turn a Challenge into a Win
 
-Once the breathing cycle completes, Relimie prompts you to log a **Clear Day** — turning the act of resisting a craving into a trackable achievement on your sober streak. Every resisted urge is a data point. Every data point is progress.
+When the cycle ends, Relimie prompts you to log a **Clear Day**. By turning a moment of resistance into a trackable achievement, you transform a difficult impulse into another brick in your streak. Every urge you ride out is proof of your progress.

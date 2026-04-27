@@ -1,13 +1,13 @@
-## Your Emotional Journal — Understand *Why* You Drink
+## Connect the Dots: Why You Drink
 
-Counting drinks tells you *what* you consumed. The Diary reveals *why* — which is far more powerful for lasting change.
+Tracking numbers is just the start. The Diary is where you find the *why*.
 
-Every day, log your emotional state: how you felt before drinking, how you feel the morning after, or the energy of a clean sober day. Over time this builds a psychological map of your habits.
+By logging how you feel — before a drink, the morning after, or on a clear-headed day — you start to see the patterns that usually stay hidden. It's about spotting the triggers before they spot you.
 
-**Contextual tags surface automatically** — no manual selection needed:
+**Contextual tags appear when you need them:**
 
-- **Triggers** appear when you log alcohol (stressed, bored, social pressure)
-- **After-Effects** are ready the next morning (hangover, anxiety, guilt)
-- **Sober Feelings** highlight clean days (productive, clear-headed, proud)
+- **Triggers** surface when you log alcohol (stress, boredom, social pressure)
+- **After-Effects** wait for you the next morning (hangover, anxiety, clarity)
+- **Sober Feelings** highlight the wins (productivity, pride, energy)
 
-Inside the Analytics Hub, your most frequent tags are ranked against your drinking days — automatically surfacing your **Top Reasons You Drink**, so you can anticipate and avoid the situations that lead to relapse.
+Inside the Analytics Hub, your most frequent tags are ranked against your drinking days — helping you anticipate the situations where you're most likely to slip, so you can stay ahead of them.

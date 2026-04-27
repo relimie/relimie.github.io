@@ -1,13 +1,13 @@
-## Log a Drink. Track Money, Calories, and More.
+## Logging without the Friction
 
-Logging should take seconds — and every entry should tell you something valuable. Relimie captures the full picture of your consumption automatically.
+Tracking shouldn't be a chore. Relimie is built to get you in and out in seconds, while automatically capturing the details that actually matter.
 
-**When you log a drink, you also log:**
+**Every entry adds up to your big picture:**
 
-- **Money spent** — estimated from your country, with Home vs. Outside pricing. Long-press the total to override if needed.
-- **Calories** — so you see the diet impact, not just the alcohol
-- **Alcohol volume** — total pure alcohol tracked over your lifetime
+- **Spending** — estimated by country, with separate prices for home vs. going out. Need to be exact? Just long-press to override.
+- **Calories** — see the real impact on your fitness goals, not just the unit count.
+- **Volume** — track the total pure alcohol consumed over weeks, months, or years.
 
-Relimie's built-in drink catalog covers hundreds of standard drinks. Can't find yours? The **AI Sparkle button** researches and autofills volume and ABV for any drink in seconds.
+With a catalog of hundreds of drinks and an **AI Sparkle button** to research and autofill anything missing, you'll never have to guess about ABV or volume again.
 
-All of this data flows into your **Analytics Hub** — so your daily logs become weekly insights, and weekly insights become the trends that drive lasting change.
+All of this data flows into your **Analytics Hub**, where daily entries become the insights that help you stay in control.
