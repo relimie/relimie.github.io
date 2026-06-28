@@ -1,6 +1,6 @@
 ## Connect the Dots: Why You Drink
 
-Tracking numbers is just the start. The Diary is where you find the *why*.
+Tracking numbers is just the start. Your alcohol diary is where you find the *why*.
 
 By logging how you feel — before a drink, the morning after, or on a clear-headed day — you start to see the patterns that usually stay hidden. It's about spotting triggers and finding a way to stay ahead of them. The diary helps you understand the consequences and spot the moments when you need to take control.
 

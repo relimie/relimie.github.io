@@ -4,7 +4,7 @@
 
 ## Drink on Your Own Terms
 
-Relimie isn't just about quitting drinking; it's a companion for those who enjoy a drink but want to prevent their habits from becoming an addiction — without the guilt or judgment that often comes with tracking.
+Relimie isn't just about quitting drinking, and it's more than an alcohol tracker: it's a mindful drinking companion for those who enjoy a drink but want to prevent their habits from becoming an addiction — without the guilt or judgment that often comes with tracking.
 
 In Relimie, everything revolves around your **Personal Baseline** (which is why we call our method "baseline-drinking"). Instead of a rigid daily limit that feels like a failure if you miss it, your baseline is a long-term anchor. Life happens: some nights you'll have an extra glass, others you won't drink at all. What matters is the trend. Over time, your habits naturally gravitate back toward your goal.
 
@@ -21,7 +21,7 @@ Keep in mind that while baseline-drinking is a powerful helper for controlling y
 
 ## Connect the Dots: Why You Drink
 
-Tracking numbers is just the start. The Diary is where you find the *why*.
+Tracking numbers is just the start. Your alcohol diary is where you find the *why*.
 
 By logging how you feel — before a drink, the morning after, or on a clear-headed day — you start to see the patterns that usually stay hidden. It's about spotting triggers and finding a way to stay ahead of them. The diary helps you understand the consequences and spot the moments when you need to take control.
 
@@ -272,6 +272,7 @@ Jump to a question:
 - [What is a Personal Baseline?](#what-is-a-personal-baseline)
 - [How do I choose the right baseline?](#how-do-i-choose-the-right-baseline)
 - [How does the baseline help me reduce my drinking?](#how-does-the-baseline-help-me-reduce-my-drinking)
+- [Can I use Relimie for Dry January or Sober October?](#can-i-use-relimie-for-dry-january-or-sober-october)
 - [How do I use the analytics features?](#how-do-i-use-the-analytics-features)
 - [What is the Cravings Breaker?](#what-is-the-cravings-breaker)
 - [Can I create my own drinks?](#can-i-create-my-own-drinks)
@@ -283,9 +284,9 @@ Jump to a question:
 ### What is Relimie's philosophy?
 We don't believe that just logging your drinks and staring at charts tells you anything new or actually changes your behavior. What makes the difference is having a **system to act on the data**. That system is simple, and we call it **[baseline-drinking](guide.html#1-personal-baseline)**: instead of a daily limit you pass or fail, you work from a long-term baseline (your normal, averaged over time), and the app gently nudges you back toward it and helps you step it down over time.
 
-Just as important, the numbers alone don't explain *why* you drink. It matters to understand the **reasons** behind a drink, the **consequences** the next day, and how you **feel** — including the positive feelings on sober days. That's why Relimie comes with a **[diary and tag system](guide.html#3-diary-and-tags)** that captures this context right alongside your data.
+Just as important, the numbers alone don't explain *why* you drink. It matters to understand the **reasons** behind a drink, the **consequences** the next day, and how you **feel** — including the positive feelings on sober days. That's why Relimie comes with an **[alcohol diary and tag system](guide.html#3-diary-and-tags)** that captures this context right alongside your data.
 
-Relimie is built to support **mindful, moderated drinking and the sober-curious approach** — no guilt, no preaching, and no requirement to quit. But it works just as well if quitting altogether is your goal: there the diary is especially valuable, helping you understand the reasons behind an urge and see how to avoid the situations that trigger it.
+Relimie is built to support **mindful, moderate drinking and the sober-curious approach** — no guilt, no preaching, and no requirement to quit. But it works just as well if quitting altogether is your goal: there the diary is especially valuable, helping you understand the reasons behind an urge and see how to avoid the situations that trigger it.
 
 One honest note: Relimie can't guarantee that you'll reach your goals — that part is on you. The app can only provide the support and the system to make it easier; following through is your responsibility.
 
@@ -309,6 +310,9 @@ The **baseline trend** (the colored Orb and the Trends view) is what guides thos
 - If you're **consistently Green** with a comfortable buffer built up (for example, around 500 g of pure alcohol below your baseline, or the equivalent in your chosen units), that's your signal to **adjust the baseline down** a notch.
 
 Repeat that loop — hold the line, then tighten it — and your drinking genuinely comes down step by step. Just remember the app only **suggests and shows**: it gives you the system and honest feedback, but logging accurately and following through is on you.
+
+### Can I use Relimie for Dry January or Sober October?
+Absolutely. Relimie is a natural companion for **Dry January**, **Sober October**, or any sober stretch you set yourself. Mark each day sober with a single tap on the Orb, and Relimie turns the whole month into a clear streak you can watch grow. The [Analytics Hub](guide.html#5-analytics-hub) shows your run of sober days at a glance, the **Body Recovery Timeline** counts what your body regains along the way, and the [Cravings Breaker](cravings.html) is there for the evenings when an old habit pushes back. Because the app works from a long-term baseline rather than a hard rule, it doesn't treat a single slip as failure — you just pick the streak back up. When the challenge ends, your alcohol diary and trends help you decide what to carry forward into more mindful, moderate drinking the rest of the year.
 
 ### How do I use the analytics features?
 Open the **Analytics Hub** by swiping up from the Home Screen or tapping the grid icon. Inside you'll find: **Overview** (daily average spending, calories, and your ratio of sober to drinking days — free), **Habits** (a graphical view of your patterns), **Trends** (the specific days and times you're most likely to drift off course), **History/Log** (revisit any past date to adjust entries), and a **chronological heatmap**. Rotate your phone to landscape on the Home Screen to open a full-screen **Consumption Chart** (Premium); on tablets, which stay in portrait, you can open the same chart from a button on the **Consumption History** in the Hub. When you want to, you can export a **"Share My Story" PDF** (without your private notes) or a full **JSON backup** — all without your data ever leaving the device.

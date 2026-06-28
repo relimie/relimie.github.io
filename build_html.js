@@ -52,9 +52,9 @@ const getPageTitle = (page) => {
 
 const getPageTitleFull = (page, lang) => {
     if (page === 'index') {
-        if (lang === 'de') return 'Relimie – Achtsamer Trink-Tracker für iPhone';
-        if (lang === 'ru') return 'Relimie – Осознанный трекер употребления алкоголя';
-        return 'Relimie – Mindful Drinking Tracker for iPhone';
+        if (lang === 'de') return 'Relimie – Alkohol-Tracker & Trinktagebuch App';
+        if (lang === 'ru') return 'Relimie – Трекер алкоголя и дневник употребления';
+        return 'Relimie – Mindful Drinking & Alcohol Tracker App';
     }
     if (page === 'guide') {
         if (lang === 'de') return 'Relimie – Alkohol tracken & Getränke loggen | Anleitung';
@@ -92,12 +92,12 @@ const getPageTitleFull = (page, lang) => {
 const getPageDescription = (page, lang) => {
     const desc = {
         en: {
-            index: 'Reduce alcohol intake mindfully. Free drink logging, calorie & spending tracking, emotional trigger diary. iPhone app — private by design, no account needed.',
-            guide: 'How to track alcohol intake and build better drinking habits — complete guide to Relimie: baseline setup, drink logging, triggers, and analytics.',
-            faq: 'Answers to common questions about tracking alcohol, setting a baseline, managing cravings, and staying private — Relimie FAQ.',
+            index: 'Mindful drinking & alcohol tracker app: free drink diary, calorie and spending logging, trigger tracking. Private by design — no account, no cloud.',
+            guide: 'How to track alcohol intake and build better drinking habits — complete guide to Relimie: baseline setup, drink logging, alcohol diary, and analytics.',
+            faq: 'Relimie FAQ: tracking alcohol, setting a baseline, Dry January and sober-curious goals, managing cravings, and staying private.',
             cravings: 'Stop alcohol cravings in real time with guided 4-7-8 breathing. A free mindfulness tool built into Relimie — no premium needed.',
             privacy: 'Relimie privacy policy. All your data stays on your device. No cloud storage, no third-party access, no tracking. Ever.',
-            terms: 'Terms of service for Relimie — the mindful drinking companion app for iPhone.',
+            terms: 'Terms of service for Relimie — the mindful drinking and alcohol tracking app.',
             impressum: 'Legal disclosure and contact information for Relimie.',
             whats_new: "What's new in Relimie v2.1.0 — full-screen landscape chart, guided in-app tours, Body Recovery Timeline, and faster logging.",
             videos: 'Video guides for Relimie — tutorials on setting your baseline, logging drinks, and using the Cravings Breaker.',
@@ -109,12 +109,12 @@ const getPageDescription = (page, lang) => {
             story: 'The story behind Relimie: how one number, average daily alcohol in grams, grew into a mindful drinking app built by an indie developer.',
         },
         de: {
-            index: 'Alkohol reduzieren ohne harte Regeln. Kostenlose Getränkeprotokollierung, Kalorien- und Ausgaben-Tracking. Kein Account, keine Cloud.',
-            guide: 'Alkoholkonsum kontrollieren Schritt für Schritt: Baseline einstellen, Getränke loggen, Auslöser tracken und Heißhunger stoppen.',
-            faq: 'Antworten auf häufige Fragen zu Alkohol-Tracking, Baseline, Heißhunger-Stopper und Datenschutz.',
-            cravings: 'Alkoholverlangen sofort stoppen: die 4-7-8-Atemtechnik als mentaler Reset. Kostenlos in Relimie für iPhone.',
+            index: 'Achtsam trinken & Alkohol reduzieren ohne harte Regeln. Kostenloses Trinktagebuch, Kalorien- und Ausgaben-Tracking. Kein Account, keine Cloud.',
+            guide: 'Alkoholkonsum kontrollieren Schritt für Schritt: Baseline einstellen, Getränke loggen, Alkohol-Tagebuch führen, Auslöser tracken und Heißhunger stoppen.',
+            faq: 'Häufige Fragen zu Alkohol-Tracking, Baseline, Dry January, achtsamem und sober-curious Trinken, Heißhunger-Stopper und Datenschutz.',
+            cravings: 'Alkoholverlangen sofort stoppen: die 4-7-8-Atemtechnik als mentaler Reset. Kostenlos in Relimie, der App für achtsames Trinken.',
             privacy: 'Datenschutzerklärung für Relimie. Alle Daten bleiben auf deinem Gerät. Kein Cloud-Speicher, kein Tracking.',
-            terms: 'Nutzungsbedingungen für Relimie — den achtsamen Trink-Begleiter für iPhone.',
+            terms: 'Nutzungsbedingungen für Relimie — den achtsamen Trink-Begleiter und Alkohol-Tracker.',
             impressum: 'Impressum für Relimie — gesetzliche Pflichtangaben und Kontaktinformationen.',
             whats_new: 'Neu in Relimie v2.1.0 — Vollbild-Diagramm im Querformat, geführte In-App-Touren, Regenerations-Zeitleiste und schnelleres Erfassen.',
             videos: 'Video-Anleitungen für Relimie — Tutorials zu Baseline, Getränken und Heißhunger-Stopper.',
@@ -126,9 +126,9 @@ const getPageDescription = (page, lang) => {
             story: 'Die Geschichte hinter Relimie: wie aus einer einzigen Zahl, dem täglichen Alkohol-Durchschnitt in Gramm, eine achtsame Trink-App eines Indie-Entwicklers wurde.',
         },
         ru: {
-            index: 'Снижай потребление алкоголя без жёстких правил. Бесплатный журнал напитков, трекинг триггеров и калорий. Только на устройстве, без облака.',
-            guide: 'Как снизить употребление алкоголя: настрой ориентир, веди журнал напитков, отслеживай триггеры и справляйся с тягой.',
-            faq: 'Ответы на частые вопросы об отслеживании алкоголя, базовой линии, борьбе с тягой и конфиденциальности.',
+            index: 'Осознанное употребление и снижение алкоголя без жёстких правил. Бесплатный дневник напитков, трекинг триггеров и калорий. Без аккаунта и облака.',
+            guide: 'Как снизить употребление алкоголя: настрой ориентир, веди дневник напитков, отслеживай триггеры и справляйся с тягой.',
+            faq: 'Частые вопросы об отслеживании алкоголя, ориентире, сухом январе, осознанном и трезвом подходе, борьбе с тягой и конфиденциальности.',
             cravings: 'Справиться с тягой к алкоголю прямо сейчас: дыхательная техника 4-7-8 как ментальный сброс. Бесплатно в Relimie.',
             privacy: 'Политика конфиденциальности Relimie. Все данные хранятся только на устройстве. Никаких облаков, никакого отслеживания.',
             terms: 'Условия использования Relimie — осознанного помощника для контроля употребления алкоголя.',
@@ -143,7 +143,7 @@ const getPageDescription = (page, lang) => {
             story: 'История Relimie: как одна цифра, средний дневной алкоголь в граммах, выросла в осознанное приложение, созданное инди-разработчиком.',
         }
     };
-    return (desc[lang] && desc[lang][page]) || (desc['en'] && desc['en'][page]) || 'Relimie – Mindful drinking companion app for iPhone.';
+    return (desc[lang] && desc[lang][page]) || (desc['en'] && desc['en'][page]) || 'Relimie – Mindful drinking and alcohol tracking app.';
 };
 
 function getHreflangTags(pageName) {
@@ -161,11 +161,17 @@ function getSchemaOrg(lang, pageName, isIndex) {
       "@id": "https://relimie.com/#organization",
       "name": "Relimie",
       "url": "https://relimie.com",
+      "description": "Relimie builds mindful drinking and alcohol tracking apps that help people track alcohol consumption, identify emotional triggers, and build healthier habits.",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://relimie.com/icon.png"
+        "url": "https://relimie.com/icon.png",
+        "width": 2048,
+        "height": 2048
       },
-      "sameAs": ["https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714"]
+      "sameAs": [
+        "https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714",
+        "https://www.youtube.com/@RelimieApp"
+      ]
     }
     </script>`;
 
@@ -190,11 +196,13 @@ function getSchemaOrg(lang, pageName, isIndex) {
       "@id": "https://relimie.com/#app",
       "name": "Relimie – Track Alcohol Limits",
       "description": "Relimie is a mindful drinking companion that helps you track alcohol consumption, set a personal baseline, identify emotional triggers, and build healthier drinking habits — without guilt or rigid rules.",
-      "url": "https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714",
+      "url": "https://relimie.com",
+      "downloadUrl": "https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714",
       "applicationCategory": "HealthApplication",
       "operatingSystem": "iOS",
       "softwareVersion": "2.1.0",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "keywords": "alcohol tracker, alcohol diary, drink tracker, mindful drinking, moderate drinking, sober curious, dry january, reduce drinking, track alcohol units, alcohol calorie counter, cravings breaker, personal baseline",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" },
       "author": { "@id": "https://relimie.com/#organization" },
       "publisher": { "@id": "https://relimie.com/#organization" },
       "inLanguage": ["en", "de", "ru"],
@@ -224,7 +232,14 @@ function getSchemaOrg(lang, pageName, isIndex) {
                         "name": m[1].trim(),
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": m[2].trim().replace(/\[(.*?)\]\(.*?\)/g, '$1')
+                            "text": m[2].trim()
+                                .replace(/\[(.*?)\]\(.*?\)/g, '$1')   // markdown links -> link text
+                                .replace(/\*\*(.*?)\*\*/g, '$1')       // bold
+                                .replace(/\*(.*?)\*/g, '$1')           // italic
+                                .replace(/^\s*[-*]\s+/gm, '')          // list bullets
+                                .replace(/\s*\n\s*/g, ' ')             // newlines -> space
+                                .replace(/\s{2,}/g, ' ')               // collapse spaces
+                                .trim()
                         }
                     }))
                 };
@@ -233,7 +248,7 @@ function getSchemaOrg(lang, pageName, isIndex) {
         }
     }
 
-    return orgSchema + `
+    const breadcrumb = `
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -244,6 +259,71 @@ function getSchemaOrg(lang, pageName, isIndex) {
       ]
     }
     </script>`;
+
+    // Article-type schema for editorial pages (E-E-A-T / AI-citation signal).
+    // Author is the Organization (the founder stays anonymous).
+    let articleSchema = '';
+    const articleType = pageName === 'story' ? 'Article' : (pageName === 'guide' ? 'TechArticle' : null);
+    if (articleType) {
+        const article = {
+            "@context": "https://schema.org",
+            "@type": articleType,
+            "@id": `https://relimie.com/${lang}/${pageName}.html#article`,
+            "headline": getPageTitleFull(pageName, lang).replace(/^Relimie\s*[–-]\s*/, ''),
+            "description": getPageDescription(pageName, lang),
+            "url": `https://relimie.com/${lang}/${pageName}.html`,
+            "image": { "@type": "ImageObject", "url": "https://relimie.com/icon.png", "width": 2048, "height": 2048 },
+            "author": { "@id": "https://relimie.com/#organization" },
+            "publisher": { "@id": "https://relimie.com/#organization" },
+            "datePublished": "2026-04-14",
+            "dateModified": "2026-06-28",
+            "mainEntityOfPage": { "@type": "WebPage", "@id": `https://relimie.com/${lang}/${pageName}.html` },
+            "about": { "@id": "https://relimie.com/#app" },
+            "inLanguage": lang
+        };
+        articleSchema = `\n    <script type="application/ld+json">\n${JSON.stringify(article, null, 4)}\n    </script>`;
+    }
+
+    // VideoObject (ItemList) schema for the video guides page — parsed from videos_<lang>.md
+    // so the schema always matches the rendered list. Each entry is "### Title\nDescription\n[link](url)".
+    let videoSchema = '';
+    if (pageName === 'videos') {
+        const vidPath = path.join(root, 'assets', 'docs', `videos_${lang}.md`);
+        if (fs.existsSync(vidPath)) {
+            const md = fs.readFileSync(vidPath, 'utf8');
+            const items = [...md.matchAll(/###\s+(.+)\n([^\n]+)\n\[[^\]]*\]\((https?:\/\/[^\s)]+)\)/g)];
+            if (items.length > 0) {
+                const videos = items.map((m, i) => {
+                    const url = m[3].trim();
+                    const idMatch = url.match(/shorts\/([A-Za-z0-9_-]+)|v=([A-Za-z0-9_-]+)|youtu\.be\/([A-Za-z0-9_-]+)/);
+                    const vid = idMatch ? (idMatch[1] || idMatch[2] || idMatch[3]) : '';
+                    return {
+                        "@type": "ListItem",
+                        "position": i + 1,
+                        "item": {
+                            "@type": "VideoObject",
+                            "name": m[1].trim(),
+                            "description": m[2].trim(),
+                            "thumbnailUrl": vid ? `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` : undefined,
+                            "uploadDate": "2026-04-14",
+                            "contentUrl": url,
+                            "embedUrl": vid ? `https://www.youtube.com/embed/${vid}` : url,
+                            "publisher": { "@id": "https://relimie.com/#organization" },
+                            "inLanguage": lang
+                        }
+                    };
+                });
+                const itemList = {
+                    "@context": "https://schema.org",
+                    "@type": "ItemList",
+                    "itemListElement": videos
+                };
+                videoSchema = `\n    <script type="application/ld+json">\n${JSON.stringify(itemList, null, 4)}\n    </script>`;
+            }
+        }
+    }
+
+    return orgSchema + breadcrumb + articleSchema + videoSchema;
 }
 
 // Read all image files from a section subfolder
@@ -258,11 +338,11 @@ function getSectionImages(sectionNum) {
 }
 
 const sectionAltTexts = {
-    1: ['Relimie Orb – Personal Baseline indicator', 'Relimie Home Screen – baseline tracking view', 'Relimie drink logging interface', 'Relimie baseline settings'],
-    2: ['Relimie Diary – emotional trigger tags', 'Relimie morning after-effects check-in'],
-    3: ['Relimie drink logging screen', 'Relimie AI drink search feature', 'Relimie daily spending and calorie summary', 'Relimie drink catalog'],
-    4: ['Relimie Analytics Hub – habits overview', 'Relimie drinking trends and patterns'],
-    5: ['Relimie Cravings Breaker – 4-7-8 breathing exercise']
+    1: ['Relimie alcohol tracker Orb showing the Personal Baseline', 'Relimie home screen for mindful drinking and baseline tracking', 'Relimie drink logging interface for tracking alcohol intake', 'Relimie baseline settings for moderate drinking goals'],
+    2: ['Relimie alcohol diary with emotional trigger tags', 'Relimie morning after-effects and sober-day check-in'],
+    3: ['Relimie drink logging screen tracking alcohol units, calories and spending', 'Relimie AI drink search for the alcohol tracker', 'Relimie daily spending and calorie summary', 'Relimie custom drink catalog'],
+    4: ['Relimie analytics hub with drinking habits overview', 'Relimie drinking trends, patterns and consumption chart'],
+    5: ['Relimie Cravings Breaker 4-7-8 breathing exercise to stop alcohol cravings']
 };
 
 // Build carousel HTML for a given section folder and path prefix
@@ -437,7 +517,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
     <link rel="canonical" href="${canonicalUrl}">
 ${isNoIndex ? '    <meta name="robots" content="noindex, nofollow">' : ''}
 ${getHreflangTags(pageName)}
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="${pageName === 'story' ? 'article' : 'website'}">
     <meta property="og:site_name" content="Relimie">
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${description}">

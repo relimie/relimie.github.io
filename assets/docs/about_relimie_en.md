@@ -1,6 +1,6 @@
 ## Drink on Your Own Terms
 
-Relimie isn't just about quitting drinking; it's a companion for those who enjoy a drink but want to prevent their habits from becoming an addiction — without the guilt or judgment that often comes with tracking.
+Relimie isn't just about quitting drinking, and it's more than an alcohol tracker: it's a mindful drinking companion for those who enjoy a drink but want to prevent their habits from becoming an addiction — without the guilt or judgment that often comes with tracking.
 
 In Relimie, everything revolves around your **Personal Baseline** (which is why we call our method "baseline-drinking"). Instead of a rigid daily limit that feels like a failure if you miss it, your baseline is a long-term anchor. Life happens: some nights you'll have an extra glass, others you won't drink at all. What matters is the trend. Over time, your habits naturally gravitate back toward your goal.
 

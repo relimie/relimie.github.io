@@ -1,6 +1,6 @@
 ## Finde das Warum: Deine Muster verstehen
 
-Zahlen zu tracken ist nur der Anfang. Im Tagebuch findest du das *Warum*.
+Zahlen zu tracken ist nur der Anfang. In deinem Alkohol-Tagebuch findest du das *Warum*.
 
 Indem du festhältst, wie du dich fühlst – vor einem Drink, am Morgen danach oder an einem klaren Tag – beginnst du, Muster zu erkennen, die sonst verborgen bleiben. Es geht darum, Auslöser zu identifizieren und einen Weg zu finden, ihnen einen Schritt voraus zu sein. Das Tagebuch hilft dir, die Konsequenzen zu verstehen und den Moment zu erkennen, in dem du die Kontrolle übernehmen musst.
 

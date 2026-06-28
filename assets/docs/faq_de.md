@@ -6,6 +6,7 @@ Springe zu einer Frage:
 - [Was ist ein persönlicher Referenzwert (Baseline)?](#was-ist-ein-persönlicher-referenzwert-baseline)
 - [Wie wähle ich den richtigen Referenzwert?](#wie-wähle-ich-den-richtigen-referenzwert)
 - [Wie hilft mir der Referenzwert, weniger zu trinken?](#wie-hilft-mir-der-referenzwert-weniger-zu-trinken)
+- [Kann ich Relimie für Dry January oder Sober October nutzen?](#kann-ich-relimie-für-dry-january-oder-sober-october-nutzen)
 - [Wie nutze ich die Analyse-Funktionen?](#wie-nutze-ich-die-analyse-funktionen)
 - [Was ist der Heißhunger-Stopper?](#was-ist-der-heißhunger-stopper)
 - [Kann ich eigene Getränke erstellen?](#kann-ich-eigene-getränke-erstellen)
@@ -17,7 +18,7 @@ Springe zu einer Frage:
 ### Was ist die Philosophie von Relimie?
 Wir glauben nicht, dass dir das bloße Eintragen deiner Getränke und das Anstarren von Diagrammen etwas Neues verrät oder dein Verhalten wirklich ändert. Den Unterschied macht ein **System, mit dem du auf die Daten reagieren kannst**. Dieses System ist einfach, und wir nennen es **[Baseline-Drinking](guide.html#1-persönlicher-referenzwert)**: Statt eines Tageslimits, das du bestehst oder nicht, arbeitest du mit einem langfristigen Referenzwert (deinem Normal, über die Zeit gemittelt), und die App schubst dich sanft dorthin zurück und hilft dir, ihn mit der Zeit zu senken.
 
-Genauso wichtig: Die Zahlen allein erklären nicht, *warum* du trinkst. Es kommt darauf an, die **Gründe** hinter einem Drink, die **Folgen** am nächsten Tag und dein **Befinden** zu verstehen – auch die positiven Gefühle an nüchternen Tagen. Deshalb kommt Relimie mit einem **[Tagebuch- und Tag-System](guide.html#3-tagebuch-und-tags)**, das diesen Kontext direkt neben deinen Daten festhält.
+Genauso wichtig: Die Zahlen allein erklären nicht, *warum* du trinkst. Es kommt darauf an, die **Gründe** hinter einem Drink, die **Folgen** am nächsten Tag und dein **Befinden** zu verstehen – auch die positiven Gefühle an nüchternen Tagen. Deshalb kommt Relimie mit einem **[Alkohol-Tagebuch und Tag-System](guide.html#3-tagebuch-und-tags)**, das diesen Kontext direkt neben deinen Daten festhält.
 
 Relimie ist darauf ausgelegt, **achtsames, maßvolles Trinken und den sober-curious Ansatz** zu unterstützen – ohne Schuldgefühle, ohne Belehrung und ohne Zwang, ganz aufzuhören. Aber es funktioniert genauso gut, wenn dein Ziel der vollständige Verzicht ist: Dann ist das Tagebuch besonders wertvoll, denn es hilft dir, die Gründe hinter einem Verlangen zu verstehen und zu erkennen, wie du die auslösenden Situationen vermeidest.
 
@@ -43,6 +44,9 @@ Der **Referenzwert-Trend** (der farbige Orb und die Trends-Ansicht) leitet diese
 - Bist du **dauerhaft Grün** mit einem komfortablen Puffer (zum Beispiel rund 500 g reinen Alkohols unter deinem Referenzwert oder das Äquivalent in deinen gewählten Einheiten), ist das dein Signal, den **Referenzwert eine Stufe niedriger** zu setzen.
 
 Wiederhole diese Schleife – halte die Linie, dann verschärfe sie – und dein Konsum geht Schritt für Schritt wirklich zurück. Denk nur daran: Die App **schlägt nur vor und zeigt**. Sie gibt dir das System und ehrliches Feedback, aber genau zu protokollieren und dranzubleiben liegt an dir.
+
+### Kann ich Relimie für Dry January oder Sober October nutzen?
+Auf jeden Fall. Relimie ist ein natürlicher Begleiter für **Dry January**, den **Sober October** oder jede nüchterne Phase, die du dir vornimmst. Markiere jeden Tag mit einem Tipp auf den Orb als nüchtern, und Relimie macht aus dem ganzen Monat eine klare Serie, die du wachsen siehst. Der [Analyse-Hub](guide.html#5-analyse-hub) zeigt deine nüchternen Tage auf einen Blick, die **Regenerations-Zeitleiste** zählt mit, was dein Körper unterwegs zurückgewinnt, und der [Heißhunger-Stopper](cravings.html) ist für die Abende da, an denen eine alte Gewohnheit zurückdrängt. Weil die App mit einem langfristigen Referenzwert statt einer harten Regel arbeitet, wertet sie einen einzelnen Ausrutscher nicht als Versagen – du nimmst die Serie einfach wieder auf. Wenn die Challenge endet, helfen dir dein Alkohol-Tagebuch und die Trends zu entscheiden, was du für ein achtsameres, maßvolleres Trinken im restlichen Jahr mitnimmst.
 
 ### Wie nutze ich die Analyse-Funktionen?
 Öffne den **Analyse-Hub**, indem du auf dem Startbildschirm nach oben wischst oder auf das Raster-Symbol tippst. Darin findest du: **Übersicht** (durchschnittliche tägliche Ausgaben, Kalorien und dein Verhältnis von nüchternen zu Trinktagen – kostenlos), **Gewohnheiten** (eine grafische Ansicht deiner Muster), **Trends** (die konkreten Tage und Uhrzeiten, an denen du am ehesten vom Kurs abkommst), **Verlauf/Log** (jedes vergangene Datum erneut aufrufen und anpassen) und eine **chronologische Heatmap**. Drehe dein Telefon auf dem Startbildschirm ins Querformat, um ein Vollbild-**Konsumdiagramm** zu öffnen (Premium); auf Tablets, die im Hochformat bleiben, öffnest du dasselbe Diagramm über einen Button im **Konsumverlauf** im Hub. Wenn du möchtest, kannst du ein **„Share My Story"-PDF** (ohne deine privaten Notizen) oder ein vollständiges **JSON-Backup** exportieren – ganz ohne dass deine Daten je dein Gerät verlassen.

@@ -1,6 +1,6 @@
 ## Bewusst genießen, statt verzichten
 
-Bei Relimie geht es nicht nur darum, mit dem Trinken aufzuhören; es ist ein Begleiter für alle, die gerne mal etwas trinken, aber verhindern möchten, dass ihre Gewohnheiten zur Sucht werden – ohne das schlechte Gewissen oder die Verurteilung, die oft beim Tracking mitschwingen.
+Bei Relimie geht es nicht nur darum, mit dem Trinken aufzuhören, und es ist mehr als ein Alkohol-Tracker: Es ist ein Begleiter für achtsames Trinken, für alle, die gerne mal etwas trinken, aber verhindern möchten, dass ihre Gewohnheiten zur Sucht werden – ohne das schlechte Gewissen oder die Verurteilung, die oft beim Tracking mitschwingen.
 
 Bei Relimie dreht sich alles um deinen **persönlichen Referenzwert** (deshalb nennen wir unsere Methode auch „Referenzwert-Trinken“ oder "Baseline-Drinking" im Englischen). Statt eines starren Tageslimits, das sich bei jeder Überschreitung wie Versagen anfühlt, ist dein Referenzwert ein langfristiger Anker. Das Leben passiert: An manchen Abenden trinkst du ein Glas mehr, an anderen gar nichts. Was zählt, ist der Trend. Mit der Zeit finden deine Gewohnheiten ganz natürlich wieder zurück zu deinem Ziel.
 

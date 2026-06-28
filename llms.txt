@@ -1,6 +1,6 @@
 # Relimie
 
-> Relimie is a mindful drinking companion app for iOS. It helps moderate drinkers track alcohol consumption against a personal baseline, understand emotional triggers through a diary, analyze habits, and break cravings with a guided 4-7-8 breathing exercise — without guilt or judgment.
+> Relimie is a mindful drinking and alcohol tracking app. It works as an alcohol diary and drinking-habit tracker, helping moderate and sober-curious drinkers track alcohol consumption against a personal baseline, understand emotional triggers through a diary, analyze habits, and break cravings with a guided 4-7-8 breathing exercise — without guilt or judgment. It is a natural companion for cutting down on drinking, Dry January, and Sober October.
 
 The core method is "baseline-drinking": a personal long-term average rather than a rigid daily limit. The Orb on the Home Screen shows at a glance whether the user is within their baseline (Green), slightly over (Gold), or needs to pause (Red).
 
@@ -18,7 +18,8 @@ The core method is "baseline-drinking": a personal long-term average rather than
 
 - Platform: iOS (Apple App Store, App ID: 6759795714)
 - Download: https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714
-- Android: Coming soon
+- YouTube: https://www.youtube.com/@RelimieApp
+- Android: In closed testing on Google Play (join at https://relimie.com/en/android.html)
 - Languages: English, German, Russian
 - Current version: 2.1.0
 - Privacy model: Zero cloud storage, no third-party analytics, no cookies, no account required
@@ -32,7 +33,7 @@ The core method is "baseline-drinking": a personal long-term average rather than
 - **Analytics Hub**: History, overview, habits graph, trends by day/time, and a chronological heatmap. Rotate the phone to landscape for a full-screen consumption chart over time. Export as PDF ("Share My Story") or JSON backup. All data stays on device.
 - **Cravings Breaker**: Long-press the Orb to trigger a guided 4-7-8 breathing exercise (inhale 4s, hold 7s, exhale 8s) with inspirational quotes. Acts as a mental circuit breaker. The same screen shows a free Body Recovery Timeline counting what the body regains since the last drink.
 
-## Optional: Full Content
+## Optional
 - [Aggregated Full Documentation](https://relimie.com/llms-full.txt)
 - [Full User Guide](https://relimie.com/en/guide.html)
 - [German version](https://relimie.com/de/)
