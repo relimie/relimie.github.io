@@ -85,7 +85,7 @@ const translations = {
                 "privacyAccept": "Понятно",
                 "newVersionBanner": "Версия 2.1.0 уже доступна! Поверни телефон для полноэкранного графика и обучающих подсказок.",
                 "seeWhatsNew": "Что нового?",
-                "cravingsBreaker": "Укротитель тяги",
+                "cravingsBreaker": "Если вдруг приспичит",
                 "navStart": "Начало",
                 "navDiary": "Дневник",
                 "navLogging": "Журнал",

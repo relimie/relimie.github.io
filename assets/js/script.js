@@ -185,20 +185,22 @@ function initScrollSpy() {
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+            const rawHash = this.getAttribute('href').substring(1);
+            // Fragments for non-ASCII headings (DE/RU TOCs) arrive percent-encoded,
+            // but the element IDs are literal Unicode — decode before lookup.
+            let targetId = rawHash;
+            try { targetId = decodeURIComponent(rawHash); } catch (err) { /* malformed, keep raw */ }
+            const targetElement = document.getElementById(targetId) || document.getElementById(rawHash);
 
             if (targetElement) {
-                // We use scrollIntoView if available, but calculate manually to respect scroll-padding in JS
-                // or just rely on the CSS scroll-padding-top if the browser supports it.
-                // Modern browsers supporting scroll-behavior will work with just this.
+                e.preventDefault();
+                // Rely on CSS scroll-padding-top for the sticky header offset.
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
-                
+
                 // Update URL without jump
-                history.pushState(null, null, `#${targetId}`);
+                history.pushState(null, null, `#${rawHash}`);
             }
         });
     });
