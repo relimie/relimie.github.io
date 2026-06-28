@@ -7,6 +7,9 @@ marked.use(gfmHeadingId());
 marked.setOptions({ breaks: true, gfm: true });
 
 const root = 'c:/GitHub/relimie.github.io';
+// Bump on every release. Appended to CSS/JS URLs as ?v= to bust browser & CDN caches
+// (otherwise GitHub Pages can keep serving a stale translations.js, leaving an old version banner).
+const APP_VERSION = '2.1.0';
 const langs = ['en', 'de', 'ru'];
 const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'android', 'videos', 'cravings'];
 
@@ -425,7 +428,7 @@ ${getHreflangTags(pageName)}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
-    <link rel="stylesheet" href="../assets/css/style.css">${isIndex ? `
+    <link rel="stylesheet" href="../assets/css/style.css?v=${APP_VERSION}">${isIndex ? `
     <link rel="preload" as="image" href="../assets/images/section1/screen1.webp">` : ''}
 ${getSchemaOrg(lang, pageName, isIndex)}
 </head>
@@ -498,8 +501,8 @@ ${getSchemaOrg(lang, pageName, isIndex)}
         <a href="android.html" class="coming-soon-link-sm" data-i18n="androidComingSoon">Android app coming soon</a>
     </div>
 
-    <script src="../assets/js/translations.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/translations.js?v=${APP_VERSION}"></script>
+    <script src="../assets/js/script.js?v=${APP_VERSION}"></script>
 </body>
 </html>`;
 }

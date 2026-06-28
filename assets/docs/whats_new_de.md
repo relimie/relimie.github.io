@@ -1,6 +1,10 @@
-# Neuigkeiten in Relimie 2.1.0
+# Neuigkeiten in Relimie
 
-Willkommen zu **Relimie 2.1.0**! Dieses Release bringt eine Reihe neuer Funktionen und viele Verbesserungen, die dir helfen, deinen Konsum noch klarer und einfacher zu verfolgen.
+Die Geschichte bisher – das hat sich in jeder Version geändert, die neuesten zuerst.
+
+## Version 2.1.0
+
+Eine Reihe neuer Funktionen und viele Verbesserungen, die dir helfen, deinen Konsum noch klarer und einfacher zu verfolgen.
 
 ### 🌟 Die Highlights
 - **Drehen für den vollen Überblick**: Halte dein Telefon auf dem Home-Screen quer für ein Vollbild-Konsumdiagramm. Das Highlight dieser Version, damit du eine Trendwende früh erkennst.
@@ -14,6 +18,20 @@ Willkommen zu **Relimie 2.1.0**! Dieses Release bringt eine Reihe neuer Funktion
 
 - **Sanfterer Start**: Ein schnelleres Onboarding personalisiert deinen Home-Screen ab dem ersten Tag und kann deine letzten nüchternen Tage erfassen.
 - **Politur & Fehlerbehebungen**: Verbesserte Texte in allen Sprachen sowie viele kleine UI-Korrekturen.
+
+## Version 2.0.1
+
+- Kleinere UI-Fehler behoben und lokalisierte Texte in allen Sprachen für ein flüssigeres Erlebnis verfeinert.
+
+## Version 2.0.0
+
+Das Release, das den Referenzwert ins Herz von Relimie gebracht hat.
+
+### ✨ Neue Premium-Funktionen (im Testzeitraum verfügbar)
+- **Referenzwert-Trend**: Tippe auf den Orb auf dem Home-Screen, um deinen Fortschritt im Vergleich zu deinem persönlichen Referenzwert zu sehen. Erhalte klare Hinweise, wie viele nüchterne Tage du brauchst, um zu deinem Referenzwert zurückzukehren, oder wie viel „Puffer" dir noch bleibt.
+- **KI-gestütztes Protokollieren**: Erstelle und protokolliere Getränke schneller mit intelligenten Vorschlägen, die deine Sprache verstehen.
+- **Tagebuch-Schnellbearbeitung**: Ändere deine täglichen Notizen und Gewohnheits-Tags direkt in der Tagebuch-Ansicht.
+- **UI-Verbesserungen**: Reibungslosere Navigation und visuelle Verfeinerungen in der gesamten App.
 
 ---
 Danke, dass du Relimie nutzt!

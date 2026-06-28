@@ -1,6 +1,10 @@
-# What's New in Relimie 2.1.0
+# What's New in Relimie
 
-Welcome to **Relimie 2.1.0**! This release brings a set of new features and many improvements to help you track your consumption with more clarity and ease.
+The story so far — here's what changed in each release, newest first.
+
+## Version 2.1.0
+
+A set of new features and many improvements to help you track your consumption with more clarity and ease.
 
 ### 🌟 Major Highlights
 - **Rotate for the full picture**: Turn your phone sideways on the Home Screen to open a full-screen consumption chart. It's the headline feature of this release, so a change in direction is easy to catch early.
@@ -14,6 +18,20 @@ Welcome to **Relimie 2.1.0**! This release brings a set of new features and many
 
 - **Smoother first run**: A faster onboarding that personalizes your Home Screen from day one and can seed your recent sober days.
 - **Polish & fixes**: Improved text in all languages, plus many small UI fixes.
+
+## Version 2.0.1
+
+- Fixed minor UI glitches and refined localized text across all languages for a smoother experience.
+
+## Version 2.0.0
+
+The release that introduced the baseline at the heart of Relimie.
+
+### ✨ New Premium Features (available in trial)
+- **Baseline Trend**: Tap the Orb on the Home Screen to see how you're performing against your personal baseline. Get clear guidance on how many sober days you need to return to your baseline, or how much "sober buffer" you have left.
+- **AI-Assisted Logging**: Create and log drinks faster with intelligent suggestions that understand your language.
+- **Diary Quick-Edit**: Change your daily notes and habit tags directly from the Diary log.
+- **UI Improvements**: Smoother navigation and visual refinements across the app.
 
 ---
 Thank you for using Relimie!

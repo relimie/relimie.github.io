@@ -86,6 +86,8 @@ relimie.github.io/
   node build_html.js
   ```
 - Content is hard-baked into HTML at build time (no runtime Markdown rendering).
+- **On every app release, bump `APP_VERSION` in `build_html.js`.** It is appended to the CSS/JS URLs as `?v=` for cache-busting — without it, GitHub Pages' CDN can keep serving a stale `translations.js`, which leaves the old version banner showing even after deploy.
+- **`whats_new_[lang].md` is a cumulative changelog** (newest version section on top). Add a new `## Version X.Y.Z` section per release rather than replacing the file. Source historical notes from `C:\GitHub\Relimie\metadata\release_notes\` and `C:\GitHub\Relimie\marketing\vXYZ\`.
 - `marked-gfm-heading-id` generates stable anchor IDs for all headings (critical for ToC links).
 - **SEO functions in `build_html.js`**: `getPageTitleFull(page, lang)` generates `<title>`, `getPageDescription(page, lang)` generates `<meta name="description">`, `getHreflangTags(pageName)` generates hreflang links, `getSchemaOrg(lang, pageName, isIndex)` generates JSON-LD schema. Update these functions when adding new pages.
 - **After adding a new page**, update `getPageDescription()` with trilingual descriptions for all three languages. For high-value content pages (guide, faq, cravings pattern), also add a language-aware case to `getPageTitleFull()` with keyword-rich titles per language.
