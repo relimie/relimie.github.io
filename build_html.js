@@ -41,7 +41,7 @@ const getPageTitle = (page) => {
         case 'whats_new': return 'Release News';
         case 'votes': return 'Feature Votes';
         case 'faq': return 'FAQ';
-        case 'android': return 'Android Open Test';
+        case 'android': return 'Android Test';
         case 'videos': return 'Video Guides';
         case 'cravings': return 'Cravings Breaker';
         case 'cooperation': return 'Cooperation';
@@ -81,6 +81,11 @@ const getPageTitleFull = (page, lang) => {
         if (lang === 'ru') return 'Relimie – История создателя: почему я сделал Relimie';
         return 'Relimie – The Founder Story: Why I Built a Mindful Drinking App';
     }
+    if (page === 'android') {
+        if (lang === 'de') return 'Relimie – Relimie für Android testen | Google Play Test';
+        if (lang === 'ru') return 'Relimie – Тестирование Relimie на Android | Google Play';
+        return 'Relimie – Test Relimie on Android | Google Play Closed Test';
+    }
     return `Relimie – ${getPageTitle(page)}`;
 };
 
@@ -97,7 +102,7 @@ const getPageDescription = (page, lang) => {
             whats_new: "What's new in Relimie v2.1.0 — full-screen landscape chart, guided in-app tours, Body Recovery Timeline, and faster logging.",
             videos: 'Video guides for Relimie — tutorials on setting your baseline, logging drinks, and using the Cravings Breaker.',
             support: 'Get support for Relimie. Contact us for help with the mindful drinking tracker app.',
-            android: 'Relimie for Android is coming soon. Join the open test and be the first to try the mindful drinking app on Android.',
+            android: 'Help test Relimie on Android. Join our Google Play closed test in three steps and be among the first to use the mindful drinking app on Android.',
             votes: 'Vote on upcoming features for Relimie — help shape the future of the mindful drinking companion app.',
             privacy_web: 'Website privacy notice for relimie.com — no cookies, no tracking scripts, no personal data collected.',
             cooperation: 'Partner with Relimie. We collaborate with influencers in the alcohol-reduction space and anyone who wants to recommend our mindful drinking app. Email partners@relimie.com.',
@@ -114,7 +119,7 @@ const getPageDescription = (page, lang) => {
             whats_new: 'Neu in Relimie v2.1.0 — Vollbild-Diagramm im Querformat, geführte In-App-Touren, Regenerations-Zeitleiste und schnelleres Erfassen.',
             videos: 'Video-Anleitungen für Relimie — Tutorials zu Baseline, Getränken und Heißhunger-Stopper.',
             support: 'Support für Relimie — Kontakt bei Fragen zur App.',
-            android: 'Relimie für Android kommt bald. Melde dich zum offenen Test an.',
+            android: 'Hilf mit, Relimie auf Android zu testen. Tritt in drei Schritten unserem Google-Play-Test bei und sei unter den Ersten, die die App auf Android nutzen.',
             votes: 'Stimme über neue Funktionen für Relimie ab — gestalte die Zukunft der App mit.',
             privacy_web: 'Website-Datenschutz für relimie.com — keine Cookies, kein Tracking.',
             cooperation: 'Kooperiere mit Relimie. Wir arbeiten mit Influencern im Bereich Alkoholreduktion und allen, die unsere achtsame Trink-App weiterempfehlen möchten. partners@relimie.com.',
@@ -131,7 +136,7 @@ const getPageDescription = (page, lang) => {
             whats_new: 'Что нового в Relimie v2.1.0 — полноэкранный график в горизонтальном режиме, обучающие подсказки, шкала восстановления и быстрая запись.',
             videos: 'Видеогиды по Relimie — уроки по настройке базовой линии, ведению журнала и борьбе с тягой.',
             support: 'Поддержка Relimie — свяжись с нами по вопросам работы приложения.',
-            android: 'Relimie для Android скоро выйдет. Присоединись к открытому тестированию.',
+            android: 'Помоги протестировать Relimie на Android. Присоединись к закрытому тесту в Google Play за три шага и стань одним из первых, кто пользуется приложением на Android.',
             votes: 'Голосуй за новые функции Relimie — помоги сформировать будущее приложения.',
             privacy_web: 'Политика конфиденциальности сайта relimie.com — без cookie, без трекинга, без аналитики.',
             cooperation: 'Сотрудничество с Relimie. Работаем с блогерами в теме снижения употребления алкоголя и со всеми, кто готов рекомендовать наше приложение. partners@relimie.com.',
@@ -469,7 +474,7 @@ ${getSchemaOrg(lang, pageName, isIndex)}
                 <div class="nav-item has-dropdown">
                     <a href="whats_new.html"><span data-i18n="community">Community</span> <span class="dot-new"></span></a>
                     <div class="dropdown-menu">
-                        <a href="android.html" data-i18n="androidTest">Android Open Test</a>
+                        <a href="android.html" data-i18n="androidTest">Android Test</a>
                         <a href="whats_new.html" data-i18n="releaseNews">Release News</a>
                         <a href="story.html" data-i18n="founderStory">Founder Story</a>
                         <a href="cooperation.html" data-i18n="cooperation">Cooperation</a>
