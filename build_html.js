@@ -11,7 +11,7 @@ const root = 'c:/GitHub/relimie.github.io';
 // (otherwise GitHub Pages can keep serving a stale translations.js, leaving an old version banner).
 const APP_VERSION = '2.1.0';
 const langs = ['en', 'de', 'ru'];
-const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'android', 'videos', 'cravings'];
+const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'android', 'videos', 'cravings', 'cooperation'];
 
 const fileMap = {
     'privacy': 'privacy_policy',
@@ -25,7 +25,8 @@ const fileMap = {
     'faq': 'faq',
     'android': 'android',
     'videos': 'videos',
-    'cravings': 'cravings'
+    'cravings': 'cravings',
+    'cooperation': 'cooperation'
 };
 
 const getPageTitle = (page) => {
@@ -42,6 +43,7 @@ const getPageTitle = (page) => {
         case 'android': return 'Android Open Test';
         case 'videos': return 'Video Guides';
         case 'cravings': return 'Cravings Breaker';
+        case 'cooperation': return 'Cooperation';
         default: return 'Relimie';
     }
 };
@@ -67,6 +69,11 @@ const getPageTitleFull = (page, lang) => {
         if (lang === 'ru') return 'Relimie – Справиться с тягой к алкоголю | Дыхание 4-7-8';
         return 'Relimie – Stop Alcohol Cravings | 4-7-8 Breathing Exercise';
     }
+    if (page === 'cooperation') {
+        if (lang === 'de') return 'Relimie – Kooperation | Influencer & Partner gesucht';
+        if (lang === 'ru') return 'Relimie – Сотрудничество | Партнёрам и блогерам';
+        return 'Relimie – Partner With Us | Influencer & Affiliate Cooperation';
+    }
     return `Relimie – ${getPageTitle(page)}`;
 };
 
@@ -86,6 +93,7 @@ const getPageDescription = (page, lang) => {
             android: 'Relimie for Android is coming soon. Join the open test and be the first to try the mindful drinking app on Android.',
             votes: 'Vote on upcoming features for Relimie — help shape the future of the mindful drinking companion app.',
             privacy_web: 'Website privacy notice for relimie.com — no cookies, no tracking scripts, no personal data collected.',
+            cooperation: 'Partner with Relimie. We collaborate with influencers in the alcohol-reduction space and anyone who wants to recommend our mindful drinking app. Email partners@relimie.com.',
         },
         de: {
             index: 'Alkohol reduzieren ohne harte Regeln. Kostenlose Getränkeprotokollierung, Kalorien- und Ausgaben-Tracking. Kein Account, keine Cloud.',
@@ -101,6 +109,7 @@ const getPageDescription = (page, lang) => {
             android: 'Relimie für Android kommt bald. Melde dich zum offenen Test an.',
             votes: 'Stimme über neue Funktionen für Relimie ab — gestalte die Zukunft der App mit.',
             privacy_web: 'Website-Datenschutz für relimie.com — keine Cookies, kein Tracking.',
+            cooperation: 'Kooperiere mit Relimie. Wir arbeiten mit Influencern im Bereich Alkoholreduktion und allen, die unsere achtsame Trink-App weiterempfehlen möchten. partners@relimie.com.',
         },
         ru: {
             index: 'Снижай потребление алкоголя без жёстких правил. Бесплатный журнал напитков, трекинг триггеров и калорий. Только на устройстве, без облака.',
@@ -116,6 +125,7 @@ const getPageDescription = (page, lang) => {
             android: 'Relimie для Android скоро выйдет. Присоединись к открытому тестированию.',
             votes: 'Голосуй за новые функции Relimie — помоги сформировать будущее приложения.',
             privacy_web: 'Политика конфиденциальности сайта relimie.com — без cookie, без трекинга, без аналитики.',
+            cooperation: 'Сотрудничество с Relimie. Работаем с блогерами в теме снижения употребления алкоголя и со всеми, кто готов рекомендовать наше приложение. partners@relimie.com.',
         }
     };
     return (desc[lang] && desc[lang][page]) || (desc['en'] && desc['en'][page]) || 'Relimie – Mindful drinking companion app for iPhone.';
@@ -451,6 +461,7 @@ ${getSchemaOrg(lang, pageName, isIndex)}
                     <div class="dropdown-menu">
                         <a href="android.html" data-i18n="androidTest">Android Open Test</a>
                         <a href="whats_new.html" data-i18n="releaseNews">Release News</a>
+                        <a href="cooperation.html" data-i18n="cooperation">Cooperation</a>
                     </div>
                 </div>
                 <div class="nav-item has-dropdown">
