@@ -134,12 +134,12 @@ function initScrollReveal() {
 }
 
 // Sticky App Store CTA — present on all pages.
-// Index page: appears once Section 1 store badges scroll out of view.
+// Index page: appears once the hero store badges scroll out of view.
 // All other pages: shown immediately on load.
 function initStickyCta() {
     const cta = document.getElementById('sticky-cta');
     if (!cta) return;
-    const heroStore = document.querySelector('#ls-hero .store-section');
+    const heroStore = document.querySelector('#home-hero .store-section');
     if (!heroStore) {
         // Not the index page — show right away
         cta.classList.add('visible');

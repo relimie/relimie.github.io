@@ -116,17 +116,25 @@ relimie.github.io/
 
 ## 4. Architecture: Index Page
 
-The index page is a **5-section scroll landing page**. Each section is a full-width card with a media carousel (left or right) and marketing copy. Sections 2–5 animate in on scroll.
+The index page leads with an **eye-catcher hero + value grid**, followed by **5 detailed scroll sections**. The hero/grid carry the headline messages; the sections provide depth, screenshots, and SEO body copy. Sections 2–5 animate in on scroll.
 
+### Hero (`#home-hero`) — animated Orb
+The page's single `<h1>` lives here. It shows the app's **Orb** as a pure-CSS animation: the source `assets/images/mindful_orb.webp` (a circular-masked WebP exported from the app's `mindful_orb.png`) is wrapped in `.hero-orb` (breathing scale + glow pulse) → `.hero-orb-inner` (slow 50s rotation). Motion is disabled under `prefers-reduced-motion`. The Orb is the LCP element and is `<link rel="preload">`ed in the head (carousel images are all `loading="lazy"`).
+- Text via i18n keys: `heroTagline` (the H1), `heroLead` (positioning sentence), `heroTrust` (privacy one-liner). Reuses `storeBadgeHtml` for the CTA.
+
+### Value grid (`.value-grid`)
+A centered flex row of 5 **clickable** cards (icon + heading + one sentence) summarizing the key messages. Built by `buildHighlightGrid(lang)` in `build_html.js` from `assets/docs/landing_highlights_[lang].md` (each card = a `### Heading` + a one-line paragraph). Each card is an `<a>` that scrolls to its detailed section below; targets come from the `HIGHLIGHT_LINKS` array (markdown order → `#ls-hero`, `#ls-diary`, `#ls-cravings`, `#ls-analytics`, `#ls-logging`). Icons come from the `HIGHLIGHT_ICONS` array (inline SVGs, `stroke="currentColor"`, tinted teal), assigned by the same order. To change a card, edit the markdown (all 3 langs); to change an icon/target, edit `HIGHLIGHT_ICONS` / `HIGHLIGHT_LINKS` (keep all three arrays/markdown in the same order). Styled under `.value-grid` / `.value-card` / `.value-icon` in `style.css`.
+
+### Detailed sections
 | Section | ID | Layout | Content file |
 |---|---|---|---|
-| 1 — Hero / Baseline | `#ls-hero` | media left, text right | `about_relimie_[lang].md` |
+| 1 — Baseline | `#ls-hero` | media left, text right | `about_relimie_[lang].md` |
 | 2 — Diary | `#ls-diary` | text left, media right (reversed) | `landing_diary_[lang].md` |
 | 3 — Logging | `#ls-logging` | media left, text right | `landing_logging_[lang].md` |
 | 4 — Analytics | `#ls-analytics` | text left, media right (reversed) | `landing_analytics_[lang].md` |
 | 5 — Cravings Breaker | `#ls-cravings` | media left, text right | `cravings_[lang].md` |
 
-Each section's `.ls-media` contains an App Store badge block (`storeBadgeHtml`) **above** the carousel.
+Each section's `.ls-media` contains an App Store badge block (`storeBadgeHtml`) **above** the carousel. (Note: `#ls-hero` is now the Baseline deep-dive section — its old `<h1>`/subtitle moved to `#home-hero`; its `## ` markdown heading is the section title.)
 
 ### Scroll-Spy Sidebar (`#section-nav`)
 A fixed left-side nav shows all 5 section labels. The active section (closest center to viewport center) is highlighted in teal. Implemented via `initScrollSpy()` in `script.js`. Labels are always visible. Hidden on screens ≤900px.

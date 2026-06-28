@@ -345,16 +345,53 @@ const sectionAltTexts = {
     5: ['Relimie Cravings Breaker 4-7-8 breathing exercise to stop alcohol cravings']
 };
 
-// Build carousel HTML for a given section folder and path prefix
+// Build carousel HTML for a given section folder and path prefix.
+// Carousels now sit below the hero + value grid, so every slide is lazy-loaded
+// (the animated Orb in the hero is the LCP element and is preloaded instead).
 function buildCarousel(sectionNum) {
     const alts = sectionAltTexts[sectionNum] || [];
     const imgs = getSectionImages(sectionNum);
     if (imgs.length === 0) return '<p style="color:var(--text-secondary);text-align:center">Screenshots coming soon</p>';
     return imgs.map((img, i) => {
         const alt = alts[i] || `Relimie app screenshot – section ${sectionNum}`;
-        const isLCP = (sectionNum === 1 && i === 0);
-        const loadAttr = isLCP ? ' fetchpriority="high"' : ' loading="lazy"';
-        return `<img src="../assets/images/section${sectionNum}/${img}" alt="${alt}" class="carousel-slide${i === 0 ? ' active' : ''}"${loadAttr}>`;
+        return `<img src="../assets/images/section${sectionNum}/${img}" alt="${alt}" class="carousel-slide${i === 0 ? ' active' : ''}" loading="lazy">`;
+    }).join('\n                ');
+}
+
+// Inline SVG icons for the home value grid, one per card (in markdown order).
+// stroke="currentColor" so CSS tints them teal. Order: baseline/control, diary,
+// cravings breath, analytics, companion compass.
+const HIGHLIGHT_ICONS = [
+    '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>',
+    '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h11a1 1 0 0 1 1 1v15H7a2 2 0 0 1-2-2V6a2 2 0 0 1 1-1.7"/><path d="M9 9h6M9 13h4"/></svg>',
+    '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9a2.5 2.5 0 1 0-2.5-2.5"/><path d="M3 12h13a2.5 2.5 0 1 1-2.5 2.5"/><path d="M3 16h7a2 2 0 1 1-2 2"/></svg>',
+    '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="11" width="3" height="7" rx="1"/><rect x="10.5" y="6" width="3" height="12" rx="1"/><rect x="16" y="13" width="3" height="5" rx="1"/></svg>',
+    '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2.2 4.8-4.8 2.2 2.2-4.8z"/></svg>',
+];
+
+// Anchor target for each value card (matches HIGHLIGHT_ICONS / markdown order):
+// baseline -> diary -> cravings -> analytics -> logging. Clicking a card scrolls
+// to the matching detailed section below.
+const HIGHLIGHT_LINKS = ['#ls-hero', '#ls-diary', '#ls-cravings', '#ls-analytics', '#ls-logging'];
+
+// Build the home value grid from assets/docs/landing_highlights_<lang>.md.
+// Each card is a "### Title" heading followed by a one-sentence paragraph.
+function buildHighlightGrid(lang) {
+    const filePath = path.join(root, 'assets', 'docs', `landing_highlights_${lang}.md`);
+    if (!fs.existsSync(filePath)) return '';
+    const raw = fs.readFileSync(filePath, 'utf8');
+    const blocks = raw.split(/^###\s+/m).map(s => s.trim()).filter(Boolean);
+    return blocks.map((block, i) => {
+        const nl = block.indexOf('\n');
+        const title = (nl === -1 ? block : block.slice(0, nl)).trim();
+        const body = (nl === -1 ? '' : block.slice(nl + 1)).trim();
+        const icon = HIGHLIGHT_ICONS[i] || '';
+        const link = HIGHLIGHT_LINKS[i] || '#';
+        return `<a class="value-card" href="${link}">
+                    <span class="value-icon" aria-hidden="true">${icon}</span>
+                    <h3>${marked.parseInline(title)}</h3>
+                    <p>${marked.parseInline(body)}</p>
+                </a>`;
     }).join('\n                ');
 }
 
@@ -374,6 +411,9 @@ const storeBadgeHtml = `
                             <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
                         </a>
                     </div>`;
+
+// "Back to top" link appended to each landing section's text column
+const backToTopHtml = `<a href="#home-hero" class="back-to-top" data-i18n="backToTop">↑ Back to top</a>`;
 
 function getTemplate(lang, pageName, isIndex, bodyContent) {
     const title = getPageTitleFull(pageName, lang);
@@ -406,12 +446,27 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
             </a>
         </nav>
 
-        <div class="new-version-banner">
-            <p data-i18n="newVersionBanner">Version 2.1.0 is now live! Rotate your phone for a full-screen chart, plus guided in-app tips.</p>
-            <a href="whats_new.html" class="banner-cta" data-i18n="seeWhatsNew">See what's new</a>
-        </div>
+        <!-- Hero: animated Orb + core promise -->
+        <header class="home-hero" id="home-hero">
+            <div class="hero-orb">
+                <div class="hero-orb-inner">
+                    <img src="../assets/images/mindful_orb.webp" alt="Relimie Orb — the mindful drinking baseline indicator" width="360" height="360" fetchpriority="high">
+                </div>
+            </div>
+            <h1 class="hero-tagline" data-i18n="heroTagline">Enjoy Life. Keep Control.</h1>
+            <p class="hero-lead" data-i18n="heroLead">Relimie is your companion for mindful, moderate and sober-curious drinking — an alcohol tracker and diary that helps you reduce drinking on your own terms.</p>
+            ${storeBadgeHtml}
+            <p class="hero-trust" data-i18n="heroTrust">No account. No cloud. Your data stays on your device.</p>
+        </header>
 
-        <!-- Section 1: Hero — Who it's for + Baseline -->
+        <!-- Value grid: the messages at a glance -->
+        <section class="value-grid-section">
+            <div class="value-grid">
+                ${buildHighlightGrid(lang)}
+            </div>
+        </section>
+
+        <!-- Section 1: Baseline deep-dive -->
         <section class="landing-section" id="ls-hero">
             <div class="ls-card glass-card">
                 <div class="ls-media">
@@ -421,12 +476,11 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
                     </div>
                 </div>
                 <div class="ls-text">
-                    <h1><span data-i18n="heroTitle">Relimie</span> <span class="version-badge" aria-hidden="true">v2.1.0</span></h1>
-                    <p class="subtitle" data-i18n="heroSubtitle">Enjoy the moment without losing your edge.</p>
                     <div class="markdown-body">
                         ${bodyContent.s1}
                     </div>
                     <a href="guide.html" class="glass-btn primary" data-i18n="readGuide">Read the User Guide</a>
+                    ${backToTopHtml}
                 </div>
             </div>
         </section>
@@ -438,6 +492,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
                     <div class="markdown-body">
                         ${bodyContent.s2}
                     </div>
+                    ${backToTopHtml}
                 </div>
                 <div class="ls-media">
                     ${storeBadgeHtml}
@@ -461,6 +516,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
                     <div class="markdown-body">
                         ${bodyContent.s3}
                     </div>
+                    ${backToTopHtml}
                 </div>
             </div>
         </section>
@@ -472,6 +528,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
                     <div class="markdown-body">
                         ${bodyContent.s4}
                     </div>
+                    ${backToTopHtml}
                 </div>
                 <div class="ls-media">
                     ${storeBadgeHtml}
@@ -495,6 +552,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
                     <div class="markdown-body">
                         ${bodyContent.s5}
                     </div>
+                    ${backToTopHtml}
                 </div>
             </div>
         </section>
@@ -534,7 +592,7 @@ ${getHreflangTags(pageName)}
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
     <link rel="stylesheet" href="../assets/css/style.css?v=${APP_VERSION}">${isIndex ? `
-    <link rel="preload" as="image" href="../assets/images/section1/screen1.webp">` : ''}
+    <link rel="preload" as="image" href="../assets/images/mindful_orb.webp">` : ''}
 ${getSchemaOrg(lang, pageName, isIndex)}
 </head>
 <body>
@@ -559,6 +617,9 @@ ${getSchemaOrg(lang, pageName, isIndex)}
                         <a href="story.html" data-i18n="founderStory">Founder Story</a>
                         <a href="cooperation.html" data-i18n="cooperation">Cooperation</a>
                     </div>
+                </div>
+                <div class="nav-item">
+                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">See what's new in 2.1.0</a>
                 </div>
                 <div class="nav-item has-dropdown">
                     <a href="guide.html" data-i18n="guide">Guide</a>
