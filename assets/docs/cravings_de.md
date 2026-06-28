@@ -12,4 +12,10 @@ Heißhunger fragt nicht um Erlaubnis. Er trifft dich schnell, und in den ersten 
 
 Wenn der Zyklus endet, erinnert Relimie dich daran, einen **klaren Tag** einzutragen. Indem du einen Moment des Widerstands in einen trackbaren Erfolg verwandelst, machst du aus einem schwierigen Impuls einen weiteren Baustein deines Erfolgs. Jeder überstandene Drang ist ein Beweis für deinen Fortschritt.
 
+## Sieh, wie dein Körper sich erholt
+
+Direkt auf dem Atem-Screen zählt eine **Regenerations-Zeitleiste** ab deinem letzten Drink und zeigt, was dein Körper mit der Zeit zurückgewinnt – von besserem Schlaf und mehr Energie in den ersten Tagen bis zu längerfristigen Veränderungen über ein Jahr. Ein weiterer kleiner Grund, deine Serie fortzusetzen.
+
+> 🎁 **Kostenlos für alle:** Die Regenerations-Zeitleiste steht jeder Nutzerin und jedem Nutzer gratis zur Verfügung.
+
 Wenn du weitere Ideen hast, was gegen Heißhunger helfen könnte, lass es uns unter [support@relimie.com] wissen!

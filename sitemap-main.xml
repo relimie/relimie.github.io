@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Homepages -->
-  <url><loc>https://relimie.com/en/index.html</loc><lastmod>2026-04-27</lastmod></url>
-  <url><loc>https://relimie.com/de/index.html</loc><lastmod>2026-04-27</lastmod></url>
-  <url><loc>https://relimie.com/ru/index.html</loc><lastmod>2026-04-27</lastmod></url>
+  <url><loc>https://relimie.com/en/index.html</loc><lastmod>2026-06-28</lastmod></url>
+  <url><loc>https://relimie.com/de/index.html</loc><lastmod>2026-06-28</lastmod></url>
+  <url><loc>https://relimie.com/ru/index.html</loc><lastmod>2026-06-28</lastmod></url>
 
   <!-- User Guide -->
-  <url><loc>https://relimie.com/en/guide.html</loc><lastmod>2026-04-27</lastmod></url>
-  <url><loc>https://relimie.com/de/guide.html</loc><lastmod>2026-04-27</lastmod></url>
-  <url><loc>https://relimie.com/ru/guide.html</loc><lastmod>2026-04-27</lastmod></url>
+  <url><loc>https://relimie.com/en/guide.html</loc><lastmod>2026-06-28</lastmod></url>
+  <url><loc>https://relimie.com/de/guide.html</loc><lastmod>2026-06-28</lastmod></url>
+  <url><loc>https://relimie.com/ru/guide.html</loc><lastmod>2026-06-28</lastmod></url>
 
   <!-- FAQ -->
   <url><loc>https://relimie.com/en/faq.html</loc><lastmod>2026-04-27</lastmod></url>
@@ -17,9 +17,9 @@
   <url><loc>https://relimie.com/ru/faq.html</loc><lastmod>2026-04-27</lastmod></url>
 
   <!-- Cravings Breaker -->
-  <url><loc>https://relimie.com/en/cravings.html</loc><lastmod>2026-04-27</lastmod></url>
-  <url><loc>https://relimie.com/de/cravings.html</loc><lastmod>2026-04-27</lastmod></url>
-  <url><loc>https://relimie.com/ru/cravings.html</loc><lastmod>2026-04-27</lastmod></url>
+  <url><loc>https://relimie.com/en/cravings.html</loc><lastmod>2026-06-28</lastmod></url>
+  <url><loc>https://relimie.com/de/cravings.html</loc><lastmod>2026-06-28</lastmod></url>
+  <url><loc>https://relimie.com/ru/cravings.html</loc><lastmod>2026-06-28</lastmod></url>
 
   <!-- Video Guides -->
   <url><loc>https://relimie.com/en/videos.html</loc><lastmod>2026-04-14</lastmod></url>
@@ -27,9 +27,9 @@
   <url><loc>https://relimie.com/ru/videos.html</loc><lastmod>2026-04-14</lastmod></url>
 
   <!-- What's New -->
-  <url><loc>https://relimie.com/en/whats_new.html</loc><lastmod>2026-04-27</lastmod></url>
-  <url><loc>https://relimie.com/de/whats_new.html</loc><lastmod>2026-04-27</lastmod></url>
-  <url><loc>https://relimie.com/ru/whats_new.html</loc><lastmod>2026-04-27</lastmod></url>
+  <url><loc>https://relimie.com/en/whats_new.html</loc><lastmod>2026-06-28</lastmod></url>
+  <url><loc>https://relimie.com/de/whats_new.html</loc><lastmod>2026-06-28</lastmod></url>
+  <url><loc>https://relimie.com/ru/whats_new.html</loc><lastmod>2026-06-28</lastmod></url>
 
   <!-- Support -->
   <url><loc>https://relimie.com/en/support.html</loc><lastmod>2026-04-14</lastmod></url>

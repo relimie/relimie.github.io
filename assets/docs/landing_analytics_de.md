@@ -9,6 +9,7 @@ Der Analyse-Hub macht aus deinen täglichen Einträgen ein klares Bild deines Gl
 - **Gewohnheiten** — Eine grafische Übersicht deiner Trinkgewohnheiten.
 - **Trends** — Erkenne die spezifischen Tage und Uhrzeiten, an denen du am ehesten vom Kurs abkommst.
 - **Log** — Schau dir jedes Datum an, um Einträge anzupassen, Notizen zu aktualisieren oder deine Gefühle zu verfeinern.
+- **Vollbild-Diagramm** — Halte dein Telefon quer für eine vollständige Querformat-Ansicht deines Konsums über die Zeit, damit du eine Trendwende früh erkennst.
 
 **Privatsphäre als Standard:**
 

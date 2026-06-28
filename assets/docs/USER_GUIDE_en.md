@@ -76,6 +76,9 @@ When a sudden urge or craving to drink hits, sheer willpower often isn't enough.
 ### Riding Out the Impulse
 By long-pressing the Orb on Today's date, you trigger an immediate psychological circuit breaker directly on the Home Screen. The screen transforms into a calm, expanding and contracting visual that guides you through the proven **4-7-8 Breathing Technique** — inhaling for 4 seconds, holding for 7, and exhaling for 8. This mindful support flow is accompanied by grounding citations and quotes to help anchor your focus. Once the breathing cycle completes, the app surfaces a prompt to log a **"Clear Day"** — a positive reinforcement step that turns the act of resisting a craving into a trackable achievement on your sober streak.
 
+### Your Regeneration Timeline
+The breathing screen does more than guide your breath — it also shows how your body bounces back. **Tap the card to flip it over** and reveal your personal **Regeneration Timeline**: a series of science-based milestones — **Day 1** (alcohol cleared), **Day 7** (rest returns), **Day 30** (body resets), **Day 90** (fully adjusted), **Day 180** (systems stronger), and **Day 365** (the one-year milestone). It highlights how far you've come based on the time since your last logged drink and what the next milestone brings. Tap the **?** for the full breakdown of each stage. This is general orientation, not medical advice — actual recovery varies from person to person and depends on factors like overall health, age, and lifestyle.
+
 ---
 
 ## 5. Analytics Hub
@@ -88,6 +91,9 @@ The hub provides a complete snapshot of your tracking lifespan. Inside, you can 
 
 ### Reviewing Consumption History
 Below your overview metrics, the Hub hosts your complete **Consumption History**. This chronologically ordered ledger allows you to easily review all past entries. More importantly, tapping directly on the history summary opens a date picker, allowing you to seamlessly navigate back to any specific previous date on the Home Screen. From there, you can effortlessly adjust logged drinks, amend your diary notes, or refine your emotional tags entirely retroactively.
+
+### The Landscape Consumption Chart
+For a focused, full-width view of your trends, simply **rotate your phone to landscape while on the Home Screen** — Relimie opens a dedicated **Consumption Chart**. Switch the metric between **Units**, **Money**, and **Calories**, and the timeframe between **Daily**, **Weekly**, and **Monthly**. On the daily alcohol view, the chart also overlays your **Baseline** and your rolling **Average**, so you can see at a glance whether your intake is trending below your target over time. The landscape chart is a **Premium** feature — available during your free trial and with Relimie Premium.
 
 ---
 
@@ -107,6 +113,7 @@ While tracking and analyzing form the core of Relimie, the app also includes sev
 - **Alcohol Unit Customization**: Relimie can display your consumption in the unit system that feels most natural to you. Navigate to **Settings → Personalization** to choose between Grams of pure alcohol, Milliliters, or Standard Drinks calibrated to the **US**, **UK**, or **Australian** definitions.
 - **Multilingual Support**: Relimie is fully localized to ensure you can interact with your health data in your native tongue. Currently, the app natively supports three languages: English, German, and Russian.
 - **Daily Reminders**: To help you build a consistent tracking habit, you can enable a daily reminder notification through the **Settings** menu. This gentle nudge ensures you never forget to check in and log your daily emotional state.
+- **Guided Tours & Tips**: The first time you open each screen, a short interactive tour points out the non-obvious gestures and shortcuts (like long-pressing the Orb or swiping between views). Want to see them again? Open the **Info** menu and tap **"Show in-app tips again"** to replay every tour from the start.
 
 ---
 
@@ -114,14 +121,14 @@ While tracking and analyzing form the core of Relimie, the app also includes sev
 
 To respect our users, the foundational tracking capabilities of Relimie are perpetually free. However, access to deep macro-analytics, unlimited historical reflections, and advanced AI utilities are part of the **Relimie Premium** experience.
 
-### The 30-Logging-Day Free Trial
-When you first start using Relimie, you are automatically granted a **30-Logging-Day Free Trial** that unlocks every premium feature. This timeframe strictly counts down *only* on the days you actually log an entry, giving you ample, fair time to properly explore the app at your own pace without feeling rushed.
+### The 20-Logging-Day Free Trial
+When you first start using Relimie, you are automatically granted a **20-Logging-Day Free Trial** that unlocks every premium feature. Only days with real content count toward these 20 days — a day where you log a drink, write a diary note, or add a tag. Pure sober days (a clean day with no drink and no diary entry) do **not** count, so marking sober days never uses up your trial. This gives you ample, fair time to explore the app at your own pace without feeling rushed.
 
 ### Core Free Tier (Always Free)
-After your 30 logging days expire, you retain perpetual access to the most vital tools, completely for free:
+After your 20 logging days expire, you retain perpetual access to the most vital tools, completely for free:
 - Unlimited daily logging of pre-delivered standard drinks.
 - Full access to the interactive Home Screen Orb and Quick Actions (Log/Sober).
-- The 4-7-8 Deep Breathing mindful exercise.
+- The 4-7-8 Deep Breathing mindful exercise and your Regeneration Timeline.
 - Your sober streaks remaining visible on the Home Screen.
 - Read-only access to your full historical Diary.
 
@@ -131,7 +138,7 @@ Upgrading to **Relimie Premium** permanently unlocks (or continues) the followin
 - **Diary & Reflection Writing**: The ability to write new journal entries and attach emotional tags to new days. After your trial expires, the Diary becomes read-only on the free tier.
 - **Complete Customization**: AI-assisted drink creation, manual drink overrides, and expanding your personal drink catalog natively.
 - **Deep Reflection**: Navigating backward through your full chronological ledger and using direct-editing shortcuts directly from the Diary.
-- **Analytics & Exporting**: Permanent access to the powerful `Analytics`, `Trends`, and `Habits` tabs inside the Hub, along with the ability to generate PDF "Share My Story" reports and Raw JSON backups.
+- **Analytics & Exporting**: Permanent access to the powerful `Analytics`, `Trends`, and `Habits` tabs inside the Hub, the full-screen landscape Consumption Chart, along with the ability to generate PDF "Share My Story" reports and Raw JSON backups.
 
 ### Pricing Models
 Upgrades are securely managed through your device's native app store. You can select the plan that best fits your lifestyle:

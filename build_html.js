@@ -77,7 +77,7 @@ const getPageDescription = (page, lang) => {
             privacy: 'Relimie privacy policy. All your data stays on your device. No cloud storage, no third-party access, no tracking. Ever.',
             terms: 'Terms of service for Relimie — the mindful drinking companion app for iPhone.',
             impressum: 'Legal disclosure and contact information for Relimie.',
-            whats_new: "What's new in Relimie v2.0.1 — interactive Orb, AI-powered drink logging, and more.",
+            whats_new: "What's new in Relimie v2.1.0 — full-screen landscape chart, guided in-app tours, Body Recovery Timeline, and faster logging.",
             videos: 'Video guides for Relimie — tutorials on setting your baseline, logging drinks, and using the Cravings Breaker.',
             support: 'Get support for Relimie. Contact us for help with the mindful drinking tracker app.',
             android: 'Relimie for Android is coming soon. Join the open test and be the first to try the mindful drinking app on Android.',
@@ -92,7 +92,7 @@ const getPageDescription = (page, lang) => {
             privacy: 'Datenschutzerklärung für Relimie. Alle Daten bleiben auf deinem Gerät. Kein Cloud-Speicher, kein Tracking.',
             terms: 'Nutzungsbedingungen für Relimie — den achtsamen Trink-Begleiter für iPhone.',
             impressum: 'Impressum für Relimie — gesetzliche Pflichtangaben und Kontaktinformationen.',
-            whats_new: 'Neu in Relimie v2.0.1 — interaktive Sphäre, KI-Protokollierung und mehr.',
+            whats_new: 'Neu in Relimie v2.1.0 — Vollbild-Diagramm im Querformat, geführte In-App-Touren, Regenerations-Zeitleiste und schnelleres Erfassen.',
             videos: 'Video-Anleitungen für Relimie — Tutorials zu Baseline, Getränken und Heißhunger-Stopper.',
             support: 'Support für Relimie — Kontakt bei Fragen zur App.',
             android: 'Relimie für Android kommt bald. Melde dich zum offenen Test an.',
@@ -107,7 +107,7 @@ const getPageDescription = (page, lang) => {
             privacy: 'Политика конфиденциальности Relimie. Все данные хранятся только на устройстве. Никаких облаков, никакого отслеживания.',
             terms: 'Условия использования Relimie — осознанного помощника для контроля употребления алкоголя.',
             impressum: 'Юридическая информация и контактные данные Relimie.',
-            whats_new: 'Что нового в Relimie v2.0.1 — интерактивная Сфера, ИИ-запись напитков и многое другое.',
+            whats_new: 'Что нового в Relimie v2.1.0 — полноэкранный график в горизонтальном режиме, обучающие подсказки, шкала восстановления и быстрая запись.',
             videos: 'Видеогиды по Relimie — уроки по настройке базовой линии, ведению журнала и борьбе с тягой.',
             support: 'Поддержка Relimie — свяжись с нами по вопросам работы приложения.',
             android: 'Relimie для Android скоро выйдет. Присоединись к открытому тестированию.',
@@ -165,7 +165,7 @@ function getSchemaOrg(lang, pageName, isIndex) {
       "url": "https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714",
       "applicationCategory": "HealthApplication",
       "operatingSystem": "iOS",
-      "softwareVersion": "2.0.1",
+      "softwareVersion": "2.1.0",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "author": { "@id": "https://relimie.com/#organization" },
       "publisher": { "@id": "https://relimie.com/#organization" },
@@ -299,7 +299,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
         </nav>
 
         <div class="new-version-banner">
-            <p data-i18n="newVersionBanner">Version 2.0.1 is now live! Discover the new interactive Orb and AI logging.</p>
+            <p data-i18n="newVersionBanner">Version 2.1.0 is now live! Rotate your phone for a full-screen chart, plus guided in-app tips.</p>
             <a href="whats_new.html" class="banner-cta" data-i18n="seeWhatsNew">See what's new</a>
         </div>
 
@@ -313,7 +313,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
                     </div>
                 </div>
                 <div class="ls-text">
-                    <h1><span data-i18n="heroTitle">Relimie</span> <span class="version-badge" aria-hidden="true">v2.0.1</span></h1>
+                    <h1><span data-i18n="heroTitle">Relimie</span> <span class="version-badge" aria-hidden="true">v2.1.0</span></h1>
                     <p class="subtitle" data-i18n="heroSubtitle">Enjoy the moment without losing your edge.</p>
                     <div class="markdown-body">
                         ${bodyContent.s1}

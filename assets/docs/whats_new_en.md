@@ -1,16 +1,19 @@
-# What's New in Relimie 2.0.1
+# What's New in Relimie 2.1.0
 
-Welcome to the **Relimie 2.0.1** release! This update brings several new features designed to help you track your consumption with more precision and clarity.
+Welcome to **Relimie 2.1.0**! This release brings a set of new features and many improvements to help you track your consumption with more clarity and ease.
 
 ### 🌟 Major Highlights
-- **Interactive Orb Explorer**: Tap the central Orb on the Home Screen to switch between your current consumption and the new **Baseline Trend** view. Real-time comparison against your goals.
-- **Improved Logging & Search**: New search bar in the drink logger and AI-assisted creation with localized results.
-- **Advanced Diary Tools**: Direct editing from Diary view (Premium) and color-coded habit tags.
+- **Rotate for the full picture**: Turn your phone sideways on the Home Screen to open a full-screen consumption chart. It's the headline feature of this release, so a change in direction is easy to catch early.
+- **Guided in-app tours**: Quick spotlights teach the non-obvious gestures and shortcuts on every screen. Replay them anytime from Info → "Show in-app tips again".
+- **Faster logging**: A calmer drink list that no longer jumps around, smarter search, and quick edit straight from the Diary.
 
 ### 🛠 Features & Improvements
-- **Redemption & Support**: Native Apple Offer Code redemption and a unique App User ID (long-press version in Info).
-- **Smart App Ratings**: Easy feedback sharing.
-- **Precision & UI**: Orb stability for historical dates, visual polish in dialogs, and smoother navigation.
+- **Body Recovery Timeline**: On the breathing screen, see what your body tends to regain since your last drink, from days to a year.
+
+> 🎁 **Free for everyone:** The Body Recovery Timeline is one more small reason to keep your streak going, available to every user at no cost.
+
+- **Smoother first run**: A faster onboarding that personalizes your Home Screen from day one and can seed your recent sober days.
+- **Polish & fixes**: Improved text in all languages, plus many small UI fixes.
 
 ---
 Thank you for using Relimie!

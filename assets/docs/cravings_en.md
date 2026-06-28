@@ -12,4 +12,10 @@ A craving doesn't ask for permission. It hits fast, and in those first 30 second
 
 When the cycle ends, Relimie prompts you to log a **Clear Day**. By turning a moment of resistance into a trackable achievement, you transform a difficult impulse into another brick in your streak. Every urge you ride out is proof of your progress.
 
+## See Your Body Bounce Back
+
+Right on the breathing screen, a **Body Recovery Timeline** counts from your last drink and shows what your body tends to regain over time — from better sleep and energy in the first days to longer-term changes across a year. It's one more small reason to keep your streak going.
+
+> 🎁 **Free for everyone:** The Body Recovery Timeline is available to every user at no cost.
+
 If you have any ideas what else can help against the craving, let us know at [support@relimie.com]!

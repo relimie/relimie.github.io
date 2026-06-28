@@ -9,6 +9,7 @@ The Analytics Hub turns your daily entries into a clear picture of your balance.
 - **Habits** — A graphical overview of your drinking habits.
 - **Trends** — Spot the specific days and times when you're most likely to drift off course.
 - **Log** — Look back at any date to adjust entries, update notes, or refine how you felt.
+- **Full-Screen Chart** — Turn your phone sideways for a full landscape view of your consumption over time, so a change in direction is easy to catch early.
 
 **Private by Design:**
 
