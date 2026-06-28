@@ -11,7 +11,7 @@ const root = 'c:/GitHub/relimie.github.io';
 // (otherwise GitHub Pages can keep serving a stale translations.js, leaving an old version banner).
 const APP_VERSION = '2.1.0';
 const langs = ['en', 'de', 'ru'];
-const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'android', 'videos', 'cravings', 'cooperation'];
+const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'android', 'videos', 'cravings', 'cooperation', 'story'];
 
 const fileMap = {
     'privacy': 'privacy_policy',
@@ -26,7 +26,8 @@ const fileMap = {
     'android': 'android',
     'videos': 'videos',
     'cravings': 'cravings',
-    'cooperation': 'cooperation'
+    'cooperation': 'cooperation',
+    'story': 'founder_story'
 };
 
 const getPageTitle = (page) => {
@@ -44,6 +45,7 @@ const getPageTitle = (page) => {
         case 'videos': return 'Video Guides';
         case 'cravings': return 'Cravings Breaker';
         case 'cooperation': return 'Cooperation';
+        case 'story': return 'Founder Story';
         default: return 'Relimie';
     }
 };
@@ -74,6 +76,11 @@ const getPageTitleFull = (page, lang) => {
         if (lang === 'ru') return 'Relimie – Сотрудничество | Партнёрам и блогерам';
         return 'Relimie – Partner With Us | Influencer & Affiliate Cooperation';
     }
+    if (page === 'story') {
+        if (lang === 'de') return 'Relimie – Die Gründergeschichte: Warum ich Relimie entwickelt habe';
+        if (lang === 'ru') return 'Relimie – История создателя: почему я сделал Relimie';
+        return 'Relimie – The Founder Story: Why I Built a Mindful Drinking App';
+    }
     return `Relimie – ${getPageTitle(page)}`;
 };
 
@@ -94,6 +101,7 @@ const getPageDescription = (page, lang) => {
             votes: 'Vote on upcoming features for Relimie — help shape the future of the mindful drinking companion app.',
             privacy_web: 'Website privacy notice for relimie.com — no cookies, no tracking scripts, no personal data collected.',
             cooperation: 'Partner with Relimie. We collaborate with influencers in the alcohol-reduction space and anyone who wants to recommend our mindful drinking app. Email partners@relimie.com.',
+            story: 'The story behind Relimie: how one number, average daily alcohol in grams, grew into a mindful drinking app built by an indie developer.',
         },
         de: {
             index: 'Alkohol reduzieren ohne harte Regeln. Kostenlose Getränkeprotokollierung, Kalorien- und Ausgaben-Tracking. Kein Account, keine Cloud.',
@@ -110,6 +118,7 @@ const getPageDescription = (page, lang) => {
             votes: 'Stimme über neue Funktionen für Relimie ab — gestalte die Zukunft der App mit.',
             privacy_web: 'Website-Datenschutz für relimie.com — keine Cookies, kein Tracking.',
             cooperation: 'Kooperiere mit Relimie. Wir arbeiten mit Influencern im Bereich Alkoholreduktion und allen, die unsere achtsame Trink-App weiterempfehlen möchten. partners@relimie.com.',
+            story: 'Die Geschichte hinter Relimie: wie aus einer einzigen Zahl, dem täglichen Alkohol-Durchschnitt in Gramm, eine achtsame Trink-App eines Indie-Entwicklers wurde.',
         },
         ru: {
             index: 'Снижай потребление алкоголя без жёстких правил. Бесплатный журнал напитков, трекинг триггеров и калорий. Только на устройстве, без облака.',
@@ -126,6 +135,7 @@ const getPageDescription = (page, lang) => {
             votes: 'Голосуй за новые функции Relimie — помоги сформировать будущее приложения.',
             privacy_web: 'Политика конфиденциальности сайта relimie.com — без cookie, без трекинга, без аналитики.',
             cooperation: 'Сотрудничество с Relimie. Работаем с блогерами в теме снижения употребления алкоголя и со всеми, кто готов рекомендовать наше приложение. partners@relimie.com.',
+            story: 'История Relimie: как одна цифра, средний дневной алкоголь в граммах, выросла в осознанное приложение, созданное инди-разработчиком.',
         }
     };
     return (desc[lang] && desc[lang][page]) || (desc['en'] && desc['en'][page]) || 'Relimie – Mindful drinking companion app for iPhone.';
@@ -461,6 +471,7 @@ ${getSchemaOrg(lang, pageName, isIndex)}
                     <div class="dropdown-menu">
                         <a href="android.html" data-i18n="androidTest">Android Open Test</a>
                         <a href="whats_new.html" data-i18n="releaseNews">Release News</a>
+                        <a href="story.html" data-i18n="founderStory">Founder Story</a>
                         <a href="cooperation.html" data-i18n="cooperation">Cooperation</a>
                     </div>
                 </div>
