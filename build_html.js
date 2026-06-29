@@ -7,9 +7,13 @@ marked.use(gfmHeadingId());
 marked.setOptions({ breaks: true, gfm: true });
 
 const root = 'c:/GitHub/relimie.github.io';
-// Bump on every release. Appended to CSS/JS URLs as ?v= to bust browser & CDN caches
-// (otherwise GitHub Pages can keep serving a stale translations.js, leaving an old version banner).
+// Semantic app version — shown to users (nav button, schema softwareVersion, What's-New copy).
 const APP_VERSION = '2.1.0';
+// Cache-bust token appended to CSS/JS URLs as ?v= to force browsers & the GitHub Pages CDN
+// to refetch assets. Bump on ANY deploy that changes style.css / script.js / translations.js
+// (otherwise a stale translations.js can leave the old copy/banner showing). Not user-visible,
+// so it does not need to match APP_VERSION — use a build tag or date.
+const ASSET_VERSION = '20260629';
 const langs = ['en', 'de', 'ru'];
 const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'android', 'videos', 'cravings', 'cooperation', 'story'];
 
@@ -572,7 +576,7 @@ ${getHreflangTags(pageName)}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap">
-    <link rel="stylesheet" href="../assets/css/style.css?v=${APP_VERSION}">${isIndex ? `
+    <link rel="stylesheet" href="../assets/css/style.css?v=${ASSET_VERSION}">${isIndex ? `
     <link rel="preload" as="image" href="../assets/images/mindful_orb.webp">` : ''}
 ${getSchemaOrg(lang, pageName, isIndex)}
 </head>
@@ -654,8 +658,8 @@ ${getSchemaOrg(lang, pageName, isIndex)}
         <a href="impressum.html" data-i18n="impressum">Impressum</a>
     </nav>
 
-    <script src="../assets/js/translations.js?v=${APP_VERSION}"></script>
-    <script src="../assets/js/script.js?v=${APP_VERSION}"></script>
+    <script src="../assets/js/translations.js?v=${ASSET_VERSION}"></script>
+    <script src="../assets/js/script.js?v=${ASSET_VERSION}"></script>
 </body>
 </html>`;
 }
