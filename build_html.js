@@ -437,7 +437,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
             <h1 class="hero-tagline" data-i18n="heroTagline">Enjoy Life. Keep Control.</h1>
             <p class="hero-lead" data-i18n="heroLead">Relimie is your companion for mindful, moderate and sober-curious drinking — an alcohol tracker and diary that helps you reduce drinking on your own terms.</p>
             ${storeBadgeHtml}
-            <p class="hero-trust" data-i18n="heroTrust">No account. No cloud. Your data stays on your device.</p>
+            <p class="hero-trust" data-i18n="heroTrust">No account. No cloud. No ads. Your data stays on your device.</p>
         </header>
 
         <!-- Value grid: the messages at a glance -->
@@ -590,17 +590,16 @@ ${getSchemaOrg(lang, pageName, isIndex)}
             </div>
 
             <nav class="main-nav">
+                <div class="nav-item">
+                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">New in 2.1.0</a>
+                </div>
                 <div class="nav-item has-dropdown">
                     <a href="whats_new.html"><span data-i18n="community">Community</span> <span class="dot-new"></span></a>
                     <div class="dropdown-menu">
                         <a href="android.html" data-i18n="androidTest">Android Test</a>
                         <a href="whats_new.html" data-i18n="releaseNews">Release News</a>
                         <a href="story.html" data-i18n="founderStory">Founder Story</a>
-                        <a href="cooperation.html" data-i18n="cooperation">Cooperation</a>
                     </div>
-                </div>
-                <div class="nav-item">
-                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">New in 2.1.0</a>
                 </div>
                 <div class="nav-item has-dropdown">
                     <a href="guide.html" data-i18n="guide">Guide</a>
@@ -610,6 +609,9 @@ ${getSchemaOrg(lang, pageName, isIndex)}
                         <a href="faq.html" data-i18n="faq">FAQ</a>
                         <a href="support.html" data-i18n="support">Support</a>
                     </div>
+                </div>
+                <div class="nav-item">
+                    <a href="cooperation.html" data-i18n="cooperation">Cooperation</a>
                 </div>
             </nav>
 

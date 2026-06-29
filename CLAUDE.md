@@ -167,9 +167,9 @@ Pages are registered in `build_html.js`:
 - `fileMap` — maps page key → MD filename prefix
 - `getPageTitle()` — maps page key → HTML `<title>` suffix
 
-**Navigation dropdown placement:**
+**Navigation placement** (left→right): New in 2.1.0 (standalone teal `nav-whatsnew` link), Community (dropdown), Guide (dropdown), Cooperation (standalone link, last).
+- Community dropdown: Android Test, Release News, Founder Story
 - Guide dropdown: User Guide, Video Guides, FAQ, Support (Support also keeps its direct link in the footer)
-- Community dropdown: Android Open Test, Release News
 
 **`cravings_[lang].md` serves double duty**: it is both Section 5 on the index page AND the standalone `cravings.html` text page.
 
