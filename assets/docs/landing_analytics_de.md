@@ -1,6 +1,6 @@
 ## Deine Geschichte. Deine Daten.
 
-Der Analyse-Hub macht aus deinen täglichen Einträgen ein klares Bild deines Gleichgewichts. Wische einfach auf dem Startbildschirm nach oben, um zu sehen, wo du stehst.
+Der **[Analyse-Hub](faq.html#wie-nutze-ich-die-analyse-funktionen)** macht aus deinen täglichen Einträgen ein klares Bild deines Gleichgewichts. Wische einfach auf dem Startbildschirm nach oben, um zu sehen, wo du stehst.
 
 **Das ist drin:**
 
@@ -13,6 +13,6 @@ Der Analyse-Hub macht aus deinen täglichen Einträgen ein klares Bild deines Gl
 
 **Privatsphäre als Standard:**
 
-Deine Daten verlassen niemals dein Gerät. Wenn du möchtest, kannst du ein **„Share My Story“-PDF** erstellen, um jemandem deinen Fortschritt zu zeigen – ohne deine privaten Tagebuchnotizen preiszugeben. Oder exportiere ein **JSON-Backup** für deine eigene Analyse.
+Deine **[Daten verlassen niemals dein Gerät](faq.html#sind-meine-daten-privat)**. Wenn du möchtest, kannst du ein **„Share My Story“-PDF** erstellen, um jemandem deinen Fortschritt zu zeigen – ohne deine privaten Tagebuchnotizen preiszugeben. Oder exportiere ein **JSON-Backup** für deine eigene Analyse.
 
 Keine Cloud, kein Tracking, kein Zugriff für Dritte. Niemals.

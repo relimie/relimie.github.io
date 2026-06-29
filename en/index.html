@@ -114,7 +114,7 @@
                     </div>
                 </div>
                 <div class="nav-item">
-                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">See what's new in 2.1.0</a>
+                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">New in 2.1.0</a>
                 </div>
                 <div class="nav-item has-dropdown">
                     <a href="guide.html" data-i18n="guide">Guide</a>
@@ -122,6 +122,7 @@
                         <a href="guide.html" data-i18n="userGuide">User Guide</a>
                         <a href="videos.html" data-i18n="videoGuides">Video Guides</a>
                         <a href="faq.html" data-i18n="faq">FAQ</a>
+                        <a href="support.html" data-i18n="support">Support</a>
                     </div>
                 </div>
             </nav>
@@ -143,29 +144,6 @@
 
     <main>
         
-        <nav class="section-nav" id="section-nav">
-            <a href="#ls-hero" class="section-nav-item active" data-section="ls-hero">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navStart">Start</span>
-            </a>
-            <a href="#ls-diary" class="section-nav-item" data-section="ls-diary">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navDiary">Diary</span>
-            </a>
-            <a href="#ls-logging" class="section-nav-item" data-section="ls-logging">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navLogging">Logging</span>
-            </a>
-            <a href="#ls-analytics" class="section-nav-item" data-section="ls-analytics">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navAnalytics">Analytics</span>
-            </a>
-            <a href="#ls-cravings" class="section-nav-item" data-section="ls-cravings">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navCravings">Cravings</span>
-            </a>
-        </nav>
-
         <!-- Hero: animated Orb + core promise -->
         <header class="home-hero" id="home-hero">
             <div class="hero-orb">
@@ -180,8 +158,12 @@
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>
             <p class="hero-trust" data-i18n="heroTrust">No account. No cloud. Your data stays on your device.</p>
@@ -227,8 +209,12 @@
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>
                     <div class="ls-carousel">
@@ -240,12 +226,13 @@
                 </div>
                 <div class="ls-text">
                     <div class="markdown-body">
-                        <h2 id="drink-on-your-own-terms">Drink on Your Own Terms</h2>
+                        <h2 id="mindful-enjoyment-not-sacrifice">Mindful Enjoyment, Not Sacrifice</h2>
 <p>Relimie isn&#39;t just about quitting drinking, and it&#39;s more than an alcohol tracker: it&#39;s a mindful drinking companion for those who enjoy a drink but want to prevent their habits from becoming an addiction — without the guilt or judgment that often comes with tracking.</p>
-<p>In Relimie, everything revolves around your <strong>Personal Baseline</strong> (which is why we call our method &quot;baseline-drinking&quot;). Instead of a rigid daily limit that feels like a failure if you miss it, your baseline is a long-term anchor. Life happens: some nights you&#39;ll have an extra glass, others you won&#39;t drink at all. What matters is the trend. Over time, your habits naturally gravitate back toward your goal.</p>
-<p>Tapping your glowing <strong>Orb</strong> shows you where you stand at a glance: <strong>Green</strong> — you&#39;re comfortably within your baseline; <strong>Gold</strong> — you&#39;re slightly over your limit; <strong>Red</strong> — you should consider pausing for a few days to bring your average back in line. The green signs also show you how many drinks you have avoided so far. You can use this information to adjust your baseline down and reduce your consumption step by step, if you wish.</p>
-<p>To help you choose your baseline, we provide data from WHO recommendations and average values for your country and gender. These serve as orientation until you find your personal values. Relimie also supports a variety of measurement units, so you can use those you understand best (like grams of pure alcohol or standard US units).</p>
+<p>In Relimie, everything revolves around your <strong><a href="faq.html#what-is-a-personal-baseline">Personal Baseline</a></strong> (which is why we call our method &quot;baseline-drinking&quot;). Instead of a rigid daily limit that feels like a failure if you miss it, your baseline is a long-term anchor. Life happens: some nights you&#39;ll have an extra glass, others you won&#39;t drink at all. What matters is the trend. Over time, your habits naturally gravitate back toward your goal.</p>
+<p>Tapping your glowing <strong>Orb</strong> shows you where you stand at a glance: <strong>Green</strong> — you&#39;re comfortably within your baseline; <strong>Gold</strong> — you&#39;re slightly over your limit; <strong>Red</strong> — you should consider pausing for a few days to bring your average back in line. The green signs also show you how many drinks you have avoided so far. You can use this information to adjust your baseline down and <strong><a href="faq.html#how-does-the-baseline-help-me-reduce-my-drinking">reduce your consumption step by step</a></strong>, if you wish.</p>
+<p>To help you <strong><a href="faq.html#how-do-i-choose-the-right-baseline">choose your baseline</a></strong>, we provide data from WHO recommendations and average values for your country and gender. These serve as orientation until you find your personal values. Relimie also supports a variety of measurement units, so you can use those you understand best (like grams of pure alcohol or standard US units).</p>
 <p>Keep in mind that while baseline-drinking is a powerful helper for controlling your behavior, it won&#39;t do the work for you. You need to put in the effort to stick to your baseline and log accurately. Since the baseline is based on aggregation, it needs some time to &quot;kick in&quot; as it collects data. Don&#39;t be discouraged if you don&#39;t see it change immediately, even though it becomes available right after onboarding.</p>
+<p>Curious where baseline-drinking came from? It grew out of a single number and one person&#39;s struggle to stay in control — <a href="story.html">read the story behind Relimie</a>.</p>
 
                     </div>
                     <a href="guide.html" class="glass-btn primary" data-i18n="readGuide">Read the User Guide</a>
@@ -260,7 +247,7 @@
                 <div class="ls-text">
                     <div class="markdown-body">
                         <h2 id="connect-the-dots-why-you-drink">Connect the Dots: Why You Drink</h2>
-<p>Tracking numbers is just the start. Your alcohol diary is where you find the <em>why</em>.</p>
+<p>Tracking numbers is just the start. Your alcohol diary is where you find the <em><a href="faq.html#what-is-relimies-philosophy">why</a></em>.</p>
 <p>By logging how you feel — before a drink, the morning after, or on a clear-headed day — you start to see the patterns that usually stay hidden. It&#39;s about spotting triggers and finding a way to stay ahead of them. The diary helps you understand the consequences and spot the moments when you need to take control.</p>
 <p><strong>Contextual tags appear when you need them:</strong></p>
 <ul>
@@ -279,8 +266,12 @@
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>
                     <div class="ls-carousel">
@@ -299,8 +290,12 @@
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>
                     <div class="ls-carousel">
@@ -317,13 +312,13 @@
 <p><strong>Every entry adds up to your big picture:</strong></p>
 <ul>
 <li><strong>Alcohol</strong> — Track the total pure alcohol consumed with each drink.</li>
-<li><strong>Spending</strong> — See exactly what you&#39;re spending. Prices are preset based on your country&#39;s averages, but you can always adjust them for a single drink or the whole day. Just long-press a drink in the list or the total amount at the bottom. Prices are also split between &quot;home&quot; and &quot;outside&quot; consumption for better accuracy.</li>
+<li><strong>Spending</strong> — See exactly what you&#39;re spending. Prices are preset based on your country&#39;s averages, but you can always <strong><a href="faq.html#how-do-i-enter-or-adjust-my-spending">adjust them</a></strong> for a single drink or the whole day. Just long-press a drink in the list or the total amount at the bottom. Prices are also split between &quot;home&quot; and &quot;outside&quot; consumption for better accuracy.</li>
 <li><strong>Calories</strong> — Each drink comes with predefined calorie counts so you can see the real impact on your fitness goals, not just the unit count. If you need to be exact, you can adjust these for any drink.</li>
 </ul>
-<p>Relimie features a catalog of the most common drinks, and you can easily add your own. To make adding new drinks as simple as possible, use the <strong>AI Sparkle button</strong>. It appears in the search bar whenever you enter a drink not found in the catalog. One tap will research and autofill the ABV and calories, so you never have to guess. Feel free to provide feedback if something doesn&#39;t work as expected — we’re always improving.</p>
+<p>Relimie features a catalog of the most common drinks, and you can easily <strong><a href="faq.html#can-i-create-my-own-drinks">add your own</a></strong>. To make adding new drinks as simple as possible, use the <strong>AI Sparkle button</strong>. It appears in the search bar whenever you enter a drink not found in the catalog. One tap will research and autofill the ABV and calories, so you never have to guess. Feel free to provide feedback if something doesn&#39;t work as expected — we’re always improving.</p>
 <p>All of this data flows into your <strong>Analytics Hub</strong>, where daily entries become the insights that help you stay in control.</p>
 <blockquote>
-<p>🎁 <strong>And most importantly:</strong> Logging your alcohol, calories, and spending is completely free, along with the essential analytics to track them. You don&#39;t need a premium subscription to use these features for as long as you like!</p>
+<p>🎁 <strong>And most importantly:</strong> Logging your alcohol, calories, and spending is <strong><a href="faq.html#is-relimie-free">completely free</a></strong>, along with the essential analytics to track them. You don&#39;t need a premium subscription to use these features for as long as you like!</p>
 </blockquote>
 
                     </div>
@@ -338,7 +333,7 @@
                 <div class="ls-text">
                     <div class="markdown-body">
                         <h2 id="see-your-story-own-your-data">See Your Story. Own Your Data.</h2>
-<p>The Analytics Hub turns your daily entries into a clear picture of your balance. Just swipe up from the Home Screen to see where you stand.</p>
+<p>The <strong><a href="faq.html#how-do-i-use-the-analytics-features">Analytics Hub</a></strong> turns your daily entries into a clear picture of your balance. Just swipe up from the Home Screen to see where you stand.</p>
 <p><strong>What&#39;s inside:</strong></p>
 <ul>
 <li><strong>History</strong> — Go back and forth in time.</li>
@@ -349,7 +344,7 @@
 <li><strong>Full-Screen Chart</strong> — Turn your phone sideways for a full landscape view of your consumption over time, so a change in direction is easy to catch early.</li>
 </ul>
 <p><strong>Private by Design:</strong></p>
-<p>Your data never leaves your device. When you want to, you can generate a <strong>&quot;Share My Story&quot; PDF</strong> to show progress to someone — without sharing your private journal notes. Or export a <strong>JSON Backup</strong> for your own analysis.</p>
+<p>Your <strong><a href="faq.html#is-my-data-private">data never leaves your device</a></strong>. When you want to, you can generate a <strong>&quot;Share My Story&quot; PDF</strong> to show progress to someone — without sharing your private journal notes. Or export a <strong>JSON Backup</strong> for your own analysis.</p>
 <p>No cloud, no tracking, no third-party access. Ever.</p>
 
                     </div>
@@ -361,8 +356,12 @@
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>
                     <div class="ls-carousel">
@@ -382,8 +381,12 @@
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>
                     <div class="ls-carousel">
@@ -396,9 +399,9 @@
 <h2 id="breathe-through-the-impulse">Breathe Through the Impulse</h2>
 <p>A craving doesn&#39;t ask for permission. It hits fast, and in those first 30 seconds, willpower alone can feel like it&#39;s not enough. But if you can disrupt that initial impulse, you give your brain the space it needs to step back and stay on track.</p>
 <h2 id="your-instant-circuit-breaker">Your Instant Circuit Breaker</h2>
-<p><strong>Long-press the Orb</strong> on the Home Screen to trigger the Breaker immediately. Your screen transforms into a calm, pulsing guide for the <strong>4-7-8 Breathing Technique</strong>. As you breathe, grounding quotes help anchor your focus and steady your mind until the urge passes.</p>
+<p><strong>Long-press the Orb</strong> on the Home Screen to trigger the <strong><a href="faq.html#what-is-the-cravings-breaker">Cravings Breaker</a></strong> immediately. Your screen transforms into a calm, pulsing guide for the <strong>4-7-8 Breathing Technique</strong>. As you breathe, grounding quotes help anchor your focus and steady your mind until the urge passes.</p>
 <h2 id="turn-a-challenge-into-a-win">Turn a Challenge into a Win</h2>
-<p>When the cycle ends, Relimie prompts you to log a <strong>Clear Day</strong>. By turning a moment of resistance into a trackable achievement, you transform a difficult impulse into another brick in your streak. Every urge you ride out is proof of your progress.</p>
+<p>When the cycle ends, Relimie prompts you to log a <strong>Clear Day</strong>. By turning a moment of resistance into a trackable achievement, you transform a difficult impulse into another brick in your streak. Every urge you ride out is proof of your progress — whether you&#39;re cutting back or taking on <strong><a href="faq.html#can-i-use-relimie-for-dry-january-or-sober-october">Dry January or Sober October</a></strong>.</p>
 <h2 id="see-your-body-bounce-back">See Your Body Bounce Back</h2>
 <p>Right on the breathing screen, a <strong>Body Recovery Timeline</strong> counts from your last drink and shows what your body tends to regain over time — from better sleep and energy in the first days to longer-term changes across a year. It&#39;s one more small reason to keep your streak going.</p>
 <blockquote>
@@ -425,13 +428,14 @@
         <p class="copyright">&copy; 2026 Relimie</p>
     </footer>
 
-    <!-- Sticky App Store CTA — always visible on scroll (all pages) -->
-    <div class="sticky-cta" id="sticky-cta">
-        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge-sm" alt="Download on the App Store">
-        </a>
-        <a href="android.html" class="coming-soon-link-sm" data-i18n="androidComingSoon">Android app coming soon</a>
-    </div>
+    <!-- Sticky legal bar — keeps the required legal links reachable from any
+         scroll position (shown whenever the footer is out of view, all pages) -->
+    <nav class="sticky-cta" id="sticky-cta" aria-label="Legal links">
+        <a href="terms.html" data-i18n="terms">Terms of Service</a>
+        <a href="privacy.html" data-i18n="privacy">Privacy Policy</a>
+        <a href="privacy_web.html" data-i18n="websitePrivacy">Website Privacy</a>
+        <a href="impressum.html" data-i18n="impressum">Impressum</a>
+    </nav>
 
     <script src="../assets/js/translations.js?v=2.1.0"></script>
     <script src="../assets/js/script.js?v=2.1.0"></script>

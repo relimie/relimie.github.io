@@ -589,7 +589,7 @@ main {
     animation-delay: 1s;
 }
 
-/* Sticky App Store CTA bar */
+/* Sticky legal bar */
 .sticky-cta {
     position: fixed;
     bottom: 0;
@@ -598,7 +598,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 8px 24px;
     padding: 12px 24px;
     padding-bottom: max(12px, env(safe-area-inset-bottom));
     background: rgba(15, 23, 42, 0.88);
@@ -614,37 +615,31 @@ main {
     transform: translateY(0);
 }
 
-.store-badge-sm {
-    height: 36px;
-    transition: opacity 0.2s;
-}
-
-.store-badge-sm:hover {
-    opacity: 0.8;
-}
-
-.coming-soon-link-sm {
+.sticky-cta a {
     color: var(--text-secondary);
     font-size: 13px;
     font-weight: 500;
     text-decoration: none;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
     transition: color 0.2s;
 }
 
-.coming-soon-link-sm:hover {
+.sticky-cta a:hover {
     color: var(--accent-teal);
 }
 
 /* Shared store/badge styles */
 .store-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 12px;
 }
 
 .store-badge {
+    display: block;
     height: 56px;
     transition: opacity 0.2s;
 }
@@ -653,21 +648,52 @@ main {
     opacity: 0.8;
 }
 
-.coming-soon {
-    font-size: 13px;
-    color: var(--text-secondary);
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    transition: color 0.2s;
-}
-
-.coming-soon-link {
+/* Android "coming soon" badge — paired with the App Store badge in the same row */
+.android-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    height: 56px;
+    padding: 0 18px;
+    box-sizing: border-box;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 11px;
     text-decoration: none;
+    transition: opacity 0.2s, border-color 0.2s;
 }
 
-.coming-soon-link:hover .coming-soon {
-    color: var(--accent-teal);
+.android-badge:hover {
+    opacity: 0.9;
+    border-color: var(--accent-teal);
+}
+
+.android-badge-icon {
+    width: 26px;
+    height: 26px;
+    color: #3DDC84;
+    flex-shrink: 0;
+}
+
+.android-badge-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.12;
+    color: #fff;
+    text-align: left;
+}
+
+.android-badge-top {
+    font-size: 11px;
+    letter-spacing: 0.4px;
+    opacity: 0.92;
+}
+
+.android-badge-bottom {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
 }
 
 /* Hero typography (used inside Section 1 ls-text) */
@@ -935,68 +961,8 @@ main {
     }
 }
 
-/* Section scroll-spy sidebar */
-.section-nav {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    z-index: 500;
-}
-
-.section-nav-item {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.section-nav-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.22);
-    flex-shrink: 0;
-    transition: background 0.3s ease, width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-.section-nav-label {
-    margin-left: 10px;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text-secondary);
-    white-space: nowrap;
-    transition: color 0.22s ease;
-}
-
-.section-nav-item.active .section-nav-dot {
-    width: 10px;
-    height: 10px;
-    background: var(--accent-teal);
-    box-shadow: 0 0 10px rgba(45, 212, 191, 0.65);
-}
-
-.section-nav-item.active .section-nav-label {
-    color: var(--accent-teal);
-}
-
-.section-nav-item:hover .section-nav-dot {
-    transform: scale(1.35);
-    background: var(--accent-teal);
-}
-
-.section-nav-item:hover .section-nav-label {
-    color: var(--accent-teal);
-}
-
 /* Responsive */
 @media (max-width: 900px) {
-    .section-nav { display: none; }
-
     .home-hero {
         padding: 40px 20px 24px;
         gap: 18px;
@@ -1117,8 +1083,11 @@ main {
 
 @media (max-width: 480px) {
     .sticky-cta {
-        flex-direction: column;
-        gap: 8px;
+        gap: 6px 14px;
+    }
+
+    .sticky-cta a {
+        font-size: 12px;
     }
 
     .ls-text h1 {

@@ -1,6 +1,6 @@
 ## See Your Story. Own Your Data.
 
-The Analytics Hub turns your daily entries into a clear picture of your balance. Just swipe up from the Home Screen to see where you stand.
+The **[Analytics Hub](faq.html#how-do-i-use-the-analytics-features)** turns your daily entries into a clear picture of your balance. Just swipe up from the Home Screen to see where you stand.
 
 **What's inside:**
 
@@ -13,6 +13,6 @@ The Analytics Hub turns your daily entries into a clear picture of your balance.
 
 **Private by Design:**
 
-Your data never leaves your device. When you want to, you can generate a **"Share My Story" PDF** to show progress to someone — without sharing your private journal notes. Or export a **JSON Backup** for your own analysis.
+Your **[data never leaves your device](faq.html#is-my-data-private)**. When you want to, you can generate a **"Share My Story" PDF** to show progress to someone — without sharing your private journal notes. Or export a **JSON Backup** for your own analysis.
 
 No cloud, no tracking, no third-party access. Ever.

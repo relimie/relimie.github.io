@@ -407,8 +407,12 @@ const storeBadgeHtml = `
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>`;
 
@@ -423,29 +427,6 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
     const isNoIndex = noIndexPages.includes(pageName);
 
     const content = isIndex ? `
-        <nav class="section-nav" id="section-nav">
-            <a href="#ls-hero" class="section-nav-item active" data-section="ls-hero">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navStart">Start</span>
-            </a>
-            <a href="#ls-diary" class="section-nav-item" data-section="ls-diary">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navDiary">Diary</span>
-            </a>
-            <a href="#ls-logging" class="section-nav-item" data-section="ls-logging">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navLogging">Logging</span>
-            </a>
-            <a href="#ls-analytics" class="section-nav-item" data-section="ls-analytics">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navAnalytics">Analytics</span>
-            </a>
-            <a href="#ls-cravings" class="section-nav-item" data-section="ls-cravings">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navCravings">Cravings</span>
-            </a>
-        </nav>
-
         <!-- Hero: animated Orb + core promise -->
         <header class="home-hero" id="home-hero">
             <div class="hero-orb">
@@ -619,7 +600,7 @@ ${getSchemaOrg(lang, pageName, isIndex)}
                     </div>
                 </div>
                 <div class="nav-item">
-                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">See what's new in 2.1.0</a>
+                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">New in 2.1.0</a>
                 </div>
                 <div class="nav-item has-dropdown">
                     <a href="guide.html" data-i18n="guide">Guide</a>
@@ -627,6 +608,7 @@ ${getSchemaOrg(lang, pageName, isIndex)}
                         <a href="guide.html" data-i18n="userGuide">User Guide</a>
                         <a href="videos.html" data-i18n="videoGuides">Video Guides</a>
                         <a href="faq.html" data-i18n="faq">FAQ</a>
+                        <a href="support.html" data-i18n="support">Support</a>
                     </div>
                 </div>
             </nav>
@@ -661,13 +643,14 @@ ${getSchemaOrg(lang, pageName, isIndex)}
         <p class="copyright">&copy; 2026 Relimie</p>
     </footer>
 
-    <!-- Sticky App Store CTA — always visible on scroll (all pages) -->
-    <div class="sticky-cta" id="sticky-cta">
-        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge-sm" alt="Download on the App Store">
-        </a>
-        <a href="android.html" class="coming-soon-link-sm" data-i18n="androidComingSoon">Android app coming soon</a>
-    </div>
+    <!-- Sticky legal bar — keeps the required legal links reachable from any
+         scroll position (shown whenever the footer is out of view, all pages) -->
+    <nav class="sticky-cta" id="sticky-cta" aria-label="Legal links">
+        <a href="terms.html" data-i18n="terms">Terms of Service</a>
+        <a href="privacy.html" data-i18n="privacy">Privacy Policy</a>
+        <a href="privacy_web.html" data-i18n="websitePrivacy">Website Privacy</a>
+        <a href="impressum.html" data-i18n="impressum">Impressum</a>
+    </nav>
 
     <script src="../assets/js/translations.js?v=${APP_VERSION}"></script>
     <script src="../assets/js/script.js?v=${APP_VERSION}"></script>

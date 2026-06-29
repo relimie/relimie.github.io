@@ -13,7 +13,8 @@
       "Bash(ffmpeg -y -i \"IMG_4330.PNG\" -vf \"scale=600:-1\" -c:v libwebp -quality 85 screen3.webp)",
       "WebFetch(domain:relimie.com)",
       "Bash(python C:\\\\Users\\\\andre\\\\.claude\\\\plugins\\\\cache\\\\agricidaniel-seo\\\\claude-seo\\\\1.9.0\\\\scripts\\\\google_auth.py --check)",
-      "Bash(python C:\\\\Users\\\\andre\\\\.claude\\\\plugins\\\\cache\\\\agricidaniel-seo\\\\claude-seo\\\\1.9.0\\\\scripts\\\\backlinks_auth.py --check)"
+      "Bash(python C:\\\\Users\\\\andre\\\\.claude\\\\plugins\\\\cache\\\\agricidaniel-seo\\\\claude-seo\\\\1.9.0\\\\scripts\\\\backlinks_auth.py --check)",
+      "PowerShell($line = \\(Get-Content \"C:\\\\GitHub\\\\relimie.github.io\\\\assets\\\\js\\\\translations.js\"\\)[21]; \"[$line]\"; \\($line.ToCharArray\\(\\) | ForEach-Object { [int][char]$_ }\\) -join ' ')"
     ]
   }
 }

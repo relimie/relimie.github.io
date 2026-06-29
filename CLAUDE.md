@@ -136,12 +136,6 @@ A centered flex row of 5 **clickable** cards (icon + heading + one sentence) sum
 
 Each section's `.ls-media` contains an App Store badge block (`storeBadgeHtml`) **above** the carousel. (Note: `#ls-hero` is now the Baseline deep-dive section — its old `<h1>`/subtitle moved to `#home-hero`; its `## ` markdown heading is the section title.)
 
-### Scroll-Spy Sidebar (`#section-nav`)
-A fixed left-side nav shows all 5 section labels. The active section (closest center to viewport center) is highlighted in teal. Implemented via `initScrollSpy()` in `script.js`. Labels are always visible. Hidden on screens ≤900px.
-
-- Translation keys: `navStart` (= "Baseline"), `navDiary`, `navLogging`, `navAnalytics`, `navCravings`
-- Section IDs must match `data-section` attributes in the nav HTML
-
 ### Scroll Animations
 - Sections 2–5 use `.reveal-section` class.
 - Cards scale from 0.85→1.0 with spring easing `cubic-bezier(0.34, 1.56, 0.64, 1)`.
@@ -149,12 +143,11 @@ A fixed left-side nav shows all 5 section labels. The active section (closest ce
 - Carousel gets a float animation after reveal (`floatPhone` keyframe, 5s).
 - Triggered by `initScrollReveal()` via IntersectionObserver (threshold 0.2).
 
-### Sticky App Store CTA (`#sticky-cta`)
-- Fixed bottom bar present on **all pages** (index and text pages alike).
-- Index: hidden while Section 1 store badges are in view, shown once scrolled past.
-- Other pages: shown immediately on load.
-- Logic in `initStickyCta()` in `script.js`. Styled under `.sticky-cta` in `style.css`.
-- Footer has extra bottom padding to prevent overlap.
+### Sticky Legal Bar (`#sticky-cta`)
+- Fixed bottom bar present on **all pages** (index and text pages alike). Carries the required **legal links** (Terms, Privacy, Website Privacy, Impressum) so they are reachable from any scroll position — legal compliance, not a download CTA. (The element id stays `sticky-cta` for backwards compatibility; it is a `<nav aria-label="Legal links">`.)
+- Shown whenever the **footer** (which carries the same links) is out of view; hidden once the footer is reached, to avoid duplicating the links at the very bottom. Same behaviour on every page.
+- Logic in `initStickyLegal()` in `script.js` (observes `.glass-footer`). Styled under `.sticky-cta` in `style.css`.
+- Footer has extra bottom padding to prevent overlap on mobile.
 
 ### Carousel
 - Each section reads all `.webp/.png/.jpg` files from its `assets/images/sectionN/` folder at build time.
@@ -175,7 +168,7 @@ Pages are registered in `build_html.js`:
 - `getPageTitle()` — maps page key → HTML `<title>` suffix
 
 **Navigation dropdown placement:**
-- Guide dropdown: User Guide, Video Guides, FAQ
+- Guide dropdown: User Guide, Video Guides, FAQ, Support (Support also keeps its direct link in the footer)
 - Community dropdown: Android Open Test, Release News
 
 **`cravings_[lang].md` serves double duty**: it is both Section 5 on the index page AND the standalone `cravings.html` text page.
@@ -193,9 +186,8 @@ Pages are registered in `build_html.js`:
 2. Create `assets/images/sectionN/` folder.
 3. Add `sN: readMd('newpage_${lang}.md')` to `indexContent` in `build_html.js`.
 4. Add the `<section>` block to the `isIndex` template in `getTemplate()`.
-5. Add a `<a>` item to `#section-nav` in the template.
-6. Add translation keys `navXxx` to `translations.js` for all three languages.
-7. Run `node build_html.js`.
+5. Optionally add a value-grid card pointing to it (edit `landing_highlights_[lang].md` + `HIGHLIGHT_LINKS`/`HIGHLIGHT_ICONS`).
+6. Run `node build_html.js`.
 
 ### Add a New Text Page
 1. Create `assets/docs/pagename_[lang].md` for EN/DE/RU.

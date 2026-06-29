@@ -6,11 +6,11 @@ Heißhunger fragt nicht um Erlaubnis. Er trifft dich schnell, und in den ersten 
 
 ## Dein sofortiger Notstopp
 
-**Halte die Sphäre** auf dem Startbildschirm gedrückt, um den Stopper sofort zu aktivieren. Dein Bildschirm verwandelt sich in eine ruhige, pulsierende Anleitung für die **4-7-8-Atemtechnik**. Während du atmest, helfen dir erdende Zitate dabei, deinen Fokus zu finden und deinen Geist zu beruhigen, bis der Drang vorüber ist.
+**Halte die Sphäre** auf dem Startbildschirm gedrückt, um den **[Heißhunger-Stopper](faq.html#was-ist-der-heißhunger-stopper)** sofort zu aktivieren. Dein Bildschirm verwandelt sich in eine ruhige, pulsierende Anleitung für die **4-7-8-Atemtechnik**. Während du atmest, helfen dir erdende Zitate dabei, deinen Fokus zu finden und deinen Geist zu beruhigen, bis der Drang vorüber ist.
 
 ## Mache aus einer Herausforderung einen Sieg
 
-Wenn der Zyklus endet, erinnert Relimie dich daran, einen **klaren Tag** einzutragen. Indem du einen Moment des Widerstands in einen trackbaren Erfolg verwandelst, machst du aus einem schwierigen Impuls einen weiteren Baustein deines Erfolgs. Jeder überstandene Drang ist ein Beweis für deinen Fortschritt.
+Wenn der Zyklus endet, erinnert Relimie dich daran, einen **klaren Tag** einzutragen. Indem du einen Moment des Widerstands in einen trackbaren Erfolg verwandelst, machst du aus einem schwierigen Impuls einen weiteren Baustein deines Erfolgs. Jeder überstandene Drang ist ein Beweis für deinen Fortschritt – egal, ob du reduzierst oder dir **[Dry January oder Sober October](faq.html#kann-ich-relimie-für-dry-january-oder-sober-october-nutzen)** vornimmst.
 
 ## Sieh, wie dein Körper sich erholt
 

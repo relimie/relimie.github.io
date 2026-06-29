@@ -28,8 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     startCarousel();
     initScrollReveal();
-    initStickyCta();
-    initScrollSpy();
+    initStickyLegal();
 });
 
 // Load static localized strings via data-i18n tags
@@ -133,54 +132,26 @@ function initScrollReveal() {
     targets.forEach(el => observer.observe(el));
 }
 
-// Sticky App Store CTA — present on all pages.
-// Index page: appears once the hero store badges scroll out of view.
-// All other pages: shown immediately on load.
-function initStickyCta() {
-    const cta = document.getElementById('sticky-cta');
-    if (!cta) return;
-    const heroStore = document.querySelector('#home-hero .store-section');
-    if (!heroStore) {
-        // Not the index page — show right away
-        cta.classList.add('visible');
+// Sticky legal bar — present on all pages. Keeps the required legal links
+// (privacy, terms, impressum) reachable from any scroll position so they are
+// always on screen. Shown whenever the footer (which carries the same links) is
+// out of view; hidden once the footer is reached to avoid duplication.
+function initStickyLegal() {
+    const bar = document.getElementById('sticky-cta');
+    if (!bar) return;
+    const footer = document.querySelector('.glass-footer');
+    if (!footer) {
+        // No footer to key off — keep the links visible.
+        bar.classList.add('visible');
         return;
     }
     const observer = new IntersectionObserver(entries => {
-        cta.classList.toggle('visible', !entries[0].isIntersecting);
+        bar.classList.toggle('visible', !entries[0].isIntersecting);
     }, { threshold: 0 });
-    observer.observe(heroStore);
+    observer.observe(footer);
 }
 
 // Scroll-spy for section sidebar nav
-function initScrollSpy() {
-    const nav = document.getElementById('section-nav');
-    if (!nav) return;
-
-    const sectionIds = ['ls-hero', 'ls-diary', 'ls-logging', 'ls-analytics', 'ls-cravings'];
-    const items = nav.querySelectorAll('.section-nav-item');
-
-    function updateActive() {
-        const center = window.innerHeight / 2;
-        let closest = null;
-        let minDist = Infinity;
-
-        sectionIds.forEach(id => {
-            const el = document.getElementById(id);
-            if (!el) return;
-            const rect = el.getBoundingClientRect();
-            const dist = Math.abs(rect.top + rect.height / 2 - center);
-            if (dist < minDist) { minDist = dist; closest = id; }
-        });
-
-        items.forEach(item => {
-            item.classList.toggle('active', item.dataset.section === closest);
-        });
-    }
-
-    window.addEventListener('scroll', updateActive, { passive: true });
-    updateActive();
-}
-
 // 4. Smooth Scroll for Anchor Links (Chrome/Safari compatibility)
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

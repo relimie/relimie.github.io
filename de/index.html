@@ -114,7 +114,7 @@
                     </div>
                 </div>
                 <div class="nav-item">
-                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">See what's new in 2.1.0</a>
+                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">New in 2.1.0</a>
                 </div>
                 <div class="nav-item has-dropdown">
                     <a href="guide.html" data-i18n="guide">Guide</a>
@@ -122,6 +122,7 @@
                         <a href="guide.html" data-i18n="userGuide">User Guide</a>
                         <a href="videos.html" data-i18n="videoGuides">Video Guides</a>
                         <a href="faq.html" data-i18n="faq">FAQ</a>
+                        <a href="support.html" data-i18n="support">Support</a>
                     </div>
                 </div>
             </nav>
@@ -143,29 +144,6 @@
 
     <main>
         
-        <nav class="section-nav" id="section-nav">
-            <a href="#ls-hero" class="section-nav-item active" data-section="ls-hero">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navStart">Start</span>
-            </a>
-            <a href="#ls-diary" class="section-nav-item" data-section="ls-diary">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navDiary">Diary</span>
-            </a>
-            <a href="#ls-logging" class="section-nav-item" data-section="ls-logging">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navLogging">Logging</span>
-            </a>
-            <a href="#ls-analytics" class="section-nav-item" data-section="ls-analytics">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navAnalytics">Analytics</span>
-            </a>
-            <a href="#ls-cravings" class="section-nav-item" data-section="ls-cravings">
-                <span class="section-nav-dot"></span>
-                <span class="section-nav-label" data-i18n="navCravings">Cravings</span>
-            </a>
-        </nav>
-
         <!-- Hero: animated Orb + core promise -->
         <header class="home-hero" id="home-hero">
             <div class="hero-orb">
@@ -180,8 +158,12 @@
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>
             <p class="hero-trust" data-i18n="heroTrust">No account. No cloud. Your data stays on your device.</p>
@@ -227,8 +209,12 @@
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>
                     <div class="ls-carousel">
@@ -242,10 +228,11 @@
                     <div class="markdown-body">
                         <h2 id="bewusst-genießen-statt-verzichten">Bewusst genießen, statt verzichten</h2>
 <p>Bei Relimie geht es nicht nur darum, mit dem Trinken aufzuhören, und es ist mehr als ein Alkohol-Tracker: Es ist ein Begleiter für achtsames Trinken, für alle, die gerne mal etwas trinken, aber verhindern möchten, dass ihre Gewohnheiten zur Sucht werden – ohne das schlechte Gewissen oder die Verurteilung, die oft beim Tracking mitschwingen.</p>
-<p>Bei Relimie dreht sich alles um deinen <strong>persönlichen Referenzwert</strong> (deshalb nennen wir unsere Methode auch „Referenzwert-Trinken“ oder &quot;Baseline-Drinking&quot; im Englischen). Statt eines starren Tageslimits, das sich bei jeder Überschreitung wie Versagen anfühlt, ist dein Referenzwert ein langfristiger Anker. Das Leben passiert: An manchen Abenden trinkst du ein Glas mehr, an anderen gar nichts. Was zählt, ist der Trend. Mit der Zeit finden deine Gewohnheiten ganz natürlich wieder zurück zu deinem Ziel.</p>
-<p>Ein Tippen auf deinen leuchtenden <strong>Orb</strong> zeigt dir auf einen Blick, wo du stehst: <strong>Grün</strong> – du bewegst dich entspannt unterhalb deines Referenzwerts; <strong>Gold</strong> – du bist leicht über deinem Limit; <strong>Rot</strong> – du solltest eine Pause von ein paar Tagen in Betracht ziehen, um deinen Durchschnitt wieder auszugleichen. Die grünen Anzeigen zeigen dir außerdem, wie viele Getränke du bisher vermieden hast. Du kannst diese Information nutzen, um deinen Referenzwert nach unten anzupassen und deinen Konsum Schritt für Schritt zu reduzieren, wenn du möchtest.</p>
-<p>Um dir bei der Wahl deines Referenzwerts zu helfen, stellen wir Daten aus WHO-Empfehlungen sowie Durchschnittswerte für dein Land und dein Geschlecht bereit. Diese dienen als Orientierung, bis du deine persönlichen Werte gefunden hast. Relimie unterstützt zudem verschiedene Maßeinheiten, damit du die nutzen kannst, die du am besten verstehst (wie Gramm reiner Alkohol oder Standard-US-Einheiten).</p>
+<p>Bei Relimie dreht sich alles um deinen <strong><a href="faq.html#was-ist-ein-pers%C3%B6nlicher-referenzwert-baseline">persönlichen Referenzwert</a></strong> (deshalb nennen wir unsere Methode auch „Referenzwert-Trinken“ oder &quot;Baseline-Drinking&quot; im Englischen). Statt eines starren Tageslimits, das sich bei jeder Überschreitung wie Versagen anfühlt, ist dein Referenzwert ein langfristiger Anker. Das Leben passiert: An manchen Abenden trinkst du ein Glas mehr, an anderen gar nichts. Was zählt, ist der Trend. Mit der Zeit finden deine Gewohnheiten ganz natürlich wieder zurück zu deinem Ziel.</p>
+<p>Ein Tippen auf deinen leuchtenden <strong>Orb</strong> zeigt dir auf einen Blick, wo du stehst: <strong>Grün</strong> – du bewegst dich entspannt unterhalb deines Referenzwerts; <strong>Gold</strong> – du bist leicht über deinem Limit; <strong>Rot</strong> – du solltest eine Pause von ein paar Tagen in Betracht ziehen, um deinen Durchschnitt wieder auszugleichen. Die grünen Anzeigen zeigen dir außerdem, wie viele Getränke du bisher vermieden hast. Du kannst diese Information nutzen, um deinen Referenzwert nach unten anzupassen und <strong><a href="faq.html#wie-hilft-mir-der-referenzwert-weniger-zu-trinken">deinen Konsum Schritt für Schritt zu reduzieren</a></strong>, wenn du möchtest.</p>
+<p>Um dir bei der <strong><a href="faq.html#wie-w%C3%A4hle-ich-den-richtigen-referenzwert">Wahl deines Referenzwerts</a></strong> zu helfen, stellen wir Daten aus WHO-Empfehlungen sowie Durchschnittswerte für dein Land und dein Geschlecht bereit. Diese dienen als Orientierung, bis du deine persönlichen Werte gefunden hast. Relimie unterstützt zudem verschiedene Maßeinheiten, damit du die nutzen kannst, die du am besten verstehst (wie Gramm reiner Alkohol oder Standard-US-Einheiten).</p>
 <p>Denk daran: Auch wenn das Referenzwert-Trinken ein starker Helfer ist, um dein Verhalten zu kontrollieren, nimmt es dir die Arbeit nicht ab. Du musst selbst den Aufwand betreiben, dich an deinen Referenzwert zu halten und die richtigen Informationen einzutragen. Da der Referenzwert auf Aggregation basiert, braucht er etwas Zeit, um „anzuspringen“, während er Daten sammelt. Lass dich also nicht entmutigen, wenn du nicht sofort eine Veränderung siehst, obwohl er direkt nach dem Onboarding verfügbar ist.</p>
+<p>Neugierig, woher das Referenzwert-Trinken kommt? Es ist aus einer einzigen Zahl und dem persönlichen Ringen um Kontrolle entstanden – <a href="story.html">lies die Geschichte hinter Relimie</a>.</p>
 
                     </div>
                     <a href="guide.html" class="glass-btn primary" data-i18n="readGuide">Read the User Guide</a>
@@ -260,7 +247,7 @@
                 <div class="ls-text">
                     <div class="markdown-body">
                         <h2 id="finde-das-warum-deine-muster-verstehen">Finde das Warum: Deine Muster verstehen</h2>
-<p>Zahlen zu tracken ist nur der Anfang. In deinem Alkohol-Tagebuch findest du das <em>Warum</em>.</p>
+<p>Zahlen zu tracken ist nur der Anfang. In deinem Alkohol-Tagebuch findest du das <em><a href="faq.html#was-ist-die-philosophie-von-relimie">Warum</a></em>.</p>
 <p>Indem du festhältst, wie du dich fühlst – vor einem Drink, am Morgen danach oder an einem klaren Tag – beginnst du, Muster zu erkennen, die sonst verborgen bleiben. Es geht darum, Auslöser zu identifizieren und einen Weg zu finden, ihnen einen Schritt voraus zu sein. Das Tagebuch hilft dir, die Konsequenzen zu verstehen und den Moment zu erkennen, in dem du die Kontrolle übernehmen musst.</p>
 <p><strong>Kontextbezogene Tags erscheinen genau dann, wenn du sie brauchst:</strong></p>
 <ul>
@@ -279,8 +266,12 @@
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>
                     <div class="ls-carousel">
@@ -299,8 +290,12 @@
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>
                     <div class="ls-carousel">
@@ -317,13 +312,13 @@
 <p><strong>Jeder Eintrag vervollständigt das Gesamtbild:</strong></p>
 <ul>
 <li><strong>Alkohol</strong> — Erfasse die Gesamtmenge an reinem Alkohol mit jedem Getränk.</li>
-<li><strong>Ausgaben</strong> — Behalte deine Kosten im Blick. Die Preise sind auf Basis von Durchschnittswerten für dein Land voreingestellt, aber du kannst sie jederzeit für ein einzelnes Getränk oder den ganzen Tag anpassen. Halte dafür einfach ein Getränk in der Liste oder den Gesamtbetrag am unteren Rand gedrückt. Die Preise sind zudem in „zu Hause“ und „auswärts“ unterteilt, um die Erfassung zu erleichtern.</li>
+<li><strong>Ausgaben</strong> — Behalte deine Kosten im Blick. Die Preise sind auf Basis von Durchschnittswerten für dein Land voreingestellt, aber du kannst sie jederzeit für ein einzelnes Getränk oder den ganzen Tag <strong><a href="faq.html#wie-kann-ich-meine-ausgaben-eintragen-oder-anpassen">anpassen</a></strong>. Halte dafür einfach ein Getränk in der Liste oder den Gesamtbetrag am unteren Rand gedrückt. Die Preise sind zudem in „zu Hause“ und „auswärts“ unterteilt, um die Erfassung zu erleichtern.</li>
 <li><strong>Kalorien</strong> — Jedes Getränk hat hinterlegte Kalorienwerte, damit du die echten Auswirkungen auf deine Fitnessziele siehst, nicht nur die Anzahl der Gläser. Falls nötig, kannst du diese Werte für jedes Getränk individuell anpassen.</li>
 </ul>
-<p>Relimie bietet einen Katalog der gängigsten Getränke, und du kannst ganz einfach deine eigenen hinzufügen. Um das Hinzufügen so einfach wie möglich zu machen, nutze den <strong>KI-Sparkle-Button</strong>. Er erscheint in der Suchleiste, wenn du ein Getränk eingibst, das noch nicht im Katalog ist. Ein Klick recherchiert und füllt Alkoholgehalt (ABV) und Kalorien automatisch aus, sodass du nie raten musst. Gib uns gerne Feedback, falls etwas nicht wie erwartet funktioniert – wir verbessern diese Funktion ständig.</p>
+<p>Relimie bietet einen Katalog der gängigsten Getränke, und du kannst ganz einfach <strong><a href="faq.html#kann-ich-eigene-getr%C3%A4nke-erstellen">deine eigenen hinzufügen</a></strong>. Um das Hinzufügen so einfach wie möglich zu machen, nutze den <strong>KI-Sparkle-Button</strong>. Er erscheint in der Suchleiste, wenn du ein Getränk eingibst, das noch nicht im Katalog ist. Ein Klick recherchiert und füllt Alkoholgehalt (ABV) und Kalorien automatisch aus, sodass du nie raten musst. Gib uns gerne Feedback, falls etwas nicht wie erwartet funktioniert – wir verbessern diese Funktion ständig.</p>
 <p>All diese Daten fließen in deinen <strong>Analyse-Hub</strong>, wo aus täglichen Einträgen wertvolle Erkenntnisse werden, die dir helfen, die Kontrolle zu behalten.</p>
 <blockquote>
-<p>🎁 <strong>Und das Wichtigste:</strong> Das Loggen von Alkohol, Kalorien und Ausgaben sowie die wichtigsten Analysen dazu sind völlig kostenlos. Du brauchst kein Premium-Abo, um diese Funktionen so lange zu nutzen, wie du möchtest!</p>
+<p>🎁 <strong>Und das Wichtigste:</strong> Das Loggen von Alkohol, Kalorien und Ausgaben sowie die wichtigsten Analysen dazu sind <strong><a href="faq.html#ist-relimie-kostenlos">völlig kostenlos</a></strong>. Du brauchst kein Premium-Abo, um diese Funktionen so lange zu nutzen, wie du möchtest!</p>
 </blockquote>
 
                     </div>
@@ -338,7 +333,7 @@
                 <div class="ls-text">
                     <div class="markdown-body">
                         <h2 id="deine-geschichte-deine-daten">Deine Geschichte. Deine Daten.</h2>
-<p>Der Analyse-Hub macht aus deinen täglichen Einträgen ein klares Bild deines Gleichgewichts. Wische einfach auf dem Startbildschirm nach oben, um zu sehen, wo du stehst.</p>
+<p>Der <strong><a href="faq.html#wie-nutze-ich-die-analyse-funktionen">Analyse-Hub</a></strong> macht aus deinen täglichen Einträgen ein klares Bild deines Gleichgewichts. Wische einfach auf dem Startbildschirm nach oben, um zu sehen, wo du stehst.</p>
 <p><strong>Das ist drin:</strong></p>
 <ul>
 <li><strong>Verlauf</strong> — Reise vor und zurück in der Zeit.</li>
@@ -349,7 +344,7 @@
 <li><strong>Vollbild-Diagramm</strong> — Halte dein Telefon quer für eine vollständige Querformat-Ansicht deines Konsums über die Zeit, damit du eine Trendwende früh erkennst.</li>
 </ul>
 <p><strong>Privatsphäre als Standard:</strong></p>
-<p>Deine Daten verlassen niemals dein Gerät. Wenn du möchtest, kannst du ein <strong>„Share My Story“-PDF</strong> erstellen, um jemandem deinen Fortschritt zu zeigen – ohne deine privaten Tagebuchnotizen preiszugeben. Oder exportiere ein <strong>JSON-Backup</strong> für deine eigene Analyse.</p>
+<p>Deine <strong><a href="faq.html#sind-meine-daten-privat">Daten verlassen niemals dein Gerät</a></strong>. Wenn du möchtest, kannst du ein <strong>„Share My Story“-PDF</strong> erstellen, um jemandem deinen Fortschritt zu zeigen – ohne deine privaten Tagebuchnotizen preiszugeben. Oder exportiere ein <strong>JSON-Backup</strong> für deine eigene Analyse.</p>
 <p>Keine Cloud, kein Tracking, kein Zugriff für Dritte. Niemals.</p>
 
                     </div>
@@ -361,8 +356,12 @@
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>
                     <div class="ls-carousel">
@@ -382,8 +381,12 @@
                         <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
                             <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
                         </a>
-                        <a href="android.html" class="coming-soon-link">
-                            <p class="coming-soon" data-i18n="androidComingSoon">Android app coming soon</p>
+                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                            <span class="android-badge-text">
+                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                                <span class="android-badge-bottom">Android</span>
+                            </span>
                         </a>
                     </div>
                     <div class="ls-carousel">
@@ -396,9 +399,9 @@
 <h2 id="atme-dich-durch-den-impuls">Atme dich durch den Impuls</h2>
 <p>Heißhunger fragt nicht um Erlaubnis. Er trifft dich schnell, und in den ersten 30 Sekunden fühlt sich reine Willenskraft oft nicht nach genug an. Aber wenn du diesen ersten Impuls unterbrichst, gibst du deinem Gehirn das nötige Zeitfenster, um einen Schritt zurückzutreten und auf Kurs zu bleiben.</p>
 <h2 id="dein-sofortiger-notstopp">Dein sofortiger Notstopp</h2>
-<p><strong>Halte die Sphäre</strong> auf dem Startbildschirm gedrückt, um den Stopper sofort zu aktivieren. Dein Bildschirm verwandelt sich in eine ruhige, pulsierende Anleitung für die <strong>4-7-8-Atemtechnik</strong>. Während du atmest, helfen dir erdende Zitate dabei, deinen Fokus zu finden und deinen Geist zu beruhigen, bis der Drang vorüber ist.</p>
+<p><strong>Halte die Sphäre</strong> auf dem Startbildschirm gedrückt, um den <strong><a href="faq.html#was-ist-der-hei%C3%9Fhunger-stopper">Heißhunger-Stopper</a></strong> sofort zu aktivieren. Dein Bildschirm verwandelt sich in eine ruhige, pulsierende Anleitung für die <strong>4-7-8-Atemtechnik</strong>. Während du atmest, helfen dir erdende Zitate dabei, deinen Fokus zu finden und deinen Geist zu beruhigen, bis der Drang vorüber ist.</p>
 <h2 id="mache-aus-einer-herausforderung-einen-sieg">Mache aus einer Herausforderung einen Sieg</h2>
-<p>Wenn der Zyklus endet, erinnert Relimie dich daran, einen <strong>klaren Tag</strong> einzutragen. Indem du einen Moment des Widerstands in einen trackbaren Erfolg verwandelst, machst du aus einem schwierigen Impuls einen weiteren Baustein deines Erfolgs. Jeder überstandene Drang ist ein Beweis für deinen Fortschritt.</p>
+<p>Wenn der Zyklus endet, erinnert Relimie dich daran, einen <strong>klaren Tag</strong> einzutragen. Indem du einen Moment des Widerstands in einen trackbaren Erfolg verwandelst, machst du aus einem schwierigen Impuls einen weiteren Baustein deines Erfolgs. Jeder überstandene Drang ist ein Beweis für deinen Fortschritt – egal, ob du reduzierst oder dir <strong><a href="faq.html#kann-ich-relimie-f%C3%BCr-dry-january-oder-sober-october-nutzen">Dry January oder Sober October</a></strong> vornimmst.</p>
 <h2 id="sieh-wie-dein-körper-sich-erholt">Sieh, wie dein Körper sich erholt</h2>
 <p>Direkt auf dem Atem-Screen zählt eine <strong>Regenerations-Zeitleiste</strong> ab deinem letzten Drink und zeigt, was dein Körper mit der Zeit zurückgewinnt – von besserem Schlaf und mehr Energie in den ersten Tagen bis zu längerfristigen Veränderungen über ein Jahr. Ein weiterer kleiner Grund, deine Serie fortzusetzen.</p>
 <blockquote>
@@ -425,13 +428,14 @@
         <p class="copyright">&copy; 2026 Relimie</p>
     </footer>
 
-    <!-- Sticky App Store CTA — always visible on scroll (all pages) -->
-    <div class="sticky-cta" id="sticky-cta">
-        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge-sm" alt="Download on the App Store">
-        </a>
-        <a href="android.html" class="coming-soon-link-sm" data-i18n="androidComingSoon">Android app coming soon</a>
-    </div>
+    <!-- Sticky legal bar — keeps the required legal links reachable from any
+         scroll position (shown whenever the footer is out of view, all pages) -->
+    <nav class="sticky-cta" id="sticky-cta" aria-label="Legal links">
+        <a href="terms.html" data-i18n="terms">Terms of Service</a>
+        <a href="privacy.html" data-i18n="privacy">Privacy Policy</a>
+        <a href="privacy_web.html" data-i18n="websitePrivacy">Website Privacy</a>
+        <a href="impressum.html" data-i18n="impressum">Impressum</a>
+    </nav>
 
     <script src="../assets/js/translations.js?v=2.1.0"></script>
     <script src="../assets/js/script.js?v=2.1.0"></script>
