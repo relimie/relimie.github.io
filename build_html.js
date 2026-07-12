@@ -433,14 +433,33 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
     const content = isIndex ? `
         <!-- Hero: animated Orb + core promise -->
         <header class="home-hero" id="home-hero">
-            <div class="hero-orb">
-                <div class="hero-orb-inner">
-                    <img src="../assets/images/mindful_orb.webp" alt="Relimie Orb — the mindful drinking baseline indicator" width="360" height="360" fetchpriority="high">
+            <div class="hero-slogan">
+                <h1 class="hero-tagline" data-i18n="heroTagline">Enjoy Life. Keep Control.</h1>
+                <p class="hero-lead" data-i18n="heroLead">Relimie is your companion for mindful, moderate and sober-curious drinking — an alcohol tracker and diary that helps you reduce drinking on your own terms.</p>
+            </div>
+            
+            <div class="hero-interactive">
+                <div class="hero-download-left">
+                    <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
+                        <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
+                    </a>
+                </div>
+                <div class="hero-orb">
+                    <div class="hero-orb-inner">
+                        <img src="../assets/images/mindful_orb.webp" alt="Relimie Orb — the mindful drinking baseline indicator" width="360" height="360" fetchpriority="high">
+                    </div>
+                </div>
+                <div class="hero-download-right">
+                    <a href="android.html" class="android-badge" aria-label="Android app coming soon">
+                        <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+                        <span class="android-badge-text">
+                            <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
+                            <span class="android-badge-bottom">Android</span>
+                        </span>
+                    </a>
                 </div>
             </div>
-            <h1 class="hero-tagline" data-i18n="heroTagline">Enjoy Life. Keep Control.</h1>
-            <p class="hero-lead" data-i18n="heroLead">Relimie is your companion for mindful, moderate and sober-curious drinking — an alcohol tracker and diary that helps you reduce drinking on your own terms.</p>
-            ${storeBadgeHtml}
+
             <p class="hero-trust" data-i18n="heroTrust">No account. No cloud. No ads. Your data stays on your device.</p>
         </header>
 
