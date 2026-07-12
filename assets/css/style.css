@@ -1000,7 +1000,14 @@ main {
 
     .hero-download-left { order: 1; }
     .hero-download-right { order: 2; }
-    .hero-orb { order: 3; margin-top: 8px; }
+    
+    .hero-interactive::before {
+        content: "";
+        width: 100%;
+        order: 3;
+    }
+
+    .hero-orb { order: 4; margin-top: 8px; }
 
     .hero-trust {
         order: 4;

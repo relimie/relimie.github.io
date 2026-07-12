@@ -1,3 +1,6 @@
+### Für selbstbewusste Genießer gemacht
+Für alle, die ein edles Tröpfchen genießen und es maßvoll und achtsam halten möchten, ganz ohne Schuldgefühle oder Urteil.
+
 ### Reduzieren oder aufhören, du entscheidest
 Eine einzigartige persönliche Baseline macht aus trockenen Statistiken konkretes Handeln, damit du Schritt für Schritt weniger trinken oder ganz aufhören kannst.
 
@@ -9,6 +12,3 @@ Wenn das Verlangen kommt, halte die Sphäre gedrückt für eine geführte Atemü
 
 ### Analysen, so genau du willst
 Vom einfachen Überblick bis zu tiefen Trends und dem Vollbild-Diagramm: sieh genau so viele Details, wie du möchtest.
-
-### Für selbstbewusste Genießer gemacht
-Für alle, die ein edles Tröpfchen genießen und es maßvoll und achtsam halten möchten, ganz ohne Schuldgefühle oder Urteil.

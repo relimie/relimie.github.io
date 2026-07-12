@@ -1,3 +1,6 @@
+### Made for Self-Confident Individuals
+For those who enjoy a fine glass and want to keep it a pleasure: in moderation, mindfully, and free of guilt or judgment.
+
 ### Reduce or Quit, Your Call
 A unique personal baseline turns dry statistics into action, so you can drink less step by step or stop altogether.
 
@@ -9,6 +12,3 @@ When a craving hits, long-press the Orb for a guided breathing exercise that hel
 
 ### Analytics as Precise as You Like
 From a simple overview to deep trends and a full-screen chart, see exactly as much detail as you want.
-
-### Made for Self-Confident Individuals
-For those who enjoy a fine glass and want to keep it a pleasure: in moderation, mindfully, and free of guilt or judgment.

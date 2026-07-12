@@ -366,17 +366,17 @@ function buildCarousel(sectionNum) {
 // stroke="currentColor" so CSS tints them teal. Order: baseline/control, diary,
 // cravings breath, analytics, companion compass.
 const HIGHLIGHT_ICONS = [
+    '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2.2 4.8-4.8 2.2 2.2-4.8z"/></svg>',
     '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>',
     '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h11a1 1 0 0 1 1 1v15H7a2 2 0 0 1-2-2V6a2 2 0 0 1 1-1.7"/><path d="M9 9h6M9 13h4"/></svg>',
     '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9a2.5 2.5 0 1 0-2.5-2.5"/><path d="M3 12h13a2.5 2.5 0 1 1-2.5 2.5"/><path d="M3 16h7a2 2 0 1 1-2 2"/></svg>',
     '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="11" width="3" height="7" rx="1"/><rect x="10.5" y="6" width="3" height="12" rx="1"/><rect x="16" y="13" width="3" height="5" rx="1"/></svg>',
-    '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2.2 4.8-4.8 2.2 2.2-4.8z"/></svg>',
 ];
 
 // Anchor target for each value card (matches HIGHLIGHT_ICONS / markdown order):
 // baseline -> diary -> cravings -> analytics -> logging. Clicking a card scrolls
 // to the matching detailed section below.
-const HIGHLIGHT_LINKS = ['#ls-hero', '#ls-diary', '#ls-cravings', '#ls-analytics', '#ls-logging'];
+const HIGHLIGHT_LINKS = ['#ls-logging', '#ls-hero', '#ls-diary', '#ls-cravings', '#ls-analytics'];
 
 // Build the home value grid from assets/docs/landing_highlights_<lang>.md.
 // Each card is a "### Title" heading followed by a one-sentence paragraph.
