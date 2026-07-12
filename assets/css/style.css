@@ -1062,9 +1062,6 @@ main {
         display: flex;
     }
 
-    .has-dropdown:hover .dropdown-menu {
-        display: none;
-    }
 
     .dropdown-menu {
         position: static;
