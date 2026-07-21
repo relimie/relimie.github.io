@@ -13,9 +13,55 @@ const APP_VERSION = '2.1.0';
 // to refetch assets. Bump on ANY deploy that changes style.css / script.js / translations.js
 // (otherwise a stale translations.js can leave the old copy/banner showing). Not user-visible,
 // so it does not need to match APP_VERSION — use a build tag or date.
-const ASSET_VERSION = '20260629';
+const ASSET_VERSION = '20260721';
 const langs = ['en', 'de', 'ru'];
 const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'android', 'videos', 'cravings', 'cooperation', 'story'];
+
+// ── Article hub ──────────────────────────────────────────────────────────────
+// Informational articles that target top-of-funnel search queries (each one is a
+// new "door" into the site). Flat URL structure, same as text pages: /<lang>/<slug>.html.
+// To add an article: (1) drop assets/docs/articles/<slug>_<lang>.md for EN/DE/RU,
+// (2) add an entry to `articles` below, (3) add its URLs to sitemap-main.xml, (4) rebuild.
+const ARTICLE_HUB_SLUG = 'articles';
+
+const hubMeta = {
+    // Breadcrumb label for the hub (per language)
+    crumb: { en: 'Articles', de: 'Ratgeber', ru: 'Статьи' },
+    title: {
+        en: 'Relimie – Mindful Drinking Articles & Guides',
+        de: 'Relimie – Ratgeber: achtsam trinken & Alkohol reduzieren',
+        ru: 'Relimie – Статьи об осознанном употреблении алкоголя',
+    },
+    description: {
+        en: 'Practical, judgement-free articles on mindful drinking: alcohol calories, units, cutting down, cravings and building better habits, from the makers of Relimie.',
+        de: 'Praktische Artikel ohne erhobenen Zeigefinger: Alkohol-Kalorien, Einheiten, weniger trinken, Heißhunger und bessere Gewohnheiten, von den Machern von Relimie.',
+        ru: 'Практичные статьи без осуждения: калории в алкоголе, единицы, как пить меньше, тяга и полезные привычки, от создателей Relimie.',
+    },
+    // Rendered as the hub page intro (H1 + lead paragraph)
+    intro: {
+        en: '# Mindful Drinking Articles\n\nClear, supportive guides to help you understand your drinking and make it your own, without lectures or guilt. Fresh reads added over time.',
+        de: '# Ratgeber zum achtsamen Trinken\n\nKlare, unterstützende Beiträge, die dir helfen, dein Trinken zu verstehen und selbst zu gestalten, ohne Belehrung und ohne schlechtes Gewissen. Nach und nach kommen neue dazu.',
+        ru: '# Статьи об осознанном употреблении\n\nПонятные и поддерживающие материалы, которые помогут разобраться в своих привычках и сделать их своими, без нотаций и чувства вины. Со временем добавляются новые.',
+    },
+};
+
+const articles = [
+    {
+        slug: 'calories-in-alcohol',
+        published: '2026-07-21',
+        modified: '2026-07-21',
+        title: {
+            en: 'Relimie – How Many Calories Are in Alcohol? Wine, Beer & Spirits',
+            de: 'Relimie – Wie viele Kalorien hat Alkohol? Wein, Bier & Spirituosen',
+            ru: 'Relimie – Сколько калорий в алкоголе? Вино, пиво и крепкие напитки',
+        },
+        description: {
+            en: 'How many calories are in wine, beer and spirits? A clear comparison of alcohol calories, why they add up, and how to track them without giving up the glass you enjoy.',
+            de: 'Wie viele Kalorien haben Wein, Bier und Spirituosen? Ein klarer Vergleich der Alkohol-Kalorien, warum sie sich summieren und wie du sie trackst, ohne aufs Glas zu verzichten.',
+            ru: 'Сколько калорий в вине, пиве и крепких напитках? Понятное сравнение калорий в алкоголе и как их отслеживать, не отказываясь от любимого бокала.',
+        },
+    },
+];
 
 const fileMap = {
     'privacy': 'privacy_policy',
@@ -55,6 +101,9 @@ const getPageTitle = (page) => {
 };
 
 const getPageTitleFull = (page, lang) => {
+    const art = articles.find(a => a.slug === page);
+    if (art) return art.title[lang] || art.title.en;
+    if (page === ARTICLE_HUB_SLUG) return hubMeta.title[lang] || hubMeta.title.en;
     if (page === 'index') {
         if (lang === 'de') return 'Relimie – Alkohol-Tracker & Trinktagebuch App';
         if (lang === 'ru') return 'Relimie – Трекер алкоголя и дневник употребления';
@@ -94,6 +143,9 @@ const getPageTitleFull = (page, lang) => {
 };
 
 const getPageDescription = (page, lang) => {
+    const art = articles.find(a => a.slug === page);
+    if (art) return art.description[lang] || art.description.en;
+    if (page === ARTICLE_HUB_SLUG) return hubMeta.description[lang] || hubMeta.description.en;
     const desc = {
         en: {
             index: 'Mindful drinking & alcohol tracker app: free drink diary, calorie and spending logging, trigger tracking. Private by design — no account, no cloud.',
@@ -220,6 +272,74 @@ function getSchemaOrg(lang, pageName, isIndex) {
       ]
     }
     </script>`;
+    }
+
+    // Article hub — Blog collection + breadcrumb
+    if (pageName === ARTICLE_HUB_SLUG) {
+        const hubUrl = `https://relimie.com/${lang}/${ARTICLE_HUB_SLUG}.html`;
+        const hubCrumb = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Relimie", "item": `https://relimie.com/${lang}/` },
+                { "@type": "ListItem", "position": 2, "name": hubMeta.crumb[lang] || hubMeta.crumb.en, "item": hubUrl }
+            ]
+        };
+        const blog = {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "@id": `${hubUrl}#blog`,
+            "name": (hubMeta.title[lang] || hubMeta.title.en).replace(/^Relimie\s*[–-]\s*/, ''),
+            "description": hubMeta.description[lang] || hubMeta.description.en,
+            "url": hubUrl,
+            "publisher": { "@id": "https://relimie.com/#organization" },
+            "inLanguage": lang,
+            "blogPost": articles.map(a => ({
+                "@type": "BlogPosting",
+                "headline": (a.title[lang] || a.title.en).replace(/^Relimie\s*[–-]\s*/, ''),
+                "url": `https://relimie.com/${lang}/${a.slug}.html`,
+                "datePublished": a.published,
+                "dateModified": a.modified
+            }))
+        };
+        return orgSchema
+            + `\n    <script type="application/ld+json">\n${JSON.stringify(hubCrumb, null, 4)}\n    </script>`
+            + `\n    <script type="application/ld+json">\n${JSON.stringify(blog, null, 4)}\n    </script>`;
+    }
+
+    // Individual article — BlogPosting + 3-level breadcrumb
+    const articleEntry = articles.find(a => a.slug === pageName);
+    if (articleEntry) {
+        const url = `https://relimie.com/${lang}/${pageName}.html`;
+        const artCrumb = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Relimie", "item": `https://relimie.com/${lang}/` },
+                { "@type": "ListItem", "position": 2, "name": hubMeta.crumb[lang] || hubMeta.crumb.en, "item": `https://relimie.com/${lang}/${ARTICLE_HUB_SLUG}.html` },
+                { "@type": "ListItem", "position": 3, "name": (articleEntry.title[lang] || articleEntry.title.en).replace(/^Relimie\s*[–-]\s*/, ''), "item": url }
+            ]
+        };
+        const post = {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "@id": `${url}#article`,
+            "headline": (articleEntry.title[lang] || articleEntry.title.en).replace(/^Relimie\s*[–-]\s*/, ''),
+            "description": articleEntry.description[lang] || articleEntry.description.en,
+            "url": url,
+            "image": { "@type": "ImageObject", "url": "https://relimie.com/icon.png", "width": 2048, "height": 2048 },
+            "author": { "@id": "https://relimie.com/#organization" },
+            "publisher": { "@id": "https://relimie.com/#organization" },
+            "datePublished": articleEntry.published,
+            "dateModified": articleEntry.modified,
+            "mainEntityOfPage": { "@type": "WebPage", "@id": url },
+            "isPartOf": { "@type": "Blog", "@id": `https://relimie.com/${lang}/${ARTICLE_HUB_SLUG}.html#blog` },
+            "about": { "@id": "https://relimie.com/#app" },
+            "inLanguage": lang
+        };
+        return orgSchema
+            + `\n    <script type="application/ld+json">\n${JSON.stringify(artCrumb, null, 4)}\n    </script>`
+            + `\n    <script type="application/ld+json">\n${JSON.stringify(post, null, 4)}\n    </script>`;
     }
 
     if (pageName === 'faq') {
@@ -399,6 +519,18 @@ function buildHighlightGrid(lang) {
     }).join('\n                ');
 }
 
+// Build the article hub body (intro + a linked list of every article).
+// Rendered inside the standard .page-card .markdown-body, so no extra CSS is needed.
+function buildArticleHub(lang) {
+    const intro = marked.parse(hubMeta.intro[lang] || hubMeta.intro.en);
+    const items = articles.map(a => {
+        const t = (a.title[lang] || a.title.en).replace(/^Relimie\s*[–-]\s*/, '');
+        const d = a.description[lang] || a.description.en;
+        return `<h2><a href="${a.slug}.html">${t}</a></h2>\n<p>${d}</p>`;
+    }).join('\n');
+    return intro + items;
+}
+
 // Ensure folders exist
 langs.forEach(lang => {
     const dirPath = path.join(root, lang);
@@ -429,6 +561,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
     const canonicalUrl = `https://relimie.com/${lang}/${pageName}.html`;
     const noIndexPages = ['privacy', 'impressum', 'terms', 'privacy_web'];
     const isNoIndex = noIndexPages.includes(pageName);
+    const isArticle = articles.some(a => a.slug === pageName);
 
     const content = isIndex ? `
         <!-- Hero: animated Orb + core promise -->
@@ -579,7 +712,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
     <link rel="canonical" href="${canonicalUrl}">
 ${isNoIndex ? '    <meta name="robots" content="noindex, nofollow">' : ''}
 ${getHreflangTags(pageName)}
-    <meta property="og:type" content="${pageName === 'story' ? 'article' : 'website'}">
+    <meta property="og:type" content="${(pageName === 'story' || isArticle) ? 'article' : 'website'}">
     <meta property="og:site_name" content="Relimie">
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${description}">
@@ -632,6 +765,9 @@ ${getSchemaOrg(lang, pageName, isIndex)}
                         <a href="faq.html" data-i18n="faq">FAQ</a>
                         <a href="support.html" data-i18n="support">Support</a>
                     </div>
+                </div>
+                <div class="nav-item">
+                    <a href="articles.html" data-i18n="articles">Articles</a>
                 </div>
                 <div class="nav-item">
                     <a href="cooperation.html" data-i18n="cooperation">Cooperation</a>
@@ -716,6 +852,22 @@ langs.forEach(lang => {
         }
 
         fs.writeFileSync(path.join(root, lang, `${page}.html`), getTemplate(lang, page, false, bodyHtml));
+    });
+
+    // Write the article hub
+    fs.writeFileSync(path.join(root, lang, `${ARTICLE_HUB_SLUG}.html`), getTemplate(lang, ARTICLE_HUB_SLUG, false, buildArticleHub(lang)));
+
+    // Write individual articles
+    articles.forEach(article => {
+        const filePath = path.join(root, 'assets', 'docs', 'articles', `${article.slug}_${lang}.md`);
+        let bodyHtml = '';
+        if (fs.existsSync(filePath)) {
+            bodyHtml = marked.parse(fs.readFileSync(filePath, 'utf8'));
+        } else {
+            console.warn(`Warning: Article file not found: ${filePath}`);
+            bodyHtml = `<p>Coming Soon</p>`;
+        }
+        fs.writeFileSync(path.join(root, lang, `${article.slug}.html`), getTemplate(lang, article.slug, false, bodyHtml));
     });
 });
 

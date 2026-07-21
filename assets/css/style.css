@@ -836,6 +836,67 @@ main {
     line-height: 1.5;
 }
 
+/* Tables (comparison tables in articles) */
+.markdown-body table {
+    width: 100%;
+    margin: 28px 0;
+    border-collapse: collapse;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    overflow: hidden; /* clip cell backgrounds to the rounded corners */
+}
+
+.markdown-body thead th {
+    background: rgba(45, 212, 191, 0.12);
+    color: var(--text-primary);
+    font-weight: 700;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.markdown-body th,
+.markdown-body td {
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+    vertical-align: top;
+}
+
+.markdown-body tbody tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.markdown-body tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Right-align numeric columns (last cell in each row) for easy scanning */
+.markdown-body td:last-child {
+    text-align: right;
+    white-space: nowrap;
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+}
+
+.markdown-body th:last-child {
+    text-align: right;
+}
+
+/* Let wide tables scroll horizontally instead of overflowing on small screens */
+@media (max-width: 640px) {
+    .markdown-body table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .markdown-body th,
+    .markdown-body td {
+        padding: 10px 14px;
+    }
+}
+
 .loading-text {
     text-align: center;
     color: var(--text-secondary);
