@@ -299,13 +299,15 @@ main {
     text-align: center;
     gap: 32px;
     width: 100%;
-    max-width: 1000px;
+    /* Wide enough for the longest tagline (DE/RU) to sit on one line on desktop;
+       narrower viewports still wrap the headline gracefully. */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 64px 24px 32px;
 }
 
 .hero-slogan {
-    order: 2;
+    order: 0;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -365,10 +367,21 @@ main {
     margin: 0;
 }
 
+/* The Russian tagline is the longest of the three. On desktop, nudge it down a
+   touch and keep it on a single line (EN/DE stay at full size). Below 992px it
+   falls back to the normal clamp and wraps like everything else. */
+@media (min-width: 992px) {
+    html[lang="ru"] .hero-tagline {
+        font-size: clamp(38px, 4vw, 46px);
+        white-space: nowrap;
+    }
+}
+
 .hero-lead {
     font-size: clamp(16px, 2.2vw, 19px);
     color: var(--text-secondary);
-    max-width: 620px;
+    /* Match the headline: span the full hero width instead of a narrow column. */
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -1050,7 +1063,7 @@ main {
     }
 
     .hero-slogan {
-        order: 3;
+        order: 0;
     }
 
     .hero-interactive {
