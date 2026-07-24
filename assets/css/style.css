@@ -1157,6 +1157,11 @@ main {
         width: 100%;
         background: rgba(15, 23, 42, 0.98);
         flex-direction: column;
+        /* Override base `align-items: center` so every item — plain links and
+           dropdown groups alike — aligns to the left edge (plain links would
+           otherwise centre while wider dropdown blocks stay left). */
+        align-items: stretch;
+        text-align: left;
         padding: 24px;
         gap: 16px;
         border-bottom: 1px solid var(--glass-border);
