@@ -47,6 +47,21 @@ const hubMeta = {
 
 const articles = [
     {
+        slug: 'am-i-drinking-too-much',
+        published: '2026-07-27',
+        modified: '2026-07-27',
+        title: {
+            en: 'Relimie – Am I Drinking Too Much?',
+            de: 'Relimie – Trinke ich zu viel?',
+            ru: 'Relimie – Много ли я пью?',
+        },
+        description: {
+            en: 'Am I drinking too much? See the average daily alcohol intake by country, how it compares to the recommended limits, and how to find where you stand. Just the numbers, so you can decide for yourself.',
+            de: 'Trinke ich zu viel? Sieh dir den durchschnittlichen Alkoholkonsum pro Tag nach Land an, wie er zur empfohlenen Grenze steht und wie du herausfindest, wo du liegst. Einfach die Zahlen, den Rest entscheidest du.',
+            ru: 'Много ли я пью? Посмотри средний уровень алкоголя в день по странам, как он соотносится с рекомендуемыми пределами и как понять, где ты. Только цифры, а выводы за тобой.',
+        },
+    },
+    {
         slug: 'calories-in-alcohol',
         published: '2026-07-21',
         modified: '2026-07-21',
@@ -878,6 +893,14 @@ let llmsFull = `# Relimie - Full Documentation\n\n`;
     if (fs.existsSync(filePath)) {
         const title = file.replace('_en.md', '').replace(/landing_|about_/g, '').replace(/_/g, ' ').toUpperCase();
         llmsFull += `## SECTION: ${title}\n\n` + fs.readFileSync(filePath, 'utf8') + `\n\n---\n\n`;
+    }
+});
+// Append the SEO articles — these are top-of-funnel entry points we want AI agents to ingest.
+articles.forEach(article => {
+    const filePath = path.join(root, 'assets', 'docs', 'articles', `${article.slug}_en.md`);
+    if (fs.existsSync(filePath)) {
+        const title = (article.title.en || '').replace(/^Relimie\s*[–-]\s*/, '');
+        llmsFull += `## ARTICLE: ${title}\n\n` + fs.readFileSync(filePath, 'utf8') + `\n\n---\n\n`;
     }
 });
 fs.writeFileSync(path.join(root, 'llms-full.txt'), llmsFull);

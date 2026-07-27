@@ -346,3 +346,165 @@ Completely. Everything stays on your device: **no account, no email, no cloud, n
 
 ---
 
+## ARTICLE: Am I Drinking Too Much?
+
+# Am I Drinking Too Much?
+
+"Am I drinking too much?" is one of the most common questions people have about alcohol and their health, and one of the hardest to answer, because "too much" has no single number attached to it. This article can't give you a definitive answer; that would be medical advice, which isn't ours to give. What it can do is point you to a sensible place to start. One of the most useful is comparison: how you stack up against the people around you, and against the guidelines from bodies like the [World Health Organization (WHO)](https://www.who.int).
+
+## First, how much alcohol is in a drink?
+
+Before you can compare anything, it helps to measure the same way. Alcohol is counted in grams of pure alcohol, because a small strong drink and a large weak one can hold exactly the same amount. Here is roughly what common servings contain. Values are approximate and depend on strength and pour.
+
+| Drink | Typical serving | Pure alcohol (approx.) |
+|---|---|---|
+| Small glass of wine | 125 ml (12%) | ~12 g |
+| Standard glass of wine | 175 ml (12%) | ~17 g |
+| Large glass of wine | 250 ml (13%) | ~26 g |
+| Bottled beer | 330 ml (5%) | ~13 g |
+| Pint of lager or ale | 568 ml (5%) | ~22 g |
+| Single spirit | 25 ml (40%) | ~8 g |
+| Double spirit | 50 ml (40%) | ~16 g |
+
+So a couple of glasses of wine in an evening is somewhere around 30 to 50 grams of pure alcohol, depending on the size of the pour.
+
+## How much does the average person drink?
+
+An average won't tell you whether your own drinking is fine, but it does give you a reference point, and most people have never actually seen one. Here is the average daily consumption by country, measured in grams of pure alcohol per day. The figures come from national and international data (2026.1).
+
+| Country | Average (men) | Average (women) | Guideline limit (men / women) | Guideline source |
+|---|---|---|---|---|
+| Germany | 38.5 g/day | 11.2 g/day | 20 / 10 g/day | DHS/RKI |
+| United States | 33.0 g/day | 9.8 g/day | 28 / 14 g/day | USDA |
+| United Kingdom | 31.5 g/day | 11.4 g/day | 16 / 16 g/day | NHS |
+| Russia | 32.0 g/day | 8.5 g/day | 30 / 20 g/day | Ministry of Health |
+| Czechia | 48.0 g/day | 13.5 g/day | 24 / 16 g/day | SZÚ |
+| Romania | 54.0 g/day | 14.2 g/day | 24 / 12 g/day | INSP |
+| France | 36.0 g/day | 12.5 g/day | 20 / 20 g/day | Santé publique France |
+
+If your country isn't listed, regional averages give a rough stand-in (for example, around 31.5 g/day for men in Europe, or 25.8 g/day in the Americas), so you still have something to compare against.
+
+The codes in the Guideline source column are the national bodies that set each limit: DHS/RKI ([Deutsche Hauptstelle für Suchtfragen](https://www.dhs.de) and the [Robert Koch-Institut](https://www.rki.de)) for Germany, the [USDA](https://www.dietaryguidelines.gov) Dietary Guidelines for the United States, the [NHS](https://www.nhs.uk/live-well/alcohol-advice/) (National Health Service) for the United Kingdom, the [Ministry of Health](https://minzdrav.gov.ru) for Russia, [SZÚ](https://szu.cz) (Státní zdravotní ústav) for Czechia, [INSP](https://insp.gov.ro) (Institutul Național de Sănătate Publică) for Romania, and [Santé publique France](https://www.santepubliquefrance.fr) for France.
+
+Two useful things stand out. First, the averages are higher than most people guess: 38.5 grams a day for men in Germany is roughly two and a half glasses of wine, every day. Second, in almost every country the average sits *above* the recommended limit, which brings us to the next point.
+
+## Average is not the same as recommended
+
+It is tempting to read an average as a green light, as if drinking "about as much as everyone else" must be fine. But the average describes what is normal, not what is advisable, and the two are often far apart. The right-hand column above shows each country's low-risk guideline, and in most cases the population average is well over it.
+
+The guidelines themselves vary because they are set nationally, not by one global rule. Each limit comes from that country's own health authority, shown in the Guideline source column, not from the WHO. The WHO's own position is blunter still: from a purely health standpoint there is no completely risk-free level of drinking, and less is always lower risk. That is context, not instruction.
+
+## First, find your own average
+
+Here is the catch that trips most people up: you cannot compare a single day against an average. A birthday, a wedding, a Friday night out: of course you drink more than usual on those, and measuring yourself by that one evening tells you nothing. The country figures above are daily averages, so the only fair comparison is your own daily average.
+
+And an average only means something over time. One week is quiet, the next is full of occasions. To reach a figure you can trust, you have to track your drinking over a longer stretch, and a quarter, roughly three months, is a good rule of thumb. Only once the quiet weeks and the heavy ones land in the same pot does a stable personal average emerge, and that is the number worth holding up against the ones in this article.
+
+## Where Relimie fits in
+
+Doing that by hand is tedious, and this is exactly what Relimie is for. You log your drinks as you go, and over the weeks it works out your real daily and weekly average and places it against two lines: the average for people like you, and the recommended guideline. You set a baseline at the start and watch how your actual average settles around it.
+
+> 🎁 **Free baseline comparison:** Relimie sets your baseline from your country's average and shows how your real drinking measures up against it and the guideline, for free, on your device, with no account and no cloud.
+
+Once a few weeks are on screen you can see the trend in your [Analytics](index.html#ls-analytics) and decide what, if anything, you would like to change. You are comparing yourself to a statistic, not to a diagnosis.
+
+## A note on the numbers
+
+These averages are drawn from national and international consumption data, and figures inevitably differ slightly between sources such as the WHO and the [OECD (Organisation for Economic Co-operation and Development)](https://www.oecd.org), partly because some count every adult and others count only people who actually drink. The guideline limits come from each country's own health authority, shown in the Guideline source column. They are meant as a shared reference point, not a precise personal measurement.
+
+## Frequently asked questions
+
+**How long should I track before I compare?**
+Long enough for the busy weeks and the quiet ones to even out. A single night out says nothing about your average, so aim for a longer run: around three months is a sensible benchmark before your personal average is stable enough to hold against the figures here.
+
+**How many grams of alcohol a day counts as "a lot"?**
+There is no official line, which is exactly why the question is hard. As a rough guide, many national low-risk guidelines land somewhere between 10 and 20 grams a day, and the WHO holds that less is always lower risk. A practical way to read it: if you are drinking noticeably more than both your country's average and its guideline, you are drinking more than most people around you.
+
+**Is the average amount a safe amount?**
+No. An average simply describes what is common, and in most countries the average is already above the recommended limit. Normal and advisable are not the same thing.
+
+**Does Relimie tell me if I drink too much?**
+No. Relimie doesn't give medical advice and doesn't diagnose. What it does is statistical: it shows your real intake next to your country's average and its guideline, so the comparison is clear and the conclusions are yours.
+
+---
+
+Want to see where you actually stand? [Set your baseline in Relimie](index.html#ls-hero), read the [User Guide](guide.html) to get going in a minute, or browse more [mindful drinking articles](articles.html).
+
+
+---
+
+## ARTICLE: How Many Calories Are in Alcohol? Wine, Beer & Spirits
+
+# How Many Calories Are in Alcohol? Wine, Beer & Spirits Compared
+
+When we think about what we eat and drink, alcohol is often the part that quietly slips off the list. A glass of wine after work, a beer with friends, a cocktail to round off dinner. These moments matter, and they deserve to be enjoyed. They also carry more calories than most people expect. Knowing the numbers has nothing to do with guilt. It just helps you see the full picture, so the choices you make stay yours.
+
+## The quick answer
+
+Pure alcohol contains about 7 calories per gram, nearly as much as pure fat (9 kcal/g) and almost double the calories in sugar or protein (4 kcal/g). On top of that, many drinks add sugar from mixers, juices and liqueurs.
+
+Here is how common drinks compare. Values are approximate and depend on strength and serving size.
+
+| Drink | Typical serving | Calories (approx.) |
+|---|---|---|
+| Dry white wine | 175 ml glass (12%) | ~140 kcal |
+| Red wine | 175 ml glass (13%) | ~170 kcal |
+| Large glass of wine | 250 ml (13%) | ~240 kcal |
+| Prosecco or Champagne | 125 ml flute | ~90 kcal |
+| Lager or ale | pint / 568 ml (5%) | ~215 kcal |
+| Bottled beer | 330 ml (5%) | ~140 kcal |
+| Spirit (gin, vodka, whisky) | single 25 ml (40%) | ~55 kcal |
+| Gin and tonic | 25 ml plus regular tonic | ~120 kcal |
+| Margarita or mixed cocktail | one glass | ~250 to 350 kcal |
+| Cream liqueur | 50 ml | ~160 kcal |
+
+## Why alcohol calories are so easy to miss
+
+Nutritionists sometimes call these "empty calories": they give you energy but almost no vitamins, fibre or protein. A few things make them especially easy to overlook.
+
+- Drinks don't feel like food. A pint can carry as many calories as a slice of pizza, but it doesn't register the same way.
+- Mixers and cocktails hide sugar. The spirit itself may be modest, while the tonic, juice or syrup often is not.
+- One drink leads to a nibble. Alcohol can lower your resolve, so the late-night snack is really part of the same round.
+
+## How quickly it adds up
+
+The individual numbers look small, so it helps to zoom out. Two 175 ml glasses of wine most evenings is roughly 320 calories a day, around 2,200 a week, or close to 9,500 a month. That is the calorie equivalent of a full extra day of eating every week, entirely from drinks.
+
+Seeing that total isn't meant to alarm you. For many people it is simply the missing piece that finally makes their week add up.
+
+## You don't have to quit to take control
+
+You don't need to give up the glass you genuinely enjoy. You just need to see it. When drinks are tracked alongside everything else, moderation stops being a vague intention and becomes something you can actually steer.
+
+That is what Relimie is built for. As you log a drink, it estimates the calories for you, so your evening out is reflected in the same picture as the rest of your day.
+
+> 🎁 **Free calorie tracking:** Relimie estimates the calories in every drink you log. No premium plan, no account, no cloud. Your numbers stay on your device.
+
+Once a week or two of drinks is on the screen, small adjustments become obvious. You can see the trend in your [Analytics](index.html#ls-analytics) and decide what, if anything, you would like to change.
+
+## Five easy ways to cut liquid calories
+
+1. Pour a smaller measure. A 125 ml glass instead of 250 ml halves the calories with barely any difference to the ritual.
+2. Reach for a spritzer. Wine topped with soda, or a lower-strength option, keeps the taste and trims the total.
+3. Alternate with water. One glass of water between drinks slows the pace and cuts the count.
+4. Watch the mixer, not just the spirit. Slimline tonic or soda can save a hundred calories a glass.
+5. Track before you trim. You can't adjust what you can't see, and a few logged days usually reveal the easiest win.
+
+## Frequently asked questions
+
+**Which alcohol has the fewest calories?**
+Neat spirits with a calorie-free mixer such as soda water or slimline tonic tend to be lowest per serving, around 55 to 60 calories for a single measure. Among wines, a dry white is usually the lightest, thanks to its lower alcohol and minimal residual sugar. A small glass of it, or a light beer, is also relatively modest.
+
+**Does wine or beer have more calories?**
+Per glass it is close, but it depends on the pour. A pint of beer usually beats a small glass of wine because the serving is larger. Measure for measure, wine is more calorie-dense because it is stronger.
+
+**Do the calories from alcohol really count?**
+Yes. Your body uses the energy from alcohol just as it does from food, and because it burns alcohol first, other calories are more likely to be stored. That is why drinks belong in the picture, not outside it.
+
+---
+
+Ready to see your own numbers? [Log your first drink with Relimie](index.html#ls-logging), read the [User Guide](guide.html) to get set up in a minute, or browse more [mindful drinking articles](articles.html).
+
+
+---
+

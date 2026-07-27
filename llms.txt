@@ -14,6 +14,14 @@ The core method is "baseline-drinking": a personal long-term average rather than
 - [Privacy Policy](https://relimie.com/en/privacy.html): Full data privacy documentation. All data is stored locally on device only.
 - [Support](https://relimie.com/en/support.html): Contact information for support.
 
+## Articles
+
+Judgement-free, informational guides on mindful drinking. Each targets a common question and is a top-of-funnel entry point (also available in German at /de/ and Russian at /ru/).
+
+- [Am I Drinking Too Much?](https://relimie.com/en/am-i-drinking-too-much.html): How to tell where you stand by comparing your own long-term average (built over ~3 months of tracking) against average daily alcohol intake by country and national low-risk guidelines. Explains why a single day cannot be compared to an average.
+- [How Many Calories Are in Alcohol?](https://relimie.com/en/calories-in-alcohol.html): Calories in wine, beer and spirits compared, why alcohol calories add up, and how to track them without giving up the glass you enjoy.
+- [All articles](https://relimie.com/en/articles.html): The full mindful-drinking article hub.
+
 ## App Details
 
 - Platform: iOS (Apple App Store, App ID: 6759795714)
