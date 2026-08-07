@@ -13,7 +13,7 @@ const APP_VERSION = '2.1.0';
 // to refetch assets. Bump on ANY deploy that changes style.css / script.js / translations.js
 // (otherwise a stale translations.js can leave the old copy/banner showing). Not user-visible,
 // so it does not need to match APP_VERSION — use a build tag or date.
-const ASSET_VERSION = '20260724';
+const ASSET_VERSION = '20260807';
 const langs = ['en', 'de', 'ru'];
 const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'android', 'videos', 'cravings', 'cooperation', 'story'];
 

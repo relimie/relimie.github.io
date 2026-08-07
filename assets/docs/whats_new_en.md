@@ -2,6 +2,20 @@
 
 The story so far — here's what changed in each release, newest first.
 
+## Version 2.2.0 — Coming Soon
+
+*Not yet available — releasing soon.*
+
+Four bigger changes and plenty of polish are on their way.
+
+### 🌟 Major Highlights
+- **Blood alcohol estimate**: On days with logged drinks, tap the small button next to the Orb to see a rough per mille estimate from what you logged, plus how long it takes to clear. It is an estimate based on the Widmark formula — never a measurement and never a reason to drive.
+- **Your drinks at a glance**: Drink days now show one icon per drink right below the Orb, coloured by category. A day is finally readable without opening it: not just "48 g", but two beers and a glass of wine.
+- **Rebuilt consumption overview**: The statistics page is no longer a wall of numbers. A hero ring shows your sober share, your streaks share one scale so the current one is measured against your best, and your average volume sits on a gauge centred on your personal baseline.
+- **A guided tour on every page**: Each screen now carries a small "?" next to its title. Tap it and Relimie walks you through that page step by step, highlighting one element at a time and explaining what it does.
+
+---
+
 ## Version 2.1.0
 
 A set of new features and many improvements to help you track your consumption with more clarity and ease.
