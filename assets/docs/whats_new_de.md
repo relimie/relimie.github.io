@@ -2,19 +2,20 @@
 
 Die Geschichte bisher – das hat sich in jeder Version geändert, die neuesten zuerst.
 
-## Version 2.2.0 — Demnächst
+## Version 2.2.0
 
-*Noch nicht verfügbar — erscheint in Kürze.*
-
-Vier größere Neuerungen und viel Feinschliff kommen bald.
+Vier größere Neuerungen und viel Feinschliff.
 
 ### 🌟 Die Highlights
 - **Promille-Schätzung**: Tippe an Tagen mit erfassten Drinks auf den kleinen Button neben dem Orb und du siehst einen groben Promille-Wert aus deinen Einträgen sowie die Zeit bis zum Abbau. Es ist eine Schätzung nach der Widmark-Formel — keine Messung und niemals ein Grund, sich ans Steuer zu setzen.
-- **Deine Drinks auf einen Blick**: An Trinktagen erscheint direkt unter dem Orb pro Drink ein Symbol, eingefärbt nach Kategorie. Ein Tag ist endlich lesbar, ohne ihn zu öffnen: nicht nur „48 g", sondern zwei Bier und ein Glas Wein.
+- **Deine Drinks auf einen Blick**: An Trinktagen erscheint direkt unter dem Orb pro Drink ein Symbol, eingefärbt nach Kategorie. Ein Tag ist endlich lesbar, ohne ihn zu öffnen: nicht nur „48 g“, sondern zwei Bier und ein Glas Wein.
 - **Neu gebaute Konsum-Übersicht**: Die Statistikseite ist keine Zahlenwand mehr. Ein Ring zeigt deinen nüchternen Anteil, deine Serien liegen auf einer gemeinsamen Skala sodass die aktuelle an deiner besten gemessen wird, und deine durchschnittliche Menge sitzt auf einer Anzeige, die auf deinem persönlichen Referenzwert zentriert ist.
 - **Eine geführte Tour auf jeder Seite**: Neben dem Titel jedes Screens sitzt jetzt ein kleines „?". Tippe darauf und Relimie führt dich Schritt für Schritt durch die Seite, hebt ein Element nach dem anderen hervor und erklärt, wofür es da ist.
 
----
+> 🎁 **Teil der kostenlosen Basisversion:** Die Promille-Schätzung steckt nicht hinter Premium und läuft nie mit deinem Testzeitraum ab. Sie ist an jedem Tag da, an dem du einen Drink erfasst hast.
+
+### 🛠 Funktionen & Verbesserungen
+- **Feinschliff & Fehlerbehebungen**: Viele kleine Verbesserungen an Oberfläche und Bedienung in der ganzen App.
 
 ## Version 2.1.0
 

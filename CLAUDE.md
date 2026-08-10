@@ -10,7 +10,7 @@ Relimie is a **mindful drinking companion app** for tracking alcohol consumption
 
 The website is a **static site** built by a Node.js script (`build_html.js`) that reads Markdown source files and generates localized HTML.
 
-**Current App Version**: v2.1.0
+**Current App Version**: v2.2.0
 **Target Platform**: iOS (Apple App Store); Android marked as "Coming Soon"
 
 ---
@@ -87,7 +87,7 @@ relimie.github.io/
   node build_html.js
   ```
 - Content is hard-baked into HTML at build time (no runtime Markdown rendering).
-- **Two version constants in `build_html.js`:** `APP_VERSION` is the **semantic app version** shown to users (nav button, schema `softwareVersion`, What's-New copy) — bump it on an app release. `ASSET_VERSION` is the **cache-bust token** appended to the CSS/JS URLs as `?v=` — **bump it on ANY deploy that changes `style.css`, `script.js`, or `translations.js`**, otherwise GitHub Pages' CDN can keep serving stale assets (e.g. an old `translations.js` leaving the old banner/copy showing). It is not user-visible, so it need not match `APP_VERSION` (use a build tag or date).
+- **Two version constants in `build_html.js`:** `APP_VERSION` is the **semantic app version** shown to users — bump it on an app release. It is interpolated into the schema `softwareVersion` and the nav badge's pre-JS fallback text, so those two need no manual edit. The badge's *visible* label still comes from the `navWhatsNew` i18n key in `translations.js` (EN/DE/RU), and the What's-New copy from `whats_new_[lang].md` — update both by hand. `ASSET_VERSION` is the **cache-bust token** appended to the CSS/JS URLs as `?v=` — **bump it on ANY deploy that changes `style.css`, `script.js`, or `translations.js`**, otherwise GitHub Pages' CDN can keep serving stale assets (e.g. an old `translations.js` leaving the old banner/copy showing). It is not user-visible, so it need not match `APP_VERSION` (use a build tag or date).
 - **`whats_new_[lang].md` is a cumulative changelog** (newest version section on top). Add a new `## Version X.Y.Z` section per release rather than replacing the file. Source historical notes from `C:\GitHub\Relimie\metadata\release_notes\` and `C:\GitHub\Relimie\marketing\vXYZ\`.
 - `marked-gfm-heading-id` generates stable anchor IDs for all headings (critical for ToC links).
 - **SEO functions in `build_html.js`**: `getPageTitleFull(page, lang)` generates `<title>`, `getPageDescription(page, lang)` generates `<meta name="description">`, `getHreflangTags(pageName)` generates hreflang links, `getSchemaOrg(lang, pageName, isIndex)` generates JSON-LD schema. Update these functions when adding new pages.
@@ -168,7 +168,7 @@ Pages are registered in `build_html.js`:
 - `fileMap` — maps page key → MD filename prefix
 - `getPageTitle()` — maps page key → HTML `<title>` suffix
 
-**Navigation placement** (left→right): New in 2.1.0 (standalone teal `nav-whatsnew` link), Community (dropdown), Guide (dropdown), Articles (standalone link → article hub), Cooperation (standalone link, last).
+**Navigation placement** (left→right): New in 2.2.0 (standalone teal `nav-whatsnew` link, label from `APP_VERSION` / i18n key `navWhatsNew`), Community (dropdown), Guide (dropdown), Articles (standalone link → article hub), Cooperation (standalone link, last).
 - Community dropdown: Android Test, Release News, Founder Story
 - Guide dropdown: User Guide, Video Guides, FAQ, Support (Support also keeps its direct link in the footer)
 

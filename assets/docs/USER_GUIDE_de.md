@@ -5,12 +5,13 @@ Willkommen bei Relimie, deinem achtsamen Begleiter für das Verfolgen deines Alk
 ## Inhaltsverzeichnis
 - [1. Persönlicher Referenzwert](#1-persönlicher-referenzwert)
 - [2. Getränke erfassen](#2-getränke-erfassen)
-- [3. Tagebuch und Tags](#3-tagebuch-und-tags)
-- [4. Verlangen und Atemübung](#4-verlangen-und-atemübung)
-- [5. Analyse-Hub](#5-analyse-hub)
-- [6. Datenexport](#6-datenexport)
-- [7. Weitere Funktionen](#7-weitere-funktionen)
-- [8. Relimie Premium](#8-relimie-premium)
+- [3. Promille-Schätzung](#3-promille-schätzung)
+- [4. Tagebuch und Tags](#4-tagebuch-und-tags)
+- [5. Verlangen und Atemübung](#5-verlangen-und-atemübung)
+- [6. Analyse-Hub](#6-analyse-hub)
+- [7. Datenexport](#7-datenexport)
+- [8. Weitere Funktionen](#8-weitere-funktionen)
+- [9. Relimie Premium](#9-relimie-premium)
 
 ## 1. Persönlicher Referenzwert
 
@@ -52,7 +53,29 @@ Diese detaillierte Aufschlüsselung stellt sicher, dass du einen ganzheitlichen,
 
 ---
 
-## 3. Tagebuch und Tags
+## 3. Promille-Schätzung
+
+### Das Grundprinzip
+Nach einem durchzechten Abend lautet die Frage, auf die es am nächsten Morgen wirklich ankommt, nicht „wie betrunken bin ich" — sondern „wie lange dauert es, bis das wieder draußen ist". Genau darauf antwortet die Promille-Schätzung. Sie nimmt den Alkohol, den du für einen Tag erfasst hast, schätzt den Blutalkoholwert (in ‰), den diese Menge ergeben würde, und zeigt dir, wie dieser Wert in den folgenden Stunden sinkt. Sie ist eine Uhr für den Abbau — niemals eine Freigabe.
+
+### Die Schätzung öffnen
+Auf dem Startbildschirm sitzt neben dem Orb eine kleine **Tacho-Schaltfläche**. An jedem Tag, an dem du Drinks erfasst hast — heute oder in der Vergangenheit — leuchtet sie türkis; an nüchternen Tagen und an Tagen ohne Eintrag bleibt sie gedimmt, weil es nichts zu schätzen gibt. Ein Tippen öffnet die Schätzung als eigenen Bildschirm; du verlässt ihn wieder über das **X**, ein Wischen nach rechts oder die Zurück-Geste deines Geräts. Die Funktion ist **vollständig kostenlos** — sie gehört nicht zu Relimie Premium und läuft auch nicht mit deiner Testphase ab.
+
+### Dein Körpergewicht festlegen
+Der Blutalkoholwert hängt stark davon ab, auf wie viel Körpermasse sich der Alkohol verteilt — deshalb braucht die Schätzung zuerst dein **Körpergewicht**. Wenn du sie zum allerersten Mal öffnest, zeigt der große Wert `–,–` und bleibt gesperrt: Relimie rät bewusst nicht. Ein angenommenes Gewicht würde jedem, der leichter ist als die Annahme, einen *niedrigeren* Wert und eine *kürzere* Wartezeit anzeigen — und genau in diese Richtung darf sich diese Funktion niemals irren. Stelle dein Gewicht mit den **− / +**-Schaltflächen in der Körper-Karte ein (in **Kilogramm**, zwischen 40 und 150 kg) und tippe auf **Speichern & schätzen**. Ab dann erscheint die Schätzung sofort, und jedes Tippen auf − / + aktualisiert sie live. Dein Gewicht wird ausschließlich auf deinem Gerät gespeichert, genau wie alle übrigen Daten. Auch dein **Geschlecht** fließt ein, da es beeinflusst, wie sich Alkohol im Körper verteilt — es wird in derselben Karte zur Information angezeigt, geändert wird es aber unter **Einstellungen → Personalisierung**, nicht hier.
+
+### Die Schätzung lesen
+Die oberste Zeile sagt dir genau, worauf die Schätzung beruht: die für diesen Tag erfasste Gesamtmenge Alkohol. Darunter steht der große ‰-Wert — der geschätzte Blutalkoholspiegel. Mit dem **Stunden-Schieberegler** spulst du ab deinem letzten Drink des Tages vor — bis zu 24 Stunden in Halbstundenschritten — und siehst zu, wie der Wert fällt, bis er als vollständig abgebaut gilt. Zwei Zeilen darunter fassen alles auf einen Blick zusammen: wie lange es dauert, bis die Schätzung **unter 0,5 ‰** fällt, und wie lange, bis sie **vollständig abgebaut** ist. Beide Zeiten zählen ab deinem letzten Drink des Tages und bleiben deshalb stehen, während du den Regler bewegst.
+
+### Wie gerechnet wird
+Relimie nutzt die **Widmark-Formel**: die erfassten Gramm reinen Alkohols geteilt durch dein Körpergewicht mal einem geschlechtsabhängigen Verteilungsfaktor, danach ein gleichmäßiger Abbau von 0,15 ‰ pro Stunde. Die Menge des ganzen Tages wird so behandelt, als wäre sie auf einmal ins Blut gelangt, und der Anteil, den dein Körper abbaut, bevor er überhaupt den Blutkreislauf erreicht, wird nicht abgezogen. Jede dieser Entscheidungen — ebenso wie das Aufrunden aller Zeitangaben auf die nächsten fünf Minuten — zeigt bewusst in dieselbe Richtung: **ein höherer Wert und eine längere Wartezeit**, als du tatsächlich haben dürftest. Das ist die einzige Richtung, die niemandem schaden kann, der sich nach dem Ergebnis richtet.
+
+### Was dieser Wert nicht ist
+**Das ist eine Schätzung, keine Messung.** Dein tatsächlicher Blutalkoholwert hängt von vielen Faktoren ab, die diese Rechnung nicht kennen kann — was und wann du gegessen hast, wie sich die Drinks über den Abend verteilt haben, Medikamente, deine Gesundheit und dein individueller Stoffwechsel — und er kann deutlich höher liegen als angezeigt. **Nutze diesen Wert niemals, um zu beurteilen, ob du fahren, arbeiten oder Medikamente einnehmen kannst.** Im Zweifel: lass es.
+
+---
+
+## 4. Tagebuch und Tags
 
 ### Das Grundkonzept
 Zu verstehen, *warum* du trinkst, ist weitaus wichtiger als nur zu zählen, *was* du trinkst. Das Tagebuch- und Tagging-System ist bewusst darauf ausgelegt, den emotionalen und situativen Kontext direkt um deine numerischen Daten herum aufzubauen.
@@ -68,20 +91,20 @@ Mit der Zeit werden diese emotionalen Daten dein stärkstes Werkzeug. Im Analyse
 
 ---
 
-## 4. Verlangen und Atemübung
+## 5. Verlangen und Atemübung
 
 ### Das Grundkonzept
 Wenn ein plötzliches Verlangen oder ein Drang zu trinken aufkommt, reicht bloße Willenskraft oft nicht aus. Das Unterbrechen des unmittelbaren Impulses gibt deinem rationalen Gehirn einen entscheidenden Moment, um aufzuholen und die Kontrolle zurückzugewinnen, was die Wahrscheinlichkeit eines ungewollten Rückfalls deutlich verringert.
 
 ### Den Impuls überwinden
-Durch langes Drücken auf den Orb beim heutigen Datum löst du direkt auf dem Startbildschirm einen unmittelbaren psychologischen Unterbrecher aus. Der Bildschirm verwandelt sich in eine ruhige, sich ausdehnende und zusammenziehende Visualisierung, die dich durch die bewährte **4-7-8-Atemtechnik** führt — 4 Sekunden einatmen, 7 Sekunden halten, 8 Sekunden ausatmen. Dieser achtsame Unterstützungsfluss wird von erdenden Zitaten und Sprüchen begleitet, die deinen Fokus verankern. Sobald der Atemzyklus abgeschlossen ist, bietet die App eine Aufforderung an, einen **„Klaren Tag"** einzutragen — ein positiver Verstärkungsschritt, der den Akt des Widerstehens eines Verlangens in eine verfolgbare Leistung in deiner Nüchternheitsserie verwandelt.
+Durch langes Drücken auf den Orb beim heutigen Datum löst du direkt auf dem Startbildschirm einen unmittelbaren psychologischen Unterbrecher aus. Der Bildschirm verwandelt sich in eine ruhige, sich ausdehnende und zusammenziehende Visualisierung, die dich durch die bewährte **4-7-8-Atemtechnik** führt — 4 Sekunden einatmen, 7 Sekunden halten, 8 Sekunden ausatmen. Eine Karte unterhalb der Visualisierung begleitet dich durch den Zyklus: Sie öffnet sich mit deiner Regenerations-Timeline, und ein einziger Tipp dreht sie zu einem erdenden Zitat um, das deinen Fokus verankert. Sobald der Atemzyklus abgeschlossen ist, bietet die App eine Aufforderung an, einen **„Klaren Tag"** einzutragen — ein positiver Verstärkungsschritt, der den Akt des Widerstehens eines Verlangens in eine verfolgbare Leistung in deiner Nüchternheitsserie verwandelt.
 
 ### Deine Regenerations-Timeline
-Der Atem-Bildschirm leitet nicht nur deinen Atem — er zeigt auch, wie sich dein Körper erholt. **Tippe auf die Karte, um sie umzudrehen**, und enthülle deine persönliche **Regenerations-Timeline**: eine Reihe wissenschaftlich fundierter Meilensteine — **Tag 1** (Alkohol abgebaut), **Tag 7** (Erholung beginnt), **Tag 30** (Körper regeneriert sich), **Tag 90** (vollständig angepasst), **Tag 180** (gestärktes System) und **Tag 365** (der Ein-Jahres-Meilenstein). Sie zeigt anhand der Zeit seit deinem letzten erfassten Getränk, wie weit du gekommen bist, und was der nächste Meilenstein bringt. Tippe auf das **?**, um die vollständige Erklärung jeder Phase zu sehen. Dies dient nur der allgemeinen Orientierung und ist keine medizinische Beratung — die tatsächliche Erholung ist von Person zu Person verschieden und hängt von Faktoren wie allgemeiner Gesundheit, Alter und Lebensstil ab.
+Der Atem-Bildschirm leitet nicht nur deinen Atem — er zeigt auch, wie sich dein Körper erholt. Die Karte unter dem Atem-Orb **öffnet sich direkt mit deiner persönlichen Regenerations-Timeline**: eine Reihe wissenschaftlich fundierter Meilensteine — **Tag 1** (Alkohol abgebaut), **Tag 7** (Erholung beginnt), **Tag 30** (Körper regeneriert sich), **Tag 90** (vollständig angepasst), **Tag 180** (gestärktes System) und **Tag 365** (der Ein-Jahres-Meilenstein). Sie zeigt anhand der Zeit seit deinem letzten erfassten Getränk, wie weit du gekommen bist, und was der nächste Meilenstein bringt. Tippe auf das **?**, um die vollständige Erklärung jeder Phase zu sehen, oder **tippe auf die Karte selbst, um sie umzudrehen** und ein erdendes Zitat zu lesen. Dies dient nur der allgemeinen Orientierung und ist keine medizinische Beratung — die tatsächliche Erholung ist von Person zu Person verschieden und hängt von Faktoren wie allgemeiner Gesundheit, Alter und Lebensstil ab.
 
 ---
 
-## 5. Analyse-Hub
+## 6. Analyse-Hub
 
 ### Das Grundkonzept
 Der Analyse-Hub ist der Ort, an dem deine täglichen Eingaben in umsetzbare, langfristige Erkenntnisse umgewandelt werden und du deinen übergreifenden Fortschritt und deine Verhaltensveränderungen klar sehen kannst. Du kannst ihn jederzeit öffnen, indem du auf dem Startbildschirm **nach oben wischst** oder auf das **Raster-Symbol** in der oberen Ecke des Bildschirms tippst.
@@ -97,7 +120,7 @@ Für eine fokussierte Vollbild-Ansicht deiner Trends **drehst du einfach dein Te
 
 ---
 
-## 6. Datenexport
+## 7. Datenexport
 
 ### Das Grundkonzept
 Deine Nüchternheitsreise ist zutiefst privat. Auch wenn es Zeiten geben kann, in denen du deinen Fortschritt mit einem Arzt teilen oder deine Geschichte sicher aufbewahren möchtest, stellt Relimie sicher, dass du die vollständige Kontrolle über deine Daten behältst, indem es standardmäßig eine private, offline-first Architektur verwendet.
@@ -107,17 +130,17 @@ Um deine Meilensteine mit einem Therapeuten, Arzt oder Betreuer zu teilen, kanns
 
 ---
 
-## 7. Weitere Funktionen
+## 8. Weitere Funktionen
 
 Während Tracking und Analyse das Herzstück von Relimie bilden, bietet die App auch verschiedene Hilfsfunktionen, die deine Reise weiter unterstützen:
 - **Alkoholeinheiten anpassen**: Relimie kann deinen Konsum in dem Einheitensystem anzeigen, das dir am natürlichsten erscheint. Navigiere zu **Einstellungen → Personalisierung**, um zwischen Gramm reinen Alkohols, Millilitern oder Standardgetränken nach **US**-, **UK**- oder **australischer** Definition zu wählen.
 - **Mehrsprachige Unterstützung**: Relimie ist vollständig lokalisiert, damit du mit deinen Gesundheitsdaten in deiner Muttersprache interagieren kannst. Derzeit unterstützt die App nativ drei Sprachen: Englisch, Deutsch und Russisch.
 - **Tägliche Erinnerungen**: Um dir zu helfen, eine konsistente Tracking-Gewohnheit aufzubauen, kannst du eine tägliche Erinnerungsbenachrichtigung über das **Einstellungen**-Menü aktivieren. Diese sanfte Erinnerung stellt sicher, dass du nie vergisst, einzuchecken und deinen täglichen emotionalen Zustand zu erfassen.
-- **Geführte Touren & Tipps**: Wenn du einen Bildschirm zum ersten Mal öffnest, weist dich eine kurze interaktive Tour auf die nicht offensichtlichen Gesten und Abkürzungen hin (etwa langes Drücken des Orbs oder das Wischen zwischen Ansichten). Möchtest du sie erneut sehen? Öffne das **Info**-Menü und tippe auf **„In-App-Tipps erneut anzeigen"**, um alle Touren von vorn abzuspielen.
+- **Geführte Touren**: Mehrere Bildschirme haben neben ihrem Titel eine kleine **Fragezeichen-Schaltfläche** — auf dem Startbildschirm findest du sie am rechten Ende der Monatszeile, direkt über den Datumsangaben. Ein Tippen startet eine kurze interaktive Tour durch genau diese Seite und zeigt dir die nicht offensichtlichen Gesten und Abkürzungen (etwa langes Drücken des Orbs oder das Wischen zwischen Ansichten). Touren starten nie von selbst und drängen sich nie auf: Sie laufen nur, wenn du sie aufrufst, sie behandeln nur die Seite, auf der du gerade bist, und du kannst sie so oft wiederholen, wie du möchtest. Touren gibt es auf den Bildschirmen **Start**, **Getränke erfassen** und **Check-in**.
 
 ---
 
-## 8. Relimie Premium
+## 9. Relimie Premium
 
 Um unsere Nutzer zu respektieren, sind die grundlegenden Tracking-Funktionen von Relimie dauerhaft kostenlos. Der Zugang zu tiefer Makro-Analytik, unbegrenzten historischen Reflexionen und erweiterten KI-Hilfsmitteln ist jedoch Teil des **Relimie Premium**-Erlebnisses.
 
@@ -129,6 +152,7 @@ Nach Ablauf deiner 20 Logging-Tage behältst du dauerhaft Zugang zu den wichtigs
 - Unbegrenzte tägliche Erfassung vorinstallierter Standardgetränke.
 - Vollständiger Zugriff auf den interaktiven Startbildschirm-Orb und Schnellaktionen (Eintragen/Nüchtern).
 - Die achtsame 4-7-8-Atemübung und deine Regenerations-Timeline.
+- Die Promille-Schätzung an jedem Tag mit erfassten Drinks.
 - Sichtbare Nüchternheitsserien auf dem Startbildschirm.
 - Nur-Lese-Zugriff auf dein vollständiges historisches Tagebuch.
 

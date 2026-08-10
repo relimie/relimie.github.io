@@ -12,7 +12,7 @@ The materials and data provided by the application do not replace professional a
 Relimie operates on a usage-based freemium model.
 * **Free Access**: Users have perpetual access to standard drink logging, "The Orb" status indicator, and breathing exercises.
 * **Diary History**: Historical logs in the Diary remain readable and available to view for all users, regardless of subscription status.
-* **30-Day Limit**: After 30 individual days of logging data, the ability to add **new** diary entries, create custom drinks, or view advanced analytics (Trends/Habits) is restricted.
+* **20-Day Limit**: After 20 individual days with logged content (a drink, a diary entry, or tags), the ability to add **new** diary entries, create custom drinks, or view advanced analytics (Trends/Habits) is restricted. Pure sober days with no entry do not count toward this limit.
 * **Premium Access**: Accessing advanced analytics and the ability to add new diary entries after the trial requires a "Relimie Premium" subscription or a Lifetime purchase.
 
 ### Premium Options

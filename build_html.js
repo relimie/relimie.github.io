@@ -8,12 +8,12 @@ marked.setOptions({ breaks: true, gfm: true });
 
 const root = 'c:/GitHub/relimie.github.io';
 // Semantic app version — shown to users (nav button, schema softwareVersion, What's-New copy).
-const APP_VERSION = '2.1.0';
+const APP_VERSION = '2.2.0';
 // Cache-bust token appended to CSS/JS URLs as ?v= to force browsers & the GitHub Pages CDN
 // to refetch assets. Bump on ANY deploy that changes style.css / script.js / translations.js
 // (otherwise a stale translations.js can leave the old copy/banner showing). Not user-visible,
 // so it does not need to match APP_VERSION — use a build tag or date.
-const ASSET_VERSION = '20260807';
+const ASSET_VERSION = '20260810';
 const langs = ['en', 'de', 'ru'];
 const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'android', 'videos', 'cravings', 'cooperation', 'story'];
 
@@ -170,7 +170,7 @@ const getPageDescription = (page, lang) => {
             privacy: 'Relimie privacy policy. All your data stays on your device. No cloud storage, no third-party access, no tracking. Ever.',
             terms: 'Terms of service for Relimie — the mindful drinking and alcohol tracking app.',
             impressum: 'Legal disclosure and contact information for Relimie.',
-            whats_new: "What's new in Relimie v2.1.0 — full-screen landscape chart, guided in-app tours, Body Recovery Timeline, and faster logging.",
+            whats_new: "What's new in Relimie v2.2.0 — a blood alcohol estimate with time to clear, drink icons under the Orb, a rebuilt consumption overview, and guided tours on every page.",
             videos: 'Video guides for Relimie — tutorials on setting your baseline, logging drinks, and using the Cravings Breaker.',
             support: 'Get support for Relimie. Contact us for help with the mindful drinking tracker app.',
             android: 'Help test Relimie on Android. Join our Google Play closed test in three steps and be among the first to use the mindful drinking app on Android.',
@@ -187,7 +187,7 @@ const getPageDescription = (page, lang) => {
             privacy: 'Datenschutzerklärung für Relimie. Alle Daten bleiben auf deinem Gerät. Kein Cloud-Speicher, kein Tracking.',
             terms: 'Nutzungsbedingungen für Relimie — den achtsamen Trink-Begleiter und Alkohol-Tracker.',
             impressum: 'Impressum für Relimie — gesetzliche Pflichtangaben und Kontaktinformationen.',
-            whats_new: 'Neu in Relimie v2.1.0 — Vollbild-Diagramm im Querformat, geführte In-App-Touren, Regenerations-Zeitleiste und schnelleres Erfassen.',
+            whats_new: 'Neu in Relimie v2.2.0 — Promille-Schätzung mit Zeit bis zum Abbau, Drink-Symbole unter dem Orb, neu gebaute Konsum-Übersicht und geführte Touren auf jeder Seite.',
             videos: 'Video-Anleitungen für Relimie — Tutorials zu Baseline, Getränken und Heißhunger-Stopper.',
             support: 'Support für Relimie — Kontakt bei Fragen zur App.',
             android: 'Hilf mit, Relimie auf Android zu testen. Tritt in drei Schritten unserem Google-Play-Test bei und sei unter den Ersten, die die App auf Android nutzen.',
@@ -204,7 +204,7 @@ const getPageDescription = (page, lang) => {
             privacy: 'Политика конфиденциальности Relimie. Все данные хранятся только на устройстве. Никаких облаков, никакого отслеживания.',
             terms: 'Условия использования Relimie — осознанного помощника для контроля употребления алкоголя.',
             impressum: 'Юридическая информация и контактные данные Relimie.',
-            whats_new: 'Что нового в Relimie v2.1.0 — полноэкранный график в горизонтальном режиме, обучающие подсказки, шкала восстановления и быстрая запись.',
+            whats_new: 'Что нового в Relimie v2.2.0 — оценка промилле и время до выведения, значки напитков под Сферой, переработанный обзор потребления и экскурсии по каждой странице.',
             videos: 'Видеогиды по Relimie — уроки по настройке базовой линии, ведению журнала и борьбе с тягой.',
             support: 'Поддержка Relimie — свяжись с нами по вопросам работы приложения.',
             android: 'Помоги протестировать Relimie на Android. Присоединись к закрытому тесту в Google Play за три шага и стань одним из первых, кто пользуется приложением на Android.',
@@ -271,7 +271,7 @@ function getSchemaOrg(lang, pageName, isIndex) {
       "downloadUrl": "https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714",
       "applicationCategory": "HealthApplication",
       "operatingSystem": "iOS",
-      "softwareVersion": "2.1.0",
+      "softwareVersion": "${APP_VERSION}",
       "keywords": "alcohol tracker, alcohol diary, drink tracker, mindful drinking, moderate drinking, sober curious, dry january, reduce drinking, track alcohol units, alcohol calorie counter, cravings breaker, personal baseline",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" },
       "author": { "@id": "https://relimie.com/#organization" },
@@ -762,7 +762,7 @@ ${getSchemaOrg(lang, pageName, isIndex)}
 
             <nav class="main-nav">
                 <div class="nav-item">
-                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">New in 2.1.0</a>
+                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">New in ${APP_VERSION}</a>
                 </div>
                 <div class="nav-item has-dropdown">
                     <a href="whats_new.html"><span data-i18n="community">Community</span> <span class="dot-new"></span></a>

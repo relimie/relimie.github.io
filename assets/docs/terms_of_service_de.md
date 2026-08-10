@@ -12,7 +12,7 @@ Die von der Anwendung bereitgestellten Materialien und Daten ersetzen keine prof
 Relimie arbeitet mit einem nutzungsbasierten Freemium-Modell.
 * **Kostenfreier Zugang**: Benutzer haben dauerhaft Zugang zur Standard-Getränkeprotokollierung, dem „The Orb"-Statusindikator und Atemübungen.
 * **Tagebuch-Verlauf**: Historische Einträge im Tagebuch bleiben für alle Benutzer lesbar und einsehbar, unabhängig vom Abonnementstatus.
-* **30-Tage-Limit**: Nach 30 einzelnen Tagen der Datenprotokollierung wird die Möglichkeit, **neue** Tagebucheinträge zu erstellen, benutzerdefinierte Getränke hinzuzufügen oder erweiterte Analysen (Trends/Gewohnheiten) anzuzeigen, eingeschränkt.
+* **20-Tage-Limit**: Nach 20 einzelnen Tagen mit erfasstem Inhalt (ein Getränk, ein Tagebucheintrag oder Tags) wird die Möglichkeit, **neue** Tagebucheinträge zu erstellen, benutzerdefinierte Getränke hinzuzufügen oder erweiterte Analysen (Trends/Gewohnheiten) anzuzeigen, eingeschränkt. Reine nüchterne Tage ohne Eintrag zählen nicht zu diesem Limit.
 * **Premium-Zugang**: Der Zugang zu erweiterten Analysen und die Möglichkeit, nach dem Testzeitraum neue Tagebucheinträge hinzuzufügen, erfordert ein „Relimie Premium"-Abonnement oder einen Lifetime-Kauf.
 
 ### Premium-Optionen

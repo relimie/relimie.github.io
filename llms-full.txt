@@ -119,12 +119,13 @@ Welcome to Relimie, your mindful companion for tracking alcohol consumption, ana
 ## Table of Contents
 - [1. Personal Baseline](#1-personal-baseline)
 - [2. Drinks Logging](#2-drinks-logging)
-- [3. Diary and Tags](#3-diary-and-tags)
-- [4. Cravings and Breathing](#4-cravings-and-breathing)
-- [5. Analytics Hub](#5-analytics-hub)
-- [6. Data Export](#6-data-export)
-- [7. Additional Features](#7-additional-features)
-- [8. Relimie Premium](#8-relimie-premium)
+- [3. Blood Alcohol Estimate](#3-blood-alcohol-estimate)
+- [4. Diary and Tags](#4-diary-and-tags)
+- [5. Cravings and Breathing](#5-cravings-and-breathing)
+- [6. Analytics Hub](#6-analytics-hub)
+- [7. Data Export](#7-data-export)
+- [8. Additional Features](#8-additional-features)
+- [9. Relimie Premium](#9-relimie-premium)
 
 ## 1. Personal Baseline
 
@@ -166,7 +167,29 @@ This detailed breakdown ensures you maintain a holistic, immediate view of the f
 
 ---
 
-## 3. Diary and Tags
+## 3. Blood Alcohol Estimate
+
+### The Core Concept
+After a night of drinking, the question that actually matters the next morning is not "how drunk am I" — it is "how long until this is out of my system". The Blood Alcohol Estimate answers exactly that. It takes the alcohol you logged for a day and estimates the blood alcohol level (in ‰) it would produce, then shows you how that value falls over the following hours. It is a recovery clock, never a green light.
+
+### Opening the Estimator
+On the Home Screen, a small **gauge button** sits in the corner beside the Orb. On any day where you have logged drinks — today or a past day — it lights up teal; on sober days and days with nothing logged it stays dimmed, because there is nothing to estimate. Tapping it opens the estimator as its own screen; you leave it again with the **X**, a swipe to the right, or your device's back gesture. The estimator is **completely free** — it is not part of Relimie Premium and never expires with your trial.
+
+### Setting Your Body Weight
+Blood alcohol depends heavily on how much body mass the alcohol distributes into, so the estimator needs your **body weight** before it can show you anything. The very first time you open it, the big value reads `–,–` and stays locked — Relimie deliberately refuses to guess, because an assumed weight would show a *lower* value and a *shorter* wait to anyone lighter than the assumption, which is the one direction this feature must never err in. Set your weight with the **− / +** buttons in the body card (in **kilograms**, between 40 and 150 kg) and tap **Save & estimate**. From then on the estimate appears immediately, and every tap on − / + updates it live. Your weight is stored on your device only, exactly like the rest of your data. Your **gender** is also used, since it changes how alcohol distributes in the body — it is shown in the same card for reference but is edited in **Settings → Personalization**, not here.
+
+### Reading the Estimate
+The top row tells you exactly what the estimate is based on: the total alcohol you logged for that day. Below it, the large ‰ value is the estimated blood alcohol level. The **hours slider** lets you scrub forward from your last drink of the day — up to 24 hours in half-hour steps — and watch the value fall until it reads fully cleared. Two rows underneath give you the summary at a glance: how long until the estimate drops **below 0.5 ‰**, and how long until it is **fully cleared**. Both of these are counted from your last drink of the day, so they stay put while you move the slider.
+
+### How It Is Calculated
+Relimie uses the **Widmark formula**: your logged grams of pure alcohol divided by your body weight times a distribution factor that depends on gender, with the alcohol then eliminated at a steady 0.15 ‰ per hour. The whole day's intake is treated as if it hit your blood at once, and no deduction is made for the portion your body breaks down before it ever reaches the bloodstream. Every one of those choices — plus rounding all durations up to the next five minutes — deliberately points the same way: **a higher number and a longer wait** than you are likely to actually have. That is the only direction that cannot hurt someone acting on the result.
+
+### What This Number Is Not
+**This is an estimate, not a measurement.** Your real blood alcohol depends on many factors this calculation cannot know — what and when you ate, how the drinks were spread across the evening, medication, your health and your individual metabolism — and it can be considerably higher than what is shown. **Never use this number to decide whether you are fit to drive, to work, or to take medication.** If you are in any doubt, don't.
+
+---
+
+## 4. Diary and Tags
 
 ### The Core Concept
 Understanding *why* you drink is vastly more important than simply counting *what* you drink. The Diary and Tagging system is intentionally designed to build the emotional and situational context directly around your numerical data.
@@ -182,20 +205,20 @@ Over time, this emotional data becomes your strongest tool. Inside the Analytics
 
 ---
 
-## 4. Cravings and Breathing
+## 5. Cravings and Breathing
 
 ### The Core Concept
 When a sudden urge or craving to drink hits, sheer willpower often isn't enough. Disrupting the immediate impulse gives your rational brain a crucial moment to catch up and regain control, significantly reducing the probability of an unwanted relapse.
 
 ### Riding Out the Impulse
-By long-pressing the Orb on Today's date, you trigger an immediate psychological circuit breaker directly on the Home Screen. The screen transforms into a calm, expanding and contracting visual that guides you through the proven **4-7-8 Breathing Technique** — inhaling for 4 seconds, holding for 7, and exhaling for 8. This mindful support flow is accompanied by grounding citations and quotes to help anchor your focus. Once the breathing cycle completes, the app surfaces a prompt to log a **"Clear Day"** — a positive reinforcement step that turns the act of resisting a craving into a trackable achievement on your sober streak.
+By long-pressing the Orb on Today's date, you trigger an immediate psychological circuit breaker directly on the Home Screen. The screen transforms into a calm, expanding and contracting visual that guides you through the proven **4-7-8 Breathing Technique** — inhaling for 4 seconds, holding for 7, and exhaling for 8. A card below the visual keeps you company through the cycle: it opens on your Regeneration Timeline, and a single tap flips it to a grounding citation to help anchor your focus. Once the breathing cycle completes, the app surfaces a prompt to log a **"Clear Day"** — a positive reinforcement step that turns the act of resisting a craving into a trackable achievement on your sober streak.
 
 ### Your Regeneration Timeline
-The breathing screen does more than guide your breath — it also shows how your body bounces back. **Tap the card to flip it over** and reveal your personal **Regeneration Timeline**: a series of science-based milestones — **Day 1** (alcohol cleared), **Day 7** (rest returns), **Day 30** (body resets), **Day 90** (fully adjusted), **Day 180** (systems stronger), and **Day 365** (the one-year milestone). It highlights how far you've come based on the time since your last logged drink and what the next milestone brings. Tap the **?** for the full breakdown of each stage. This is general orientation, not medical advice — actual recovery varies from person to person and depends on factors like overall health, age, and lifestyle.
+The breathing screen does more than guide your breath — it also shows how your body bounces back. The card below the breathing orb **opens directly on your personal Regeneration Timeline**: a series of science-based milestones — **Day 1** (alcohol cleared), **Day 7** (rest returns), **Day 30** (body resets), **Day 90** (fully adjusted), **Day 180** (systems stronger), and **Day 365** (the one-year milestone). It highlights how far you've come based on the time since your last logged drink and what the next milestone brings. Tap the **?** for the full breakdown of each stage, or **tap the card itself to flip it over** for a grounding citation. This is general orientation, not medical advice — actual recovery varies from person to person and depends on factors like overall health, age, and lifestyle.
 
 ---
 
-## 5. Analytics Hub
+## 6. Analytics Hub
 
 ### The Core Concept
 The Analytics Hub is where your daily inputs are transformed into actionable, long-term insights, allowing you to view your overarching progress and behavior shifts clearly. You can open it at any time by **swiping up** on the Home Screen, or by tapping the **grid icon** in the top corner of the screen.
@@ -211,7 +234,7 @@ For a focused, full-width view of your trends, simply **rotate your phone to lan
 
 ---
 
-## 6. Data Export
+## 7. Data Export
 
 ### The Core Concept
 Your sobriety journey is intimately private. While there may be times you need to share your progress with a medical professional or securely back up your history, Relimie ensures you retain complete ownership over your data by defaulting to a private, offline-first architecture.
@@ -221,17 +244,17 @@ To share your milestones with a therapist, doctor, or sponsor, you can generate 
 
 ---
 
-## 7. Additional Features
+## 8. Additional Features
 
 While tracking and analyzing form the core of Relimie, the app also includes several utility features to further support your journey:
 - **Alcohol Unit Customization**: Relimie can display your consumption in the unit system that feels most natural to you. Navigate to **Settings → Personalization** to choose between Grams of pure alcohol, Milliliters, or Standard Drinks calibrated to the **US**, **UK**, or **Australian** definitions.
 - **Multilingual Support**: Relimie is fully localized to ensure you can interact with your health data in your native tongue. Currently, the app natively supports three languages: English, German, and Russian.
 - **Daily Reminders**: To help you build a consistent tracking habit, you can enable a daily reminder notification through the **Settings** menu. This gentle nudge ensures you never forget to check in and log your daily emotional state.
-- **Guided Tours & Tips**: The first time you open each screen, a short interactive tour points out the non-obvious gestures and shortcuts (like long-pressing the Orb or swiping between views). Want to see them again? Open the **Info** menu and tap **"Show in-app tips again"** to replay every tour from the start.
+- **Guided Tours**: Several screens carry a small **question-mark button** next to their title — on the Home screen you'll find it at the right end of the month row, just above the dates. Tap it and a short interactive tour walks you through that page, pointing out the non-obvious gestures and shortcuts (like long-pressing the Orb or swiping between views). Tours never start on their own and never get in your way: they run only when you ask, they cover only the page you're on, and you can replay one as often as you like. Tours are available on the **Home**, **Log Drinks** and **Check-in** screens.
 
 ---
 
-## 8. Relimie Premium
+## 9. Relimie Premium
 
 To respect our users, the foundational tracking capabilities of Relimie are perpetually free. However, access to deep macro-analytics, unlimited historical reflections, and advanced AI utilities are part of the **Relimie Premium** experience.
 
@@ -243,6 +266,7 @@ After your 20 logging days expire, you retain perpetual access to the most vital
 - Unlimited daily logging of pre-delivered standard drinks.
 - Full access to the interactive Home Screen Orb and Quick Actions (Log/Sober).
 - The 4-7-8 Deep Breathing mindful exercise and your Regeneration Timeline.
+- The Blood Alcohol Estimate on any day with logged drinks.
 - Your sober streaks remaining visible on the Home Screen.
 - Read-only access to your full historical Diary.
 
