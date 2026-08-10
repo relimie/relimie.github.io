@@ -910,6 +910,180 @@ main {
     }
 }
 
+/* ── Blood-alcohol calculator (promille-calculator article) ────────────────── */
+/* Injected by buildBacCalculator() in build_html.js; driven by initBacCalculator(). */
+.bac-calc {
+    margin: 36px 0;
+    padding: 28px 32px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(45, 212, 191, 0.35);
+    border-radius: 24px;
+    box-shadow: 0 8px 40px rgba(45, 212, 191, 0.08);
+}
+
+.markdown-body .bac-calc-title {
+    font-size: 22px;
+    margin: 0 0 8px;
+}
+
+.bac-calc-lead {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.bac-calc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 20px;
+}
+
+.bac-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.bac-field-wide {
+    grid-column: 1 / -1;
+}
+
+.bac-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.2px;
+}
+
+.bac-field output {
+    color: var(--accent-teal);
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+}
+
+.bac-field input[type="number"],
+.bac-field select {
+    width: 100%;
+    padding: 10px 14px;
+    font-family: inherit;
+    font-size: 16px; /* >=16px so iOS Safari does not zoom on focus */
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    font-variant-numeric: tabular-nums;
+}
+
+.bac-field select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.bac-field option {
+    background: var(--bg-gradient-top);
+    color: var(--text-primary);
+}
+
+.bac-field input[type="number"]:focus-visible,
+.bac-field select:focus-visible,
+.bac-field input[type="range"]:focus-visible {
+    outline: 2px solid var(--accent-teal);
+    outline-offset: 2px;
+}
+
+.bac-field input[type="range"] {
+    width: 100%;
+    accent-color: var(--accent-teal);
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.bac-calc-results {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--glass-border);
+}
+
+.bac-headline {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 150px;
+}
+
+.bac-headline-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.bac-headline-value {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: var(--accent-teal);
+    font-variant-numeric: tabular-nums;
+}
+
+.bac-rows {
+    flex: 1 1 260px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bac-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    font-size: 15px;
+}
+
+.bac-row dt {
+    color: var(--text-secondary);
+}
+
+.bac-row dd {
+    margin: 0;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+}
+
+.bac-calc-note {
+    margin: 20px 0 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+    .bac-calc {
+        padding: 22px 20px;
+    }
+    .bac-calc-grid {
+        grid-template-columns: 1fr;
+    }
+    .bac-calc-results {
+        gap: 18px;
+    }
+    .bac-headline-value {
+        font-size: 34px;
+    }
+}
+
 .loading-text {
     text-align: center;
     color: var(--text-secondary);

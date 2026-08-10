@@ -13,7 +13,7 @@ const APP_VERSION = '2.2.0';
 // to refetch assets. Bump on ANY deploy that changes style.css / script.js / translations.js
 // (otherwise a stale translations.js can leave the old copy/banner showing). Not user-visible,
 // so it does not need to match APP_VERSION — use a build tag or date.
-const ASSET_VERSION = '20260810';
+const ASSET_VERSION = '20260810b';
 const langs = ['en', 'de', 'ru'];
 const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'android', 'videos', 'cravings', 'cooperation', 'story'];
 
@@ -22,6 +22,12 @@ const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'sup
 // new "door" into the site). Flat URL structure, same as text pages: /<lang>/<slug>.html.
 // To add an article: (1) drop assets/docs/articles/<slug>_<lang>.md for EN/DE/RU,
 // (2) add an entry to `articles` below, (3) add its URLs to sitemap-main.xml, (4) rebuild.
+//
+// Optional per-entry flags:
+//   faq: true  -> also emit FAQPage schema, parsed from the article's own
+//                 "**Question?**\nAnswer" FAQ section (see getSchemaOrg).
+// Article markdown may contain the token [[BAC_CALCULATOR]], which is replaced at
+// build time with the localized blood-alcohol calculator widget.
 const ARTICLE_HUB_SLUG = 'articles';
 
 const hubMeta = {
@@ -33,9 +39,9 @@ const hubMeta = {
         ru: 'Relimie – Статьи об осознанном употреблении алкоголя',
     },
     description: {
-        en: 'Practical, judgement-free articles on mindful drinking: alcohol calories, units, cutting down, cravings and building better habits, from the makers of Relimie.',
-        de: 'Praktische Artikel ohne erhobenen Zeigefinger: Alkohol-Kalorien, Einheiten, weniger trinken, Heißhunger und bessere Gewohnheiten, von den Machern von Relimie.',
-        ru: 'Практичные статьи без осуждения: калории в алкоголе, единицы, как пить меньше, тяга и полезные привычки, от создателей Relimie.',
+        en: 'Practical, judgement-free articles on mindful drinking: blood alcohol and promille, alcohol calories, cutting down and cravings, from the makers of Relimie.',
+        de: 'Praktische Artikel ohne erhobenen Zeigefinger: Promille und Restalkohol, Alkohol-Kalorien, weniger trinken und Heißhunger, von den Machern von Relimie.',
+        ru: 'Практичные статьи без осуждения: промилле и выведение алкоголя, калории, как пить меньше и тяга, от создателей Relimie.',
     },
     // Rendered as the hub page intro (H1 + lead paragraph)
     intro: {
@@ -46,6 +52,22 @@ const hubMeta = {
 };
 
 const articles = [
+    {
+        slug: 'promille-calculator',
+        published: '2026-08-10',
+        modified: '2026-08-10',
+        faq: true,
+        title: {
+            en: "Relimie – Promille Calculator: Blood Alcohol and How Long Until You're Sober",
+            de: 'Relimie – Promille-Rechner: Wie viel Promille hast du und wann bist du wieder nüchtern?',
+            ru: 'Relimie – Калькулятор промилле: сколько алкоголя в крови и когда ты снова трезв',
+        },
+        description: {
+            en: 'A free promille calculator plus the Widmark formula explained: work out your blood alcohol from grams of pure alcohol, see how long until it clears, and read an honest account of how far you can trust the number.',
+            de: 'Kostenloser Promille-Rechner und die Widmark-Formel erklärt: berechne deinen Blutalkohol aus Gramm reinen Alkohols, sieh wie lange der Abbau von Restalkohol dauert, und lies ehrlich, wie weit du der Zahl trauen kannst.',
+            ru: 'Бесплатный калькулятор промилле и формула Видмарка простыми словами: рассчитай алкоголь в крови по граммам чистого спирта, узнай время выведения и насколько можно доверять результату.',
+        },
+    },
     {
         slug: 'am-i-drinking-too-much',
         published: '2026-07-27',
@@ -164,7 +186,7 @@ const getPageDescription = (page, lang) => {
     const desc = {
         en: {
             index: 'Mindful drinking & alcohol tracker app: free drink diary, calorie and spending logging, trigger tracking. Private by design — no account, no cloud.',
-            guide: 'How to track alcohol intake and build better drinking habits — complete guide to Relimie: baseline setup, drink logging, alcohol diary, and analytics.',
+            guide: 'How to track alcohol intake and build better drinking habits — complete guide to Relimie: baseline setup, drink logging, alcohol diary, blood alcohol estimate.',
             faq: 'Relimie FAQ: tracking alcohol, setting a baseline, Dry January and sober-curious goals, managing cravings, and staying private.',
             cravings: 'Stop alcohol cravings in real time with guided 4-7-8 breathing. A free mindfulness tool built into Relimie — no premium needed.',
             privacy: 'Relimie privacy policy. All your data stays on your device. No cloud storage, no third-party access, no tracking. Ever.',
@@ -181,7 +203,7 @@ const getPageDescription = (page, lang) => {
         },
         de: {
             index: 'Achtsam trinken & Alkohol reduzieren ohne harte Regeln. Kostenloses Trinktagebuch, Kalorien- und Ausgaben-Tracking. Kein Account, keine Cloud.',
-            guide: 'Alkoholkonsum kontrollieren Schritt für Schritt: Baseline einstellen, Getränke loggen, Alkohol-Tagebuch führen, Auslöser tracken und Heißhunger stoppen.',
+            guide: 'Alkoholkonsum kontrollieren Schritt für Schritt: Baseline einstellen, Getränke loggen, Alkohol-Tagebuch führen, Promille schätzen und Heißhunger stoppen.',
             faq: 'Häufige Fragen zu Alkohol-Tracking, Baseline, Dry January, achtsamem und sober-curious Trinken, Heißhunger-Stopper und Datenschutz.',
             cravings: 'Alkoholverlangen sofort stoppen: die 4-7-8-Atemtechnik als mentaler Reset. Kostenlos in Relimie, der App für achtsames Trinken.',
             privacy: 'Datenschutzerklärung für Relimie. Alle Daten bleiben auf deinem Gerät. Kein Cloud-Speicher, kein Tracking.',
@@ -198,7 +220,7 @@ const getPageDescription = (page, lang) => {
         },
         ru: {
             index: 'Осознанное употребление и снижение алкоголя без жёстких правил. Бесплатный дневник напитков, трекинг триггеров и калорий. Без аккаунта и облака.',
-            guide: 'Как снизить употребление алкоголя: настрой ориентир, веди дневник напитков, отслеживай триггеры и справляйся с тягой.',
+            guide: 'Как снизить употребление алкоголя: настрой ориентир, веди дневник напитков, оценивай промилле, отслеживай триггеры и справляйся с тягой.',
             faq: 'Частые вопросы об отслеживании алкоголя, ориентире, сухом январе, осознанном и трезвом подходе, борьбе с тягой и конфиденциальности.',
             cravings: 'Справиться с тягой к алкоголю прямо сейчас: дыхательная техника 4-7-8 как ментальный сброс. Бесплатно в Relimie.',
             privacy: 'Политика конфиденциальности Relimie. Все данные хранятся только на устройстве. Никаких облаков, никакого отслеживания.',
@@ -222,6 +244,38 @@ function getHreflangTags(pageName) {
     return langs.map(l =>
         `    <link rel="alternate" hreflang="${l}" href="${base}/${l}/${pageName}.html">`
     ).join('\n') + `\n    <link rel="alternate" hreflang="x-default" href="${base}/en/${pageName}.html">`;
+}
+
+// Flatten a snippet of Markdown to the plain text schema.org expects in an answer.
+function stripMd(text) {
+    return text.trim()
+        .replace(/\[(.*?)\]\(.*?\)/g, '$1')   // markdown links -> link text
+        .replace(/\*\*(.*?)\*\*/g, '$1')       // bold
+        .replace(/\*(.*?)\*/g, '$1')           // italic
+        .replace(/^\s*[-*]\s+/gm, '')          // list bullets
+        .replace(/\s*\n\s*/g, ' ')             // newlines -> space
+        .replace(/\s{2,}/g, ' ')               // collapse spaces
+        .trim();
+}
+
+// Parse an article's FAQ section into schema.org Question entries.
+// Convention (see assets/docs/articles/*.md): the last "## " section of the article
+// holds pairs of "**Question?**" on one line with the answer on the following line(s),
+// separated by blank lines. Returns [] when the article has no such section.
+function parseArticleFaq(slug, lang) {
+    const filePath = path.join(root, 'assets', 'docs', 'articles', `${slug}_${lang}.md`);
+    if (!fs.existsSync(filePath)) return [];
+    const md = fs.readFileSync(filePath, 'utf8');
+    // Everything from the last H2 to the closing "---" rule (or end of file).
+    const sections = md.split(/^##\s+/m);
+    const faqSection = sections[sections.length - 1].split(/^---\s*$/m)[0];
+    return [...faqSection.matchAll(/^\*\*(.+?)\*\*\s*\n([\s\S]*?)(?=\n\s*\n|$)/gm)]
+        .map(m => ({
+            "@type": "Question",
+            "name": stripMd(m[1]),
+            "acceptedAnswer": { "@type": "Answer", "text": stripMd(m[2]) }
+        }))
+        .filter(q => q.name && q.acceptedAnswer.text);
 }
 
 function getSchemaOrg(lang, pageName, isIndex) {
@@ -272,7 +326,7 @@ function getSchemaOrg(lang, pageName, isIndex) {
       "applicationCategory": "HealthApplication",
       "operatingSystem": "iOS",
       "softwareVersion": "${APP_VERSION}",
-      "keywords": "alcohol tracker, alcohol diary, drink tracker, mindful drinking, moderate drinking, sober curious, dry january, reduce drinking, track alcohol units, alcohol calorie counter, cravings breaker, personal baseline",
+      "keywords": "alcohol tracker, alcohol diary, drink tracker, mindful drinking, moderate drinking, sober curious, dry january, reduce drinking, track alcohol units, alcohol calorie counter, cravings breaker, personal baseline, blood alcohol calculator, promille calculator, BAC calculator, Widmark formula",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" },
       "author": { "@id": "https://relimie.com/#organization" },
       "publisher": { "@id": "https://relimie.com/#organization" },
@@ -282,6 +336,7 @@ function getSchemaOrg(lang, pageName, isIndex) {
         "Emotional trigger diary",
         "Drinks logging with AI-powered catalog",
         "Analytics Hub with data export",
+        "Blood alcohol (promille) estimate using the Widmark formula",
         "Cravings Breaker breathing exercise",
         "WHO-based recommendations"
       ]
@@ -352,9 +407,27 @@ function getSchemaOrg(lang, pageName, isIndex) {
             "about": { "@id": "https://relimie.com/#app" },
             "inLanguage": lang
         };
-        return orgSchema
+        let out = orgSchema
             + `\n    <script type="application/ld+json">\n${JSON.stringify(artCrumb, null, 4)}\n    </script>`
             + `\n    <script type="application/ld+json">\n${JSON.stringify(post, null, 4)}\n    </script>`;
+        // Opt-in (registry flag `faq: true`): expose the article's own FAQ section as FAQPage.
+        if (articleEntry.faq) {
+            const questions = parseArticleFaq(pageName, lang);
+            if (questions.length > 0) {
+                const faqSchema = {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "@id": `${url}#faq`,
+                    "isPartOf": { "@id": `${url}#article` },
+                    "inLanguage": lang,
+                    "mainEntity": questions
+                };
+                out += `\n    <script type="application/ld+json">\n${JSON.stringify(faqSchema, null, 4)}\n    </script>`;
+            } else {
+                console.warn(`Warning: faq:true set for "${pageName}" (${lang}) but no questions were parsed.`);
+            }
+        }
+        return out;
     }
 
     if (pageName === 'faq') {
@@ -369,17 +442,7 @@ function getSchemaOrg(lang, pageName, isIndex) {
                     "mainEntity": matches.map(m => ({
                         "@type": "Question",
                         "name": m[1].trim(),
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": m[2].trim()
-                                .replace(/\[(.*?)\]\(.*?\)/g, '$1')   // markdown links -> link text
-                                .replace(/\*\*(.*?)\*\*/g, '$1')       // bold
-                                .replace(/\*(.*?)\*/g, '$1')           // italic
-                                .replace(/^\s*[-*]\s+/gm, '')          // list bullets
-                                .replace(/\s*\n\s*/g, ' ')             // newlines -> space
-                                .replace(/\s{2,}/g, ' ')               // collapse spaces
-                                .trim()
-                        }
+                        "acceptedAnswer": { "@type": "Answer", "text": stripMd(m[2]) }
                     }))
                 };
                 return orgSchema + `\n    <script type="application/ld+json">\n${JSON.stringify(faqSchema, null, 4)}\n    </script>`;
@@ -544,6 +607,94 @@ function buildArticleHub(lang) {
         return `<h2><a href="${a.slug}.html">${t}</a></h2>\n<p>${d}</p>`;
     }).join('\n');
     return intro + items;
+}
+
+// ── Blood-alcohol calculator widget ──────────────────────────────────────────
+// Injected into article markdown wherever the token [[BAC_CALCULATOR]] appears.
+// Static labels are baked per language here (same approach as buildHighlightGrid),
+// so translations.js needs no entry; the handful of strings the script builds at
+// runtime ride along as data-* attributes on the container.
+//
+// The maths lives in initBacCalculator() in assets/js/script.js and mirrors the app's
+// services/bac.ts exactly: c = A / (m x r), r = 0.7/0.6/0.65, 0.15 permille per hour,
+// durations rounded UP to the next 5 minutes, no absorption correction. Keep the two
+// in sync — a visitor comparing the page against the app must see identical numbers.
+const BAC_CALC_STRINGS = {
+    en: {
+        title: 'Estimate your blood alcohol',
+        lead: 'Enter what you drank in grams of pure alcohol. The table below converts common drinks.',
+        grams: 'Pure alcohol (g)', weight: 'Body weight (kg)', gender: 'Gender',
+        male: 'Male', female: 'Female', other: 'Other / not specified',
+        hours: 'Hours since your last drink',
+        current: 'Estimated now', peak: 'Peak', marker: 'Below 0.5 ‰ after', zero: 'Fully cleared after',
+        belowStart: 'Below from the start',
+        note: 'An estimate from the Widmark formula, not a measurement. Your real level can be considerably higher. Never use this to decide whether you are fit to drive.',
+        unitH: 'h', unitMin: 'min',
+    },
+    de: {
+        title: 'Schätze deinen Blutalkohol',
+        lead: 'Trag ein, was du getrunken hast, in Gramm reinen Alkohols. Die Tabelle unten rechnet gängige Getränke um.',
+        grams: 'Reiner Alkohol (g)', weight: 'Körpergewicht (kg)', gender: 'Geschlecht',
+        male: 'Männlich', female: 'Weiblich', other: 'Divers / keine Angabe',
+        hours: 'Stunden seit dem letzten Drink',
+        current: 'Aktuell geschätzt', peak: 'Spitzenwert', marker: 'Unter 0,5 ‰ nach', zero: 'Vollständig abgebaut nach',
+        belowStart: 'Von Anfang an darunter',
+        note: 'Eine Schätzung nach der Widmark-Formel, keine Messung. Dein echter Wert kann deutlich höher liegen. Nutze das niemals, um zu entscheiden, ob du fahren kannst.',
+        unitH: 'Std.', unitMin: 'Min.',
+    },
+    ru: {
+        title: 'Оцени алкоголь в крови',
+        lead: 'Укажи выпитое в граммах чистого алкоголя. Таблица ниже переводит привычные напитки в граммы.',
+        grams: 'Чистый алкоголь (г)', weight: 'Вес тела (кг)', gender: 'Пол',
+        male: 'Мужской', female: 'Женский', other: 'Другое / не указан',
+        hours: 'Часов с последнего напитка',
+        current: 'Оценка сейчас', peak: 'Пик', marker: 'Ниже 0,5 ‰ через', zero: 'Полностью выведется через',
+        belowStart: 'Ниже с самого начала',
+        note: 'Это оценка по формуле Видмарка, а не измерение. Реальное значение может быть заметно выше. Никогда не решай по нему, можно ли садиться за руль.',
+        unitH: 'ч', unitMin: 'мин',
+    },
+};
+
+function buildBacCalculator(lang) {
+    const t = BAC_CALC_STRINGS[lang] || BAC_CALC_STRINGS.en;
+    return `<div class="bac-calc" data-locale="${lang}" data-unit-h="${t.unitH}" data-unit-min="${t.unitMin}" data-below-start="${t.belowStart}">
+    <h2 class="bac-calc-title">${t.title}</h2>
+    <p class="bac-calc-lead">${t.lead}</p>
+    <div class="bac-calc-grid">
+        <div class="bac-field">
+            <label for="bac-grams">${t.grams}</label>
+            <input type="number" id="bac-grams" value="60" min="0" max="1000" step="1" inputmode="decimal">
+        </div>
+        <div class="bac-field">
+            <label for="bac-weight">${t.weight}</label>
+            <input type="number" id="bac-weight" value="80" min="40" max="150" step="1" inputmode="numeric">
+        </div>
+        <div class="bac-field">
+            <label for="bac-gender">${t.gender}</label>
+            <select id="bac-gender">
+                <option value="male">${t.male}</option>
+                <option value="female">${t.female}</option>
+                <option value="other">${t.other}</option>
+            </select>
+        </div>
+        <div class="bac-field bac-field-wide">
+            <label for="bac-hours">${t.hours} <output id="bac-hours-out" for="bac-hours">0</output></label>
+            <input type="range" id="bac-hours" value="0" min="0" max="24" step="0.5">
+        </div>
+    </div>
+    <div class="bac-calc-results">
+        <div class="bac-headline">
+            <span class="bac-headline-label">${t.current}</span>
+            <span class="bac-headline-value" id="bac-current">–</span>
+        </div>
+        <dl class="bac-rows">
+            <div class="bac-row"><dt>${t.peak}</dt><dd id="bac-peak">–</dd></div>
+            <div class="bac-row"><dt>${t.marker}</dt><dd id="bac-marker">–</dd></div>
+            <div class="bac-row"><dt>${t.zero}</dt><dd id="bac-zero">–</dd></div>
+        </dl>
+    </div>
+    <p class="bac-calc-note">${t.note}</p>
+</div>`;
 }
 
 // Ensure folders exist
@@ -877,7 +1028,10 @@ langs.forEach(lang => {
         const filePath = path.join(root, 'assets', 'docs', 'articles', `${article.slug}_${lang}.md`);
         let bodyHtml = '';
         if (fs.existsSync(filePath)) {
-            bodyHtml = marked.parse(fs.readFileSync(filePath, 'utf8'));
+            // marked leaves the [[BAC_CALCULATOR]] token wrapped in a <p>; swap the whole
+            // paragraph so the widget is not nested inside one.
+            bodyHtml = marked.parse(fs.readFileSync(filePath, 'utf8'))
+                .replace(/<p>\s*\[\[BAC_CALCULATOR\]\]\s*<\/p>/g, () => buildBacCalculator(lang));
         } else {
             console.warn(`Warning: Article file not found: ${filePath}`);
             bodyHtml = `<p>Coming Soon</p>`;
@@ -900,7 +1054,10 @@ articles.forEach(article => {
     const filePath = path.join(root, 'assets', 'docs', 'articles', `${article.slug}_en.md`);
     if (fs.existsSync(filePath)) {
         const title = (article.title.en || '').replace(/^Relimie\s*[–-]\s*/, '');
-        llmsFull += `## ARTICLE: ${title}\n\n` + fs.readFileSync(filePath, 'utf8') + `\n\n---\n\n`;
+        // Describe the interactive widget rather than leaking its build-time token.
+        const body = fs.readFileSync(filePath, 'utf8')
+            .replace(/\[\[BAC_CALCULATOR\]\]/g, '(An interactive blood-alcohol calculator is embedded here on the web page: it takes grams of pure alcohol, body weight, gender and hours since the last drink, and returns the estimated per mille value, the peak, the time until below 0.5 permille and the time until fully cleared.)');
+        llmsFull += `## ARTICLE: ${title}\n\n` + body + `\n\n---\n\n`;
     }
 });
 fs.writeFileSync(path.join(root, 'llms-full.txt'), llmsFull);

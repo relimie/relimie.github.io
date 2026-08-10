@@ -1,6 +1,6 @@
 # Relimie
 
-> Relimie is a mindful drinking and alcohol tracking app. It works as an alcohol diary and drinking-habit tracker, helping moderate and sober-curious drinkers track alcohol consumption against a personal baseline, understand emotional triggers through a diary, analyze habits, and break cravings with a guided 4-7-8 breathing exercise — without guilt or judgment. It is a natural companion for cutting down on drinking, Dry January, and Sober October.
+> Relimie is a mindful drinking and alcohol tracking app. It works as an alcohol diary and drinking-habit tracker, helping moderate and sober-curious drinkers track alcohol consumption against a personal baseline, understand emotional triggers through a diary, analyze habits, estimate blood alcohol (promille) after a night out, and break cravings with a guided 4-7-8 breathing exercise — without guilt or judgment. It is a natural companion for cutting down on drinking, Dry January, and Sober October.
 
 The core method is "baseline-drinking": a personal long-term average rather than a rigid daily limit. The Orb on the Home Screen shows at a glance whether the user is within their baseline (Green), slightly over (Gold), or needs to pause (Red).
 
@@ -10,6 +10,7 @@ The core method is "baseline-drinking": a personal long-term average rather than
 - [User Guide](https://relimie.com/en/guide.html): Complete feature documentation covering the Orb, drink logging, diary, analytics, and data export.
 - [FAQ](https://relimie.com/en/faq.html): Common questions about baseline tracking, logging, the Cravings Breaker, and data privacy.
 - [Cravings Breaker](https://relimie.com/en/cravings.html): How the 4-7-8 breathing circuit breaker works for craving disruption.
+- [Promille / Blood Alcohol Calculator](https://relimie.com/en/promille-calculator.html): Interactive blood alcohol calculator and a full explanation of the Widmark formula, including how long alcohol takes to clear and how accurate such an estimate really is.
 - [What's New](https://relimie.com/en/whats_new.html): Release notes for Relimie v2.2.0 — blood alcohol estimate with time to clear, per-drink icons under the Orb, rebuilt consumption overview, guided tours on every page.
 - [Privacy Policy](https://relimie.com/en/privacy.html): Full data privacy documentation. All data is stored locally on device only.
 - [Support](https://relimie.com/en/support.html): Contact information for support.
@@ -18,6 +19,7 @@ The core method is "baseline-drinking": a personal long-term average rather than
 
 Judgement-free, informational guides on mindful drinking. Each targets a common question and is a top-of-funnel entry point (also available in German at /de/ and Russian at /ru/).
 
+- [Promille Calculator: Blood Alcohol and How Long Until You're Sober](https://relimie.com/en/promille-calculator.html): An interactive blood alcohol calculator plus a full explanation of the Widmark formula (c = A / (m x r), r = 0.7 male / 0.6 female / 0.65 unspecified, elimination 0.15 permille per hour). Covers converting drinks to grams of pure alcohol, why nothing speeds up sobering up, and an honest account of accuracy: the estimate deliberately errs toward a higher value and a longer wait (no absorption correction, whole day counted at once, durations rounded up, body weight never guessed). Explicitly not a fitness-to-drive test.
 - [Am I Drinking Too Much?](https://relimie.com/en/am-i-drinking-too-much.html): How to tell where you stand by comparing your own long-term average (built over ~3 months of tracking) against average daily alcohol intake by country and national low-risk guidelines. Explains why a single day cannot be compared to an average.
 - [How Many Calories Are in Alcohol?](https://relimie.com/en/calories-in-alcohol.html): Calories in wine, beer and spirits compared, why alcohol calories add up, and how to track them without giving up the glass you enjoy.
 - [All articles](https://relimie.com/en/articles.html): The full mindful-drinking article hub.
