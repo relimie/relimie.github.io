@@ -13,9 +13,17 @@ const APP_VERSION = '2.2.0';
 // to refetch assets. Bump on ANY deploy that changes style.css / script.js / translations.js
 // (otherwise a stale translations.js can leave the old copy/banner showing). Not user-visible,
 // so it does not need to match APP_VERSION — use a build tag or date.
-const ASSET_VERSION = '20260810b';
+const ASSET_VERSION = '20260904a';
+// Store listings and the official badge images. Apple's badge is an SVG served by
+// Apple; Google's is the official Play badge PNG (English is used on all three
+// languages, matching the English-only Apple badge).
+const IOS_URL     = 'https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714';
+const ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.ikaengel.relimie';
+const IOS_BADGE   = 'https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg';
+const GP_BADGE    = 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png';
+
 const langs = ['en', 'de', 'ru'];
-const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'android', 'videos', 'cravings', 'cooperation', 'story'];
+const pagesText = ['privacy', 'impressum', 'terms', 'guide', 'privacy_web', 'support', 'whats_new', 'faq', 'videos', 'cravings', 'cooperation', 'story'];
 
 // ── Article hub ──────────────────────────────────────────────────────────────
 // Informational articles that target top-of-funnel search queries (each one is a
@@ -110,7 +118,6 @@ const fileMap = {
     'whats_new': 'whats_new',
     'votes': 'votes',
     'faq': 'faq',
-    'android': 'android',
     'videos': 'videos',
     'cravings': 'cravings',
     'cooperation': 'cooperation',
@@ -128,7 +135,6 @@ const getPageTitle = (page) => {
         case 'whats_new': return 'Release News';
         case 'votes': return 'Feature Votes';
         case 'faq': return 'FAQ';
-        case 'android': return 'Android Test';
         case 'videos': return 'Video Guides';
         case 'cravings': return 'Cravings Breaker';
         case 'cooperation': return 'Cooperation';
@@ -171,11 +177,6 @@ const getPageTitleFull = (page, lang) => {
         if (lang === 'ru') return 'Relimie – История создателя: почему я сделал Relimie';
         return 'Relimie – The Founder Story: Why I Built a Mindful Drinking App';
     }
-    if (page === 'android') {
-        if (lang === 'de') return 'Relimie – Relimie für Android testen | Google Play Test';
-        if (lang === 'ru') return 'Relimie – Тестирование Relimie на Android | Google Play';
-        return 'Relimie – Test Relimie on Android | Google Play Closed Test';
-    }
     return `Relimie – ${getPageTitle(page)}`;
 };
 
@@ -195,7 +196,6 @@ const getPageDescription = (page, lang) => {
             whats_new: "What's new in Relimie v2.2.0 — a blood alcohol estimate with time to clear, drink icons under the Orb, a rebuilt consumption overview, and guided tours on every page.",
             videos: 'Video guides for Relimie — tutorials on setting your baseline, logging drinks, and using the Cravings Breaker.',
             support: 'Get support for Relimie. Contact us for help with the mindful drinking tracker app.',
-            android: 'Help test Relimie on Android. Join our Google Play closed test in three steps and be among the first to use the mindful drinking app on Android.',
             votes: 'Vote on upcoming features for Relimie — help shape the future of the mindful drinking companion app.',
             privacy_web: 'Website privacy notice for relimie.com — no cookies, no tracking scripts, no personal data collected.',
             cooperation: 'Partner with Relimie. We collaborate with influencers in the alcohol-reduction space and anyone who wants to recommend our mindful drinking app. Email partners@relimie.com.',
@@ -212,7 +212,6 @@ const getPageDescription = (page, lang) => {
             whats_new: 'Neu in Relimie v2.2.0 — Promille-Schätzung mit Zeit bis zum Abbau, Drink-Symbole unter dem Orb, neu gebaute Konsum-Übersicht und geführte Touren auf jeder Seite.',
             videos: 'Video-Anleitungen für Relimie — Tutorials zu Baseline, Getränken und Heißhunger-Stopper.',
             support: 'Support für Relimie — Kontakt bei Fragen zur App.',
-            android: 'Hilf mit, Relimie auf Android zu testen. Tritt in drei Schritten unserem Google-Play-Test bei und sei unter den Ersten, die die App auf Android nutzen.',
             votes: 'Stimme über neue Funktionen für Relimie ab — gestalte die Zukunft der App mit.',
             privacy_web: 'Website-Datenschutz für relimie.com — keine Cookies, kein Tracking.',
             cooperation: 'Kooperiere mit Relimie. Wir arbeiten mit Influencern im Bereich Alkoholreduktion und allen, die unsere achtsame Trink-App weiterempfehlen möchten. partners@relimie.com.',
@@ -229,7 +228,6 @@ const getPageDescription = (page, lang) => {
             whats_new: 'Что нового в Relimie v2.2.0 — оценка промилле и время до выведения, значки напитков под Сферой, переработанный обзор потребления и экскурсии по каждой странице.',
             videos: 'Видеогиды по Relimie — уроки по настройке базовой линии, ведению журнала и борьбе с тягой.',
             support: 'Поддержка Relimie — свяжись с нами по вопросам работы приложения.',
-            android: 'Помоги протестировать Relimie на Android. Присоединись к закрытому тесту в Google Play за три шага и стань одним из первых, кто пользуется приложением на Android.',
             votes: 'Голосуй за новые функции Relimie — помоги сформировать будущее приложения.',
             privacy_web: 'Политика конфиденциальности сайта relimie.com — без cookie, без трекинга, без аналитики.',
             cooperation: 'Сотрудничество с Relimie. Работаем с блогерами в теме снижения употребления алкоголя и со всеми, кто готов рекомендовать наше приложение. partners@relimie.com.',
@@ -294,7 +292,8 @@ function getSchemaOrg(lang, pageName, isIndex) {
         "height": 2048
       },
       "sameAs": [
-        "https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714",
+        "${IOS_URL}",
+        "${ANDROID_URL}",
         "https://www.youtube.com/@RelimieApp"
       ]
     }
@@ -322,12 +321,12 @@ function getSchemaOrg(lang, pageName, isIndex) {
       "name": "Relimie – Track Alcohol Limits",
       "description": "Relimie is a mindful drinking companion that helps you track alcohol consumption, set a personal baseline, identify emotional triggers, and build healthier drinking habits — without guilt or rigid rules.",
       "url": "https://relimie.com",
-      "downloadUrl": "https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714",
+      "downloadUrl": ["${IOS_URL}", "${ANDROID_URL}"],
       "applicationCategory": "HealthApplication",
-      "operatingSystem": "iOS",
+      "operatingSystem": "iOS, Android",
       "softwareVersion": "${APP_VERSION}",
       "keywords": "alcohol tracker, alcohol diary, drink tracker, mindful drinking, moderate drinking, sober curious, dry january, reduce drinking, track alcohol units, alcohol calorie counter, cravings breaker, personal baseline, blood alcohol calculator, promille calculator, BAC calculator, Widmark formula",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "${IOS_URL}" },
       "author": { "@id": "https://relimie.com/#organization" },
       "publisher": { "@id": "https://relimie.com/#organization" },
       "inLanguage": ["en", "de", "ru"],
@@ -703,19 +702,20 @@ langs.forEach(lang => {
     if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true });
 });
 
+// Official store badges, defined once and reused by the hero and every landing section.
+const iosBadgeHtml = `<a href="${IOS_URL}" target="_blank" rel="noopener noreferrer">
+                            <img alt="Download on the App Store" src="${IOS_BADGE}" class="store-badge" width="166" height="56" />
+                        </a>`;
+
+const androidBadgeHtml = `<a href="${ANDROID_URL}" target="_blank" rel="noopener noreferrer">
+                            <img alt="Get it on Google Play" src="${GP_BADGE}" class="store-badge google" width="646" height="250" />
+                        </a>`;
+
 // Reusable store badge block used in every landing section
 const storeBadgeHtml = `
                     <div class="store-section">
-                        <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
-                            <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
-                        </a>
-                        <a href="android.html" class="android-badge" aria-label="Android app coming soon">
-                            <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
-                            <span class="android-badge-text">
-                                <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
-                                <span class="android-badge-bottom">Android</span>
-                            </span>
-                        </a>
+                        ${iosBadgeHtml}
+                        ${androidBadgeHtml}
                     </div>`;
 
 // "Back to top" link appended to each landing section's text column
@@ -739,9 +739,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
             
             <div class="hero-interactive">
                 <div class="hero-download-left">
-                    <a href="https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714" target="_blank" rel="noopener noreferrer">
-                        <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store-badge" width="166" height="56" />
-                    </a>
+                    ${iosBadgeHtml}
                 </div>
                 <div class="hero-orb">
                     <div class="hero-orb-inner">
@@ -749,17 +747,11 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
                     </div>
                 </div>
                 <div class="hero-download-right">
-                    <a href="android.html" class="android-badge" aria-label="Android app coming soon">
-                        <svg class="android-badge-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
-                        <span class="android-badge-text">
-                            <span class="android-badge-top" data-i18n="androidBadgeTop">Coming soon</span>
-                            <span class="android-badge-bottom">Android</span>
-                        </span>
-                    </a>
+                    ${androidBadgeHtml}
                 </div>
             </div>
 
-            <p class="hero-trust" data-i18n="heroTrust">No account. No cloud. No ads. Your data stays on your device.</p>
+            <p class="hero-trust" data-i18n="heroTrust">For iPhone and Android. No account. No cloud. No ads. Your data stays on your device.</p>
         </header>
 
         <!-- Value grid: the messages at a glance -->
@@ -913,12 +905,11 @@ ${getSchemaOrg(lang, pageName, isIndex)}
 
             <nav class="main-nav">
                 <div class="nav-item">
-                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">New in ${APP_VERSION}</a>
+                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">Now on Android</a>
                 </div>
                 <div class="nav-item has-dropdown">
                     <a href="whats_new.html"><span data-i18n="community">Community</span> <span class="dot-new"></span></a>
                     <div class="dropdown-menu">
-                        <a href="android.html" data-i18n="androidTest">Android Test</a>
                         <a href="whats_new.html" data-i18n="releaseNews">Release News</a>
                         <a href="story.html" data-i18n="founderStory">Founder Story</a>
                     </div>

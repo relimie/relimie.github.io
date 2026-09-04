@@ -11,7 +11,7 @@ Relimie is a **mindful drinking companion app** for tracking alcohol consumption
 The website is a **static site** built by a Node.js script (`build_html.js`) that reads Markdown source files and generates localized HTML.
 
 **Current App Version**: v2.2.0
-**Target Platform**: iOS (Apple App Store); Android marked as "Coming Soon"
+**Target Platform**: iOS (Apple App Store, id6759795714) and Android (Google Play, `com.ikaengel.relimie`) — both live
 
 ---
 
@@ -39,7 +39,6 @@ relimie.github.io/
 │   │   ├── faq_[lang].md
 │   │   ├── videos_[lang].md
 │   │   ├── whats_new_[lang].md
-│   │   ├── android_[lang].md
 │   │   ├── privacy_web_[lang].md
 │   │   └── support_[lang].md
 │   └── images/
@@ -87,8 +86,8 @@ relimie.github.io/
   node build_html.js
   ```
 - Content is hard-baked into HTML at build time (no runtime Markdown rendering).
-- **Two version constants in `build_html.js`:** `APP_VERSION` is the **semantic app version** shown to users — bump it on an app release. It is interpolated into the schema `softwareVersion` and the nav badge's pre-JS fallback text, so those two need no manual edit. The badge's *visible* label still comes from the `navWhatsNew` i18n key in `translations.js` (EN/DE/RU), and the What's-New copy from `whats_new_[lang].md` — update both by hand. `ASSET_VERSION` is the **cache-bust token** appended to the CSS/JS URLs as `?v=` — **bump it on ANY deploy that changes `style.css`, `script.js`, or `translations.js`**, otherwise GitHub Pages' CDN can keep serving stale assets (e.g. an old `translations.js` leaving the old banner/copy showing). It is not user-visible, so it need not match `APP_VERSION` (use a build tag or date).
-- **`whats_new_[lang].md` is a cumulative changelog** (newest version section on top). Add a new `## Version X.Y.Z` section per release rather than replacing the file. Source historical notes from `C:\GitHub\Relimie\metadata\release_notes\` and `C:\GitHub\Relimie\marketing\vXYZ\`.
+- **Two version constants in `build_html.js`:** `APP_VERSION` is the **semantic app version** shown to users — bump it on an app release. It is interpolated into the schema `softwareVersion`, so that needs no manual edit. The nav badge's pre-JS fallback text is a **literal** (it currently reads "Now on Android" rather than a version), so change it by hand in `getTemplate()` alongside the i18n key. The badge's *visible* label comes from the `navWhatsNew` i18n key in `translations.js` (EN/DE/RU), and the What's-New copy from `whats_new_[lang].md` — update both by hand. `ASSET_VERSION` is the **cache-bust token** appended to the CSS/JS URLs as `?v=` — **bump it on ANY deploy that changes `style.css`, `script.js`, or `translations.js`**, otherwise GitHub Pages' CDN can keep serving stale assets (e.g. an old `translations.js` leaving the old banner/copy showing). It is not user-visible, so it need not match `APP_VERSION` (use a build tag or date).
+- **`whats_new_[lang].md` is a cumulative changelog** (newest section on top). Add a new `## Version X.Y.Z` section per release rather than replacing the file. Non-release milestones (e.g. the Android launch) get a plain `## ` heading instead of a version number. Source historical notes from `C:\GitHub\Relimie\metadata\release_notes\` and `C:\GitHub\Relimie\marketing\vXYZ\`.
 - `marked-gfm-heading-id` generates stable anchor IDs for all headings (critical for ToC links).
 - **SEO functions in `build_html.js`**: `getPageTitleFull(page, lang)` generates `<title>`, `getPageDescription(page, lang)` generates `<meta name="description">`, `getHreflangTags(pageName)` generates hreflang links, `getSchemaOrg(lang, pageName, isIndex)` generates JSON-LD schema. Update these functions when adding new pages.
 - **Schema details in `getSchemaOrg`**: index emits Organization + WebSite + MobileApplication (with `keywords`/`downloadUrl`); FAQ emits FAQPage (answers are Markdown-stripped for clean text); the `story` page also emits `Article` and the `guide` page `TechArticle` (author = Organization, founder stays anonymous), plus a BreadcrumbList on all other content pages. `og:type` is `article` for the `story` page (else `website`). Titles/descriptions are intentionally platform-agnostic ("app", not "for iPhone") for broader keyword reach.
@@ -168,8 +167,8 @@ Pages are registered in `build_html.js`:
 - `fileMap` — maps page key → MD filename prefix
 - `getPageTitle()` — maps page key → HTML `<title>` suffix
 
-**Navigation placement** (left→right): New in 2.2.0 (standalone teal `nav-whatsnew` link, label from `APP_VERSION` / i18n key `navWhatsNew`), Community (dropdown), Guide (dropdown), Articles (standalone link → article hub), Cooperation (standalone link, last).
-- Community dropdown: Android Test, Release News, Founder Story
+**Navigation placement** (left→right): the teal `nav-whatsnew` link (currently "Now on Android"; label from the `navWhatsNew` i18n key, with a hardcoded English fallback in `getTemplate()`), Community (dropdown), Guide (dropdown), Articles (standalone link → article hub), Cooperation (standalone link, last).
+- Community dropdown: Release News, Founder Story
 - Guide dropdown: User Guide, Video Guides, FAQ, Support (Support also keeps its direct link in the footer)
 
 **`cravings_[lang].md` serves double duty**: it is both Section 5 on the index page AND the standalone `cravings.html` text page.
@@ -236,7 +235,7 @@ Edit `privacyNotice` and `privacyAccept` in `translations.js`. Logic is in `init
 
 ## 7. Important Notes
 
-- **App Links**: iOS App Store only. Android links must say "Coming Soon" (`androidComingSoon` i18n key).
+- **App Links**: both stores are live. The listing URLs and the two official badge images (Apple SVG, Google Play PNG — English on all three languages) are the `IOS_URL` / `ANDROID_URL` / `IOS_BADGE` / `GP_BADGE` constants at the top of `build_html.js`; the badge anchors are built once as `iosBadgeHtml` / `androidBadgeHtml` and reused by the hero and `storeBadgeHtml`. Google's badge PNG (646x250) carries a transparent 41px margin on every side, so only 168/250 of its height is artwork: `.store-badge.google` is rendered **1.488x** taller than Apple's edge-to-edge badge (83px vs 56px) so the two read the same size, and negative margins (16.4% of the height per side) cancel the surplus so both occupy the same layout box. Scale-downs follow the same ratio at the 900px and 480px breakpoints.
 - **Keep this file current**: Update `CLAUDE.md` after every new feature or structural change.
 - **Legal compliance**: Impressum and Privacy Policy must always be accessible across all three languages.
 - **Commit prefixes**: `feat:`, `fix:`, `docs:`, `chore:`.

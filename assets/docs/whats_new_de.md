@@ -2,6 +2,19 @@
 
 Die Geschichte bisher – das hat sich in jeder Version geändert, die neuesten zuerst.
 
+## Relimie ist jetzt für Android da
+
+Relimie ist bei Google Play verfügbar. Nach einem geschlossenen Test mit echten Menschen auf echten Geräten ist die App aus der Testphase raus und für alle da.
+
+### 🌟 Was das heißt
+- **Die komplette App, vom ersten Tag an**: Die Android-Version kommt mit allem bis einschließlich 2.2.0 — der Sphäre und deiner persönlichen Baseline, dem Tagebuch, dem Logging, dem Analytics Hub, der Promille-Schätzung und dem Cravings Breaker. Nichts wurde für später zurückgehalten.
+- **Dieselben Prinzipien**: Kein Konto, keine Cloud, keine Werbung, kein Tracking. Deine Einträge bleiben auf deinem Gerät, genau wie auf dem iPhone.
+- **Eine App, zwei Plattformen**: iPhone und Android gehen ab jetzt gemeinsam weiter. Neue Funktionen kommen auf beiden an.
+
+> 🎁 **Danke an alle, die getestet haben.** Ihr habt diesen Start möglich gemacht, und das versprochene Gratisjahr Relimie Premium gilt weiterhin — schreib uns an **support@relimie.com** mit dem Google-Konto, mit dem du getestet hast, und wir richten es ein.
+
+Jetzt bei [Google Play](https://play.google.com/store/apps/details?id=com.ikaengel.relimie) laden.
+
 ## Version 2.2.0
 
 Vier größere Neuerungen und viel Feinschliff.

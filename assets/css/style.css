@@ -672,6 +672,10 @@ main {
 .store-badge {
     display: block;
     height: 56px;
+    /* The intrinsic width/height attributes on the <img> are presentational hints
+       that map to CSS. Height is overridden above, so width must be released to
+       auto, or the badge renders at its full intrinsic pixel width. */
+    width: auto;
     transition: opacity 0.2s;
 }
 
@@ -679,54 +683,14 @@ main {
     opacity: 0.8;
 }
 
-/* Android "coming soon" badge — paired with the App Store badge in the same row */
-.android-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    height: 56px;
-    width: 166px;
-    padding: 0 18px;
-    box-sizing: border-box;
-    background: #000;
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    border-radius: 11px;
-    text-decoration: none;
-    transition: opacity 0.2s, border-color 0.2s;
-}
-
-.android-badge:hover {
-    opacity: 0.9;
-    border-color: var(--accent-teal);
-}
-
-.android-badge-icon {
-    width: 26px;
-    height: 26px;
-    color: #3DDC84;
-    flex-shrink: 0;
-}
-
-.android-badge-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    line-height: 1.12;
-    color: #fff;
-    text-align: left;
-}
-
-.android-badge-top {
-    font-size: 11px;
-    letter-spacing: 0.4px;
-    opacity: 0.92;
-}
-
-.android-badge-bottom {
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
+/* Google's official Play badge PNG is 646x250 with a transparent 41px margin on
+   every side, so only 168/250 of its height is artwork. It is therefore rendered
+   1.488x taller than Apple's edge-to-edge badge (56 * 250/168 = 83) so both read
+   the same size, and the surplus is cancelled with negative margins (16.4% of the
+   height per side) so the two badges also occupy the same layout box. */
+.store-badge.google {
+    height: 83px;
+    margin: -13.6px;
 }
 
 /* Hero typography (used inside Section 1 ls-text) */
@@ -1246,6 +1210,9 @@ main {
         gap: 16px;
     }
 
+    .store-badge { height: 46px; }
+    .store-badge.google { height: 68px; margin: -11.2px; }
+
     .hero-download-left { order: 1; }
     .hero-download-right { order: 2; }
     
@@ -1377,6 +1344,9 @@ main {
 }
 
 @media (max-width: 480px) {
+    .store-badge { height: 40px; }
+    .store-badge.google { height: 60px; margin: -9.8px; }
+
     .sticky-cta {
         gap: 6px 14px;
     }

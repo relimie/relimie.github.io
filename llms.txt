@@ -11,7 +11,7 @@ The core method is "baseline-drinking": a personal long-term average rather than
 - [FAQ](https://relimie.com/en/faq.html): Common questions about baseline tracking, logging, the Cravings Breaker, and data privacy.
 - [Cravings Breaker](https://relimie.com/en/cravings.html): How the 4-7-8 breathing circuit breaker works for craving disruption.
 - [Promille / Blood Alcohol Calculator](https://relimie.com/en/promille-calculator.html): Interactive blood alcohol calculator and a full explanation of the Widmark formula, including how long alcohol takes to clear and how accurate such an estimate really is.
-- [What's New](https://relimie.com/en/whats_new.html): Release notes for Relimie v2.2.0 — blood alcohol estimate with time to clear, per-drink icons under the Orb, rebuilt consumption overview, guided tours on every page.
+- [What's New](https://relimie.com/en/whats_new.html): Release notes, newest first. Relimie is now available on Android via Google Play (the full app, feature-identical to iOS). Latest release v2.2.0 — blood alcohol estimate with time to clear, per-drink icons under the Orb, rebuilt consumption overview, guided tours on every page.
 - [Privacy Policy](https://relimie.com/en/privacy.html): Full data privacy documentation. All data is stored locally on device only.
 - [Support](https://relimie.com/en/support.html): Contact information for support.
 
@@ -26,10 +26,10 @@ Judgement-free, informational guides on mindful drinking. Each targets a common 
 
 ## App Details
 
-- Platform: iOS (Apple App Store, App ID: 6759795714)
-- Download: https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714
+- Platform: iOS (Apple App Store, App ID: 6759795714) and Android (Google Play, package com.ikaengel.relimie)
+- Download (iOS): https://apps.apple.com/us/app/relimie-track-alcohol-limits/id6759795714
+- Download (Android): https://play.google.com/store/apps/details?id=com.ikaengel.relimie
 - YouTube: https://www.youtube.com/@RelimieApp
-- Android: In closed testing on Google Play (join at https://relimie.com/en/android.html)
 - Languages: English, German, Russian
 - Current version: 2.2.0
 - Privacy model: Zero cloud storage, no third-party analytics, no cookies, no account required

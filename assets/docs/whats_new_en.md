@@ -2,6 +2,19 @@
 
 The story so far — here's what changed in each release, newest first.
 
+## Relimie is now on Android
+
+Relimie is live on Google Play. After a closed test run by real people on real phones, the app is out of testing and available to everyone.
+
+### 🌟 What this means
+- **The full app, from day one**: The Android version arrives with everything up to and including 2.2.0 — the Orb and your personal baseline, the diary, drinks logging, the Analytics Hub, the blood alcohol estimate, and the Cravings Breaker. Nothing was held back for a later release.
+- **The same principles**: No account, no cloud, no ads, no tracking. Your entries stay on your phone, exactly as they do on iPhone.
+- **One app, two platforms**: iPhone and Android now move together. New features land on both.
+
+> 🎁 **Thank you to everyone who tested.** You made this launch possible, and the free year of Relimie Premium we promised still stands — write to us at **support@relimie.com** with the Google account you tested with and we'll set it up.
+
+Get it on [Google Play](https://play.google.com/store/apps/details?id=com.ikaengel.relimie).
+
 ## Version 2.2.0
 
 Four bigger changes and plenty of polish.
