@@ -61,6 +61,22 @@ const hubMeta = {
 
 const articles = [
     {
+        slug: 'sober-after-vacation',
+        published: '2026-09-04',
+        modified: '2026-09-04',
+        faq: true,
+        title: {
+            en: 'Relimie – Sober After Vacation: How Many Sober Days Bring You Back?',
+            de: 'Relimie – Alkoholfrei nach dem Urlaub: Wie viele nüchterne Tage bis zum Referenzwert?',
+            ru: 'Relimie – Без алкоголя после отпуска: сколько трезвых дней до ориентира?',
+        },
+        description: {
+            en: 'Back from an all-inclusive week? Work out how many sober days bring your average back to your baseline, log the trip roughly rather than perfectly, and turn the number into your own challenge.',
+            de: 'Zurück aus dem All-inclusive-Urlaub? Rechne aus, wie viele nüchterne Tage deinen Durchschnitt zurück auf deinen Referenzwert bringen, trag den Urlaub grob nach und mach aus der Zahl deine Challenge.',
+            ru: 'После отпуска «всё включено»: посчитай, сколько трезвых дней вернут твой средний к ориентиру, внеси поездку примерно и сделай из цифры свой челлендж.',
+        },
+    },
+    {
         slug: 'promille-calculator',
         published: '2026-08-10',
         modified: '2026-08-10',
