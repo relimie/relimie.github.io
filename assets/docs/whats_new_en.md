@@ -2,6 +2,20 @@
 
 The story so far — here's what changed in each release, newest first.
 
+## Version 2.3.0
+
+Tracking your drinking doesn't have to be boring. This update brings challenges, your own little town and live backgrounds.
+
+### 🌟 Major Highlights
+- **Challenges**: Tap the trophy next to the Orb. Relimie offers a challenge only when one fits where you are right now: stay sober a little longer than last time, log every day for two weeks, or bring your consumption back to your baseline after a heavier stretch. The goals are small and reachable, so you change your drinking step by step instead of all at once. [How challenges work](guide.html#6-challenges)
+- **Your town**: Every challenge you master adds to your own little town, and each kind of challenge builds something different. The town follows your clock and the seasons: the windows light up at night, and in winter there is snow on the roofs. Each time you master a challenge, fireworks go up over the rooftops.
+- **Search your diary**: Find days by words in your notes, by tags or by drink names. Type "wine stress" and you see the days when both came together.
+- **Live backgrounds**: Pick one of the new live themes, each with its own figures and scenery. Every sober day in a row adds a figure, and every 7 days they merge into a bigger one. You find them under Settings → Appearance.
+
+### 🛠 Features & Improvements
+- **Find your drink faster**: Filters by drink type sit under the search line. You decide what to show: the search line, the filters, both or neither.
+- **Texts that sound natural**: Every text in the app was reworked. Relimie now sounds more natural in English, German and Russian.
+
 ## Relimie is now on Android
 
 Relimie is live on Google Play. After a closed test run by real people on real phones, the app is out of testing and available to everyone.

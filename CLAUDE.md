@@ -10,7 +10,7 @@ Relimie is a **mindful drinking companion app** for tracking alcohol consumption
 
 The website is a **static site** built by a Node.js script (`build_html.js`) that reads Markdown source files and generates localized HTML.
 
-**Current App Version**: v2.2.0
+**Current App Version**: v2.3.0
 **Target Platform**: iOS (Apple App Store, id6759795714) and Android (Google Play, `com.ikaengel.relimie`) — both live
 
 ---
@@ -86,7 +86,7 @@ relimie.github.io/
   node build_html.js
   ```
 - Content is hard-baked into HTML at build time (no runtime Markdown rendering).
-- **Two version constants in `build_html.js`:** `APP_VERSION` is the **semantic app version** shown to users — bump it on an app release. It is interpolated into the schema `softwareVersion`, so that needs no manual edit. The nav badge's pre-JS fallback text is a **literal** (it currently reads "Now on Android" rather than a version), so change it by hand in `getTemplate()` alongside the i18n key. The badge's *visible* label comes from the `navWhatsNew` i18n key in `translations.js` (EN/DE/RU), and the What's-New copy from `whats_new_[lang].md` — update both by hand. `ASSET_VERSION` is the **cache-bust token** appended to the CSS/JS URLs as `?v=` — **bump it on ANY deploy that changes `style.css`, `script.js`, or `translations.js`**, otherwise GitHub Pages' CDN can keep serving stale assets (e.g. an old `translations.js` leaving the old banner/copy showing). It is not user-visible, so it need not match `APP_VERSION` (use a build tag or date).
+- **Two version constants in `build_html.js`:** `APP_VERSION` is the **semantic app version** shown to users — bump it on an app release. It is interpolated into the schema `softwareVersion`, so that needs no manual edit. The nav badge's pre-JS fallback text is a **literal** (currently "V2.3.0 - tracking can be fun!"), so change it by hand in `getTemplate()` alongside the i18n key. The badge's *visible* label comes from the `navWhatsNew` i18n key in `translations.js` (EN/DE/RU), and the What's-New copy from `whats_new_[lang].md` — update both by hand. `ASSET_VERSION` is the **cache-bust token** appended to the CSS/JS URLs as `?v=` — **bump it on ANY deploy that changes `style.css`, `script.js`, or `translations.js`**, otherwise GitHub Pages' CDN can keep serving stale assets (e.g. an old `translations.js` leaving the old banner/copy showing). It is not user-visible, so it need not match `APP_VERSION` (use a build tag or date).
 - **`whats_new_[lang].md` is a cumulative changelog** (newest section on top). Add a new `## Version X.Y.Z` section per release rather than replacing the file. Non-release milestones (e.g. the Android launch) get a plain `## ` heading instead of a version number. Source historical notes from `C:\GitHub\Relimie\metadata\release_notes\` and `C:\GitHub\Relimie\marketing\vXYZ\`.
 - `marked-gfm-heading-id` generates stable anchor IDs for all headings (critical for ToC links).
 - **SEO functions in `build_html.js`**: `getPageTitleFull(page, lang)` generates `<title>`, `getPageDescription(page, lang)` generates `<meta name="description">`, `getHreflangTags(pageName)` generates hreflang links, `getSchemaOrg(lang, pageName, isIndex)` generates JSON-LD schema. Update these functions when adding new pages.
@@ -167,7 +167,7 @@ Pages are registered in `build_html.js`:
 - `fileMap` — maps page key → MD filename prefix
 - `getPageTitle()` — maps page key → HTML `<title>` suffix
 
-**Navigation placement** (left→right): the teal `nav-whatsnew` link (currently "Now on Android"; label from the `navWhatsNew` i18n key, with a hardcoded English fallback in `getTemplate()`), Community (dropdown), Guide (dropdown), Articles (standalone link → article hub), Cooperation (standalone link, last).
+**Navigation placement** (left→right): the teal `nav-whatsnew` link (currently "V2.3.0 - tracking can be fun!"; label from the `navWhatsNew` i18n key, with a hardcoded English fallback in `getTemplate()`), Community (dropdown), Guide (dropdown), Articles (standalone link → article hub), Cooperation (standalone link, last). Below **1150px** the nav collapses into the hamburger menu (its own `@media (max-width: 1150px)` block in `style.css`, mirrored by the resize check in `initHamburger()`), above the 900px layout breakpoint, because the badge plus four links and the language switcher don't fit narrower. Re-check this if the badge text gets longer.
 - Community dropdown: Release News, Founder Story
 - Guide dropdown: User Guide, Video Guides, FAQ, Support (Support also keeps its direct link in the footer)
 

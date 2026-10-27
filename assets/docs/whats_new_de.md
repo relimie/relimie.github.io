@@ -1,17 +1,31 @@
 # Neuigkeiten in Relimie
 
-Die Geschichte bisher – das hat sich in jeder Version geändert, die neuesten zuerst.
+Die Geschichte bisher: Das hat sich in jeder Version geändert, die neuesten zuerst.
+
+## Version 2.3.0
+
+Alkohol tracken muss nicht langweilig sein. Dieses Update bringt Challenges, deine eigene kleine Stadt und lebendige Hintergründe.
+
+### 🌟 Die Highlights
+- **Challenges**: Tippe auf den Pokal neben dem Orb. Relimie schlägt dir nur dann eine Challenge vor, wenn sie zu deiner aktuellen Lage passt: etwas länger nüchtern bleiben als beim letzten Mal, zwei Wochen lang jeden Tag eintragen oder deinen Konsum wieder auf deinen Referenzwert bringen, wenn du zuletzt mehr getrunken hast. Die Ziele sind klein und gut erreichbar. So änderst du dein Trinkverhalten Schritt für Schritt statt auf einen Schlag. [So funktionieren Challenges](guide.html#6-challenges)
+- **Deine Stadt**: Jede gemeisterte Challenge baut an deiner eigenen kleinen Stadt weiter, und jede Art von Challenge lässt etwas anderes entstehen. Die Stadt lebt mit deiner Uhrzeit und den Jahreszeiten: Nachts leuchten die Fenster, und im Winter liegt Schnee auf den Dächern. Jedes Mal, wenn du eine Challenge meisterst, steigt über den Dächern ein Feuerwerk auf.
+- **Durchsuche dein Tagebuch**: Finde Tage über Wörter in deinen Notizen, über Tags oder über Getränkenamen. Gib „Wein Stress“ ein, und du siehst die Tage, an denen beides zusammenkam.
+- **Lebendige Hintergründe**: Wähle eines der neuen Motive, jedes mit eigenen Figuren und eigener Kulisse. Jeder nüchterne Tag in Folge bringt eine Figur dazu, und alle 7 Tage verschmelzen sie zu einer großen. Du findest sie unter Einstellungen → Darstellung.
+
+### 🛠 Funktionen & Verbesserungen
+- **Schneller zum richtigen Drink**: Unter dem Suchfeld filterst du nach Getränkeart. Du entscheidest, was angezeigt wird: Suchfeld, Filter, beides oder nichts.
+- **Texte, die natürlich klingen**: Alle Texte der App wurden gründlich überarbeitet. Relimie klingt jetzt auf Deutsch, Englisch und Russisch noch natürlicher.
 
 ## Relimie ist jetzt für Android da
 
 Relimie ist bei Google Play verfügbar. Nach einem geschlossenen Test mit echten Menschen auf echten Geräten ist die App aus der Testphase raus und für alle da.
 
 ### 🌟 Was das heißt
-- **Die komplette App, vom ersten Tag an**: Die Android-Version kommt mit allem bis einschließlich 2.2.0 — der Sphäre und deiner persönlichen Baseline, dem Tagebuch, dem Logging, dem Analytics Hub, der Promille-Schätzung und dem Cravings Breaker. Nichts wurde für später zurückgehalten.
+- **Die komplette App, vom ersten Tag an**: Die Android-Version kommt mit allem bis einschließlich 2.2.0: der Sphäre und deiner persönlichen Baseline, dem Tagebuch, dem Logging, dem Analytics Hub, der Promille-Schätzung und dem Cravings Breaker. Nichts wurde für später zurückgehalten.
 - **Dieselben Prinzipien**: Kein Konto, keine Cloud, keine Werbung, kein Tracking. Deine Einträge bleiben auf deinem Gerät, genau wie auf dem iPhone.
 - **Eine App, zwei Plattformen**: iPhone und Android gehen ab jetzt gemeinsam weiter. Neue Funktionen kommen auf beiden an.
 
-> 🎁 **Danke an alle, die getestet haben.** Ihr habt diesen Start möglich gemacht, und das versprochene Gratisjahr Relimie Premium gilt weiterhin — schreib uns an **support@relimie.com** mit dem Google-Konto, mit dem du getestet hast, und wir richten es ein.
+> 🎁 **Danke an alle, die getestet haben.** Ihr habt diesen Start möglich gemacht, und das versprochene Gratisjahr Relimie Premium gilt weiterhin. Schreib uns an **support@relimie.com** mit dem Google-Konto, mit dem du getestet hast, und wir richten es ein.
 
 Jetzt bei [Google Play](https://play.google.com/store/apps/details?id=com.ikaengel.relimie) laden.
 
@@ -20,7 +34,7 @@ Jetzt bei [Google Play](https://play.google.com/store/apps/details?id=com.ikaeng
 Vier größere Neuerungen und viel Feinschliff.
 
 ### 🌟 Die Highlights
-- **Promille-Schätzung**: Tippe an Tagen mit erfassten Drinks auf den kleinen Button neben dem Orb und du siehst einen groben Promille-Wert aus deinen Einträgen sowie die Zeit bis zum Abbau. Es ist eine Schätzung nach der Widmark-Formel — keine Messung und niemals ein Grund, sich ans Steuer zu setzen.
+- **Promille-Schätzung**: Tippe an Tagen mit erfassten Drinks auf den kleinen Button neben dem Orb und du siehst einen groben Promille-Wert aus deinen Einträgen sowie die Zeit bis zum Abbau. Es ist eine Schätzung nach der Widmark-Formel, keine Messung und niemals ein Grund, sich ans Steuer zu setzen.
 - **Deine Drinks auf einen Blick**: An Trinktagen erscheint direkt unter dem Orb pro Drink ein Symbol, eingefärbt nach Kategorie. Ein Tag ist endlich lesbar, ohne ihn zu öffnen: nicht nur „48 g“, sondern zwei Bier und ein Glas Wein.
 - **Neu gebaute Konsum-Übersicht**: Die Statistikseite ist keine Zahlenwand mehr. Ein Ring zeigt deinen nüchternen Anteil, deine Serien liegen auf einer gemeinsamen Skala sodass die aktuelle an deiner besten gemessen wird, und deine durchschnittliche Menge sitzt auf einer Anzeige, die auf deinem persönlichen Referenzwert zentriert ist.
 - **Eine geführte Tour auf jeder Seite**: Neben dem Titel jedes Screens sitzt jetzt ein kleines „?". Tippe darauf und Relimie führt dich Schritt für Schritt durch die Seite, hebt ein Element nach dem anderen hervor und erklärt, wofür es da ist.
@@ -40,9 +54,9 @@ Eine Reihe neuer Funktionen und viele Verbesserungen, die dir helfen, deinen Kon
 - **Schnelleres Erfassen**: Eine ruhigere Getränkeliste, die nicht mehr springt, eine bessere Suche und Schnellbearbeitung direkt aus dem Tagebuch.
 
 ### 🛠 Funktionen & Verbesserungen
-- **Regenerations-Zeitleiste**: Sieh auf dem Atem-Screen, was dein Körper seit dem letzten Drink zurückgewinnt – von Tagen bis zu einem Jahr.
+- **Regenerations-Zeitleiste**: Sieh auf dem Atem-Screen, was dein Körper seit dem letzten Drink zurückgewinnt, von Tagen bis zu einem Jahr.
 
-> 🎁 **Kostenlos für alle:** Die Regenerations-Zeitleiste ist ein weiterer kleiner Grund, deine Serie fortzusetzen – für jede Nutzerin und jeden Nutzer gratis.
+> 🎁 **Kostenlos für alle:** Die Regenerations-Zeitleiste ist ein weiterer kleiner Grund, deine Serie fortzusetzen, für jede Nutzerin und jeden Nutzer gratis.
 
 - **Sanfterer Start**: Ein schnelleres Onboarding personalisiert deinen Home-Screen ab dem ersten Tag und kann deine letzten nüchternen Tage erfassen.
 - **Politur & Fehlerbehebungen**: Verbesserte Texte in allen Sprachen sowie viele kleine UI-Korrekturen.

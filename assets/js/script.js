@@ -63,7 +63,7 @@ function initHamburger() {
 
         // Close menu automatically on larger screens
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 900) {
+            if (window.innerWidth > 1150) {
                 hamburger.classList.remove('active');
                 mainNav.classList.remove('active');
             }

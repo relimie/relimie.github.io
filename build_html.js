@@ -8,12 +8,12 @@ marked.setOptions({ breaks: true, gfm: true });
 
 const root = 'c:/GitHub/relimie.github.io';
 // Semantic app version — shown to users (nav button, schema softwareVersion, What's-New copy).
-const APP_VERSION = '2.2.0';
+const APP_VERSION = '2.3.0';
 // Cache-bust token appended to CSS/JS URLs as ?v= to force browsers & the GitHub Pages CDN
 // to refetch assets. Bump on ANY deploy that changes style.css / script.js / translations.js
 // (otherwise a stale translations.js can leave the old copy/banner showing). Not user-visible,
 // so it does not need to match APP_VERSION — use a build tag or date.
-const ASSET_VERSION = '20260904a';
+const ASSET_VERSION = '20261027a';
 // Store listings and the official badge images. Apple's badge is an SVG served by
 // Apple; Google's is the official Play badge PNG (English is used on all three
 // languages, matching the English-only Apple badge).
@@ -921,7 +921,7 @@ ${getSchemaOrg(lang, pageName, isIndex)}
 
             <nav class="main-nav">
                 <div class="nav-item">
-                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">Now on Android</a>
+                    <a href="whats_new.html" class="nav-whatsnew" data-i18n="navWhatsNew">V2.3.0 - tracking can be fun!</a>
                 </div>
                 <div class="nav-item has-dropdown">
                     <a href="whats_new.html"><span data-i18n="community">Community</span> <span class="dot-new"></span></a>
