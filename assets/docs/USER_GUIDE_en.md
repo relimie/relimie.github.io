@@ -8,10 +8,11 @@ Welcome to Relimie, your mindful companion for tracking alcohol consumption, ana
 - [3. Blood Alcohol Estimate](#3-blood-alcohol-estimate)
 - [4. Diary and Tags](#4-diary-and-tags)
 - [5. Cravings and Breathing](#5-cravings-and-breathing)
-- [6. Analytics Hub](#6-analytics-hub)
-- [7. Data Export](#7-data-export)
-- [8. Additional Features](#8-additional-features)
-- [9. Relimie Premium](#9-relimie-premium)
+- [6. Challenges](#6-challenges)
+- [7. Analytics Hub](#7-analytics-hub)
+- [8. Data Export](#8-data-export)
+- [9. Additional Features](#9-additional-features)
+- [10. Relimie Premium](#10-relimie-premium)
 
 ## 1. Personal Baseline
 
@@ -29,7 +30,11 @@ Your Personal Baseline is initially configured during the **Onboarding** process
 If you are unsure what a healthy baseline looks like, Relimie provides dynamic, science-based suggestions. These recommendations are aligned with the **World Health Organization (WHO)** guidelines. The app also contextualizes your target by comparing it against the median consumption levels tailored to your country's health data and adjusted for your gender. As your habits improve, pay attention to your actual consumption patterns: if you consistently find yourself drinking well below your current limit, that is a strong positive signal — consider revisiting **Settings → Personalization** to tighten your baseline to a lower value. Your ceiling should grow stricter as you grow stronger.
 
 ### Tracking Your Progress
-Once your baseline is established, monitoring your adherence takes only moments. By tapping the glowing **Orb** on your Home Screen, you toggle into the **Baseline Trend View** — a second tap cycles you back to the standard display. This instantly visualizes whether you are under your limit or exactly how many recovery days you need to get back on track. The Orb's color signals your position at a glance: **green** when you are safely within your limit, **gold** when you are approaching it, and **red** when recovery days are needed. Note that on **past dates**, tapping the Orb does not cycle views — instead, it logs a "Clear Day" for that day if it has no entry recorded. For comprehensive, long-term macro-shifts, you can dive deeper into the **Trends** tab located inside the Analytics Hub.
+Once your baseline is established, monitoring your adherence takes only moments. By tapping the glowing **Orb** on your Home Screen, you toggle into the **Baseline Trend View** — a second tap cycles you back to the standard display. This instantly visualizes whether you are under your limit or exactly how many recovery days you need to get back on track. The Orb's color signals your position at a glance: **green** when you are safely within your limit, **gold** when you are approaching it, and **red** when recovery days are needed. On **past dates**, tapping the Orb doesn't switch views; it logs a sober day instead (see **Logging Sober Days** in chapter 2). For comprehensive, long-term macro-shifts, you can dive deeper into the **Trends** tab located inside the Analytics Hub.
+
+**Sober days or days in range.** A streak of alcohol-free days is a clear measure, but it doesn't show everything. If you drink in moderation, a long run of days at or under your baseline is progress too, yet a streak that counts only sober days ends with the first glass. That's why we added **days in range** as an experimental feature. Tell us whether it helps you: **support@relimie.com**.
+
+**Double-tap the Orb** to switch its streak between **sober days** (no alcohol at all) and **days in range** (days on which your consumption stayed at or under your baseline). Days in range include your sober days, so a single beer within your baseline keeps that streak going, and the Orb turns light blue to show which streak you are looking at. A day above your baseline ends it and the Orb shows that day's amount instead. Relimie remembers your choice, and it works on past dates too. Your sober days themselves never change: the background figures, the Regeneration Timeline and the challenges still count only alcohol-free days. Both streaks also appear side by side under **Streaks** in the Analytics Hub. If your baseline is **0** — you've decided not to drink at all — both streaks are the same, so the double-tap has nothing to switch.
 
 ---
 
@@ -43,6 +48,11 @@ When you log a drink, you inherently log much more than just the alcohol. Relimi
 
 ### Navigating the Catalog and AI Assistance
 Relimie stores a built-in catalog of pre-delivered standard drinks, but also allows you to securely save any number of your own custom drinks. To make navigating this growing catalog effortless, a dedicated **Search Bar** helps you find your drinks faster. Once you have typed a search term and no match is found, the **AI Sparkle button** automatically appears. Tapping this button prompts the system to research and autofill the correct Volume and ABV for your new drink. AI-assisted detection is available across all tiers, though the number of monthly lookups is tiered — **Trial** users receive a generous quota to explore the feature, while **Subscription** and **Lifetime Premium** holders enjoy higher limits. You also have total control over what is displayed: you can use the **(+) button** to define custom drinks manually, and you can use the **Organizing Dialog** to hide any catalog drinks you don't use, keeping your interface beautifully relevant to your lifestyle.
+
+Under the search line you'll find **filters by drink type**: tap beer, wine, spirits, cocktails or your own drinks to see only that type, and tap it again for the full list. A dot marks the types you have already logged for that day. The two small buttons at the top, the magnifier and the funnel, let you choose what to show: the search line, the filters, both or neither.
+
+### Logging Sober Days
+A day without alcohol needs an entry too, so that Relimie knows it was a sober day and not a forgotten one. On today's date, long-press the Orb to log a sober day (a short breathing exercise comes first). On a past date, tap the Orb to log that day as sober, or hold it to log every unlogged day back to your last entry in one go (Relimie asks first). When you open the app after a few days away and some past days have no entry yet, Relimie offers to log them all as sober days in one tap. If you drank on some of them, choose **Not now** and log those days yourself.
 
 ### Reviewing Your Statistics
 All of this comprehensively collected data is gathered and visualized for you inside the **Analytics Hub**. You can open the Hub at any time by **swiping up** on the Home Screen, or by tapping the **grid icon** in the top corner of the screen. Inside, you'll find the **Consumption Overview**. This section breaks your logging down in explicit detail:
@@ -104,7 +114,36 @@ The breathing screen does more than guide your breath — it also shows how your
 
 ---
 
-## 6. Analytics Hub
+## 6. Challenges
+
+### The Core Concept
+A challenge is a small, concrete goal you choose to take on. Relimie offers one only when it fits where you are right now, never a long list to work through. To make it more fun, every challenge you complete adds to your own little town. It grows with each success, and whenever you open it you see what you have achieved, building by building.
+
+### Finding and Accepting a Challenge
+The trophy button in the top-left corner of the Orb opens the Challenges screen. A gold dot on it means a challenge is waiting for you; a ring around it shows how far along a running one is (a small "2" appears when two run at once). A red dot means a challenge has ended — open Challenges to see why. You decide by tapping **Accept** — only the two get-to-know challenges below start on their own.
+
+### The Three Challenges
+- **New sober streak**: stay sober longer than your previous streak — the one that ended with your last drinking day or a day left unlogged. If there was none in the last 90 days, stay sober for the next few days. The goal is always at least that many days longer than your current streak, but never more than 30 days at a time, so a very long previous streak is beaten in steps. The card shows your previous streak, your goal and how many sober, logged days are left; the rule is behind “How is the goal set?”. A drinking day or a day left unlogged ends it. Reaching the goal adds a new section to your tower, and it keeps growing for as long as the streak lasts: each floor is one week, and every sober day lights another window.
+- **Back to your baseline** (Premium): offered when your average is above your baseline. To get back to it, stay sober or drink no more than your baseline on a day. A day above your baseline or a change of your baseline ends the challenge. If getting back to your baseline would take more than 30 sober days, the challenge is limited to 30 sober days. A new challenge can follow after that. Completing it grows your house by one stage.
+- **Lower your baseline** (Premium): offered when your average is at or a little under your baseline. Bring it 10 % below your baseline; when you get there, that becomes your new baseline. If your average is already 10 % or more below your baseline, set a baseline that matches how much you drink now first. Below a baseline of 10 g this challenge is switched off, since a further 10 % makes no real difference there. Completing it adds a terrace to your terraced building.
+
+### Get-to-Know Challenges
+Two get-to-know challenges help you learn how to use Relimie. They start on their own, one after the other:
+- **Log every day for 14 days**: starts right after setup. Every day you log counts, sober days too; a day left unlogged starts the count again. It builds your town hall.
+- **Start your story**: starts once "Log every day for 14 days" is completed. Record your thoughts in your diary on any 10 days, as a note, tags or both. Past days count too. It builds a clock tower.
+
+### Challenges Grow With You
+At the start the challenges are short, so you get to know Relimie and your first successes come quickly. Once you know the app and use it for real, the goals get longer, because a challenge of only a few days doesn't mean much any more.
+
+### Fair Rules
+You can run a streak challenge and a baseline challenge at the same time; one sober day moves both forward. A slip is not final straight away: the challenge turns rose, and if you correct a wrong entry within a day, it carries on — until then no new challenge of that kind is offered. If yesterday is still empty you get a reminder to fill it in instead of losing the challenge. Once an ending is final, Relimie tells you once, the next time you open Challenges, which day ended it. Changing your baseline in Personalization while a baseline challenge runs ends that challenge (Relimie asks first), so the goal can't change halfway. Whatever you have built stays in your town — an ended challenge never takes anything away.
+
+### Your Town
+Each kind of challenge grows its own building instead of adding a new one every time. A tower has up to four sections, one for each completed challenge; a house grows from a cottage to a second floor, a side wing and an annex; a terraced building gets up to five terraces. The town hall and the clock tower are built once. A building that is still growing has a crane next to it; a finished one gets a small gold light on its roof, and your next challenge of that kind starts a new building. Tap any building to see which challenges it is made of and when you completed them. Each time you complete a challenge, fireworks go up over the rooftops, and at night they are at their best. Swipe the town sideways to see more; the gold arrows at the edges show how many of your buildings are out of view. The town follows your clock: the sun rises and sets over it, at night the windows light up under the moon, and in winter there is snow on the roofs.
+
+---
+
+## 7. Analytics Hub
 
 ### The Core Concept
 The Analytics Hub is where your daily inputs are transformed into actionable, long-term insights, allowing you to view your overarching progress and behavior shifts clearly. You can open it at any time by **swiping up** on the Home Screen, or by tapping the **grid icon** in the top corner of the screen.
@@ -115,12 +154,14 @@ The hub provides a complete snapshot of your tracking lifespan. Inside, you can 
 ### Reviewing Consumption History
 Below your overview metrics, the Hub hosts your complete **Consumption History**. This chronologically ordered ledger allows you to easily review all past entries. More importantly, tapping directly on the history summary opens a date picker, allowing you to seamlessly navigate back to any specific previous date on the Home Screen. From there, you can effortlessly adjust logged drinks, amend your diary notes, or refine your emotional tags entirely retroactively.
 
+The **Consumption Diary** has a search box at the top. It finds days by words in your notes, by tags and by drink names — type several words to narrow it down (e.g. "wine stress"). When a match comes from a drink, the drink is named next to the day's alcohol amount; tap that amount to open the day's drinks.
+
 ### The Landscape Consumption Chart
 For a focused, full-width view of your trends, simply **rotate your phone to landscape while on the Home Screen** — Relimie opens a dedicated **Consumption Chart**. Switch the metric between **Units**, **Money**, and **Calories**, and the timeframe between **Daily**, **Weekly**, and **Monthly**. On the daily alcohol view, the chart also overlays your **Baseline** and your rolling **Average**, so you can see at a glance whether your intake is trending below your target over time. The landscape chart is a **Premium** feature — available during your free trial and with Relimie Premium.
 
 ---
 
-## 7. Data Export
+## 8. Data Export
 
 ### The Core Concept
 Your sobriety journey is intimately private. While there may be times you need to share your progress with a medical professional or securely back up your history, Relimie ensures you retain complete ownership over your data by defaulting to a private, offline-first architecture.
@@ -130,17 +171,18 @@ To share your milestones with a therapist, doctor, or sponsor, you can generate 
 
 ---
 
-## 8. Additional Features
+## 9. Additional Features
 
 While tracking and analyzing form the core of Relimie, the app also includes several utility features to further support your journey:
 - **Alcohol Unit Customization**: Relimie can display your consumption in the unit system that feels most natural to you. Navigate to **Settings → Personalization** to choose between Grams of pure alcohol, Milliliters, or Standard Drinks calibrated to the **US**, **UK**, or **Australian** definitions.
 - **Multilingual Support**: Relimie is fully localized to ensure you can interact with your health data in your native tongue. Currently, the app natively supports three languages: English, German, and Russian.
 - **Daily Reminders**: To help you build a consistent tracking habit, you can enable a daily reminder notification through the **Settings** menu. This gentle nudge ensures you never forget to check in and log your daily emotional state.
-- **Guided Tours**: Several screens carry a small **question-mark button** next to their title — on the Home screen you'll find it at the right end of the month row, just above the dates. Tap it and a short interactive tour walks you through that page, pointing out the non-obvious gestures and shortcuts (like long-pressing the Orb or swiping between views). Tours never start on their own and never get in your way: they run only when you ask, they cover only the page you're on, and you can replay one as often as you like. Tours are available on the **Home**, **Log Drinks** and **Check-in** screens.
+- **Guided Tours**: Several screens carry a small **question-mark button** next to their title — on the Home screen you'll find it at the right end of the month row, just above the dates. Tap it and a short interactive tour walks you through that page, pointing out the non-obvious gestures and shortcuts (like long-pressing the Orb or swiping between views). Tours never start on their own and never get in your way: they run only when you ask, they cover only the page you're on, and you can replay one as often as you like. Tours are available on the **Home**, **Log Drinks** and **Journal** screens.
+- **Background Themes**: Under **Settings → Appearance** you can add little companions to the background: **Bubbles**, **Snowflakes**, **Koi**, **Paper birds** or **Paper lemurs**. Every alcohol-free day in a row adds one, each in its own colour: a bubble rises slowly from the bottom and flows around the Orb, a snowflake drifts down from the top, a small fish joins the school circling the Orb, a paper bird joins the flock, or a little lemur leaps onto a branch. Every 7 days they merge into a bigger one (a pearl, a big snowflake, a big koi, a crane, a big lemur), so you can watch your streak grow. A drinking day sends them all away and you start again. Each theme has its own backdrop: the bubbles and snowflakes float over the classic circles, the birds fly among soft clouds, the koi swim in a pond with lily pads, and the lemurs leap between branches under leafy treetops. With **Background strength** (Subtle, Normal, Vivid) you choose how strongly the figures show. If you have **Reduce Motion** switched on in your phone settings, they stay still. Classic is free; the figure themes are part of Relimie Premium.
 
 ---
 
-## 9. Relimie Premium
+## 10. Relimie Premium
 
 To respect our users, the foundational tracking capabilities of Relimie are perpetually free. However, access to deep macro-analytics, unlimited historical reflections, and advanced AI utilities are part of the **Relimie Premium** experience.
 
@@ -154,6 +196,8 @@ After your 20 logging days expire, you retain perpetual access to the most vital
 - The 4-7-8 Deep Breathing mindful exercise and your Regeneration Timeline.
 - The Blood Alcohol Estimate on any day with logged drinks.
 - Your sober streaks remaining visible on the Home Screen.
+- The "New sober streak" challenge and the towers it builds in your town.
+- The "Log every day for 14 days" and "Start your story" challenges, with the town hall and clock tower they build.
 - Read-only access to your full historical Diary.
 
 ### Relimie Premium Features
@@ -163,6 +207,8 @@ Upgrading to **Relimie Premium** permanently unlocks (or continues) the followin
 - **Complete Customization**: AI-assisted drink creation, manual drink overrides, and expanding your personal drink catalog natively.
 - **Deep Reflection**: Navigating backward through your full chronological ledger and using direct-editing shortcuts directly from the Diary.
 - **Analytics & Exporting**: Permanent access to the powerful `Analytics`, `Trends`, and `Habits` tabs inside the Hub, the full-screen landscape Consumption Chart, along with the ability to generate PDF "Share My Story" reports and Raw JSON backups.
+- **Background Themes**: Bubbles, Snowflakes, Koi, Paper birds and Paper lemurs under **Settings → Appearance**. If Premium ends, the app returns to the Classic background and remembers your choice for later.
+- **Baseline Challenges**: "Back to your baseline" and "Lower your baseline", with their houses and buildings in your town. A challenge you started during the trial runs to its end.
 
 ### Pricing Models
 Upgrades are securely managed through your device's native app store. You can select the plan that best fits your lifestyle:
