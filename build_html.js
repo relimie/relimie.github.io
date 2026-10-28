@@ -13,7 +13,7 @@ const APP_VERSION = '2.3.0';
 // to refetch assets. Bump on ANY deploy that changes style.css / script.js / translations.js
 // (otherwise a stale translations.js can leave the old copy/banner showing). Not user-visible,
 // so it does not need to match APP_VERSION — use a build tag or date.
-const ASSET_VERSION = '20261028c';
+const ASSET_VERSION = '20261028d';
 // Store listings and the official badge images. Apple's badge is an SVG served by
 // Apple; Google's is the official Play badge PNG (English is used on all three
 // languages, matching the English-only Apple badge).
@@ -762,7 +762,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
         <header class="home-hero" id="home-hero">
             <div class="hero-text">
                 <h1 class="hero-tagline" data-i18n="heroTagline">Enjoy Life. Keep Control.</h1>
-                <p class="hero-lead" data-i18n="heroLead">Relimie is your companion for mindful drinking: a tracker for drinks, calories, and spending. Drink less, analyze deeper.</p>
+                <p class="hero-lead" data-i18n="heroLead">Relimie is your companion for mindful, moderate and sober-curious drinking — an alcohol tracker and diary that helps you reduce drinking on your own terms.</p>
                 ${storeBadgeHtml}
                 <p class="hero-trust" data-i18n="heroTrust">For iPhone and Android. No account. No cloud. No ads. Your data stays on your device.</p>
                 <a href="#value-grid" class="hero-scroll" aria-label="Scroll down">&#8595;</a>
