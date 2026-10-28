@@ -291,41 +291,40 @@ main {
     padding: 48px;
 }
 
-/* ===== Home Hero (animated Orb) ===== */
+/* ===== Home Hero (text + download badges left, animated Orb right) ===== */
 .home-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 32px;
-    width: 100%;
-    /* Wide enough for the longest tagline (DE/RU) to sit on one line on desktop;
-       narrower viewports still wrap the headline gracefully. */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 64px 24px 32px;
-}
-
-.hero-slogan {
-    order: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.hero-interactive {
-    order: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
+    gap: 56px;
     width: 100%;
+    max-width: 1200px;
+    min-height: calc(88vh - 80px);
+    margin: 0 auto;
+    padding: 48px 24px 56px;
+}
+
+.hero-text {
+    flex: 1 1 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 24px;
+    min-width: 0;
+}
+
+.hero-media {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-orb {
-    width: clamp(220px, 40vw, 360px);
-    height: clamp(220px, 40vw, 360px);
+    width: clamp(240px, 32vw, 380px);
+    height: clamp(240px, 32vw, 380px);
     display: grid;
     place-items: center;
     animation: orbBreathe 3.5s ease-in-out infinite,
@@ -335,6 +334,8 @@ main {
 .hero-orb-inner {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
     animation: orbSpin 50s linear infinite;
 }
 
@@ -360,69 +361,95 @@ main {
 }
 
 .hero-tagline {
-    font-size: clamp(34px, 6vw, 56px);
+    font-size: clamp(34px, 4.6vw, 54px);
     font-weight: 900;
     letter-spacing: -0.02em;
-    line-height: 1.05;
+    line-height: 1.08;
     margin: 0;
 }
 
-/* The Russian tagline is the longest of the three. On desktop, nudge it down a
-   touch and keep it on a single line (EN/DE stay at full size). Below 992px it
-   falls back to the normal clamp and wraps like everything else. */
-@media (min-width: 992px) {
-    html[lang="ru"] .hero-tagline {
-        font-size: clamp(38px, 4vw, 46px);
-        white-space: nowrap;
-    }
-}
-
 .hero-lead {
-    font-size: clamp(16px, 2.2vw, 19px);
+    font-size: clamp(16px, 2vw, 19px);
     color: var(--text-secondary);
-    /* Match the headline: span the full hero width instead of a narrow column. */
-    max-width: 100%;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 0;
+    line-height: 1.6;
 }
 
 .home-hero .store-section {
+    justify-content: flex-start;
     margin-top: 4px;
 }
 
 .hero-trust {
-    order: 3;
     font-size: 13px;
     color: var(--text-secondary);
     opacity: 0.8;
     letter-spacing: 0.01em;
+    margin: 0;
+}
+
+.hero-scroll {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 22px;
+    color: var(--accent-teal);
+    opacity: 0.65;
+    text-decoration: none;
+    animation: heroBob 2.4s ease-in-out infinite;
+    transition: opacity 0.2s ease;
+}
+
+.hero-scroll:hover {
+    opacity: 1;
+}
+
+@keyframes heroBob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(8px); }
 }
 
 /* ===== Value Grid (messages at a glance) ===== */
 .value-grid-section {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 16px 24px 24px;
+    padding: 56px 24px 40px;
+    scroll-margin-top: 72px;
+}
+
+.value-grid-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(85%, 1100px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.28), transparent);
 }
 
 .value-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 18px;
     width: 100%;
-    max-width: 1040px;
+    max-width: 1360px;
 }
 
 .value-card {
-    flex: 0 1 320px;
+    flex: 0 1 310px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    padding: 26px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    padding: 20px 22px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    column-gap: 12px;
+    row-gap: 10px;
+    align-items: center;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
@@ -442,27 +469,34 @@ main {
 
 .value-icon {
     display: inline-flex;
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     align-items: center;
     justify-content: center;
-    border-radius: 14px;
+    border-radius: 12px;
     color: var(--accent-teal);
     background: rgba(45, 212, 191, 0.12);
     border: 1px solid rgba(45, 212, 191, 0.25);
 }
 
+.value-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
 .value-card h3 {
-    font-size: 18px;
+    font-size: 16.5px;
     font-weight: 700;
+    line-height: 1.25;
     margin: 0;
 }
 
 .value-card p {
-    font-size: 15px;
+    grid-column: 1 / -1;
+    font-size: 14.5px;
     color: var(--text-secondary);
     margin: 0;
-    line-height: 1.55;
+    line-height: 1.5;
 }
 
 /* "Back to top" link inside each landing section */
@@ -483,7 +517,8 @@ main {
 /* Respect reduced-motion preferences for the Orb */
 @media (prefers-reduced-motion: reduce) {
     .hero-orb,
-    .hero-orb-inner {
+    .hero-orb-inner,
+    .hero-scroll {
         animation: none;
     }
 }
@@ -1196,40 +1231,32 @@ main {
 /* Responsive */
 @media (max-width: 900px) {
     .home-hero {
-        padding: 40px 20px 24px;
-        gap: 24px;
+        flex-direction: column;
+        min-height: auto;
+        padding: 40px 20px 32px;
+        gap: 32px;
     }
 
-    .hero-slogan {
-        order: 0;
+    .hero-text {
+        flex: 1 1 auto;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
     }
 
-    .hero-interactive {
-        order: 1;
-        flex-wrap: wrap;
-        gap: 16px;
+    .hero-scroll {
+        display: none;
+    }
+
+    .home-hero .store-section {
+        justify-content: center;
     }
 
     .store-badge { height: 46px; }
     .store-badge.google { height: 68px; margin: -11.2px; }
 
-    .hero-download-left { order: 1; }
-    .hero-download-right { order: 2; }
-    
-    .hero-interactive::before {
-        content: "";
-        width: 100%;
-        order: 3;
-    }
-
-    .hero-orb { order: 4; margin-top: 8px; }
-
-    .hero-trust {
-        order: 4;
-    }
-
     .value-grid-section {
-        padding: 8px 16px 16px;
+        padding: 32px 16px 20px;
     }
 
     /* Landing sections: stack vertically */

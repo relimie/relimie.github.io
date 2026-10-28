@@ -12,3 +12,9 @@ When a craving hits, long-press the Orb for a guided breathing exercise that hel
 
 ### Analytics as Precise as You Like
 From a simple overview to deep trends and a full-screen chart, see exactly as much detail as you want.
+
+### Challenges That Build Your Town
+Small, reachable goals tailored to where you are right now — and every challenge you master adds a new building to your own little town.
+
+### Blood Alcohol Estimate
+See an estimated per mille level from your logged drinks and how long your body needs to clear it, or try the calculator right here.

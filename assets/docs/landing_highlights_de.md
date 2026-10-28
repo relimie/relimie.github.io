@@ -12,3 +12,9 @@ Wenn das Verlangen kommt, halte die Sphäre gedrückt für eine geführte Atemü
 
 ### Analysen, so genau du willst
 Vom einfachen Überblick bis zu tiefen Trends und dem Vollbild-Diagramm: sieh genau so viele Details, wie du möchtest.
+
+### Challenges, die deine Stadt bauen
+Kleine, gut erreichbare Ziele passend zu deiner aktuellen Lage: Jede gemeisterte Challenge lässt deine eigene kleine Stadt weiter wachsen.
+
+### Promille-Rechner
+Sieh aus deinen erfassten Drinks eine Promille-Schätzung und die Zeit bis zum Abbau oder probiere den Rechner direkt hier aus.

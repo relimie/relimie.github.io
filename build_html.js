@@ -13,7 +13,7 @@ const APP_VERSION = '2.3.0';
 // to refetch assets. Bump on ANY deploy that changes style.css / script.js / translations.js
 // (otherwise a stale translations.js can leave the old copy/banner showing). Not user-visible,
 // so it does not need to match APP_VERSION — use a build tag or date.
-const ASSET_VERSION = '20261027a';
+const ASSET_VERSION = '20261028c';
 // Store listings and the official badge images. Apple's badge is an SVG served by
 // Apple; Google's is the official Play badge PNG (English is used on all three
 // languages, matching the English-only Apple badge).
@@ -576,20 +576,31 @@ function buildCarousel(sectionNum) {
 }
 
 // Inline SVG icons for the home value grid, one per card (in markdown order).
-// stroke="currentColor" so CSS tints them teal. Order: baseline/control, diary,
-// cravings breath, analytics, companion compass.
+// stroke="currentColor" so CSS tints them teal. Order: companion compass,
+// baseline/control, diary, cravings breath, analytics, challenges trophy,
+// promille gauge.
 const HIGHLIGHT_ICONS = [
     '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2.2 4.8-4.8 2.2 2.2-4.8z"/></svg>',
     '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>',
     '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h11a1 1 0 0 1 1 1v15H7a2 2 0 0 1-2-2V6a2 2 0 0 1 1-1.7"/><path d="M9 9h6M9 13h4"/></svg>',
     '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9a2.5 2.5 0 1 0-2.5-2.5"/><path d="M3 12h13a2.5 2.5 0 1 1-2.5 2.5"/><path d="M3 16h7a2 2 0 1 1-2 2"/></svg>',
     '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="5" y="11" width="3" height="7" rx="1"/><rect x="10.5" y="6" width="3" height="12" rx="1"/><rect x="16" y="13" width="3" height="5" rx="1"/></svg>',
+    '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4v2a3 3 0 0 0 3 3"/><path d="M17 6h3v2a3 3 0 0 1-3 3"/></svg>',
+    '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15l3.5-3.5"/><path d="M20.3 18a9 9 0 1 0-16.6 0"/><path d="M4 18h16"/><circle cx="12" cy="15" r="1.5"/></svg>',
 ];
 
-// Anchor target for each value card (matches HIGHLIGHT_ICONS / markdown order):
-// baseline -> diary -> cravings -> analytics -> logging. Clicking a card scrolls
-// to the matching detailed section below.
-const HIGHLIGHT_LINKS = ['#ls-logging', '#ls-hero', '#ls-diary', '#ls-cravings', '#ls-analytics'];
+// Target for each value card (matches HIGHLIGHT_ICONS / markdown order):
+// logging -> baseline -> diary -> cravings -> analytics -> challenges (guide) -> promille calculator.
+// Entries may be a string or a per-language map { en, de, ru }.
+const HIGHLIGHT_LINKS = [
+    '#ls-logging',
+    '#ls-hero',
+    '#ls-diary',
+    '#ls-cravings',
+    '#ls-analytics',
+    { en: 'guide.html#6-challenges', de: 'guide.html#6-challenges', ru: 'guide.html#6-вызовы' },
+    'promille-calculator.html',
+];
 
 // Build the home value grid from assets/docs/landing_highlights_<lang>.md.
 // Each card is a "### Title" heading followed by a one-sentence paragraph.
@@ -603,7 +614,8 @@ function buildHighlightGrid(lang) {
         const title = (nl === -1 ? block : block.slice(0, nl)).trim();
         const body = (nl === -1 ? '' : block.slice(nl + 1)).trim();
         const icon = HIGHLIGHT_ICONS[i] || '';
-        const link = HIGHLIGHT_LINKS[i] || '#';
+        const rawLink = HIGHLIGHT_LINKS[i] || '#';
+        const link = typeof rawLink === 'object' ? (rawLink[lang] || rawLink.en || '#') : rawLink;
         return `<a class="value-card" href="${link}">
                     <span class="value-icon" aria-hidden="true">${icon}</span>
                     <h3>${marked.parseInline(title)}</h3>
@@ -746,32 +758,26 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
     const isArticle = articles.some(a => a.slug === pageName);
 
     const content = isIndex ? `
-        <!-- Hero: animated Orb + core promise -->
+        <!-- Hero: text + download badges left, animated Orb right -->
         <header class="home-hero" id="home-hero">
-            <div class="hero-slogan">
-                <h1 class="hero-tagline" data-i18n="heroTagline">Enjoy Life. Keep Control.</h1>
-                <p class="hero-lead" data-i18n="heroLead">Relimie is your companion for mindful, moderate and sober-curious drinking — an alcohol tracker and diary that helps you reduce drinking on your own terms.</p>
+            <div class="hero-text">
+                <h1 class="hero-tagline" data-i18n="heroTagline">Enjoy Life. Keep Control.</h1>
+                <p class="hero-lead" data-i18n="heroLead">Relimie is your companion for mindful drinking: a tracker for drinks, calories, and spending. Drink less, analyze deeper.</p>
+                ${storeBadgeHtml}
+                <p class="hero-trust" data-i18n="heroTrust">For iPhone and Android. No account. No cloud. No ads. Your data stays on your device.</p>
+                <a href="#value-grid" class="hero-scroll" aria-label="Scroll down">&#8595;</a>
             </div>
-            
-            <div class="hero-interactive">
-                <div class="hero-download-left">
-                    ${iosBadgeHtml}
-                </div>
+            <div class="hero-media">
                 <div class="hero-orb">
                     <div class="hero-orb-inner">
                         <img src="../assets/images/mindful_orb.webp" alt="Relimie Orb — the mindful drinking baseline indicator" width="360" height="360" fetchpriority="high">
                     </div>
                 </div>
-                <div class="hero-download-right">
-                    ${androidBadgeHtml}
-                </div>
             </div>
-
-            <p class="hero-trust" data-i18n="heroTrust">For iPhone and Android. No account. No cloud. No ads. Your data stays on your device.</p>
         </header>
 
         <!-- Value grid: the messages at a glance -->
-        <section class="value-grid-section">
+        <section class="value-grid-section" id="value-grid">
             <div class="value-grid">
                 ${buildHighlightGrid(lang)}
             </div>
