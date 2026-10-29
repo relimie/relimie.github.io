@@ -41,6 +41,7 @@ relimie.github.io/
 │   │   ├── whats_new_[lang].md
 │   │   ├── privacy_web_[lang].md
 │   │   └── support_[lang].md
+│   ├── downloads/                 # Downloadable assets (e.g. .xlsx drinking diary templates)
 │   └── images/
 │       ├── section1/   # Hero screenshots/videos (carousel) — WebP preferred
 │       ├── section2/   # Diary carousel
@@ -87,7 +88,7 @@ relimie.github.io/
   ```
 - Content is hard-baked into HTML at build time (no runtime Markdown rendering).
 - **Two version constants in `build_html.js`:** `APP_VERSION` is the **semantic app version** shown to users — bump it on an app release. It is interpolated into the schema `softwareVersion`, so that needs no manual edit. The nav badge's pre-JS fallback text is a **literal** (currently "V2.3.0 - tracking can be fun!"), so change it by hand in `getTemplate()` alongside the i18n key. The badge's *visible* label comes from the `navWhatsNew` i18n key in `translations.js` (EN/DE/RU), and the What's-New copy from `whats_new_[lang].md` — update both by hand. `ASSET_VERSION` is the **cache-bust token** appended to the CSS/JS URLs as `?v=` — **bump it on ANY deploy that changes `style.css`, `script.js`, or `translations.js`**, otherwise GitHub Pages' CDN can keep serving stale assets (e.g. an old `translations.js` leaving the old banner/copy showing). It is not user-visible, so it need not match `APP_VERSION` (use a build tag or date).
-- **`whats_new_[lang].md` is a cumulative changelog** (newest section on top). Add a new `## Version X.Y.Z` section per release rather than replacing the file. Non-release milestones (e.g. the Android launch) get a plain `## ` heading instead of a version number. Source historical notes from `C:\GitHub\Relimie\metadata\release_notes\` and `C:\GitHub\Relimie\marketing\vXYZ\`.
+- **`whats_new_[lang].md` is a cumulative changelog** (newest section on top). Add a new `## Version X.Y.Z` section per release rather than replacing the file. Non-release milestones (e.g. the Android launch) get a plain `## ` heading instead of a version number. Source historical notes from `C:\GitHub\Relimie\metadata\release_notes\` and `C:\GitHub\Relimie_marketing\store\vXYZ\`.
 - `marked-gfm-heading-id` generates stable anchor IDs for all headings (critical for ToC links).
 - **SEO functions in `build_html.js`**: `getPageTitleFull(page, lang)` generates `<title>`, `getPageDescription(page, lang)` generates `<meta name="description">`, `getHreflangTags(pageName)` generates hreflang links, `getSchemaOrg(lang, pageName, isIndex)` generates JSON-LD schema. Update these functions when adding new pages.
 - **Schema details in `getSchemaOrg`**: index emits Organization + WebSite + MobileApplication (with `keywords`/`downloadUrl`); FAQ emits FAQPage (answers are Markdown-stripped for clean text); the `story` page also emits `Article` and the `guide` page `TechArticle` (author = Organization, founder stays anonymous), plus a BreadcrumbList on all other content pages. `og:type` is `article` for the `story` page (else `website`). Titles/descriptions are intentionally platform-agnostic ("app", not "for iPhone") for broader keyword reach.
@@ -184,7 +185,7 @@ An informational article hub drives top-of-funnel search discovery (each article
 - **`[[BAC_CALCULATOR]]` token**: article markdown may contain this token on its own line; the article write loop replaces the whole wrapping `<p>` with `buildBacCalculator(lang)` — the interactive blood-alcohol calculator (currently used by `promille-calculator`). Static labels are baked per language in `BAC_CALC_STRINGS` (so `translations.js` needs no entry); the few runtime strings ride along as `data-*` attributes. The maths lives in `initBacCalculator()` in `script.js` and is a **direct port of the app's `services/bac.ts`** (`c = A / (m × r)`, `r` = 0.7/0.6/0.65, 0.15 ‰/h, durations rounded **up** to 5 min, deliberately no absorption correction). **Keep the two in sync** — a visitor comparing the page against the app must see identical numbers. `llms-full.txt` substitutes a prose description for the token.
 - **To add an article**: (1) create `assets/docs/articles/[slug]_[lang].md` (all 3 langs), (2) add an entry to the `articles` array, (3) add its 3 URLs + the hub lastmod to `sitemap-main.xml`, (4) add the article to the `## Articles` section of `llms.txt` (the static AI index — articles are deliberate AI/search entry points; `llms-full.txt` picks them up automatically from the `articles` array at build time), (5) `node build_html.js`.
 
-**Current articles**: `promille-calculator` (blood alcohol / Widmark, DACH-focused, carries the live calculator + `faq: true`), `am-i-drinking-too-much`, `calories-in-alcohol`.
+**Current articles**: `drinking-diary` (template + `.xlsx` downloads + `faq: true`), `craving-journal` (triggers, consequences & if-then plans + `faq: true`), `sober-after-vacation` (`faq: true`), `promille-calculator` (blood alcohol / Widmark, DACH-focused, carries the live calculator + `faq: true`), `am-i-drinking-too-much`, `calories-in-alcohol`.
 
 ---
 

@@ -61,6 +61,38 @@ const hubMeta = {
 
 const articles = [
     {
+        slug: 'drinking-diary',
+        published: '2026-10-29',
+        modified: '2026-10-29',
+        faq: true,
+        title: {
+            en: 'How to Keep a Drinking Diary & Alcohol Calendar',
+            de: 'Trinktagebuch & Alkoholkalender führen',
+            ru: 'Как вести дневник и календарь алкоголя',
+        },
+        description: {
+            en: 'Keep a drinking diary and alcohol calendar: free Excel template to download, a filled-in example, how to calculate grams of alcohol, and why the Relimie alcohol tracker app beats paper and spreadsheets.',
+            de: 'Trinktagebuch und Alkoholtagebuch führen: kostenlose Vorlage als Tabelle, ausgefülltes Beispiel, Gramm Alkohol ausrechnen und warum Relimie als Trinktagebuch-App genauer ist als Papier und Strichlisten.',
+            ru: 'Как вести дневник алкоголя и алкокалендарь: бесплатная таблица в Excel, пример расчёта чистого спирта в граммах и удобный учёт в приложении Relimie.',
+        },
+    },
+    {
+        slug: 'craving-journal',
+        published: '2026-10-29',
+        modified: '2026-10-29',
+        faq: true,
+        title: {
+            en: 'Alcohol Cravings: Spot Your Triggers & Consequences',
+            de: 'Verlangen nach Alkohol: Auslöser & Konsequenzen erkennen',
+            ru: 'Тяга к алкоголю: триггеры и последствия в дневнике',
+        },
+        description: {
+            en: 'Keep a craving journal for the why behind your drinking: spot your alcohol triggers, write down the morning-after consequences, and turn recurring situations into concrete if-then plans.',
+            de: 'Ein Tagebuch für das Warum hinter dem Trinken: Alkohol-Trigger und Auslöser erkennen, Konsequenzen am Morgen danach festhalten und daraus konkrete Wenn-Dann-Pläne machen.',
+            ru: 'Как распознать триггеры употребления алкоголя с помощью дневника, фиксировать последствия наутро и заранее продумывать конкретные действия по принципу «если — то».',
+        },
+    },
+    {
         slug: 'sober-after-vacation',
         published: '2026-09-04',
         modified: '2026-09-04',
