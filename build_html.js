@@ -47,9 +47,9 @@ const hubMeta = {
         ru: 'Relimie – Статьи об осознанном употреблении алкоголя',
     },
     description: {
-        en: 'Practical, judgement-free articles on mindful drinking: blood alcohol and promille, alcohol calories, cutting down and cravings, from the makers of Relimie.',
-        de: 'Praktische Artikel ohne erhobenen Zeigefinger: Promille und Restalkohol, Alkohol-Kalorien, weniger trinken und Heißhunger, von den Machern von Relimie.',
-        ru: 'Практичные статьи без осуждения: промилле и выведение алкоголя, калории, как пить меньше и тяга, от создателей Relimie.',
+        en: 'Practical, judgement-free articles on mindful drinking: keeping a drinking diary and alcohol calendar, spotting triggers and cravings, blood alcohol and promille, and alcohol calories.',
+        de: 'Praktische Ratgeber ohne erhobenen Zeigefinger: Trinktagebuch und Alkoholkalender führen, Auslöser und Alkoholverlangen erkennen, Promille-Rechner und Alkohol-Kalorien.',
+        ru: 'Практичные статьи без нотаций: как вести дневник и календарь алкоголя, распознавать триггеры и тягу, считать промилле и калории в алкоголе.',
     },
     // Rendered as the hub page intro (H1 + lead paragraph)
     intro: {
@@ -75,6 +75,11 @@ const articles = [
             de: 'Trinktagebuch und Alkoholtagebuch führen: kostenlose Vorlage als Tabelle, ausgefülltes Beispiel, Gramm Alkohol ausrechnen und warum Relimie als Trinktagebuch-App genauer ist als Papier und Strichlisten.',
             ru: 'Как вести дневник алкоголя и алкокалендарь: бесплатная таблица в Excel, пример расчёта чистого спирта в граммах и удобный учёт в приложении Relimie.',
         },
+        keywords: {
+            en: 'drinking diary, alcohol calendar, drink diary, alcohol diary, drinking diary template, alcohol tracker app, grams of pure alcohol',
+            de: 'Trinktagebuch, Alkoholkalender, Alkoholtagebuch, Alkohol Tagebuch, Trinktagebuch führen, Trinktagebuch Vorlage, Trinktagebuch App, Alkohol-Tracker, Trinktagebuch Beispiel',
+            ru: 'дневник алкоголя, календарь алкоголя, алкокалендарь, дневник употребления алкоголя, трекер алкоголя, шаблон дневника алкоголя, контроль алкоголя',
+        },
     },
     {
         slug: 'craving-journal',
@@ -90,6 +95,11 @@ const articles = [
             en: 'Keep a craving journal for the why behind your drinking: spot your alcohol triggers, write down the morning-after consequences, and turn recurring situations into concrete if-then plans.',
             de: 'Ein Tagebuch für das Warum hinter dem Trinken: Alkohol-Trigger und Auslöser erkennen, Konsequenzen am Morgen danach festhalten und daraus konkrete Wenn-Dann-Pläne machen.',
             ru: 'Как распознать триггеры употребления алкоголя с помощью дневника, фиксировать последствия наутро и заранее продумывать конкретные действия по принципу «если — то».',
+        },
+        keywords: {
+            en: 'alcohol cravings, drinking triggers, alcohol triggers, urge to drink, craving journal, morning-after consequences, if-then plan drinking',
+            de: 'Verlangen nach Alkohol, Alkoholverlangen, Auslöser Alkohol erkennen, Alkohol Trigger, Konsequenzen Alkohol Tagebuch, Suchtdruck Alkohol, Craving Alkohol, Wenn-Dann-Plan Alkohol',
+            ru: 'тяга к алкоголю, триггеры употребления алкоголя, последствия алкоголя, дневник причин, желание выпить, принцип если — то',
         },
     },
     {
@@ -234,7 +244,7 @@ const getPageDescription = (page, lang) => {
     if (page === ARTICLE_HUB_SLUG) return hubMeta.description[lang] || hubMeta.description.en;
     const desc = {
         en: {
-            index: 'Mindful drinking & alcohol tracker app: free drink diary, calorie and spending logging, trigger tracking. Private by design — no account, no cloud.',
+            index: 'Mindful drinking & alcohol tracker app: free drinking diary and alcohol calendar, calorie and spending logging, trigger journal. Private by design — no account, no cloud.',
             guide: 'How to track alcohol intake and build better drinking habits — complete guide to Relimie: baseline setup, drink logging, alcohol diary, blood alcohol estimate.',
             faq: 'Relimie FAQ: tracking alcohol, setting a baseline, Dry January and sober-curious goals, managing cravings, and staying private.',
             cravings: 'Stop alcohol cravings in real time with guided 4-7-8 breathing. A free mindfulness tool built into Relimie — no premium needed.',
@@ -250,7 +260,7 @@ const getPageDescription = (page, lang) => {
             story: 'The story behind Relimie: how one number, average daily alcohol in grams, grew into a mindful drinking app built by an indie developer.',
         },
         de: {
-            index: 'Achtsam trinken & Alkohol reduzieren ohne harte Regeln. Kostenloses Trinktagebuch, Kalorien- und Ausgaben-Tracking. Kein Account, keine Cloud.',
+            index: 'Achtsam trinken & Alkohol reduzieren ohne starre Regeln: kostenloses Trinktagebuch und Alkoholkalender, Auslöser-, Kalorien- und Ausgaben-Tracking. Kein Account, keine Cloud.',
             guide: 'Alkoholkonsum kontrollieren Schritt für Schritt: Baseline einstellen, Getränke loggen, Alkohol-Tagebuch führen, Promille schätzen und Heißhunger stoppen.',
             faq: 'Häufige Fragen zu Alkohol-Tracking, Baseline, Dry January, achtsamem und sober-curious Trinken, Heißhunger-Stopper und Datenschutz.',
             cravings: 'Alkoholverlangen sofort stoppen: die 4-7-8-Atemtechnik als mentaler Reset. Kostenlos in Relimie, der App für achtsames Trinken.',
@@ -266,7 +276,7 @@ const getPageDescription = (page, lang) => {
             story: 'Die Geschichte hinter Relimie: wie aus einer einzigen Zahl, dem täglichen Alkohol-Durchschnitt in Gramm, eine achtsame Trink-App eines Indie-Entwicklers wurde.',
         },
         ru: {
-            index: 'Осознанное употребление и снижение алкоголя без жёстких правил. Бесплатный дневник напитков, трекинг триггеров и калорий. Без аккаунта и облака.',
+            index: 'Трекер и дневник алкоголя без жёстких правил: бесплатный алкокалендарь, заметки о триггерах, подсчёт калорий и расходов. Без регистрации, аккаунта и облака.',
             guide: 'Как снизить употребление алкоголя: настрой ориентир, веди дневник напитков, оценивай промилле, отслеживай триггеры и справляйся с тягой.',
             faq: 'Частые вопросы об отслеживании алкоголя, ориентире, сухом январе, осознанном и трезвом подходе, борьбе с тягой и конфиденциальности.',
             cravings: 'Справиться с тягой к алкоголю прямо сейчас: дыхательная техника 4-7-8 как ментальный сброс. Бесплатно в Relimie.',
@@ -283,6 +293,17 @@ const getPageDescription = (page, lang) => {
         }
     };
     return (desc[lang] && desc[lang][page]) || (desc['en'] && desc['en'][page]) || 'Relimie – Mindful drinking and alcohol tracking app.';
+};
+
+const getPageKeywords = (page, lang) => {
+    const art = articles.find(a => a.slug === page);
+    if (art && art.keywords) return art.keywords[lang] || art.keywords.en || '';
+    if (page === 'index') {
+        if (lang === 'de') return 'Alkohol-Tracker, Trinktagebuch, Alkoholkalender, Alkoholtagebuch, Trinktagebuch App, weniger trinken, Alkohol reduzieren, Referenzwert, Alkoholverlangen, Promille-Rechner';
+        if (lang === 'ru') return 'трекер алкоголя, дневник алкоголя, алкокалендарь, календарь алкоголя, контроль алкоголя, дневник трезвости, триггеры алкоголя, калькулятор промилле';
+        return 'alcohol tracker, drinking diary, drink diary, alcohol calendar, alcohol diary, mindful drinking app, reduce drinking, drinking triggers, alcohol cravings, promille calculator';
+    }
+    return '';
 };
 
 function getHreflangTags(pageName) {
@@ -373,19 +394,20 @@ function getSchemaOrg(lang, pageName, isIndex) {
       "applicationCategory": "HealthApplication",
       "operatingSystem": "iOS, Android",
       "softwareVersion": "${APP_VERSION}",
-      "keywords": "alcohol tracker, alcohol diary, drink tracker, mindful drinking, moderate drinking, sober curious, dry january, reduce drinking, track alcohol units, alcohol calorie counter, cravings breaker, personal baseline, blood alcohol calculator, promille calculator, BAC calculator, Widmark formula",
+      "keywords": "alcohol tracker, drinking diary, drink diary, alcohol diary, alcohol calendar, drink tracker, craving journal, drinking triggers, alcohol cravings, Trinktagebuch, Alkoholkalender, Alkoholtagebuch, Alkohol-Tracker, Alkoholverlangen, дневник алкоголя, трекер алкоголя, алкокалендарь, mindful drinking, moderate drinking, sober curious, dry january, reduce drinking, track alcohol units, alcohol calorie counter, cravings breaker, personal baseline, blood alcohol calculator, promille calculator, BAC calculator, Widmark formula",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "${IOS_URL}" },
       "author": { "@id": "https://relimie.com/#organization" },
       "publisher": { "@id": "https://relimie.com/#organization" },
       "inLanguage": ["en", "de", "ru"],
       "featureList": [
+        "Free drinking diary and alcohol calendar (pure alcohol in grams)",
         "Personal baseline drinking tracker",
-        "Emotional trigger diary",
+        "Craving journal with trigger and consequence tags",
         "Drinks logging with AI-powered catalog",
-        "Analytics Hub with data export",
+        "Analytics Hub with habits overview and PDF/JSON data export",
         "Blood alcohol (promille) estimate using the Widmark formula",
-        "Cravings Breaker breathing exercise",
-        "WHO-based recommendations"
+        "Cravings Breaker 4-7-8 breathing exercise",
+        "Personal challenges that build your own town"
       ]
     }
     </script>`;
@@ -454,6 +476,9 @@ function getSchemaOrg(lang, pageName, isIndex) {
             "about": { "@id": "https://relimie.com/#app" },
             "inLanguage": lang
         };
+        if (articleEntry.keywords && (articleEntry.keywords[lang] || articleEntry.keywords.en)) {
+            post.keywords = articleEntry.keywords[lang] || articleEntry.keywords.en;
+        }
         let out = orgSchema
             + `\n    <script type="application/ld+json">\n${JSON.stringify(artCrumb, null, 4)}\n    </script>`
             + `\n    <script type="application/ld+json">\n${JSON.stringify(post, null, 4)}\n    </script>`;
@@ -784,6 +809,7 @@ const backToTopHtml = `<a href="#home-hero" class="back-to-top" data-i18n="backT
 function getTemplate(lang, pageName, isIndex, bodyContent) {
     const title = getPageTitleFull(pageName, lang);
     const description = getPageDescription(pageName, lang);
+    const keywords = getPageKeywords(pageName, lang);
     const canonicalUrl = `https://relimie.com/${lang}/${pageName}.html`;
     const noIndexPages = ['privacy', 'impressum', 'terms', 'privacy_web'];
     const isNoIndex = noIndexPages.includes(pageName);
@@ -921,7 +947,7 @@ function getTemplate(lang, pageName, isIndex, bodyContent) {
     <meta name="theme-color" content="#0F172A">
     <title>${title}</title>
     <meta name="description" content="${description}">
-    <link rel="canonical" href="${canonicalUrl}">
+${keywords ? `    <meta name="keywords" content="${keywords}">\n` : ''}    <link rel="canonical" href="${canonicalUrl}">
 ${isNoIndex ? '    <meta name="robots" content="noindex, nofollow">' : ''}
 ${getHreflangTags(pageName)}
     <meta property="og:type" content="${(pageName === 'story' || isArticle) ? 'article' : 'website'}">
